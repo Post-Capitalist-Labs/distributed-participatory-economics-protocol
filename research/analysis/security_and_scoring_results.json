@@ -1,0 +1,51 @@
+{
+  "R_SEC_09_committee": {
+    "pool_10pct": {
+      "single_draw_unsafe_prob": 1.2020746138529458e-07,
+      "single_draw_unsafe_pct": 1.2e-05,
+      "annual_435_independent_draws_unsafe_pct": 0.0052
+    },
+    "pool_20pct": {
+      "single_draw_unsafe_prob": 0.005085566548231989,
+      "single_draw_unsafe_pct": 0.508557,
+      "annual_435_independent_draws_unsafe_pct": 89.1159
+    },
+    "pool_25pct": {
+      "single_draw_unsafe_prob": 0.059622694035137036,
+      "single_draw_unsafe_pct": 5.962269,
+      "annual_435_independent_draws_unsafe_pct": 100.0
+    },
+    "pool_30pct": {
+      "single_draw_unsafe_prob": 0.26172699471120564,
+      "single_draw_unsafe_pct": 26.172699,
+      "annual_435_independent_draws_unsafe_pct": 100.0
+    }
+  },
+  "R_SEC_03_06_TECH_02_bytes": {
+    "R_SEC_03_pairwise_99_kem_ciphertexts_bytes": 110880,
+    "R_SEC_03_dense_10k_vector_bytes": 80000,
+    "R_SEC_06_naive_mst_16_level_proof_bytes": 1280512,
+    "R_TECH_02_43_hybrid_validator_sigs_bytes": 145039
+  },
+  "R_TECH_05_scoring": {
+    "recomputed_baseline_2dp": {
+      "Arch_A": 3.1,
+      "Arch_B": 3.58,
+      "Arch_C": 2.54,
+      "Arch_D": 4.5
+    },
+    "recomputed_baseline_4dp": {
+      "Arch_A": 3.095,
+      "Arch_B": 3.585,
+      "Arch_C": 2.535,
+      "Arch_D": 4.505,
+      "weight_sum": 1.0
+    },
+    "equal_weights_2dp": {
+      "Arch_A": 3.32,
+      "Arch_B": 3.61,
+      "Arch_C": 2.46,
+      "Arch_D": 4.46
+    }
+  }
+}

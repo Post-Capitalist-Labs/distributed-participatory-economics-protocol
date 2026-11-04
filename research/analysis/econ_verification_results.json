@@ -1,0 +1,95 @@
+{
+  "R_ECON_03_scarf": {
+    "no_damping": {
+      "min_max_rho_over_3000_rounds": 0.105444,
+      "final_max_rho_at_3000": 0.542269,
+      "converged_to_5pct": false,
+      "final_prices": [
+        0.0001,
+        0.0,
+        0.0001
+      ]
+    },
+    "beta_0.25": {
+      "min_max_rho_over_3000_rounds": 0.105444,
+      "final_max_rho_at_3000": 0.542269,
+      "converged_to_5pct": false,
+      "final_prices": [
+        0.0001,
+        0.0,
+        0.0001
+      ]
+    },
+    "beta_0.10": {
+      "min_max_rho_over_3000_rounds": 0.105444,
+      "final_max_rho_at_3000": 2.0,
+      "converged_to_5pct": false,
+      "final_prices": [
+        0.3525,
+        0.0,
+        0.0
+      ]
+    },
+    "beta_0.02": {
+      "min_max_rho_over_3000_rounds": 0.105444,
+      "final_max_rho_at_3000": 2.0,
+      "converged_to_5pct": false,
+      "final_prices": [
+        13825057.3106,
+        0.0,
+        0.0
+      ]
+    },
+    "beta_0.25_decay_0.99": {
+      "min_max_rho_over_3000_rounds": 0.105444,
+      "final_max_rho_at_3000": 0.565951,
+      "converged_to_5pct": false,
+      "final_prices": [
+        2.703936230680395e+44,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "R_ECON_04_nonconvex": {
+    "single_indivisible_plant": {
+      "min_rho_over_500_rounds": 0.50374,
+      "final_price": 11.2279,
+      "theoretical_min_imbalance_at_p10": 0.5
+    },
+    "shapley_folkman_multi_plant": {
+      "K=1": {
+        "min_rho": 0.50374,
+        "final_price": 11.2279
+      },
+      "K=5": {
+        "min_rho": 9e-06,
+        "final_price": 10.2742
+      },
+      "K=20": {
+        "min_rho": 0.003955,
+        "final_price": 10.2471
+      },
+      "K=100": {
+        "min_rho": 0.00481,
+        "final_price": 10.2863
+      }
+    }
+  },
+  "R_ECON_05_numeraire": {
+    "init_p_700": {
+      "converged_round": 22,
+      "final_p1": 588.16,
+      "final_p2": 1126.94,
+      "price_ratio_p1_over_p2": 0.521912,
+      "final_w_base": 578.21
+    },
+    "init_p_1400": {
+      "converged_round": 21,
+      "final_p1": 1054.7,
+      "final_p2": 2019.28,
+      "price_ratio_p1_over_p2": 0.522316,
+      "final_w_base": 1036.53
+    }
+  }
+}

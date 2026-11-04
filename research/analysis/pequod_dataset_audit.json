@@ -1,0 +1,42 @@
+{
+  "R_ECON_06_clj_audit": {
+    "clj_dataset_files_count": 70,
+    "total_wc_records_audited": 150000,
+    "baseline_sum_b_plus_c_over_k_range": [
+      0.7706,
+      0.8756
+    ],
+    "toothache_sum_b_plus_c_over_k_range": [
+      1.0712,
+      1.6652
+    ],
+    "toothache_concavity_violations": 150000,
+    "toothache_violation_rate": 1.0
+  },
+  "R_ECON_12_csv_audit": {
+    "csv_files_audited_count": 99,
+    "naive_line_count_mean": 31.56,
+    "dep1ex_year1_first_green_5pct_mean": 11.505,
+    "dep1ex_year1_first_green_5pct_range": [
+      9,
+      13
+    ],
+    "dep1ex_year1_first_blue_3pct_mean": 19.232,
+    "dep1ex_year1_first_blue_3pct_range": [
+      15,
+      23
+    ],
+    "dep1ex_year2_first_green_5pct_mean": 5.848,
+    "dep1ex_year2_first_green_5pct_range": [
+      5,
+      8
+    ],
+    "dep1ex_year2_first_blue_3pct_mean": 9.323,
+    "dep1ex_year2_first_blue_3pct_range": [
+      9,
+      11
+    ],
+    "tables2_dep2ex_year1_first_green_mean": 8.54,
+    "tables2_dep2ex_year2_first_green_mean": 5.1
+  }
+}

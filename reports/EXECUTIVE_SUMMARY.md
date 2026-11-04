@@ -1,127 +1,70 @@
 # Executive Summary: Distributed Participatory Economics Protocol (DPEP)
 
 **Deliverable:** `reports/EXECUTIVE_SUMMARY.md`  
-**Audience:** Project Founder & Technical/Institutional Leadership  
-**Date:** November 4, 2026  
+**Imprint:** Post-Capitalist Labs Imprint (`https://github.com/Post-Capitalist-Labs`)  
+**Status:** Working Draft Monograph (November 2026)  
 
 ---
 
-## 1. What Is Being Proposed
+## 1. Purpose and Scope
 
-We propose the design and open-source engineering of the **Distributed Participatory Economics Protocol (DPEP)**: a local-first, cryptographically verifiable, peer-to-peer coordination protocol that enables democratic worker councils, neighborhood consumer councils, and nested federations to formulate, iterate, ratify, and execute comprehensive economic plans without capitalist markets or authoritarian central planning.
+The **Distributed Participatory Economics Protocol (DPEP)** is an open-source research and systems-architecture programme investigating whether contemporary distributed computing, applied cryptography, and mathematical optimisation can provide a practical technical foundation for democratic, non-market, non-command economic coordination.
 
-Grounded directly in the economic model of **Participatory Economics (Parecon)** developed by Michael Albert and Robin Hahnel (*The Political Economy of Participatory Economics*, 1991; *Looking Forward*, 1991; *Democratic Economic Planning*, 2021) and the double-entry social accounting framework of Anders Sandström (*Anarchist Accounting*, 2020), DPEP provides the computational substrate for:
-1. **Self-Managed Work and Consumption:** Democratic worker and consumer councils where participants exercise decision-making influence proportional to the degree they are affected.
-2. **Equitable Remuneration and Balanced Job Complexes:** Non-transferable consumption allowances calibrated to socially valued work effort, sacrifice, and need—eliminating income from private capital ownership, inheritance, or market bargaining power—paired with job complexes balanced for empowerment and desirability.
-3. **Decentralised Iterative Planning:** A multi-round coordination protocol in which councils submit production and consumption proposals, federated aggregators compute excess demands across private goods, public goods, intermediate inputs, natural resources, labor, capital stocks, and pollutant emissions, and a deterministic Iteration Facilitation Board (IFB) engine updates indicative social opportunity-cost prices until a feasible, ecologically bounded plan is ratified.
-4. **Intra-Year Operational Clearing and Scoped Replanning:** Continuous tracking of fulfillment against the plan, absorbing routine consumer preference shifts locally within neighborhood and city slack buffers while mediating larger supply shocks across affected industry federations.
+Its intellectual foundation is **Participatory Economics (Parecon)**, developed by Michael Albert and Robin Hahnel (*The Political Economy of Participatory Economics*, 1991; *Looking Forward*, 1991; *Parecon: Life After Capitalism*, 2003; *Democratic Economic Planning*, 2021), combined with Anders Sandström's double-entry social accounting (*Anarchist Accounting*, 2020) and historical experiences of worker and community self-management.
 
----
+This Working Draft enforces a strict boundary between **what has been empirically demonstrated**, **what has been analytically estimated from explicit models**, and **what remains an unverified hypothesis or research target**.
 
-## 2. Why It Matters
+### Central Finding
+The principal bottleneck to a viable participatory economy is **not** raw distributed computing speed or cryptographic throughput—it is **economic, algorithmic, and political-institutional**:
+1. **Algorithmic & Economic Frontier:** Existing computer simulations of participatory planning (`pequod-cljs`, Hahnel et al. 2021; Szczepanczyk 2023) demonstrated rapid convergence (6–20 iterations) only for smooth, unconstrained Cobb-Douglas agents with fixed nominal incomes. Our mathematical audit proves that `pequod-cljs`'s increasing-returns ("toothache") experiment violated concavity across 100% of selected councils (rendering their unconstrained objectives unbounded above and their closed-form solutions perverse-supply saddle points), and our numerical stress tests confirm that heuristic multiplicative price rules fail on Scarf's (1960) 3-good Leontief cycle and on single indivisible plants with fixed start-up thresholds.
+2. **Cryptographic & Privacy Frontier:** Simple one-round pairwise masking with an unlinked zero-knowledge budget proof is vulnerable to both malicious input substitution and offline peer dropouts. Binding private household budget compliance to counted aggregate demand requires a validated secret-sharing architecture such as **IETF CFRG `Prio3` / Verifiable Distributed Aggregation Functions (VDAFs)** over multiple non-colluding council aggregators.
+3. **Institutional & Political Frontier:** Cryptographic verification proves that a calculation ran faithfully or that a digital key signed a claim—it **cannot** prove that physical wheat was harvested, nor can it prevent a technical elite from exercising coordinator-class power if they control protocol upgrades, product catalogues, ecological ceilings, or default solver weights.
 
-For over a century, economic thought has been trapped in Alec Nove's famous dichotomy: *"There is no third way"* between the alienation, inequality, and ecological blindness of market capitalism and the bureaucratic dictatorship of Soviet-style command planning.
-
-Yet historical attempts at democratic self-management—most notably the industrial and agrarian collectives of the **Spanish Revolution (1936–1939)**, the **Paris Commune (1871)**, federated cooperatives like **Mondragón**, and horizontal movements like **Occupy (2011)**—repeatedly hit two structural walls when attempting to scale beyond single workplaces or villages:
-- **Without a unified social accounting and indicative-price system,** wealthier collectives hoarded superior inherited machinery ("collective egoism"), while inter-industry coordination of intermediate inputs broke down into cumbersome bilateral barter.
-- **Without structured, asynchronous computational tools,** horizontal deliberation degenerated into exhausting multi-hour plenary meetings ($O(N^2)$ communication friction) or informal technocratic cliques ("the tyranny of structurelessness").
-
-Modern distributed computing, applied cryptography, and mathematical optimization make it possible for the first time to overcome both barriers simultaneously—allowing millions of participants to coordinate complex industrial supply chains and ecological boundaries democratically in minutes of computation rather than months of bureaucratic paperwork.
+Consequently, rather than attempting to build an all-in-one distributed prototype immediately, DPEP organises validation into a **staged, kill-gated three-phase experimental programme**, starting with a **Python-first economic coordination and non-convexity research phase (Phase 1)** and a **low-technology human participation probe (Phase 1H)**. No expensive distributed or post-quantum cryptographic build should be funded until Phase 1's economic and human-agency kill gates are passed.
 
 ---
 
-## 3. Technical Feasibility Assessment: Is It Achievable?
+## 2. Three-Tier Classification of Technical and Economic Claims
 
-**Yes—with a crucial distinction between computational feasibility (which is demonstrably high) and algorithmic/human-factors feasibility (which requires targeted experimental validation).**
+To eliminate any conflation between analytical back-of-the-envelope calculations and proven empirical benchmarks, Table 1 categorises DPEP's core claims into three strict evidentiary tiers:
 
-### Demonstrably Achievable Guarantees vs. Aspirational Properties
-
-| Demonstrably Achievable Today (Proven by Math & Engineering) | Aspirational or Conditionally Achievable (Requires Experimental Validation) |
-| :--- | :--- |
-| **1. Sub-10-Second Global Aggregation & Price Updates:** Even for 1,000,000 participants (40,000 councils, 10,000 product categories), aggregating sparse council proposals up a federated tree and updating prices takes **$<10\text{ seconds}$ per round** across modest community servers. | **1. Convergence Speed Under Severe Industrial Non-Convexities:** Existing Parecon simulations (`pequod-cljs`, Hahnel et al. 2021) proved 6–12 round convergence for smooth Cobb-Douglas agents, *but* our source-code audit revealed they did not test discrete fixed setup costs, Leontief complementarities, or endogenous income feedback. |
-| **2. Verifiable Neutrality of the Iteration Facilitation Board (IFB):** Compiling the IFB price-update rule to a deterministic, floating-point-free WebAssembly (WASM) module paired with a **BLAKE3 Sparse Merkle-Sum Tree (MST)** mathematically prevents IFB operators from secretly skewing prices or censoring council proposals. | **2. Low-Fatigue Human Participation at Scale:** Keeping household consumption planning under 30–60 minutes per year and preventing council deliberation burnout requires human-in-the-loop UX testing of automated drafting assistants and milestone voting schedules. |
-| **3. Offline-First & Low-End Smartphone Participation:** A lightweight client (`Role-LP`) using SQLite, delta-CRDTs, and Zstandard-compressed price deltas runs on a 5-year-old Android phone with $<60\text{ MB}$ storage and $<150\text{ KB}$ bandwidth per round. | **3. Harmonious Workplace Effort Rating:** Software can enforce the cap that a workplace's average effort rating cannot exceed its social benefit-to-cost ratio ($SB_j/SC_j$), but preventing interpersonal friction in peer evaluation is an institutional/cultural challenge. |
-| **4. Post-Quantum & Privacy-Preserving Household Budgets:** Hybrid `Ed25519 + ML-DSA-65` (NIST FIPS 204) signatures, `X25519 + ML-KEM-768` (FIPS 203) encryption, and pairwise additive masking with local budget proofs (`Plonky3` STARKs / Pedersen commitments) allow a neighborhood council to sum private demands without neighbors seeing each other's personal or medical items. | **4. Truthful Revelation of Tacit Workplace Potential:** While $SB/SC$ benchmarking and public technology blueprints deter gross slacking, no mechanism can mathematically force a workplace to reveal uncodified local process innovations (Hurwicz's impossibility theorem). |
+| Tier A: Empirically Demonstrated (Reproduced from Source Code / Data) | Tier B: Analytical Estimates (Derived from Explicit Models; Unbenchmarked at Scale) | Tier C: Open Research Targets & Hypotheses (Require Experimental Proof) |
+| :--- | :--- | :--- |
+| **1. Cobb-Douglas Tâtonnement Baseline (`pequod-cljs`):** Across 40 experiments with 30,000 Worker Councils, 30,000 Consumer Councils, and 500 categories (`dep1ex61..100.csv`), the damped multiplicative price rule reaches $\rho_i \le 5\%$ in **11.85 rounds** (Year 1 cold start) and **6.53–6.58 rounds** (Year 2 warm start), and $\rho_i \le 3\%$ in **19.20 rounds** (Year 1). | **1. Automated Federated Round Latency ($N = 10^6$):** Aggregating 40,000 canonical CBOR council proposals ($5.2\text{ KB}$ each; $208\text{ MB}$ raw / $60\text{ MB}$ compressed) across 50 federated servers and committing a $616\text{ KB}$ Layer-1 checkpoint block is projected to take **9–27 seconds** of compute/network time per round (including a $1.5\times\text{–}3\times$ indexing and retransmission factor). | **1. Convergence Under Leontief Complementarities & Fixed Setup Costs:** Whether **Two-Tier Hierarchical MILP + Convex Proximal-Jacobi ADMM** can clear economies with rigid Leontief input matrices, fixed setup costs, and endogenous budgets in $\le 15\text{–}25$ rounds with $<1\%$ non-convexity gap. |
+| **2. Failure of Heuristic Tâtonnement on Scarf & Single-Plant Non-Convexities (`verify_economics.py`):** The Pequod price rule fails to reach $\rho \le 5\%$ on Scarf's 3-good Leontief cycle over 3,000 rounds ($\min \rho = 10.5\%$), stalls at $\rho = 56.6\%$ under decaying trust regions, and cannot clear a single indivisible plant ($\min \rho = 50.4\%$). | **2. Mobile Client Round Bandwidth (`Role-LP`):** Verifying 43 hybrid validator signatures ($145\text{ KB}$), downloading compressed price deltas ($15\text{–}40\text{ KB}$), and submitting $K=3$ `Prio3` VDAF secret shares + FLP proofs ($75\text{ KB}$) plus a $512\text{ B}$ Merkle inclusion path requires **250–400 KB per round** ($\sim 2.5\text{–}4.0\text{ MB}$ per 10-round annual plan). | **2. Human Override Rates & Democratic Agency (`Phase 1H`):** Whether real participants using local solver drafting assistants actively understand and override default trade-offs or passively rubber-stamp automated drafts ("computed tâtonnement"). |
+| **3. Shapley–Folkman Smoothing Across $K \ge 20$ Small Plants (`verify_economics.py`):** Disaggregating an indivisible 100-unit capacity across $K=20$ heterogeneous councils with staggered thresholds shrinks the non-clearing imbalance from $50.4\%$ to **$0.40\%$**. | **3. Bare-Metal Server Hosting Cost vs. Total Socio-Technical Cost:** Hosting 100 federation servers at verified 2026 VPS rates costs **~$3,000–$6,000/month** ($\sim\$0.04\text{–}\$0.07$ per citizen/year), *excluding* BJC operator labour, key ceremonies, and external security audits ($\$50\text{k–}\$200\text{k}$). | **3. Incentive Compatibility & Soft-Budget Resistance:** Preventing strategic capacity understatement (Weitzman ratchet effect), soft-budget appeals (Kornai), and inter-council carousel fraud without intrusive workplace surveillance. |
 
 ---
 
-## 4. The Most Promising Architecture
+## 3. Leading Architectural Hypothesis and Key Design Pillars
 
-**We strongly reject building a global per-transaction blockchain (Architecture C), a centralized cloud database (Architecture A), or an unstructured gossip network (Architecture B).**
+We select **Architecture D — A Four-Layer Hybrid Local-First, Federated, and Selectively Checkpointed Architecture** as our leading long-term architectural hypothesis (scoring **4.51 / 5.00** in our multi-criteria analysis vs. **2.54 / 5.00** for a per-transaction blockchain), while recognizing via sensitivity analysis that **Architecture A (Conventional Federated Services)** is superior for Phase 1 and Phase 1H research prototyping.
 
-Participatory planning is not a stream of high-frequency financial trades; it is an **epoch-synchronized, hierarchical bulk-synchronous coordination process** followed by localized intra-year fulfillment. The optimal design is **Architecture D — A Four-Layer Hybrid Local-First, Federated P2P, and Selective Epoch-BFT Architecture**:
-
-1. **Layer 4 (Human Deliberation & Local Solver Edge):** Accessible mobile/desktop Progressive Web App (PWA) and native clients running an embedded interior-point conic/quadratic solver (`Clarabel.rs` / `HiGHS` in WASM) for instant local proposal drafting and "what-if" collective-good exploration.
-2. **Layer 3 (Local-First Council & Household State):** Encrypted local **SQLite** for structured vectors and accounting ledgers + **Loro/Automerge CRDTs** for offline-capable workplace and neighborhood council deliberation, authorized via revocable post-quantum capability tokens (**`PQ-UCAN`**).
-3. **Layer 2 (Federated Aggregation & Content-Addressed Data Plane):** Peer-to-peer **QUIC (`quinn` / `iroh`)** transport organizing councils into nested Ward $\to$ City $\to$ Region and Industry Federation **BLAKE3 Sparse Merkle-Sum Trees (MST)**, paired with content-addressed storage for qualitative council narratives (`Lists`).
-4. **Layer 1 (Selective Epoch-BFT Checkpoint & Deterministic IFB Engine):** A lightweight rotating BFT validator committee (drawn from federated councils via Athenian-style cryptographic sortition) that commits **only ~10–20 global checkpoint blocks per annual planning cycle**—anchoring each round's MST proposal root, executing the deterministic WASM price-update rule, and settling Sandström's macro **Society Account**.
-
----
-
-## 5. The Role of Distributed Systems, Cryptography, and AI
-
-### What Distributed Systems and Cryptography Actually Do (and Do Not Do)
-- **They replace blind trust in central planners with mathematical verifiability:** Every council receives a compact Merkle-Sum inclusion proof guaranteeing its proposal was accurately summed into the global total, and any laptop can re-run the deterministic WASM module in milliseconds to verify the IFB's price vector.
-- **They protect personal privacy without sacrificing budget accountability:** Pairwise additive masking + local zero-knowledge budget proofs guarantee that a household's private consumption requests never exceed its warranted effort-rated budget ($P \cdot y_u \le B_u$) without exposing sensitive personal choices to neighbors.
-- **They do NOT replace social reality:** Cryptography cannot verify that physical wheat was harvested or that a factory's smokestack sensor was not physically bypassed; those remain the domain of federated physical audits (*euthynai*) and environmental courts. Nor does DPEP use any cryptocurrency, tradable token, or speculative financial incentive.
-
-### Where AI Adds Value—and Where It Must Be Excluded
-- **Strict Exclusion from Core Planning Authority:** Neural networks and LLMs must **never** set indicative prices, approve/veto council proposals, or act as autonomous voting agents. The core allocation engine is 100% deterministic mathematical programming.
-- **High-Value Advisory Roles at the Edge:**
-  1. *Deterministic Operations Research (`Clarabel.rs` / `HiGHS`):* Automatically computes optimal input substitutions for worker councils and adjusts household draft bundles from last year's history in $<10\text{ ms}$ locally on the user's device.
-  2. *Statistical Forecasting (Hierarchical ETS/ARIMA):* Translates coarse annual product categories (e.g., "running shoes") into statistical size/color distributions for producers.
-  3. *Optional Local Open-Weight LLMs & NMT:* Strictly bounded to multi-lingual translation, screen-reader/voice accessibility, and summarizing qualitative council `Lists`—always linked directly to the underlying verifiable source text.
+Four core design pillars structure the DPEP specification:
+1. **Two-Tier Hierarchical Optimisation (Federation MILP + Council Proximal-Jacobi ADMM):**
+   - Instead of assuming that local price tâtonnement can clear large indivisible facilities, **Industry and Regional Federations** first resolve discrete lumpy capacity commitments ($z_j \in \{0,1\}$) via Mixed-Integer Linear/Quadratic Programming (MILP), after which individual worker and consumer councils clear continuous quantities via **Convex Proximal-Jacobi ADMM** with an explicit numéraire ($w_{\text{base}} \equiv 1.0$) and strict one-sided ecological caps ($D_r \le r^*, D_z \le E_z^{\max}$).
+2. **Two-Root Authenticated Aggregation & Full Leaf Data Availability:**
+   - Rather than embedding $80\text{ KB}$ dense vectors inside every internal Merkle-Sum node (which would bloat mobile inclusion proofs to $1.28\text{ MB}$ and still fail to prevent off-path sibling fraud without full-tree verification), each round checkpoint commits: (a) a standard `BLAKE3` `proposals_merkle_root` (**512-byte** mobile inclusion path), (b) a `category_totals_merkle_root`, and (c) an explicit **Active vs. Partitioned Council Bitmap**. Because all 40,000 signed sparse council proposals total only $\sim 60\text{ MB}$ compressed per round, every regional storage (`Role-SR`) and validator (`Role-BFT`) node downloads and verifies all leaf proposals directly during a pre-finality challenge window.
+3. **Post-Quantum & Dropout-Resilient Household Privacy via `Prio3` VDAFs:**
+   - Households split their private demand vector $y_u^{\text{priv}}$ into $K=3$ additive secret shares sent to non-colluding Neighbourhood, Ward, and Federation aggregators using **IETF CFRG `Prio3`** (`draft-irtf-cfrg-vdaf-16`). A Fully Linear Proof (FLP) mathematically binds budget compliance ($p^{\text{priv}} \cdot y_u^{\text{priv}} + \text{PubShare}_u \le B_u$) and non-negativity directly to the counted shares, requires zero Reed–Solomon proximity-gap conjectures (avoiding the conjectures disproved by Crites & Stewart 2025), and tolerates arbitrary offline peer dropouts.
+4. **Constitutional Governance of Protocol Parameters & Hardware-Decoupled Sortition:**
+   - Every protocol lever—WASM price-update modules, the product catalogue $\Omega$, biophysical ceilings $E^{\max}$, and 5-plan voting grids—is governed by explicit dual-federation ratification and challenge rules. Sortition selects **human citizens** across all councils first and provisions them with community-hosted validator appliances so server-rich collectives cannot monopolise oversight roles.
 
 ---
 
-## 6. Principal Technical and Economic Obstacles
+## 4. Staged Three-Phase Experimental Programme and Kill Gates
 
-Our investigation identified **four primary obstacles** that the project must confront head-on:
-1. **The Non-Convexity & Complementarity Gap (Priority 1):** Real supply chains involve fixed setup costs, minimum efficient scales, and rigid Leontief input ratios. Our proposed **Algorithm 3 (Safeguarded Primal-Dual / ADMM Proximal Regularization)** adds round-to-round trust regions (formalizing Albert & Hahnel 1991a, Ch. 4, p. 70) to prevent price-tâtonnement oscillation, which must be proven in large-scale simulation.
-2. **Coupled Endogenous Income Dynamics (Priority 2):** Closing the loop between Worker Council effort/output valuations and Consumer Council budgets during active planning rounds introduces cross-market income effects that require damped fixed-point relaxation.
-3. **Ecological Incommensurability vs. Local Pollution Pricing (Priority 4):** Following John O'Neill's (2024) critique, pricing pollutants solely via local victim willingness-to-accept compensation (Hahnel's PDRM) is insufficient for planetary boundaries. DPEP enforces a **strict lexicographic hierarchy**: scientific/intergenerational biophysical caps ($r^*, E_z^{\max}$) act as inviolable hard constraints, while PDRM operates only on localized nuisances below those ceilings.
-4. **Deliberative Fatigue and Federation Gatekeeping (Priorities 3 & 7):** Preventing endless meeting overhead and ensuring incumbent Industry Federations cannot block innovative new worker councils require careful institutional protocol rules (such as a 3-milestone human deliberation schedule and cross-federation innovation appeals).
+Instead of building cryptography, P2P networking, mobile apps, and economic solvers simultaneously, DPEP organises development into **three sequential, gated phases**:
 
----
-
-## 7. What the First Proof of Concept (PoC) Will Demonstrate
-
-Before any real-world deployment, the first deliverable is a self-contained, reproducible **Proof of Concept (`dpep-poc`)** modeling a nontrivial economy of **1,000 participants, 20 Worker Councils, 20 Neighborhood Consumer Councils, 8 Ward/Industry Federations, 2 Communities of Affected Parties (CAPs), and 80 priced categories** across all 7 economic classes.
-
-The PoC will concretely demonstrate:
-- All **12 lifecycle stages** from council formation and collective-first consumption planning through iterative Merkle-Sum aggregation, deterministic WASM price updates, convergence to $\tau \le 3\%$ imbalance, and Sandström Society Account balancing.
-- **Intra-year resilience:** Local ward cancellation of $\pm 12\%$ consumer preference shifts within a 4% slack buffer, plus automated **Scoped Sub-Graph Replanning** when a simulated 30% intermediate-input supply shock hits in Month 6.
-- **Physical & Adversarial Verification:** Live execution across **separate physical devices** (workstation + Raspberry Pi) and a **real smartphone PWA client**, demonstrating **offline disconnection/resynchronization** and **100% deterministic rejection** of tampered, out-of-budget, or censored proposals.
+| Phase | Primary Objective & Technical Stack | Core Experiments | Mandatory Go / No-Go Kill Gate | Estimated Effort & Cost |
+| :--- | :--- | :--- | :--- | :--- |
+| **Phase 1: Economic Coordination Research (Kill Gate)** | **Python-First Reproducible Simulator** (`NumPy`/`SciPy`, `HiGHS` MILP/LP, `Clarabel` conic solver) testing all 9 algorithmic families on commodity hardware. | **8 Progressive Stress Tests:** (1) Convex Cobb-Douglas baseline; (2) Leontief complementarities (incl. Scarf tests); (3) Fixed setup costs & lumpy plants ($K=1..100$); (4) Capacity constraints; (5) Endogenous income + numéraire; (6) Intra-year supply shocks; (7) Strategic misreporting/appeals; (8) Strict one-sided ecological caps. | **KILL GATE 1:** Candidate algorithm must achieve $\ge 95\%$ convergence to strict one-sided feasibility ($D_g \le S_g$, $D_r \le r^*$) within $\le 25$ rounds across 1,000-council Leontief + lumpy-capacity economies with $<2\%$ welfare gap vs. central MILP oracle. **No distributed or cryptographic build proceeds until passed.** | **2–3 months** (1 FTE economist/OR engineer); **$0–$100** compute cost. |
+| **Phase 1H: Low-Tech Human Participation Probe** | **Simple Trusted Web App (PostgreSQL + Python/TS, Zero Crypto)** with explicit trust disclosure to test human assumptions early. | 30–60 human participants in 3 simulated councils completing a 3-milestone planning cycle with and without local QP drafting assistance. | **KILL GATE 1H:** $\ge 80\%$ completion rate in $<45\text{ min/round}$; empirically measure whether users actively modify automated drafts ($\ge 30\%$ meaningful override rate on perturbed prices) and measure power dispersion (Gini of accepted amendments) alongside NASA-TLX workload. | **1.5–2 months** (parallel with Phase 1; 1 FTE UX/fullstack); **$50** VPS hosting. |
+| **Phase 2: Distributed Coordination & Anti-Censorship** | **Rust Reference Node (`dpep-node`)** implementing canonical CBOR schemas, `QUIC` federated aggregation, Two-Root Merkle verification, and deterministic `Wasmtime` clearing. | Multi-node WAN benchmarks ($10^2$ to $10^5$ simulated councils) against a centralised PostgreSQL baseline; adversarial fault injection (censorship, equivocation, 20% regional partition). | **KILL GATE 2:** 100% detection of omitted/tampered proposals via signed receipts and challenge windows; $<30\text{ s}$ automated round aggregation at $10^5$ participants; measured decentralisation overhead $\le 5\times$ centralised baseline. | **3–4 months** (2–3 FTEs); **$1,500–$3,000** multi-region testbed. |
+| **Phase 3: Integrated Security, Mobile & Co-op Field Pilot** | **Hybrid PQC (`ML-DSA-65`, `ML-KEM-768`, `SLH-DSA-192s`) + `Prio3` VDAF Privacy + Mobile PWA** deployed with real worker/consumer cooperatives. | Legacy Android hardware benchmarks; third-party cryptographic security audit; parallel-economy pilot (cooperative procurement, shared equipment, participatory budgeting). | **KILL GATE 3:** Independent external cryptographic audit completed (**$50,000–$150,000** mandatory before real-world use of custom VDAF/privacy circuits); $<400\text{ KB/round}$ mobile bandwidth and $<100\text{ MB}$ RAM verified on 5-year-old Android devices. | **6–12 months** (4–8 FTEs + external audit); **$250k–$950k** total programme. |
 
 ---
 
-## 8. Estimated Effort and Cost Summary
+## 5. Recommendation
 
-We summarize the three implementation scenarios detailed in `reports/POC_SPECIFICATION.md` (distinguishing verified 2026 infrastructure/audit rates from staffing estimates):
-
-| Scenario | Team Size | Duration | Infrastructure Cost | External Security Audit | Total Estimated Budget | Primary Deliverable |
-| :--- | :---: | :---: | :---: | :---: | :---: | :--- |
-| **A: Solo Engineer + AI Coding (Cursor / Claude Code)** | 1.0 FTE | **4–6 months** | $150 – $300 | $0 (Self-fuzzing + audited crates) | **~$0 cash + 1 FTE time** (or $50k–$90k fellowship) | Complete open-source PoC passing all 12 capabilities, mobile PWA, and 100k-participant benchmark suite. |
-| **B: Small Research & Engineering Team (Recommended)** | 3.5–4.5 FTEs | **6–9 months** | $2,500 – $5,000 | $25,000 – $45,000 | **$380,000 – $700,000** | Production-grade PoC + 1M-participant distributed benchmarks + non-convex convergence paper + 50-person live workshop pilot. |
-| **C: Funded Research Programme & Co-op Pilot** | 10–14 FTEs | **24–36 months** | $35,000 – $75,000 | $120,000 – $200,000 | **$2.4M – $4.3M** | Formally verified v1.0 protocol + multi-year live field pilot across 10–30 federated cooperatives & participatory budgets. |
-
----
-
-## 9. The Five Most Important Decisions for Project Leadership
-
-1. **Commit to Architecture D (Local-First + Federated Merkle-Sum Trees + Epoch Checkpoints) and Reject a Per-Transaction Blockchain:** Avoid wasting 12+ months building custom blockchain virtual machines or tokenomics that contradict Participatory Economics and cripple mobile/offline usability.
-2. **Upgrade the Economic Solver from Unconstrained Cobb-Douglas to Constrained Conic/LP Optimization with Proximal Damping:** Address the most serious theoretical vulnerability in existing Parecon simulations immediately in Milestone M1 by embedding `Clarabel.rs` / `HiGHS` with round-to-round trust regions and coupled Society Account budgets.
-3. **Enforce Hard Biophysical Caps Above PDRM Pricing:** Resolve the ecological economics critique (O'Neill 2024) at the protocol level by treating natural resource limits ($r^*$) and critical emissions ceilings ($E_z^{\max}$) as non-negotiable domain constraints rather than purely tradeable shadow prices.
-4. **Design for a "3-Milestone Hybrid Deliberation Schedule":** Protect human participants from meeting fatigue by separating automated intermediate input-clearing sub-iterations from the 3–4 human council deliberation milestones where value choices are actually made.
-5. **Target Dual Utility—Long-Term Full Parecon Simulation AND Near-Term Cooperative Federation Tooling:** Structure the accounting and federation modules so existing worker cooperative federations, food co-ops, and municipal participatory budgeting projects can adopt DPEP incrementally today ("Parallel Economy" Experiment 2, Albert & Hahnel 1991a, Ch. 6).
-
----
-
-## 10. Clear Recommendation on Whether to Proceed
-
-**Recommendation: PROCEED—starting immediately with Scenario A/B Milestone M1–M5 (the 16-week Proof of Concept and Non-Convex Convergence Benchmark Suite).**
-
-**Why Proceed:**
-1. Our source-grounded audit shows that **distributed systems and cryptography are not the bottleneck**—analytical capacity modeling from our `proto3` message schemas indicates that a hybrid post-quantum, privacy-preserving, federated protocol can coordinate a million-person participatory economy in seconds per round on ~100 modest community servers costing ~$0.003–$0.006 per citizen per month (~$0.04–$0.07 per citizen per year in 24/7 server hosting).
-2. The true scientific frontier lies in demonstrating that **safeguarded iterative planning converges reliably under realistic industrial non-convexities, endogenous budgets, and intra-year shocks**, and that **local-first decision-support tools can make democratic participation effortless rather than exhausting**.
-3. A focused 4-to-6-month Proof of Concept can definitively test and demonstrate these properties at minimal cost, transforming Participatory Economics from a theoretical debate into an inspectable, executable, open-source engineering discipline.
+**Proceed immediately with Phase 1 (the Python-first Economic Coordination & Non-Convexity Simulator) and Phase 1H (the Low-Tech Human Participation Probe), holding Phase 2 and Phase 3 strictly contingent on passing Kill Gates 1 and 1H.** This sequence honors the ambition of a democratic, classless post-capitalist economy while upholding the highest standards of scientific falsifiability and engineering discipline.
