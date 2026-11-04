@@ -182,34 +182,34 @@
   \fill[SlateDark] ($(current page.south west)+(0.45in,0)$) rectangle ($(current page.north west)+(0.52in,-0.32in)$);
   \fill[GoldAccent] ($(current page.south west)+(0.52in,0)$) rectangle ($(current page.north west)+(0.54in,-0.32in)$);
 
-  % Decorative Geometric Network / Merkle-Sum Council Constellation (Compact & well-separated in middle band)
-  \begin{scope}[shift={($(current page.south west)+(3.48in,3.88in)$)}]
-    % Concentric Federation Rings (outer radius 1.00in -> ample breathing room above and below)
-    \draw[SlateDark!90!white, line width=1.2pt, dashed] (0,0) circle (1.00in);
-    \draw[TealAccent!80!white, line width=1.0pt] (0,0) circle (0.70in);
-    \draw[GoldAccent!80!black, line width=0.9pt] (0,0) circle (0.42in);
+  % Decorative Geometric Network / Merkle-Sum Council Constellation (Centered in middle band)
+  \begin{scope}[shift={($(current page.south west)+(3.48in,4.16in)$)}]
+    % Concentric Federation Rings (outer radius 1.38in -> balanced visual presence with clean margins)
+    \draw[SlateDark!90!white, line width=1.4pt, dashed] (0,0) circle (1.38in);
+    \draw[TealAccent!85!white, line width=1.15pt] (0,0) circle (0.98in);
+    \draw[GoldAccent!85!black, line width=1.05pt] (0,0) circle (0.58in);
 
     % Radial Federation Spokes & Leaf Council Nodes
     \foreach \ang in {0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330} {
-      \draw[SlateDark!75!white, thin, opacity=0.55] (0,0) -- (\ang:1.00in);
-      \fill[TealAccent] (\ang:0.70in) circle (2.2pt);
-      \draw[white, very thin] (\ang:0.70in) circle (2.2pt);
+      \draw[SlateDark!75!white, thin, opacity=0.6] (0,0) -- (\ang:1.38in);
+      \fill[TealAccent] (\ang:0.98in) circle (2.7pt);
+      \draw[white, very thin] (\ang:0.98in) circle (2.7pt);
     }
     \foreach \ang in {15, 45, 75, 105, 135, 165, 195, 225, 255, 285, 315, 345} {
-      \draw[GoldAccent!55!white, very thin, opacity=0.45] (\ang-15:0.70in) -- (\ang:1.00in);
-      \draw[GoldAccent!55!white, very thin, opacity=0.45] (\ang+15:0.70in) -- (\ang:1.00in);
-      \fill[white!90!GoldAccent] (\ang:1.00in) circle (1.5pt);
+      \draw[GoldAccent!60!white, very thin, opacity=0.5] (\ang-15:0.98in) -- (\ang:1.38in);
+      \draw[GoldAccent!60!white, very thin, opacity=0.5] (\ang+15:0.98in) -- (\ang:1.38in);
+      \fill[white!92!GoldAccent] (\ang:1.38in) circle (1.9pt);
     }
     \foreach \ang in {0, 60, 120, 180, 240, 300} {
-      \draw[GoldAccent, thick, opacity=0.85] (0,0) -- (\ang:0.42in);
-      \fill[CrimsonAccent] (\ang:0.42in) circle (2.8pt);
-      \draw[GoldAccent, thin] (\ang:0.42in) circle (2.8pt);
+      \draw[GoldAccent, thick, opacity=0.88] (0,0) -- (\ang:0.58in);
+      \fill[CrimsonAccent] (\ang:0.58in) circle (3.4pt);
+      \draw[GoldAccent, thin] (\ang:0.58in) circle (3.4pt);
     }
 
     % Central Epoch-Root Core Node
-    \fill[NavyPrimary] (0,0) circle (0.29in);
-    \draw[GoldAccent, line width=1.4pt] (0,0) circle (0.29in);
-    \node[text=GoldAccent, font=\tiny\bfseries, align=center] at (0,0) {$\Sigma \text{MST}$\\[-1.5pt]\tiny$SB/SC \ge 1$};
+    \fill[NavyPrimary] (0,0) circle (0.38in);
+    \draw[GoldAccent, line width=1.6pt] (0,0) circle (0.38in);
+    \node[text=GoldAccent, font=\footnotesize\bfseries, align=center] at (0,0) {$\Sigma \text{MST}$\\[-1pt]\tiny$SB/SC \ge 1$};
   \end{scope}
 
   % Top Classification Header & Working Draft Badge
