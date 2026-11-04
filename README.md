@@ -9,7 +9,7 @@
 
 ## 📖 Read the Book (Working Draft)
 
-- **[Download the Typeset PDF Monograph (`Distributed_Participatory_Economics_Protocol_Book.pdf`)](./Distributed_Participatory_Economics_Protocol_Book.pdf)** *(57 pages, LaTeX typeset with full mathematical models, comprehensive list of abbreviations & notation, canonical `proto3` schemas, architecture diagrams, and source footnotes)*
+- **[Download the Typeset PDF Monograph (`Distributed_Participatory_Economics_Protocol_Book.pdf`)](./Distributed_Participatory_Economics_Protocol_Book.pdf)** *(61 pages, LaTeX typeset with full mathematical models, comprehensive list of abbreviations & notation, canonical `proto3` schemas, architecture diagrams, and source footnotes)*
 - **LaTeX Source:** [`book/dpep_book.tex`](./book/dpep_book.tex)
 
 *Note: This research monograph and technical architecture specification are currently released in **draft form** for open community review, critique, and collaborative iteration prior to Proof-of-Concept implementation.*
@@ -20,7 +20,7 @@
 
 Can contemporary distributed computing, post-quantum cryptography, local-first software, and mathematical optimization provide the technical foundations for a democratic, classless, ecologically sustainable post-capitalist economy?
 
-This book presents a rigorous, source-grounded feasibility study and systems architecture proposal for the **Distributed Participatory Economics Protocol (DPEP)**. Grounded in the economic model of **Participatory Economics (Parecon)** developed by Michael Albert and Robin Hahnel (*The Political Economy of Participatory Economics*, 1991; *Looking Forward*, 1991; *Democratic Economic Planning*, 2021), Anders Sandström's double-entry social accounting (*Anarchist Accounting*, 2020), and historical experiences of democratic self-management (the 1936–1939 Spanish Revolution, the 1871 Paris Commune, Classical Athens, Occupy, and Mondragón), the book is written for three interdisciplinary audiences:
+This book presents a rigorous, source-grounded feasibility study and systems architecture proposal for the **Distributed Participatory Economics Protocol (DPEP)**. Grounded in the economic model of **Participatory Economics (Parecon)** developed by Michael Albert and Robin Hahnel (*The Political Economy of Participatory Economics*, 1991; *Looking Forward*, 1991; *Parecon: Life After Capitalism*, 2003; *Democratic Economic Planning*, 2021), Anders Sandström's double-entry social accounting (*Anarchist Accounting*, 2020), and historical experiences of democratic self-management (the 1936–1939 Spanish Revolution, the 1871 Paris Commune, Classical Athens, Occupy, and Mondragón), the book is written for three interdisciplinary audiences:
 
 1. **Advocates & Cooperative Practitioners:** How council democracy, balanced job complexes, revocable delegation, sortition, and productive-commons accounting prevent bureaucratic capture, meeting fatigue, and inter-regional inequality.
 2. **Economists & Mechanism Designers:** Formal mathematical integration of Albert and Hahnel's Formal Model of a Participatory Economy (FMPE) with Sandström's *Society Account* and Hahnel's Pollution Demand-Revealing Mechanism (PDRM); a source-code audit of the `pequod-cljs` planning simulator; and **Algorithm 3** (Safeguarded Primal-Dual / ADMM Proximal Regularization) for convergence under non-convexities and hard biophysical ecological caps.
@@ -32,7 +32,7 @@ This book presents a rigorous, source-grounded feasibility study and systems arc
 
 | Path | Description |
 | :--- | :--- |
-| **[`Distributed_Participatory_Economics_Protocol_Book.pdf`](./Distributed_Participatory_Economics_Protocol_Book.pdf)** | **Complete 57-page typeset PDF book (Working Draft)** published under the Post-Capitalist Labs Imprint. |
+| **[`Distributed_Participatory_Economics_Protocol_Book.pdf`](./Distributed_Participatory_Economics_Protocol_Book.pdf)** | **Complete 61-page typeset PDF book (Working Draft)** published under the Post-Capitalist Labs Imprint. |
 | [`reports/EXECUTIVE_SUMMARY.md`](./reports/EXECUTIVE_SUMMARY.md) | Standalone executive summary covering feasibility, architecture, obstacles, PoC scope, and budget scenarios. |
 | [`reports/HISTORICAL_INSTITUTIONS.md`](./reports/HISTORICAL_INSTITUTIONS.md) | Institutional analysis of Spain (1936), Paris Commune (1871), Classical Athens, Occupy, Mondragón, Porto Alegre, Rojava, and Ostrom's CPR principles. |
 | [`reports/ECONOMIC_MODEL.md`](./reports/ECONOMIC_MODEL.md) | Formal mathematical specification, Sandström's Society Account, 10-state machine, convergence algorithms, and `proto3` schemas. |
