@@ -22,6 +22,10 @@
    - **DOI:** [https://doi.org/10.1515/9780691216034](https://doi.org/10.1515/9780691216034)
    - **Access Status:** Referenced via extensive theorem summaries and proofs cited in Albert & Hahnel (1991a, Ch. 1 pp. 9–11, Ch. 3 pp. 43–44, Ch. 5 pp. 74–105); provides the formal endogenous-preference welfare theorems (Chs. 4, 6, 7) and critique of market/coordinator biases (Chs. 7–10).
 
+3a. **Albert, Michael (2003).** *Parecon: Life After Capitalism*. London & New York: Verso Books. 311 pp. ISBN 978-1-85984-698-8 (hbk), 978-1-84467-505-0 (pbk).
+   - **Reference Portals & Online Full Text:** [https://znetwork.org/parecon-reading-list/](https://znetwork.org/parecon-reading-list/) and ZCommunications book archive (`http://books.zcommunications.org/books/pareconv/`); full PDF edition verified on November 4, 2026.
+   - **Access Status:** Full text accessed, read, and analyzed on November 4, 2026 (analytical extraction preserved at `research/sources/albert_2003_parecon_analysis.md`). Key sections cited: Introduction (internationalism and replacement of IMF/World Bank/WTO with IAA, GIAA, and WTA), Ch. 3 (critique of Green Bioregionalism and autarkic localism), Ch. 4 (abolition of productive property ownership as a "non-thing"), Ch. 5 ("Consensus?" — distinguishing participatory preparation from unanimity veto rules), Ch. 11 (John Henry Steel vintage vs. retooled plant productivity and interactive worker demand drill-down; Jesse Owens Airport hiring/firing and EFB transfers), Ch. 12 (Collective Consumption Facilitation Boards [CCFBs] and anonymized personal consumption proposals), Ch. 17 (resolving capitalism's static vs. dynamic innovation patent dilemma), Ch. 18 (rebutting Nancy Folbre's "busybody economy" and "dictatorship of the sociable" critiques, and citing Pat Devine and David Levy on capitalist transaction/planning overhead), and Ch. 20 (why black markets and coordinator capture are structurally blocked).
+
 ---
 
 ## 2. Subsequent Participatory Economics Developments, Accounting, and Simulations
