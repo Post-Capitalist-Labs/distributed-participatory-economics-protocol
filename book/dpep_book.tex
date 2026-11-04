@@ -1154,7 +1154,7 @@ We compare the four candidate architectures across all 14 required criteria: \te
 9. Privacy & 9\% & 2.5 & 2.0 & 1.0 & \textbf{4.5} & Public ledgers (Arch C) leak personal consumption; Arch D uses pairwise masking + local ZK budget proofs. \\
 10. Post-Quantum Readiness & 6\% & 4.0 & 3.5 & 2.0 & \textbf{4.5} & Edge MST verification absorbs $3.3\text{ KB}$ \texttt{ML-DSA-65} signatures without bloating global blocks. \\
 11. Implementation Simplicity & 6\% & 5.0 & 3.0 & 2.5 & \textbf{3.5} & Modular 4-layer stack allows clean phased rollout. \\
-12. Operational Cost & 4\% & 4.0 & 4.5 & 2.0 & \textbf{4.5} & $<1\text{ GB/year}$ checkpoint ledger growth; $\sim\$0.005$ per citizen/year. \\
+12. Operational Cost & 4\% & 4.0 & 4.5 & 2.0 & \textbf{4.5} & Analytical projection: $<1\text{ GB/yr}$ L1 checkpoint growth ($\sim 78\text{ GB/yr}$ L2 archive); $\sim\$0.005\text{/citizen/mo}$ ($\sim\$0.05\text{/yr}$) server hosting.\footnotemark \\
 13. Energy Efficiency & 4\% & 4.5 & 4.0 & 2.5 & \textbf{4.5} & Epoch-driven consensus uses $\sim 10^{-7}\times$ Proof-of-Work energy. \\
 14. Maintainability & 4\% & 4.0 & 3.5 & 2.0 & \textbf{4.0} & Economic rules compiled to upgradable WASM modules. \\
 \midrule
@@ -1162,6 +1162,7 @@ We compare the four candidate architectures across all 14 required criteria: \te
 \bottomrule
 \end{tabularx}
 \end{table}
+\footnotetext{Analytical derivation from Listing 4.1 schemas (at $N=10^6$ participants, $G=10,000$ categories): each Layer-1 \texttt{RoundAggregationAndPrices} checkpoint block contains 5 \texttt{FixedDecimal} arrays ($5 \times 10,000 \times 8\text{ B} = 400\text{ KB}$) plus 64 hybrid \texttt{Ed25519 + ML-DSA-65} validator signatures ($64 \times 3,373\text{ B} \approx 216\text{ KB}$) $\approx 616\text{ KB/block}$. Over 20 annual planning rounds + 365 daily operational rollups + 50 replanning epochs ($435\text{ blocks/year}$), uncompressed Layer-1 growth is $435 \times 616\text{ KB} \approx 268\text{ MB/year}$ ($<1\text{ GB/year}$), while full Layer-2 council proposal archives (\texttt{Role-SR}) grow by $\sim 78\text{ GB/year}$ (Table \ref{tab:scale-bench}). Hosting 100 federation servers at \$30--\$60/month costs \$3,000--\$6,000/month ($\approx\$0.003\text{--}\$0.006\text{/citizen/month}$, or $\$0.036\text{--}\$0.072\text{/citizen/year}$). These are unbenchmarked analytical projections to be empirically tested against database indexing and P2P retransmission overhead in Chapter 9.}
 
 \section{Language and Runtime Evaluation}
 
@@ -1334,6 +1335,8 @@ The PoC demonstrates all 12 required lifecycle stages end-to-end: (1) hybrid PQC
 \end{table}
 
 \section{Multi-Scale Benchmark Projections ($10^2$ to $10^6$ Participants)}
+
+{\small\color{SlateDark} \textbf{Methodological Note (Analytical Projections vs.\ Empirical Benchmarks):} Only the single-JVM \texttt{pequod-cljs} convergence baseline (6.5--11.85 rounds; 2.5s CPU for 60,000 councils) has been empirically executed to date. All figures in Table \ref{tab:scale-bench} are \textbf{analytical capacity projections} derived from the byte sizes of our \texttt{proto3} schemas ($5.2\text{ KB}$ per signed sparse council proposal; $616\text{ KB}$ per Layer-1 checkpoint block) and micro-benchmark instruction counts. Real-world deployment will incur $1.5\times\text{--}3\times$ additional overhead from SQLite/CRDT indexing, P2P retransmissions, and intra-round council revisions, which the benchmark harness in Milestone M5 is designed to measure.}
 
 \begin{table}[htbp]
 \centering
