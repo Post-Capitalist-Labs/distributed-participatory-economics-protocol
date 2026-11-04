@@ -1,0 +1,354 @@
+Journal of Information Economics 2023 1 (3) 43-54 * Corresponding author: Mitchell Szczepanczyk E-mail address: mitchell@szcz.org
+
+ISSN 2972-3671 
+doi: 10.58567/jie01030004 
+This is an open-access article distributed under a CC BY license 
+(Creative Commons Attribution 4.0 International License) 
+
+Received 12 August 2023; Accepted 13 September 2023; Available online 26 October 2023
+
+### Pseudocode and Algorithms for Computer Simulations of Democratically
+
+### Planned Economies
+
+Mitchell Szczepanczyk a, * a OpenMarkets, Inc., Chicago, USA
+
+ABSTRACT
+
+The claim that “there is no third way” besides the economic models of capitalism and communism has faced a challenge from a new and growing body of research into a “third way” economic paradigm known as democratic planning. In this paper, we explore one of these democratic planning models–Robin Hahnel and Michael Albert’s model of a participatory economy, focusing in particular on its allocation mechanism–a non-market, non-command planning procedure known as “participatory planning.” This procedure has recently been implemented in computer programs to explore its feasibility, the encouraging results of which have been published elsewhere and which we summarize here. But I present here for the first time the detailed algorithms and related pseudocode powering all of these computer programs for others to consider, examine, and build as their own programs. I also describe future directions for this avenue of research.
+
+KEYWORDS
+
+Participatory Economy; Democratic Planning; Economic Simulation Algorithms
+
+## Journal of Information Economics
+
+Homepage: https://www.anserpress.org/journal/jie
+
+#### 1. Introduction
+
+Most of the twentieth century was dominated by two main economic systems: capitalism (characterized by markets and limited liability corporations), and Communism (characterized by command planning, also known as central planning with a central-planning authority). Despite the various and abundant problems in these two main economic systems, the guiding wisdom was that all complex industrial economies had to choose between one of these two systems. The economic historian Alec Nove wrote in no uncertain terms that "there is no third way".1 For many, to broach the topic of exploring other economies outside of these terrible two, even in theory, seems fanciful to the point of absurdity. And yet, beginning in 1990 there has been research into a hypothesized "third way" economy that is neither Communist nor capitalist, which goes by the generic name of "democratic planning". In democratic planning, workers and consumers organize their economic affairs democratically, but without markets, without corporations, and without a command planning authority. Indeed, a handful of different models in this democratic planning vein have been proposed.2 In light of these developments, those who followed Nove’s dictum that “there is no third way” have apparently dropped that objection and have instead raised new objections. Among them: Is such an economy feasible? Is it a practical possibility? That is, would it actually work in the real world? Advocates of democratic planning have sought to address such objections, and in recent years have taken to using computers and computer programs to do so. In this paper, we explore in depth one of these democratic planning models, referred to as a "participatory economy". We focus on the algorithms and pseudocode that have been devised in computerized simulations to explore its main organizational function-its non-market, non command-planning allocation mechanism, which goes by the name "participatory planning"–in order to address the objection that a democratically-planned economy is not a practical possibility. With a roadmap of the algorithms and pseudocode, we encourage others to build and explore their own implementations of this model in any computer programming language.
+
+#### 2. A Participatory Economy in outline
+
+There are four main institutional components of the "third way" democratically-planned economy known as a
+
+participatory economy:3
+
+2.1. Division of labor
+
+Both capitalism and communism have hierarchical divisions of labor, where few perform the more empowering and desirable work while the vast majority perform less empowering and less desirable work. In a participatory economy, work is balanced so that all participants have a comparable mix of empowering and desirable work.
+
+1 Nove, 44. 
+2 Five models of democratic planning are outlined and discussed in the appendix of Hahnel (2021). In this book 
+Hahnel also discusses the problems with both market economies and command-planning economies in chapters 
+two, three, and four. 
+3 In addition to the aforementioned Hahnel (2021), other books that describe and elaborate on the participatory 
+economy model include Hahnel (2022), Albert (2021), Hahnel and Wright (2016), and Albert and Hahnel (1991). 
+The model is also described online at many websites, including https://www.participatoryeconomy.org. 
+
+2.2. Remuneration
+
+In twentieth century “communist” economies people were often paid according to how much their human capital contributed to the value of output. People in capitalist economies are paid according to market power and how much their human and physical capital contribute to the value of output. However, people in a participatory economy are paid according to the effort and sacrifice expended in socially valued labor, tempered by need.
+
+2.3. Institutional sovereign
+
+In a communist economy the planning authority is “sovereign” (i.e., it is recognized as the ultimate authority in the economy). In a capitalist economy limited-liability corporations are “sovereign.” In a participatory economy worker councils and consumer councils in which all members have an equal vote, as well as federations of worker and consumer councils, are “sovereign.”
+
+2.4. Allocation mechanism
+
+A capitalist economy allocates goods and services by means of markets, while a communist economy does so 
+by means of command planning. A participatory economy, as already mentioned briefly, uses an allocation 
+mechanism known as "participatory planning"4 where worker councils propose what they want to produce and 
+how they want to produce it, consumer councils propose what they want to consume, and councils then revise those 
+proposals in a series of iterations until excess demands for different goods, categories of labor, and inputs from the 
+natural environment are eliminated, i.e. until a “feasible plan” is reached. More specifically: 
+The actors in participatory planning are: 
+ Worker councils, and federations of worker councils. 
+ Neighborhood consumer councils, and federations of consumer councils. 
+ The best indicators available of social and opportunity costs of goods and services, referred to as "indicative 
+prices". 
+ A procedure to announce and adjust indicative prices, referred to in the literature as an "iteration facilitation 
+board" (IFB). 
+The annual participatory planning procedure is as follows: 
+ The IFB announces current estimates of indicative prices for all goods and services in the economy. 
+ Consumer councils make proposals for what they propose to consume, while worker councils make proposals 
+for what they propose to produce, and what inputs they would require to do so. 
+ If all excess demand from consumer councils' proposals are met by production proposals from worker councils, 
+we have an allocation plan which economists call “feasible,” i.e. it could be carried out. If not, the IFB adjusts 
+indicative prices up or down based on differences in supply and demand. Councils then revise their proposals 
+based on the new information from the IFB and the process is repeated until all excess demands are eliminated. 
+It is this annual participatory planning procedure which has been the focus of recent research using 
+computational, agent-based models, and which is also the focus of the present paper. One key issue this research 
+addresses is what has been called the "practicality question"-how many iterations would a participatory economy 
+
+4 More precisely, what is described here, and what we simulated in a computer program, is the participatory annual planning procedure, which determines what is produced and consumed during a year. Participatory procedures for generating investment and long-run development plans of different kinds have also now been proposed. See Hahnel (2021) and Hahnel (2022).
+
+require in order to arrive at a feasible economic plan? If the procedure requires hundreds of iterations for a single annual economic plan, that's certainly not very practical. Proponents of participatory planning have argued that there is no reason to assume that the number of iterations required would be excessive, and therefore impractical. But until recently there was no empirical evidence to support this conclusion. However, we now have some empirical evidence, thanks to the development of computerized models implementing the annual participatory planning procedure. So far the evidence seems to confirm what participatory economy advocates conjectured–that the number of iterations necessary for a participatory planning procedure to converge to a feasible plan is quite practical. Over many experiments, my fellow researchers and I discovered that on average it took only six iterations, with very little variation.5 We now turn to the details of these computerized models as algorithms and their pseudocode.
+
+#### 3. Economic and Mathematical Preliminaries
+
+The actors in a participatory planning procedure include worker councils and consumer councils. In a mathematical model, we can represent the behavior of worker councils using production functions and we can represent the behavior of consumer councils using utility functions. In particular, we use Cobb Douglas functions to represent these councils. The general form for a production function is:
+
+= (1)
+
+Where: is output, is labor input, is capital input, and are output elasticities (the relationship of 
+percentage change between input and output), is total factor productivity (a representation of what goes into 
+the output that isn't labor nor capital) 
+We adapt this prototypical Cobb Douglas function for our simulated participatory planning procedure as 
+follows: 
+
+= (2)
+
+where: is output, is a vector of intermediate inputs (goods used in the production of other goods), is a vector of natural resource inputs, is a vector of different kinds of labor inputs, represents the effort level expended by workers, , , , and give the elasticities for each input, q is the total factor productivity. We define the well-being generated by a worker council as follows:
+
+( , , , ) = [ − [ + + ]] − (3)
+
+where represents the social value of the worker council’s output, and , pr and pl represent the opportunity 
+costs of using its various inputs, the “indicative prices” previously explained. 
+Therefore, the first term represents an estimate of the value of worker council output to others, the second 
+term represents an estimate of the opportunity cost to society of all the inputs used by the worker council, and the 
+final term represents the negative utility to the workers in the council from the effort they expend. Since income for 
+members of a worker council depend positively on the quantity in large brackets and negatively on , the members 
+will presumably want to choose , , , and . to maximize the difference between the term in large brackets and 
+the final term. 
+
+5 A full presentation of the results of large-scale experiments investigating various aspects of the participatory planning procedure can be found in chapter 9 of Hahnel (2021).
+
+We then convert these formalisms into equations suitable to code. For this purpose, we use Wolfram Mathematica6 to generate the equations. The following is an example in Wolfram Language for a production function with two intermediate goods. We define a set of variables we wish to calculate. Following the convention above, we first declare a list of variables for output, intermediate goods, and effort:
+
+= { , 1, 2, } (4)
+
+We then define a function y which takes vars as input and computes a Cobb Douglas production function involving the total factor of productivity and elasticities:
+
+[ ] ∶= ∗ 1^ 1 ∗ 2^ 2 ∗ ^ (5)
+
+We have a companion function to take the derivative of , using the Wolfram function for derivative in relation to a given intermediate good and accompanying elasticity. (We take the derivative since we want to maximize the overall net well-being of the worker council.)
+
+[ ] ≔ [ [ ], ] (6)
+
+We then use the Mathematica Solve function to solve a system of equations for the variables in vars as follows: Solve[ = ∗ 1^ 1 ∗ 2^ 2 ∗ ^ && , = && , 1 = ∗ [1]&& , 2 = ∗ [2]&& , = ∗ ^ − 1 =∗ D[y[vars], ef] , vars;; where 1 and 2 represents the price of each input and refer to the price of each output refers to the disutility of effort (the dissatisfaction associated with work), calculated with an accompanying coefficient . The solution for this set of equations involving just two inputs appears below (written in the Clojure programming language) in Figure 1. The result is quite complicated and grows only more complicated with more inputs. For our research, we limited the number of inputs in our production function to a maximum of eight. However, I was able to generalize the production functions to any number of inputs, thanks to the regularity of the patterns in the solutions, so it is possible to extend the model accordingly.
+
+Figure 1. The resulting output, effort, and corresponding goods in our model for a workers' council involving two inputs.
+
+6 https://www.wolfram.com.
+
+The utility function to simulate a consumer council in the participatory planning procedure is more brief and nowhere near as complicated:
+
+( 1, 2) = 1 2 (7)
+
+subject to
+
+= ( 1 1) + ( 2 2) (8)
+
+Where: 1 is a vector of the private goods consumed by a consumer council, 2 is a vector of the public goods 
+consumed by a consumer council, and are the corresponding vectors of elasticities, 1 and 2 are the 
+corresponding vectors of indicative prices for private and public goods, represents the income earned by the 
+members of the consumer council. 
+In short, the well-being of a consumer council is represented by the utility they enjoy from consuming whatever 
+bundle of private and public goods they consume. The constraint reminds us that a consumer council cannot spend 
+more than it has in its budget. 
+
+#### 4. Algorithm and Pseudocode
+
+We can now articulate an algorithm to simulate a participatory planning procedure. We endeavor to track five broad categories of goods -- private goods, intermediate goods, public goods, natural resources, and categories of labor. The algorithm in broad strokes is as follows:  Generate all worker councils, consumer councils, and indicative prices, and load them all into memory.  For each worker council: Solve its well-being optimization problem-update its output, effort, and demands for inputs based on the latest indicative prices.  For each consumer council: Solve its well-being optimization problem-update its demands for public and private goods based on the latest indicative prices.  Calculate the new excess demands for all goods, natural resources, and categories of labor, and apply a price adjustment formula (about which more below) to update all indicative prices.  Increase our iteration counter by one.  Check all excess demands. Do they all fall within a prespecified threshold? If so, stop. If not, return to step 2 and repeat. We arrived at a price adjustment rule with some trial-and-error which seemed to be effective in helping the economy converge to a plan. The price adjustment formula we used is as follows:
+
+= (1.05 − 0.5 ), (9)
+
+except when > 0.25 then = 0.25 . where: is the percentage change in the price of a good for the next iteration, and is the percentage excess supply for a good in the iteration just completed. We implemented the following algorithm in the multi-agent programmable environment Netlogo7, as well as in Clojure (a list-processing functional language which compiles to Java bytecode for the Java Virtual Machine)8 and in Clojurescript (a variant of Clojure which compiles to Javascript for the World Wide Web)9. In all these instances, we implemented the detailed procedure below outlined in pseudocode. Instantiate worker councils. Each worker council is a key-value data structure incorporating the following
+
+7 https://ccl.northwestern.edu/netlogo/. 
+8 https://www.clojure.org. 
+9 https://clojurescript.org. 
+
+values, based largely on the well-being function for worker councils. 
+ industry (a simple identifier - 0 for private goods, 1 for intermediate goods, 2 for public goods). 
+ product (another simple identifier, 0 or 1). 
+ s (coefficient for disutility of effort). 
+ du (exponent for the disutilty of effort). 
+ c (effort elasticity). 
+ effort (defined with a starting value of 0.5). 
+ a (the total factor of productivity - a floating-point value within a given range, say 4 and 6). 
+ labor-quantities (starting with a very simple vector of vectors: [[0;;). 
+ production-inputs (a set of vectors to represent intermediate goods, natural resources, and kinds of available 
+labor -- a typical example could be [[6 7; [8; [1 2;;). 
+ input-exponents (the elasticities for intermediate goods: for a set of two intermediate goods a simple example 
+could be [0.16, 0.15;). 
+ nature-exponents (the elasticities for natural resources: for a single entry, an example could be [0.12;). 
+ labor-exponents (the elasticities for the natural resources: for a set of two, an example could be [0.10 0.11;). 
+ output (defined to start at a value of 0.5). 
+There is one important constraint to every worker council which is worth noting here: The combined set of 
+exponents (intermediate input-exponents, nature-exponents, and labor-exponents) when added together must be 
+less than one for any worker council. Violating this rule would lead to increasing returns to scale. We intentionally 
+violate this rule later to test our procedure for robustness, as explained below. 
+Instantiate consumer councils. Each consumer council is also a key-value data structure incorporating the 
+following values based largely on the well-being function for consumer councils. 
+ number-of-consumers (defined with a starting value of 10). 
+ private-good-demands (the private goods being consumed, comprising a list like [0 0 0 0 0;). 
+ public-good-demands (the public goods being consumed, also a list like [0 0 0 0 0;). 
+ private-good-exponents (the elasticities for the private goods, a list of values like [0.03 0.02 0.06 0.04 0.05;). 
+ public-good-exponents (the elasticities for the private goods, also a list of values like [0.02;). 
+ cy (the total factor of utility, defined with a value of 1). 
+In the memory state of the program, we instantiate the following values. 
+ The list of available private goods (for a list of ten goods, for example, a list of numbers 1 through 10). 
+ The list of available public goods (also a list 1 through N for a value N). 
+ The list of available intermediate goods (also a list 1 through N for a value N). 
+ The list of available natural resources (also a list 1 through N for a value N). 
+ The list of available categories of labor (also a list 1 through N for a value N). 
+ The list of prices for each of the available private goods, public goods, intermediate goods, natural resources, 
+and labor categories (in one instantiation, we set each good to a price of 700). 
+ The surpluses for each of the available private goods, public goods, intermediate goods, natural resources, and 
+labor categories. 
+ The supplies of natural resources (assigned in one instantiation at a value of 1000 to start). 
+ The supplies of categories of labor (assigned in one instantiation at a value of 1000 to start). 
+ An iteration counter, set at zero to start. 
+There are various other statistics that can be initialized. These include price deltas (the percentage change in 
+price across iterations), the gross domestic product of the economy, the Gini index (a measure of income inequality), 
+and so on. Various past instances of code have computed and displayed subsets of these statistics. 
+
+For each worker council, solve its optimization problem. The function which does this, named produce, takes 
+as input the indicative prices and the following components: 
+ (the total factor of productivity) 
+ (the coefficient for disutility of effort) 
+ (effort elasticity) 
+ (synonym for the exponent of the utility of effort) 
+ (the set of indicative prices) 
+ − (the production inputs) 
+ (the exponents for the production inputs) 
+ (the price for a given worker council's product and industry). 
+The output of the function is the worker's council revised output, revised effort, and revised demands for inputs. 
+For each consumer council, solve its optimization problem. The function which does this, named consume, 
+takes as input the indicative prices for public goods, and the indicative prices for private goods, and the following 
+components: income, private-good-demands, private-good-exponents, public-good-demands, public-good 
+exponents, as well as the total number of consumer councils in the economy. 
+For a given consumer council, we proceed as detailed below. 
+For each private good, the new demand for that private good is computed as follows: 
+
+∗ − −
+[( − − − − ) ∗ ( − − )]
+
+(10)
+
+For each public good, the new demand for that public good is computed as follows:
+
+∗ − −
+
+[
+
+( − − − − ) ∗
+( − − − − − ) ]
+
+(11)
+
+We divide the price by the number of consumer councils whose members are also consuming the public good, while we assume that every consumer of a public good must pay only his or her proportionate share of its cost. Update the surpluses (the difference between supply and demand) for all goods, natural resources, and categories of labor. Update all the indicative prices in the economy as follows: For each good within each of the five categories outlined: * Compute its surplus (supply minus demand); * Compute its new price adjustment, which we defined as [ ∗ (1.05 − 0.5^ );. We adapt this in pseudocode to be: 1.05 − 0.5^[|( ∗ 2)|/( + )]; * Multiply this price adjustment (termed a price delta) to the corresponding price adjustment of the previous round and take its absolute value. Then take the smaller of this product and the price adjustment just computed. Return this result or 0.001 whichever is larger. * If the surplus is positive (if supply is greater than demand), take that result and subtract it from one (so that [1 − − − ]) then multiply by the price of the corresponding good. * If the surplus is negative (if supply is less than the demand), take that result and add it to one (so that [1 + − − ]) then multiply by the price of the corresponding good. * If the surplus is zero (supply and demand are equal), return the previous price. We increase our iteration counter by one and then check to see if each surplus falls within a prescribed threshold. The algorithm calls for the planning procedure to halt if the threshold is met. However, for the purposes of exploration, we didn't always implement a halting mechanism, and one strictly speaking isn't necessary in the code. If the threshold is not met, we return to step four above and repeat.
+
+In one implementation where we display various components of the procedure, we color-coded the resulting surpluses as a convenience. See Figure 2 for a screenshot of such an implementation. As the surpluses for a given category of goods approached zero, the color of the display showing the surpluses changed from red (greater than 20% surplus), to orange (10%-20% surplus), to yellow (5%-10%), to green (3%-5%) to blue (3% surplus or less).
+
+Figure 2. Implementation of the participatory planning procedure as a color-coded web app.
+
+There are two other notable addenda to the pseudocode presented here that deserve mention. One, we 
+simulated a two-year simulation of the participatory planning procedure. First, we simulated Year One of our 
+participatory economy effectively from scratch as outlined in pseudocode above, then we preserved that 
+information for a Year Two simulation with the same economy and implemented an "augmented reset" as follows: 
+ Reset the iteration counter back to zero. 
+ For each worker council, randomly increase the input-exponents, nature-exponents, and labor-exponents by a 
+small amount (selected from the set [0, 0.001 0.002, 0.003, 0.004;). 
+ For each consumer council, randomly increase the private-good-exponents and public-good-exponents by a 
+small amount (selected from the set [-0.002, -0.001, 0, 0.001 0.002;). Naturally, since we occasionally added 
+negative numbers this will have the effect of reducing the size of the exponent in certain cases. 
+ Repeat the procedure starting from step three of the above pseudocode. 
+The adjustments in the exponents simulate the improvements of technology in the economy during the passage 
+of a given year. 
+To test the robustness of the procedure we intentionally violated our assumption requiring that the combined 
+set of intermediate input-exponents, nature-exponents, and labor-exponents in a given worker's council always 
+summed to less than one. The pseudocode for simulating increasing returns to scale is as follows: 
+ In step one of the pseudocode above, randomly select 20% of the worker councils in the economy. 
+ For that 20%, increase the size of each of the intermediate input-exponents, nature-exponents, and labor 
+exponents by 0.1, thus assuring that the total will be greater than one. 
+
+ Proceed with the rest of the pseudocode as directed.
+
+#### 5. Results
+
+The pseudocode was first implemented in the Netlogo environment, then was ported to the programming languages Clojure and Clojurescript. The transition to Clojure and Clojurescript made more feasible the expansion of the repertoire of types of goods and number of councils to better approximate the size of real world economies. In the largest scale considered, we generated forty experiments each comprising thirty thousand separate worker councils, thirty thousand consumer councils, and one hundred different goods. The results were first published in [REDACTED;, and were highly encouraging. When striving for a 5% threshold across two years of the lifespan of a simulated participatory planning procedure, we see an average of 6.5 iterations and an average GDP percentage increase of 2.446%. Even when we incorporate increasing returns to scale, the numbers are comparable: an average of 6.25 iterations, and an average GDP percentage increase of 1.859%. For the first time in democratic planning research, we have a prediction about its “practicality” backed up by some empirical support. The source code for all instances of the algorithm and pseudocode presented here are online10, as are the data files for the large-scale experiments reported.11
+
+#### 6. Proposed Future Directions
+
+There are a variety of proposed future directions for research involving pseudocode and algorithms for democratic-planning. These include the following:
+
+6.1. Other functions besides Cobb Douglas
+
+Cobb Douglas functions generate constant elasticities of demands for all goods, in contrast to real world economies where different goods can have very different elasticities. This algorithm can incorporate such functions by replacing our Cobb-Douglas-powered model with one or more other functions, and then replacing the resulting production and utility functions in steps four and five in the pseudocode.
+
+6.2. Improved price adjustment algorithms
+
+The price adjustment rule we used in the algorithm and in the pseudocode was arrived at with little concerted effort. Despite the encouraging results we believe we can do better. We intend to carry out more systematic research across the price adjustment space to find more efficient price adjustment rules.
+
+6.3. Environmental impacts
+
+We have given precious little attention in this algorithm and in this research to the environmental impacts of a participatory economy. We hope and believe that a participatory economy would treat the environment with greater care than either its capitalist or communist predecessors-an urgent question given the environmental calamities that await humanity if an environmentally-sound economy is not soon found. But hope and belief in a model or in a new system is not evidence. We should update the algorithm to incorporate pollutants, to examine how and if a participatory economy can minimize and reduce pollution (like the greenhouse gases that threaten runaway global
+
+10 The Clojure and Clojurescript code may be found at [REDACTED]; a version of the original Netlogo instance of 
+Pequod may be found at [REDACTED]. 
+11 The files are downloadable as gzipped Clojure data files at [REDACTED]. 
+
+climate change).
+
+6.4. Further robustness testing
+
+We added in some robustness testing in our pseudocode and in our testing (the increasing returns to scale), but more is needed to confirm that a participatory economy can handle different problems and concerns. We intend to update the algorithm and the pseudocode to violate different assumptions and test to see how the model handles those, if the economy convergences to a feasible allocation plan as quickly as before, more slowly, or not at all.
+
+6.5. Human intervention research
+
+The literature about a participatory economy offers the possibility of human intervention in the participatory planning procedure, particularly in later iterations where parts of the convergence may be slow or less-than effective. This would help speed the arrival of an allocation plan. The pseudocode could be updated to see if such interventions prove helpful.
+
+6.6. More interactions among councils
+
+In all of the simulations thus far simulated in computer code, worker councils and consumer councils interact with the IFB, but the councils do not otherwise interact with each other. The model allows for federations of both worker councils and consumer councils to account for collective consumption at regional, national, and international levels, as well as changes in industry output by changing the number of worker councils in the industry rather than changing the outputs of existing councils. The pseudocode could be updated to allow for complex interactions among councils and more sophisticated council arrangements-again, making for a still more complicated program and algorithm, but one more in tune to the proposal and vision of a participatory economy.
+
+6.7. Augment with other interactive software
+
+There is now a proposal to “design and build interactive participatory planning software in order to experiment with, improve upon and deepen our understanding of participatory planning in practice…and…in the longer-term, to build…planning software that could be used by a society wishing to implement a real-world pilot scheme.” 12 Components of the research presented here could be utilized by this new software project. Meanwhile, insights from this new project could help inform new research directions for this algorithm and accompanying pseudocode.
+
+#### 7. Conclusion
+
+Alec Nove’s claim that “there is no third way” beyond markets or command planning was an assertion 
+unaccompanied by a logical argument. Our previous theoretical research describing how a participatory economy 
+might function in theory was a first shot across the bow to Nove’s assertion. 
+Now Nove’s claim of “no third way” faces a new challenge: an implementation of the allocation mechanism for 
+a democratically planned economy as a computer program. The algorithm of that program, outlined here as 
+reasonably detailed pseudocode, and already implemented as working code, is available for examination, criticism, 
+further testing and improvement. 
+The results so far seem to confirm that a “third way” economy is not only possible in theory, but seems to be a 
+practical possibility as well. A much more compelling test of a democratically planned economy would be to 
+
+12 https://participatoryeconomy.org/project/participatory-planning-user-story-mapping/.
+
+implement one for some national economy in the real world. Absent that, we have pursued the next best option: 
+implementing such an economy as a computer program, to address reasonable concerns about the economy’s 
+practicality and robustness. 
+"There was no third way"-until there was! 
+
+Funding Statement
+
+This research received no external funding.
+
+#### Acknowledgments
+
+Acknowledgments to anonymous referees' comments and editor's effort.
+
+Conflict of interest
+
+All the authors claim that the manuscript is completely original. The authors also declare no conflict of interest.
+
+References 
+Albert, Michael. (2021). No Bosses. London: Zero Books. 
+Albert, Michael, and Hahnel, Robin. (1991). The Political Economy of Participatory Economics. Princeton, New 
+Jersey: Princeton University Press. https://doi.org/10.1515/9780691216003 
+Hahnel, Robin. (2021). Democratic Economic Planning. London: Routledge. 
+https://doi.org/10.4324/9781003173700 
+Hahnel, Robin. (2022). A Participatory Economy. Chico, California: AK Press. 
+Hahnel, Robin, and Wright, Erik Olin. (2016). Alternatives to Capitalism. London: Verso Books. 
+Nove, Alec. (1983). The Economics of Feasible Socialism. London: Routledge. 
+https://doi.org/10.4324/9781315000015 
+

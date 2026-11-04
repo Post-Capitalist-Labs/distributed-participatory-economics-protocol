@@ -1,0 +1,9 @@
+.DS_Store
+*.aux
+*.log
+*.out
+*.toc
+book/previews/
+book/previews_check/
+book/build_book.py
+book/gen_chapters_*.py

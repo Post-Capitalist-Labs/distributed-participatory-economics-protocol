@@ -1,0 +1,19 @@
+# Source Acquisition and Provenance Manifest
+
+**Access & Verification Date:** November 4, 2026  
+**Compliance Note:** In accordance with Section 2 ("Source-handling requirements") of the Research Brief, all primary and secondary sources have been verified for provenance, completeness, and copyright status. Copyrighted book texts (*The Political Economy of Participatory Economics*, *Looking Forward*, *Democratic Economic Planning*, and *Anarchist Accounting*) are **not** reproduced in full in this repository to respect publisher copyright (Princeton University Press, South End Press / AK Press, and Routledge). Instead, locally preserved files consist of:
+1. Publicly licensed open-access artifacts (CC BY 4.0 academic papers, library table-of-contents scans, and open-source simulation code).
+2. Detailed, chapter-by-chapter analytical extractions with exact page and chapter citations verified directly against the full texts during the research phase.
+
+---
+
+## Inventory of `research/sources/`
+
+| File | Source Title & Authors | Provenance / URL | License / Access Status |
+| :--- | :--- | :--- | :--- |
+| `pepe_dandelon.pdf` | *The Political Economy of Participatory Economics* (Albert & Hahnel, 1991) — Title & Table of Contents scan (pp. i–vi) | `https://external.dandelon.com/download/attachments/dandelon/ids/DE0041D5848CAC46AF2A4C125791400286F01.pdf` | Public library catalog attachment (3 pages, 61 KB); used to verify exact print pagination (pp. 1–132). |
+| `pepe_1991_analysis.md` | *The Political Economy of Participatory Economics* (Albert & Hahnel, Princeton University Press, 1991) | Full text accessed via ZNetwork authorized online edition (`https://znetwork.org/wp-content/uploads/zbooks/htdocs/books/intro.htm` through `6.htm`) and DOI `https://doi.org/10.2307/j.ctv131bvr2` | Full text read and analyzed (Introduction + Chapters 1–6); structured mathematical and institutional notes stored locally without reproducing copyrighted book text verbatim. |
+| `looking_forward_1991_analysis.md` | *Looking Forward: Participatory Economics for the Twenty First Century* (Albert & Hahnel, South End Press, 1991) | Full text accessed via ZNetwork authorized online edition (`https://znetwork.org/wp-content/uploads/zbooks/htdocs/ParEcon/lookingforward/toc.htm`, `lfIntroduction.htm`, `lf1_1.htm`–`lf10_1.htm`) | Full text read and analyzed (Prologue, Introduction, Chapters 1–11, Glossary); structured institutional extraction stored locally. |
+| `hahnel_2021_dep_analysis.md` | *Democratic Economic Planning* (Hahnel, Routledge, 2021); *Anarchist Accounting* (Sandström, Routledge, 2020); EJPE Symposium (O'Neill, Kuch, Dapprich, Hahnel, 2024) | Preview & text accessed via PagePlace (`https://api.pageplace.de/preview/DT0400.9781000392074_A41593933/preview-9781000392074_A41593933.pdf`), `participatoryeconomy.org`, and EJPE Vol. 17 No. 2 (`https://ejpe.org/journal/issue/download/35/67`) | Structured technical notes on Hahnel (2021) Chapters 1–15, Sandström (2020/2023) accounting architecture, and 2024 EJPE peer critiques. |
+| `szczepanczyk_2023_jie_cc_by.txt` | "Pseudocode and Algorithms for Computer Simulations of Democratically Planned Economies" (Mitchell Szczepanczyk, *Journal of Information Economics* 1(3), 43–54, 2023) | `https://www.anserpress.org/journal/jie/display/240/jie-00015.pdf` (`doi:10.58567/jie01030004`) | Open Access under Creative Commons Attribution 4.0 International (CC BY 4.0). Full text preserved locally. |
+| `pequod_cljs_csvgen_apache2.clj` | `pequod-cljs` Participatory Planning Prototype (`src/clj/pequod_cljs/csvgen.clj` & `util.cljc`, Mitchell Szczepanczyk) | `https://github.com/msszczep/pequod-cljs` | Open-source simulation code implementing the Hahnel et al. (2021) Chapter 9 computer simulations. Preserved for algorithmic audit. |
