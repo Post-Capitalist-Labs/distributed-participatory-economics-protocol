@@ -870,36 +870,37 @@ When we examine the computational structure formalized in Chapter 4, three archi
 
 \section{The Four-Layer Hybrid Architecture (Architecture D)}
 
-\begin{figure}[htbp]
+\begin{figure}[ht!]
 \centering
 \begin{tikzpicture}[
-  layer/.style={rectangle, rounded corners=3pt, draw=NavyPrimary, thick, text width=4.62in, minimum height=0.56in, align=left, inner sep=5pt, font=\scriptsize},
-  arrow/.style={-{Stealth[length=2.2mm]},-{Stealth[length=2.2mm]}, thick, color=CrimsonAccent}
+  node distance=0.34in,
+  layer/.style={rectangle, rounded corners=4pt, draw=NavyPrimary, line width=0.9pt, text width=4.52in, align=left, inner xsep=9pt, inner ysep=8.5pt, font=\scriptsize},
+  arrow/.style={{Stealth[length=2.4mm]}-{Stealth[length=2.4mm]}, line width=1.2pt, color=CrimsonAccent}
 ]
-  \node[layer, fill=SoftBg] (l4) at (0, 3.0) {
-    \textbf{\textcolor{CrimsonAccent}{LAYER 4: HUMAN DELIBERATION, ACCESSIBILITY \& LOCAL SOLVER EDGE}}\\[-1pt]
-    $\bullet$ Offline-First Mobile/Desktop PWA \& Native Clients (\texttt{Role-LP}) + Embedded \texttt{Clarabel.rs} / \texttt{HiGHS} WASM Solver\\[-1pt]
-    $\bullet$ ``What-If'' Collective Consumption Explorer, Qualitative \texttt{List} Browser \& Screen-Reader/Voice Interface
+  \node[layer, fill=SoftBg] (l4) {
+    {\footnotesize\textbf{\textcolor{CrimsonAccent}{LAYER 4: HUMAN DELIBERATION, ACCESSIBILITY \& LOCAL SOLVER EDGE}}}\par\vspace{3.5pt}
+    $\bullet$ Offline-First Mobile/Desktop PWA \& Native Clients (\texttt{Role-LP}) + Embedded \texttt{Clarabel.rs} / \texttt{HiGHS} WASM Solver\par\vspace{2pt}
+    $\bullet$ ``What-If Collective Consumption Explorer, Qualitative \texttt{List} Browser \& Screen-Reader/Voice Interface\par\vspace{1pt}
   };
-  \node[layer, fill=CodeBg] (l3) at (0, 2.0) {
-    \textbf{\textcolor{NavyPrimary}{LAYER 3: LOCAL-FIRST COUNCIL \& HOUSEHOLD STATE LAYER (ASYNC / OFFLINE)}}\\[-1pt]
-    $\bullet$ Encrypted SQLite (SQLCipher) Vector Ledger + Loro/Automerge Delta-CRDT Council Workspaces (\texttt{Role-CC})\\[-1pt]
-    $\bullet$ Pairwise Additive Masking + Local ZK/STARK Budget Prover + Revocable \texttt{PQ-UCAN} Capability Certificates
+  \node[layer, fill=CodeBg, below=of l4] (l3) {
+    {\footnotesize\textbf{\textcolor{NavyPrimary}{LAYER 3: LOCAL-FIRST COUNCIL \& HOUSEHOLD STATE LAYER (ASYNC / OFFLINE)}}}\par\vspace{3.5pt}
+    $\bullet$ Encrypted SQLite (SQLCipher) Vector Ledger + Loro/Automerge Delta-CRDT Council Workspaces (\texttt{Role-CC})\par\vspace{2pt}
+    $\bullet$ Pairwise Additive Masking + Local ZK/STARK Budget Prover + Revocable \texttt{PQ-UCAN} Capability Certificates\par\vspace{1pt}
   };
-  \node[layer, fill=SoftBg] (l2) at (0, 1.0) {
-    \textbf{\textcolor{TealAccent}{LAYER 2: FEDERATED AGGREGATION \& CONTENT-ADDRESSED DATA PLANE (P2P / QUIC)}}\\[-1pt]
-    $\bullet$ \texttt{iroh} / \texttt{quinn} (QUIC) P2P Transport with Delay-Tolerant Store-and-Forward Gateways (\texttt{Role-GW})\\[-1pt]
-    $\bullet$ \textbf{BLAKE3 Sparse Merkle-Sum Trees (MST)} (\texttt{Role-PCW}) + Verified Streaming of Qualitative \texttt{List} Blobs (\texttt{Role-SR})
+  \node[layer, fill=SoftBg, below=of l3] (l2) {
+    {\footnotesize\textbf{\textcolor{TealAccent}{LAYER 2: FEDERATED AGGREGATION \& CONTENT-ADDRESSED DATA PLANE (P2P / QUIC)}}}\par\vspace{3.5pt}
+    $\bullet$ \texttt{iroh} / \texttt{quinn} (QUIC) P2P Transport with Delay-Tolerant Store-and-Forward Gateways (\texttt{Role-GW})\par\vspace{2pt}
+    $\bullet$ \textbf{BLAKE3 Sparse Merkle-Sum Trees (MST)} (\texttt{Role-PCW}) + Verified Streaming of Qualitative \texttt{List} Blobs (\texttt{Role-SR})\par\vspace{1pt}
   };
-  \node[layer, fill=NavyPrimary!8!white] (l1) at (0, 0.0) {
-    \textbf{\textcolor{SlateDark}{LAYER 1: SELECTIVE EPOCH-BFT CHECKPOINT \& DETERMINISTIC IFB ENGINE}}\\[-1pt]
-    $\bullet$ Rotating Sortition-Selected BFT Committee (\texttt{Role-BFT}, CometBFT / Simplex) Committing 1 Checkpoint / Round\\[-1pt]
-    $\bullet$ Sandboxed Deterministic Fixed-Point \texttt{Wasmtime} IFB Price Engine + Sandstr\"om Society Account \& CAP Roots
+  \node[layer, fill=NavyPrimary!8!white, below=of l2] (l1) {
+    {\footnotesize\textbf{\textcolor{SlateDark}{LAYER 1: SELECTIVE EPOCH-BFT CHECKPOINT \& DETERMINISTIC IFB ENGINE}}}\par\vspace{3.5pt}
+    $\bullet$ Rotating Sortition-Selected BFT Committee (\texttt{Role-BFT}, CometBFT / Simplex) Committing 1 Checkpoint / Round\par\vspace{2pt}
+    $\bullet$ Sandboxed Deterministic Fixed-Point \texttt{Wasmtime} IFB Price Engine + Sandstr\"om Society Account \& CAP Roots\par\vspace{1pt}
   };
 
-  \draw[arrow] (l4.south) -- (l3.north);
-  \draw[arrow] (l3.south) -- (l2.north);
-  \draw[arrow] (l2.south) -- (l1.north);
+  \draw[arrow] ($(l4.south)+(0,-1.5pt)$) -- ($(l3.north)+(0,1.5pt)$);
+  \draw[arrow] ($(l3.south)+(0,-1.5pt)$) -- ($(l2.north)+(0,1.5pt)$);
+  \draw[arrow] ($(l2.south)+(0,-1.5pt)$) -- ($(l1.north)+(0,1.5pt)$);
 \end{tikzpicture}
 \caption{Four-Layer Architecture of the Distributed Participatory Economics Protocol (Architecture D)}
 \label{fig:arch-d}
