@@ -10,9 +10,10 @@ import os
 import re
 import statistics
 
-PEQUOD_DIR = "/tmp/pequod_audit/pequod-cljs/src/clj/pequod_cljs"
-TABLES_TXT = "/tmp/pequod_audit/pequod-cljs/resources/tables.txt"
-TABLES2_TXT = "/tmp/pequod_audit/pequod-cljs/resources/tables2.txt"
+PEQUOD_ROOT = os.environ.get("PEQUOD_DIR", "/tmp/pequod_audit/pequod-cljs")
+PEQUOD_DIR = os.path.join(PEQUOD_ROOT, "src/clj/pequod_cljs")
+TABLES_TXT = os.path.join(PEQUOD_ROOT, "resources/tables.txt")
+TABLES2_TXT = os.path.join(PEQUOD_ROOT, "resources/tables2.txt")
 
 def audit_clj_datasets():
     clj_files = sorted(glob.glob(os.path.join(PEQUOD_DIR, "dep1ex*.clj")))
@@ -29,6 +30,8 @@ def audit_clj_datasets():
     toothache_violations = 0
 
     for path in clj_files:
+        if os.path.getsize(path) < 1000:
+            continue  # Git LFS pointer; not fetched
         text = open(path).read()
         # Extract each WC map in wcs vector
         wcs_pos = text.find("(def wcs")

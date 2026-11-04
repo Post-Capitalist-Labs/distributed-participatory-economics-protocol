@@ -1,0 +1,3130 @@
+[
+  {
+    "label": "Albert, Michael, and Robin Hahnel (1991a).",
+    "entry": "Albert, Michael, and Robin Hahnel (1991a). The Political Economy of Participatory Economics. Princeton, NJ: Princeton University Press. 132 pp. ISBN 978-0-691-00384-9. DOI: https://doi.org/10.2307/j.ctv131bvr2. Print TOC/pagination scan preserved at research/sources/pepe\\_dandelon.pdf; full text ana",
+    "method": "doi",
+    "given_doi": "10.2307/j.ctv131bvr2",
+    "crossref": {
+      "doi": "10.2307/j.ctv131bvr2",
+      "title": "The Political Economy of Participatory Economics",
+      "authors": [
+        "Michael Albert",
+        "Robin Hahnel"
+      ],
+      "container": "",
+      "publisher": "Princeton University Press",
+      "year": 2020,
+      "volume": null,
+      "issue": null,
+      "page": null,
+      "type": "monograph"
+    }
+  },
+  {
+    "label": "Albert, Michael, and Robin Hahnel (1991b).",
+    "entry": "Albert, Michael, and Robin Hahnel (1991b). Looking Forward: Participatory Economics for the Twenty First Century. Boston, MA: South End Press. 154 pp. ISBN 978-0-89608-405-6. Full text analyzed via ZNetwork (https://znetwork.org/wp-content/uploads/zbooks/htdocs/ParEcon/lookingforward/toc.htm).",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.1177/027046769101100326",
+        "title": "The Looking Glass World of Nonfiction TV, Elayne Rapping. 1989. South End Press, Boston, MA. 201 pages. ISBN: 0-89608-282-2 (hc); 0-89608-281-4 (pb). $25.00 (hc); $9.00 (pb",
+        "authors": [],
+        "container": "Bulletin of Science, Technology &amp; Society",
+        "publisher": "SAGE Publications",
+        "year": 1991,
+        "volume": "11",
+        "issue": "3",
+        "page": "182-182",
+        "type": "journal-article",
+        "score": 53.324844
+      },
+      {
+        "doi": "10.1016/0147-5967(92)90105-g",
+        "title": "Looking forward participatory economics for the Twenty First Century",
+        "authors": [
+          "Stephen C Smith"
+        ],
+        "container": "Journal of Comparative Economics",
+        "publisher": "Elsevier BV",
+        "year": 1992,
+        "volume": "16",
+        "issue": "4",
+        "page": "765-773",
+        "type": "journal-article",
+        "score": 52.557175
+      },
+      {
+        "doi": "10.1080/00213624.1992.11505343",
+        "title": "Looking Forward: Participatory Economics for the Twenty First Century",
+        "authors": [
+          "Doug Brown"
+        ],
+        "container": "Journal of Economic Issues",
+        "publisher": "Informa UK Limited",
+        "year": 1992,
+        "volume": "26",
+        "issue": "3",
+        "page": "925-929",
+        "type": "journal-article",
+        "score": 49.108208
+      }
+    ]
+  },
+  {
+    "label": "Hahnel, Robin, and Michael Albert (1990).",
+    "entry": "Hahnel, Robin, and Michael Albert (1990). Quiet Revolution in Welfare Economics. Princeton, NJ: Princeton University Press. 440 pp. DOI (digital edition): https://doi.org/10.1515/9781400887057.",
+    "method": "doi",
+    "given_doi": "10.1515/9781400887057",
+    "crossref": {
+      "doi": "10.1515/9781400887057",
+      "title": "Quiet Revolution in Welfare Economics",
+      "authors": [
+        "Michael Albert",
+        "Robin Hahnel"
+      ],
+      "container": "",
+      "publisher": "Princeton University Press",
+      "year": 2017,
+      "volume": null,
+      "issue": null,
+      "page": null,
+      "type": "edited-book"
+    }
+  },
+  {
+    "label": "Albert, Michael (2003).",
+    "entry": "Albert, Michael (2003). Parecon: Life After Capitalism. London \\& New York: Verso Books. 311 pp. ISBN 978-1-85984-698-8. Full text analyzed via ZCommunications/ZNetwork (http://books.zcommunications.org/books/pareconv/) and PDF edition; analytical summary preserved at research/sources/albert\\_2003\\_",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.1002/sd.280",
+        "title": "Parecon: life after capitalism by Michael Albert. Verso, 2003. xxxix + 311 pp. ISBN 1‐85984‐698‐X",
+        "authors": [
+          "Miriam Kennet"
+        ],
+        "container": "Sustainable Development",
+        "publisher": "Wiley",
+        "year": 2005,
+        "volume": "13",
+        "issue": "4",
+        "page": "268-270",
+        "type": "journal-article",
+        "score": 97.76485
+      },
+      {
+        "doi": "10.1080/10455752.2023.2190533",
+        "title": "Cannibal Capitalism. How Our System Is Devouring Democracy, Care, and the Planet – And What We Can Do About It\n            <b>Cannibal Capitalism. How Our System Is Devouring Democracy, Care, and the Planet – And What We Can Do About It</b>\n            , by N. Fraser, New York and London, Verso Books, 2022, 208 pages, £14.99 (Hardback), ISBN 978-1-83976-123-2",
+        "authors": [
+          "Carlos Tornel"
+        ],
+        "container": "Capitalism Nature Socialism",
+        "publisher": "Informa UK Limited",
+        "year": 2023,
+        "volume": "34",
+        "issue": "4",
+        "page": "163-166",
+        "type": "journal-article",
+        "score": 63.11799
+      },
+      {
+        "doi": "10.1080/2325548x.2023.2277932",
+        "title": "Arid Empire: The Entangled Fates of Arizona and ArabiaArid Empire: The Entangled Fates of Arizona and ArabiaNatalieKoch. London and New York: Verso, 2023. $21.56 cloth (ISBN 9781839763694), $5.99 electronic (ISBN 9781839763724).",
+        "authors": [
+          "Clarence Dodge"
+        ],
+        "container": "The AAG Review of Books",
+        "publisher": "Informa UK Limited",
+        "year": 2024,
+        "volume": "12",
+        "issue": "1",
+        "page": "9-11",
+        "type": "journal-article",
+        "score": 58.972813
+      }
+    ]
+  },
+  {
+    "label": "Hahnel, Robin (2021).",
+    "entry": "Hahnel, Robin (2021). Democratic Economic Planning (with contributions by Peter Bohmer, Savvina Chowdhury, Allison Kerkhoff, Mitchell Szczepanczyk, and Michael Weisdorf). Abingdon \\& New York: Routledge. 358 pp. ISBN 978-1-032-00332-0. DOI: https://doi.org/10.4324/9781003173700.",
+    "method": "doi",
+    "given_doi": "10.4324/9781003173700",
+    "crossref": {
+      "doi": "10.4324/9781003173700",
+      "title": "Democratic Economic Planning",
+      "authors": [
+        "Robin Hahnel"
+      ],
+      "container": "",
+      "publisher": "Routledge",
+      "year": 2021,
+      "volume": null,
+      "issue": null,
+      "page": null,
+      "type": "book"
+    }
+  },
+  {
+    "label": "Hahnel, Robin (2022).",
+    "entry": "Hahnel, Robin (2022). A Participatory Economy. Chico, CA: AK Press. 160 pp. ISBN 978-1-84935-484-4.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.1080/02604027.2026.2669886",
+        "title": "<i>Practicing New Worlds: Abolition and Emergent Strategies</i>",
+        "authors": [
+          "Shandara Gill"
+        ],
+        "container": "World Futures",
+        "publisher": "Informa UK Limited",
+        "year": 2026,
+        "volume": null,
+        "issue": null,
+        "page": "1-5",
+        "type": "journal-article",
+        "score": 57.599606
+      },
+      {
+        "doi": "10.1080/2325548x.2023.2277953",
+        "title": "The Modern CrisisThe Modern CrisisMurrayBookchin. Oakland, CA: AK Press, 2022. 196 pp. $16.00 paper (ISBN 9781849354462), $8.00 electronic (ISBN 9781849354479).",
+        "authors": [
+          "Federico Venturini"
+        ],
+        "container": "The AAG Review of Books",
+        "publisher": "Informa UK Limited",
+        "year": 2024,
+        "volume": "12",
+        "issue": "1",
+        "page": "7-8",
+        "type": "journal-article",
+        "score": 38.441914
+      },
+      {
+        "doi": "10.1080/14681994.2023.2246410",
+        "title": "Pleasure Activism: The Politics of FeelingPleasure Activism: The Politics of Feeling, by adrienne maree brown. Chico, CA: AK Press, (2019). 464 pp., $20 (USA).",
+        "authors": [
+          "Danielle A. Samuel"
+        ],
+        "container": "Sexual and Relationship Therapy",
+        "publisher": "Informa UK Limited",
+        "year": 2023,
+        "volume": "39",
+        "issue": "1",
+        "page": "288-290",
+        "type": "journal-article",
+        "score": 37.033394
+      }
+    ]
+  },
+  {
+    "label": "Sandstr\\\"om, Anders (2020).",
+    "entry": "Sandstr\\\"om, Anders (2020). Anarchist Accounting: Accounting Principles for a Democratic Economy. Abingdon \\& New York: Routledge. 140 pp. ISBN 978-0-367-47703-5. DOI: https://doi.org/10.4324/9781003036005.",
+    "method": "doi",
+    "given_doi": "10.4324/9781003036005",
+    "crossref": {
+      "doi": "10.4324/9781003036005",
+      "title": "Anarchist Accounting",
+      "authors": [
+        "Anders Sandström"
+      ],
+      "container": "",
+      "publisher": "Routledge",
+      "year": 2020,
+      "volume": null,
+      "issue": null,
+      "page": null,
+      "type": "book"
+    }
+  },
+  {
+    "label": "Sandstr\\\"om, Anders (2023).",
+    "entry": "Sandstr\\\"om, Anders (2023). ``An Accounting System for a Libertarian Socialist Economy.'' Participatory Economy Project, February 14, 2023. https://participatoryeconomy.org/an-accounting-system-for-a-libertarian-socialist-economy/.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.1080/13563467.2022.2095995",
+        "title": "Karl Polanyi’s ‘socialist accounting’ and ‘overview’ in the age of data analytics",
+        "authors": [
+          "Silvia Rief"
+        ],
+        "container": "New Political Economy",
+        "publisher": "Informa UK Limited",
+        "year": 2022,
+        "volume": "28",
+        "issue": "2",
+        "page": "284-298",
+        "type": "journal-article",
+        "score": 62.09871
+      },
+      {
+        "doi": "10.4324/9781003371571-4",
+        "title": "Libertarian Socialism",
+        "authors": [
+          "Steven Rosefielde"
+        ],
+        "container": "Socialist Economic Systems",
+        "publisher": "Routledge",
+        "year": 2023,
+        "volume": null,
+        "issue": null,
+        "page": "20-51",
+        "type": "book-chapter",
+        "score": 60.544186
+      },
+      {
+        "doi": "10.1017/cbo9780511895678.006",
+        "title": "Value accounting, prices, and socialist planning",
+        "authors": [],
+        "container": "Marxian Political Economy",
+        "publisher": "Cambridge University Press",
+        "year": 1977,
+        "volume": null,
+        "issue": null,
+        "page": "111-130",
+        "type": "book-chapter",
+        "score": 59.29048
+      }
+    ]
+  },
+  {
+    "label": "Sandstr\\\"om, Anders (2025).",
+    "entry": "Sandstr\\\"om, Anders (2025). The Participatory Economy: Adding Realism to Democratic Planning. Abingdon \\& New York: Routledge. ISBN 978-1-041-22413-6. DOI: https://doi.org/10.4324/9781003732174 (Crossref dates the online edition 2026; subtitle not confirmed there).",
+    "method": "doi",
+    "given_doi": "10.4324/9781003732174",
+    "crossref": {
+      "doi": "10.4324/9781003732174",
+      "title": "The Participatory Economy",
+      "authors": [
+        "Anders Sandström"
+      ],
+      "container": "",
+      "publisher": "Routledge",
+      "year": 2026,
+      "volume": null,
+      "issue": null,
+      "page": null,
+      "type": "monograph"
+    }
+  },
+  {
+    "label": "Szczepanczyk, Mitchell (2023).",
+    "entry": "Szczepanczyk, Mitchell (2023). ``Pseudocode and Algorithms for Computer Simulations of Democratically Planned Economies.'' Journal of Information Economics 1, no. 3: 43-54. DOI: https://doi.org/10.58567/jie01030004. Open-access CC BY 4.0 full text and pequod-cljs source code (https://github.com/mssz",
+    "method": "doi",
+    "given_doi": "10.58567/jie01030004",
+    "crossref": {
+      "doi": "10.58567/jie01030004",
+      "title": "Pseudocode and Algorithms for Computer Simulations of Democratically Planned Economies",
+      "authors": [
+        "Mitchell Szczepanczyk"
+      ],
+      "container": "Journal of Information Economics",
+      "publisher": "Anser Press Pte. Ltd.",
+      "year": 2023,
+      "volume": "1",
+      "issue": "3",
+      "page": null,
+      "type": "journal-article"
+    }
+  },
+  {
+    "label": "Participatory Economy Project (2023).",
+    "entry": "Participatory Economy Project (2023). ``Participatory Planning: User Story Mapping.'' https://participatoryeconomy.org/project/participatory-planning-user-story-mapping/.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.4135/9781529695915.n3",
+        "title": "Marie-Eve Drouin and Alicia Ibarra Discuss Recruitment for Participatory Mapping as Decolonization Work",
+        "authors": [],
+        "container": "Participatory Mapping as a Decolonial Tool to Re-Story the City as an Indigenous Place",
+        "publisher": "SAGE Publications, Ltd",
+        "year": 2024,
+        "volume": null,
+        "issue": null,
+        "page": null,
+        "type": "book-chapter",
+        "score": 65.52798
+      },
+      {
+        "doi": "10.17528/cifor/data.00276",
+        "title": "Results of Participatory Mapping in Katingan Mentaya Project",
+        "authors": [
+          "Duchelle A",
+          "Boissiere M",
+          "Selviana V",
+          "Anggraini F",
+          "Karlina F",
+          "Parningotan NA"
+        ],
+        "container": "Results of Participatory Mapping in Katingan Mentaya Project",
+        "publisher": "Center for International Forestry Research (CIFOR) and World Agroforestry Centre (ICRAF)",
+        "year": 2022,
+        "volume": null,
+        "issue": null,
+        "page": null,
+        "type": "dataset",
+        "score": 65.36773
+      },
+      {
+        "doi": "10.4135/9781529695915.n2",
+        "title": "Marie-Eve Drouin and Alicia Ibarra Discuss Personal Obligations for Participatory Mapping as Decolonization Work",
+        "authors": [],
+        "container": "Participatory Mapping as a Decolonial Tool to Re-Story the City as an Indigenous Place",
+        "publisher": "SAGE Publications, Ltd",
+        "year": 2024,
+        "volume": null,
+        "issue": null,
+        "page": null,
+        "type": "book-chapter",
+        "score": 65.00328
+      }
+    ]
+  },
+  {
+    "label": "Arrow, Kenneth J., Leonid Hurwicz, and Hirofumi Uzawa (1958).",
+    "entry": "Arrow, Kenneth J., Leonid Hurwicz, and Hirofumi Uzawa (1958). Studies in Linear and Nonlinear Programming. Stanford, CA: Stanford University Press.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.1017/s0008439500025522",
+        "title": "Studies in linear and non-linear programming, by K. J. Arrow, L. Hurwicz and H. Uzawa. Stanford University Press, 1958. 229 pages. $7.50.",
+        "authors": [
+          "A.M. Duguid"
+        ],
+        "container": "Canadian Mathematical Bulletin",
+        "publisher": "Canadian Mathematical Society",
+        "year": 1960,
+        "volume": "3",
+        "issue": "3",
+        "page": "196-198",
+        "type": "journal-article",
+        "score": 79.68313
+      },
+      {
+        "doi": "10.1017/s0025557200043011",
+        "title": "Studies in Linear and Non-Linear Programming. (Stanford Mathematical Studies in the Social Sciences.) By K. J. Arrow, L. Hurwicz, and H. Uzawa. Pp. 229. 60s. 1958. (Stanford Univ. Press)",
+        "authors": [
+          "S. Vajda"
+        ],
+        "container": "The Mathematical Gazette",
+        "publisher": "Informa UK Limited",
+        "year": 1960,
+        "volume": "44",
+        "issue": "348",
+        "page": "151-151",
+        "type": "journal-article",
+        "score": 78.56104
+      },
+      {
+        "doi": "10.2307/1910003",
+        "title": "Studies in Linear and Nonlinear Programming",
+        "authors": [
+          "H. P. Kunzi",
+          "J. K. Arrow",
+          "L. Hurwicz",
+          "H. Uzawa"
+        ],
+        "container": "Econometrica",
+        "publisher": "JSTOR",
+        "year": 1963,
+        "volume": "31",
+        "issue": "3",
+        "page": "611",
+        "type": "journal-article",
+        "score": 61.94887
+      }
+    ]
+  },
+  {
+    "label": "Heal, Geoffrey M. (1973).",
+    "entry": "Heal, Geoffrey M. (1973). The Theory of Economic Planning. Amsterdam: North-Holland Publishing Co.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.1007/bf02380254",
+        "title": "Aspects of language",
+        "authors": [
+          "H. Schnelle"
+        ],
+        "container": "Philosophia",
+        "publisher": "Springer Science and Business Media LLC",
+        "year": 1973,
+        "volume": "3",
+        "issue": "2-3",
+        "page": "295-341",
+        "type": "journal-article",
+        "score": 41.680958
+      },
+      {
+        "doi": "10.1016/0160-9327(60)90083-1",
+        "title": "Theory of elementary particles By P. Roman. Pp. xii + 575. North Holland Publishing Co., Amsterdam. 1960. 1005. net",
+        "authors": [
+          "A SALAM"
+        ],
+        "container": "Endeavour",
+        "publisher": "Elsevier BV",
+        "year": 1960,
+        "volume": "19",
+        "issue": "76",
+        "page": "229",
+        "type": "journal-article",
+        "score": 41.378967
+      },
+      {
+        "doi": "10.1017/s0770451800003092",
+        "title": "Studies in Economic Planning over Space and Time. Edited by G.G. Judge and T. Takayama, Amsterdam, North-Holland Publishing Company, 1973, XIII p. 727 p., DFL 180.00.",
+        "authors": [],
+        "container": "Recherches économiques de Louvain",
+        "publisher": "CAIRN",
+        "year": 1974,
+        "volume": "40",
+        "issue": "3",
+        "page": "299-300",
+        "type": "journal-article",
+        "score": 40.54924
+      }
+    ]
+  },
+  {
+    "label": "Henry, Claude (1972).",
+    "entry": "Henry, Claude (1972). ``Differential Equations with Discontinuous Right-Hand Side for Planning Procedures.'' Journal of Economic Theory 4, no. 3: 545-551. DOI: https://doi.org/10.1016/0022-0531(72)90138-x.",
+    "method": "doi",
+    "given_doi": "10.1016/0022-0531(72)90138-x",
+    "crossref": {
+      "doi": "10.1016/0022-0531(72)90138-x",
+      "title": "Differential equations with discontinuous right-hand side for planning procedures",
+      "authors": [
+        "Claude Henry"
+      ],
+      "container": "Journal of Economic Theory",
+      "publisher": "Elsevier BV",
+      "year": 1972,
+      "volume": "4",
+      "issue": "3",
+      "page": "545-551",
+      "type": "journal-article"
+    }
+  },
+  {
+    "label": "Hurwicz, Leonid (1973).",
+    "entry": "Hurwicz, Leonid (1973). ``The Design of Mechanisms for Resource Allocation.'' American Economic Review 63, no. 2: 1-30.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.1093/oso/9780199313280.003.0009",
+        "title": "The Design of Mechanisms for Resource Allocation",
+        "authors": [],
+        "container": "The Collected Papers of Leonid Hurwicz",
+        "publisher": "Oxford University Press",
+        "year": 2022,
+        "volume": null,
+        "issue": null,
+        "page": "83-119",
+        "type": "book-chapter",
+        "score": 62.002632
+      },
+      {
+        "doi": "10.1093/oso/9780199313280.003.0014",
+        "title": "Economic Design, Adjustment Processes, Mechanisms, and Institutions",
+        "authors": [],
+        "container": "The Collected Papers of Leonid Hurwicz",
+        "publisher": "Oxford University Press",
+        "year": 2022,
+        "volume": null,
+        "issue": null,
+        "page": "193-208",
+        "type": "book-chapter",
+        "score": 52.152725
+      },
+      {
+        "doi": "10.1017/cbo9780511752940.002",
+        "title": "The design of resource allocation mechanisms",
+        "authors": [
+          "Leonid Hurwicz"
+        ],
+        "container": "Studies in Resource Allocation Processes",
+        "publisher": "Cambridge University Press",
+        "year": 1977,
+        "volume": null,
+        "issue": null,
+        "page": "3-38",
+        "type": "book-chapter",
+        "score": 48.557434
+      }
+    ]
+  },
+  {
+    "label": "Hayek, Friedrich A. (1945).",
+    "entry": "Hayek, Friedrich A. (1945). ``The Use of Knowledge in Society.'' American Economic Review 35, no. 4: 519-530.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.7312/hayo18620-017",
+        "title": "5 Friedrich Hayek, from “The Use of Knowledge in Society” (1945)",
+        "authors": [],
+        "container": "Information",
+        "publisher": "Columbia University Press",
+        "year": 2021,
+        "volume": null,
+        "issue": null,
+        "page": null,
+        "type": "book-chapter",
+        "score": 48.48625
+      },
+      {
+        "doi": "10.4324/9781003527152-33",
+        "title": "Friedrich Hayek, “The Use of Knowledge in Society”",
+        "authors": [
+          "Matt Zwolinski",
+          "Mario I. Juarez-Garcia"
+        ],
+        "container": "Arguing About Political Philosophy",
+        "publisher": "Routledge",
+        "year": 2025,
+        "volume": null,
+        "issue": null,
+        "page": "341-348",
+        "type": "book-chapter",
+        "score": 36.492374
+      },
+      {
+        "doi": "10.2307/1949539",
+        "title": "The Road to Serfdom. By Friedrich A. Hayek. Chicago: University of Chicago Press. 1944. Pp. xi, 250. $2.75.)",
+        "authors": [
+          "Carl J. Friedrich"
+        ],
+        "container": "American Political Science Review",
+        "publisher": "Cambridge University Press (CUP)",
+        "year": 1945,
+        "volume": "39",
+        "issue": "3",
+        "page": "575-579",
+        "type": "journal-article",
+        "score": 33.25758
+      }
+    ]
+  },
+  {
+    "label": "Lange, Oskar, and Fred M. Taylor (1938/1964).",
+    "entry": "Lange, Oskar, and Fred M. Taylor (1938/1964). On the Economic Theory of Socialism, ed.\\ Benjamin E. Lippincott. New York: Monthly Review Press.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.1086/218095",
+        "title": "<i>On the Economic Theory of Socialism: Papers by Oskar Lange and Fred M. Taylor.</i>Oskar Lange , Fred M. Taylor , Benjamin E. Lippincott",
+        "authors": [
+          "Frank H. Knight"
+        ],
+        "container": "American Journal of Sociology",
+        "publisher": "University of Chicago Press",
+        "year": 1939,
+        "volume": "44",
+        "issue": "4",
+        "page": "600-600",
+        "type": "journal-article",
+        "score": 75.703415
+      },
+      {
+        "doi": "10.2307/137077",
+        "title": "On the Economic Theory of Socialism, papers by Oskar Lange and Fred M. Taylor, edited by Benjamin E. Lippincott (Minneapolis, University of Minnesota Press, 1938, pp. vii, 143, $1.75).",
+        "authors": [
+          "V. W. Bladen"
+        ],
+        "container": "Canadian Journal of Economics and Political Science",
+        "publisher": "Cambridge University Press (CUP)",
+        "year": 1940,
+        "volume": "6",
+        "issue": "1",
+        "page": "119-120",
+        "type": "journal-article",
+        "score": 65.8925
+      },
+      {
+        "doi": "10.2307/1052453",
+        "title": "On the Economic Theory of Socialism",
+        "authors": [
+          "Edgar Z. Palmer",
+          "Oskar Lange",
+          "Fred M. Taylor",
+          "Benjamin E. Lippincott"
+        ],
+        "container": "Southern Economic Journal",
+        "publisher": "JSTOR",
+        "year": 1938,
+        "volume": "5",
+        "issue": "2",
+        "page": "232",
+        "type": "journal-article",
+        "score": 54.946735
+      }
+    ]
+  },
+  {
+    "label": "Nove, Alec (1983).",
+    "entry": "Nove, Alec (1983). The Economics of Feasible Socialism. London: George Allen \\& Unwin.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.2307/2497396",
+        "title": "The Economics of Feasible Socialism. By Alec Nove. London, Boston, and Sydney: George Allen and Unwin, 1983. xi, 244 pp. $29.50, cloth. $9.95, paper.",
+        "authors": [
+          "Holland Hunter"
+        ],
+        "container": "Slavic Review",
+        "publisher": "Cambridge University Press (CUP)",
+        "year": 1983,
+        "volume": "42",
+        "issue": "4",
+        "page": "705-705",
+        "type": "journal-article",
+        "score": 78.18875
+      },
+      {
+        "doi": "10.1177/003231878703900222",
+        "title": "Alec Nove, Socialism, Economics and Development (London: Allen &amp; Unwin, 1986), pp. 243. £25.00.",
+        "authors": [
+          "Keith Jackson"
+        ],
+        "container": "Political Science",
+        "publisher": "Informa UK Limited",
+        "year": 1987,
+        "volume": "39",
+        "issue": "2",
+        "page": "216-217",
+        "type": "journal-article",
+        "score": 62.417316
+      },
+      {
+        "doi": "10.2307/2496973",
+        "title": "Political Economy and Soviet Socialism. By Alec Nove. London: George Allen &amp; Unwin, 1979. xii, 249 pp. $27.50.",
+        "authors": [
+          "Deborah Duff Milenkovitch"
+        ],
+        "container": "Slavic Review",
+        "publisher": "Cambridge University Press (CUP)",
+        "year": 1981,
+        "volume": "40",
+        "issue": "2",
+        "page": "297-298",
+        "type": "journal-article",
+        "score": 60.326298
+      }
+    ]
+  },
+  {
+    "label": "Buchanan, Allen (1985).",
+    "entry": "Buchanan, Allen (1985). Ethics, Efficiency, and the Market. Totowa, NJ: Rowman and Littlefield.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.1017/s0012217300044978",
+        "title": "Marx and Justice: The Radical Critique of LiberalismAllen Buchanan Totowa, NJ: Rowman and Littlefield, 1982. Pp. vii, 206. $23.50",
+        "authors": [
+          "Derek P. H. Allen"
+        ],
+        "container": "Dialogue",
+        "publisher": "Cambridge University Press (CUP)",
+        "year": 1984,
+        "volume": "23",
+        "issue": "2",
+        "page": "343-345",
+        "type": "journal-article",
+        "score": 56.46762
+      },
+      {
+        "doi": "10.1017/s0034670500034586",
+        "title": "Economic Activity and Morality - Allen Buchanan: Ethics, Efficiency, and the Market. (Totowa, New Jersey: Rowman &amp; Allanheld, 1985. Pp. viii, 135. $24.50. $10.95 paper.)",
+        "authors": [
+          "Stephen T. Worland"
+        ],
+        "container": "The Review of Politics",
+        "publisher": "Cambridge University Press (CUP)",
+        "year": 1987,
+        "volume": "49",
+        "issue": "3",
+        "page": "458-462",
+        "type": "journal-article",
+        "score": 55.353214
+      },
+      {
+        "doi": "10.1017/s0012217300040403",
+        "title": "Ethics in the World of BusinessDavid Braybrooke Totowa, NJ: Rowman &amp; Allanheld, 1983. Pp. ix, 488. $16.00",
+        "authors": [
+          "Richard Bronaugh"
+        ],
+        "container": "Dialogue",
+        "publisher": "Cambridge University Press (CUP)",
+        "year": 1985,
+        "volume": "24",
+        "issue": "3",
+        "page": "545-548",
+        "type": "journal-article",
+        "score": 46.874634
+      }
+    ]
+  },
+  {
+    "label": "Cockshott, W. Paul, and Allin Cottrell (1993).",
+    "entry": "Cockshott, W. Paul, and Allin Cottrell (1993). Towards a New Socialism. Nottingham: Spokesman Books.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.1007/s12113-004-1036-4",
+        "title": "Towards a new socialism? By W. Paul Cockshott and Allin F. Cottrell. Nottingham, U.K.: Spokesman books, 1993",
+        "authors": [
+          "Len Brewster"
+        ],
+        "container": "The Quarterly Journal of Austrian Economics",
+        "publisher": "Mises Institute",
+        "year": 2004,
+        "volume": "7",
+        "issue": "1",
+        "page": "65-77",
+        "type": "journal-article",
+        "score": 88.16499
+      },
+      {
+        "doi": "10.1177/030639687701800411",
+        "title": "Book reviews : The Pike Report Introduced by PHIL AGEE (Nottingham, Spokesman Books, 1977). 284pp. £2.25 CIA and the labour movement By FRED HIRSCH and RICHARD FLETCHER (Nottingham, Spokesman Books, 1977). 71pp. 95p",
+        "authors": [
+          "Tony Bunyan"
+        ],
+        "container": "Race &amp; Class",
+        "publisher": "SAGE Publications",
+        "year": 1977,
+        "volume": "18",
+        "issue": "4",
+        "page": "416-418",
+        "type": "journal-article",
+        "score": 35.422794
+      },
+      {
+        "doi": "10.1016/s0161-7230(04)22009-0",
+        "title": "REFLECTIONS ON ECONOMIC DEMOCRACY",
+        "authors": [
+          "W.Paul Cockshott",
+          "Allin Cottrell"
+        ],
+        "container": "Research in Political Economy",
+        "publisher": "Emerald (MCB UP )",
+        "year": null,
+        "volume": null,
+        "issue": null,
+        "page": "217-258",
+        "type": "book-chapter",
+        "score": 35.07392
+      }
+    ]
+  },
+  {
+    "label": "Devine, Pat (1988).",
+    "entry": "Devine, Pat (1988). Democracy and Economic Planning: The Political Economy of a Self-Governing Society. Boulder, CO: Westview Press.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.4324/9780429033117",
+        "title": "Democracy and Economic Planning",
+        "authors": [
+          "Pat Devine"
+        ],
+        "container": "",
+        "publisher": "Routledge",
+        "year": 2020,
+        "volume": null,
+        "issue": null,
+        "page": null,
+        "type": "book",
+        "score": 69.844215
+      },
+      {
+        "doi": "10.4324/9780429033117-6",
+        "title": "Democracy",
+        "authors": [
+          "Pat Devine"
+        ],
+        "container": "Democracy and Economic Planning",
+        "publisher": "Routledge",
+        "year": 2020,
+        "volume": null,
+        "issue": null,
+        "page": "138-161",
+        "type": "book-chapter",
+        "score": 69.11148
+      },
+      {
+        "doi": "10.4324/9780429033117-2",
+        "title": "Capitalist Planning",
+        "authors": [
+          "Pat Devine"
+        ],
+        "container": "Democracy and Economic Planning",
+        "publisher": "Routledge",
+        "year": 2020,
+        "volume": null,
+        "issue": null,
+        "page": "29-54",
+        "type": "book-chapter",
+        "score": 67.61188
+      }
+    ]
+  },
+  {
+    "label": "Schweickart, David (1993).",
+    "entry": "Schweickart, David (1993). Against Capitalism. Cambridge: Cambridge University Press.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.1177/004839319702700306",
+        "title": "Book Reviews : David Schweickart, Against Capitalism. Cambridge: Cambridge University Press, 1993. Pp. 387. $80.00",
+        "authors": [
+          "David A. Duquette"
+        ],
+        "container": "Philosophy of the Social Sciences",
+        "publisher": "SAGE Publications",
+        "year": 1997,
+        "volume": "27",
+        "issue": "3",
+        "page": "361-369",
+        "type": "journal-article",
+        "score": 64.761375
+      },
+      {
+        "doi": "10.1093/ww/9780199540884.013.u171986",
+        "title": "David, Richard (William), (28 Jan. 1912–25 April 1993), formerly Publisher to the University, Cambridge University Press; Fellow of Clare Hall, Cambridge",
+        "authors": [],
+        "container": "Who Was Who",
+        "publisher": "Oxford University Press",
+        "year": 2007,
+        "volume": null,
+        "issue": null,
+        "page": null,
+        "type": "reference-entry",
+        "score": 48.868874
+      },
+      {
+        "doi": "10.2307/4051341",
+        "title": "David McKitterick. A History of Cambridge University Press. Volume I: Printing and the Book Trade in Cambridge, 1534–1698. New York: Cambridge University Press. 1992. Pp. xxiv, 500. $125.00.",
+        "authors": [
+          "David H. Stam"
+        ],
+        "container": "Albion",
+        "publisher": "Cambridge University Press (CUP)",
+        "year": 1993,
+        "volume": "25",
+        "issue": "4",
+        "page": "687-688",
+        "type": "journal-article",
+        "score": 44.828598
+      }
+    ]
+  },
+  {
+    "label": "Laibman, David (2014).",
+    "entry": "Laibman, David (2014). ``Horizontalism and Idealism in Socialist Imagination: An Appraisal of the Participatory Economy.'' Science \\& Society 78, no. 2: 207-234. DOI: https://doi.org/10.1521/siso.2014.78.2.207. Abstract consulted.",
+    "method": "doi",
+    "given_doi": "10.1521/siso.2014.78.2.207",
+    "crossref": {
+      "doi": "10.1521/siso.2014.78.2.207",
+      "title": "Horizontalism and Idealism in Socialist Imagination: An Appraisal of the Participatory Economy",
+      "authors": [
+        "David Laibman"
+      ],
+      "container": "Science &amp; Society: A Journal of Marxist Thought and Analysis",
+      "publisher": "SAGE Publications",
+      "year": 2014,
+      "volume": "78",
+      "issue": "2",
+      "page": "207-234",
+      "type": "journal-article"
+    }
+  },
+  {
+    "label": "Hahnel, Robin (2014).",
+    "entry": "Hahnel, Robin (2014). ``Response to David Laibman's `Appraisal of the Participatory Economy'.'' Science \\& Society 78, no. 3: 379-389. DOI: https://doi.org/10.1521/siso.2014.78.3.379. Bibliographic record only.",
+    "method": "doi",
+    "given_doi": "10.1521/siso.2014.78.3.379",
+    "crossref": {
+      "doi": "10.1521/siso.2014.78.3.379",
+      "title": "Response to David Laibman's “Appraisal of the Participatory Economy”\n                    <sup/>",
+      "authors": [
+        "Robin Hahnel"
+      ],
+      "container": "Science &amp; Society: A Journal of Marxist Thought and Analysis",
+      "publisher": "SAGE Publications",
+      "year": 2014,
+      "volume": "78",
+      "issue": "3",
+      "page": "379-389",
+      "type": "journal-article"
+    }
+  },
+  {
+    "label": "Hahnel, Robin, and Erik Olin Wright (2016).",
+    "entry": "Hahnel, Robin, and Erik Olin Wright (2016). Alternatives to Capitalism: Proposals for a Democratic Economy. London: Verso Books.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.5195/jwsr.2018.873",
+        "title": "Review of Alternatives to Capitalism: Proposals for a Democratic Economy by Robin Hahnel and Erik Olin Wright. 2016. London: Verso. 148 pages, ISBN 978-1-7847-8504-8 Paper ($19.95)",
+        "authors": [
+          "Dennis O'Hearn"
+        ],
+        "container": "Journal of World-Systems Research",
+        "publisher": "University Library System, University of Pittsburgh",
+        "year": 2018,
+        "volume": "24",
+        "issue": "2",
+        "page": "488-495",
+        "type": "journal-article",
+        "score": 93.95035
+      },
+      {
+        "doi": "10.17583/rimcis.2017.2651",
+        "title": "Alternatives to Capitalism. Proposals for a Democratic Economy, by Robin Hahnel and Erik Olin Wright",
+        "authors": [
+          "Alfonso Rodríguez"
+        ],
+        "container": "International and Multidisciplinary Journal of Social Sciences",
+        "publisher": "Hipatia Press",
+        "year": 2017,
+        "volume": "6",
+        "issue": "1",
+        "page": "103",
+        "type": "journal-article",
+        "score": 88.996155
+      },
+      {
+        "doi": "10.1111/1468-4446.12211",
+        "title": "Hahnel, Robin and Wright, Eric OlinAlternatives to Capitalism: Proposals for a Democratic EconomyNew Left Project2014 156 pp. Free E‐Book.",
+        "authors": [
+          "Andreas S. Zaunseder"
+        ],
+        "container": "The British Journal of Sociology",
+        "publisher": "Wiley",
+        "year": 2016,
+        "volume": "67",
+        "issue": "3",
+        "page": "565-566",
+        "type": "journal-article",
+        "score": 51.59175
+      }
+    ]
+  },
+  {
+    "label": "O'Neill, John (2024).",
+    "entry": "O'Neill, John (2024). ``Pluralism, Ecology and Planning.'' Erasmus Journal for Philosophy and Economics 17, no. 2: 27-48, https://doi.org/10.23941/ejpe.v17i2.884; and ``Incommensurability, Environment and Planning: A Response to Hahnel's Reply,'' ibid.: 117-124, https://doi.org/10.23941/ejpe.v17i2.9",
+    "method": "doi",
+    "given_doi": "10.23941/ejpe.v17i2.884",
+    "crossref": {
+      "doi": "10.23941/ejpe.v17i2.884",
+      "title": "Pluralism, Ecology and Planning",
+      "authors": [
+        "John O'Neill"
+      ],
+      "container": "Erasmus Journal for Philosophy and Economics",
+      "publisher": "Erasmus Journal for Philosophy and Economics",
+      "year": 2025,
+      "volume": "17",
+      "issue": "2",
+      "page": null,
+      "type": "journal-article"
+    }
+  },
+  {
+    "label": "Kuch, Hannes (2024).",
+    "entry": "Kuch, Hannes (2024). ``Centralization Tendencies in Participatory Planning.'' Erasmus Journal for Philosophy and Economics 17, no. 2: 49-72. DOI: https://doi.org/10.23941/ejpe.v17i2.885.",
+    "method": "doi",
+    "given_doi": "10.23941/ejpe.v17i2.885",
+    "crossref": {
+      "doi": "10.23941/ejpe.v17i2.885",
+      "title": "Centralization Tendencies in Participatory Planning",
+      "authors": [
+        "Hannes Kuch"
+      ],
+      "container": "Erasmus Journal for Philosophy and Economics",
+      "publisher": "Erasmus Journal for Philosophy and Economics",
+      "year": 2024,
+      "volume": "17",
+      "issue": "2",
+      "page": null,
+      "type": "journal-article"
+    }
+  },
+  {
+    "label": "Dapprich, Jan Philipp (2024).",
+    "entry": "Dapprich, Jan Philipp (2024). ``Democratic Theory and Economic Planning: A Critique of Participatory Economics.'' Erasmus Journal for Philosophy and Economics 17, no. 2: 73-93. DOI: https://doi.org/10.23941/ejpe.v17i2.867.",
+    "method": "doi",
+    "given_doi": "10.23941/ejpe.v17i2.867",
+    "crossref": {
+      "doi": "10.23941/ejpe.v17i2.867",
+      "title": "Democratic Theory and Economic Planning",
+      "authors": [
+        "Jan Philipp Dapprich"
+      ],
+      "container": "Erasmus Journal for Philosophy and Economics",
+      "publisher": "Erasmus Journal for Philosophy and Economics",
+      "year": 2025,
+      "volume": "17",
+      "issue": "2",
+      "page": null,
+      "type": "journal-article"
+    }
+  },
+  {
+    "label": "Dolgoff, Sam, ed.\\ (1974).",
+    "entry": "Dolgoff, Sam, ed.\\ (1974). The Anarchist Collectives: Workers' Self-Management in the Spanish Revolution, 1936-1939. New York: Free Life Editions. https://theanarchistlibrary.org/library/sam-dolgoff-editor-the-anarchist-collectives.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.1017/s0034670500025766",
+        "title": "Spanish Anarchism - *Sam Dolgoff, editor: The Anarchist Collectives: Workers’ Self-management in the Spanish Revolution (1936–1939), intro. Murray Bookchin. (New York: Free Life Editions, 1974. Pp. xxix, 192. $10.00 cloth, $3.45, paper.)",
+        "authors": [
+          "John P. Clark"
+        ],
+        "container": "The Review of Politics",
+        "publisher": "Cambridge University Press (CUP)",
+        "year": 1975,
+        "volume": "37",
+        "issue": "1",
+        "page": "114-116",
+        "type": "journal-article",
+        "score": 141.37202
+      },
+      {
+        "doi": "10.1515/9780691227580-061",
+        "title": "Sam Dolgoff",
+        "authors": [],
+        "container": "Anarchist Voices",
+        "publisher": "Princeton University Press",
+        "year": 1996,
+        "volume": null,
+        "issue": null,
+        "page": "223-233",
+        "type": "book-chapter",
+        "score": 83.23664
+      },
+      {
+        "doi": "10.1515/9780691227580-059",
+        "title": "Picture. The Relevance of Anarchism to Modern Society, pamphlet by Sam Dolgoff, 1989 edition, Charles H. Kerr Publishing Company (Paul Avrich Collection)",
+        "authors": [],
+        "container": "Anarchist Voices",
+        "publisher": "Princeton University Press",
+        "year": 1996,
+        "volume": null,
+        "issue": null,
+        "page": "218-218",
+        "type": "book-chapter",
+        "score": 63.01113
+      }
+    ]
+  },
+  {
+    "label": "Leval, Gaston (1975).",
+    "entry": "Leval, Gaston (1975). Collectives in the Spanish Revolution, trans.\\ Vernon Richards. London: Freedom Press.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.25071/1913-9632.39525",
+        "title": "Gaston Leval, Collectives in the Spanish Revolution, translated by Vernon Richards (Oakland: Freedom and PM Press, 2018).",
+        "authors": [
+          "Bàrbara Molas"
+        ],
+        "container": "Left History: An Interdisciplinary Journal of Historical Inquiry and Debate",
+        "publisher": "York University Libraries",
+        "year": 2019,
+        "volume": "23",
+        "issue": "1",
+        "page": null,
+        "type": "journal-article",
+        "score": 73.12042
+      },
+      {
+        "doi": "10.1017/s0034670500025766",
+        "title": "Spanish Anarchism - *Sam Dolgoff, editor: The Anarchist Collectives: Workers’ Self-management in the Spanish Revolution (1936–1939), intro. Murray Bookchin. (New York: Free Life Editions, 1974. Pp. xxix, 192. $10.00 cloth, $3.45, paper.)",
+        "authors": [
+          "John P. Clark"
+        ],
+        "container": "The Review of Politics",
+        "publisher": "Cambridge University Press (CUP)",
+        "year": 1975,
+        "volume": "37",
+        "issue": "1",
+        "page": "114-116",
+        "type": "journal-article",
+        "score": 29.147486
+      },
+      {
+        "doi": "10.1037/e513632011-002",
+        "title": "On making a revolution",
+        "authors": [
+          "Fred Richards"
+        ],
+        "container": "PsycEXTRA Dataset",
+        "publisher": "American Psychological Association (APA)",
+        "year": 1975,
+        "volume": null,
+        "issue": null,
+        "page": null,
+        "type": "dataset",
+        "score": 28.560305
+      }
+    ]
+  },
+  {
+    "label": "Mintz, Frank (2013 [1970/1977]).",
+    "entry": "Mintz, Frank (2013 [1970/1977]). Anarchism and Workers' Self-Management in Revolutionary Spain, trans.\\ Paul Sharkey. Oakland, CA: AK Press.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.25071/1913-9632.24918",
+        "title": "Terence Kissack, \"Free Comrades: Anarchism and Homosexuality in the United States, 1895-1917\" (Oakland, CA and Edinburgh, Scotlan: AK Press, 2008)",
+        "authors": [
+          "Richard D. Sonn"
+        ],
+        "container": "Left History: An Interdisciplinary Journal of Historical Inquiry and Debate",
+        "publisher": "York University Libraries",
+        "year": 2009,
+        "volume": "14",
+        "issue": "1",
+        "page": null,
+        "type": "journal-article",
+        "score": 39.20454
+      },
+      {
+        "doi": "10.1080/2325548x.2023.2277953",
+        "title": "The Modern CrisisThe Modern CrisisMurrayBookchin. Oakland, CA: AK Press, 2022. 196 pp. $16.00 paper (ISBN 9781849354462), $8.00 electronic (ISBN 9781849354479).",
+        "authors": [
+          "Federico Venturini"
+        ],
+        "container": "The AAG Review of Books",
+        "publisher": "Informa UK Limited",
+        "year": 2024,
+        "volume": "12",
+        "issue": "1",
+        "page": "7-8",
+        "type": "journal-article",
+        "score": 37.635
+      },
+      {
+        "doi": "10.1177/13634607100130040302",
+        "title": "Book Review: Terence Kissack, Free Comrades: Anarchism and Homosexuality in the United States, 1895—1917. Oakland, CA and Edinburgh: AK Press, 2008. 220 pp. ISBN 10: 190 4859119; ISBN 13: 978 1904859116 (pbk)",
+        "authors": [
+          "Richard Cleminson"
+        ],
+        "container": "Sexualities",
+        "publisher": "SAGE Publications",
+        "year": 2010,
+        "volume": "13",
+        "issue": "4",
+        "page": "531-532",
+        "type": "journal-article",
+        "score": 37.29682
+      }
+    ]
+  },
+  {
+    "label": "Marx, Karl (1871).",
+    "entry": "Marx, Karl (1871). The Civil War in France. London: General Council of the International Workingmen's Association.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.5040/9781474278737.ch-010",
+        "title": "The Civil War in France (1871)",
+        "authors": [],
+        "container": "The Bloomsbury Companion to Marx",
+        "publisher": "Bloomsbury Academic",
+        "year": null,
+        "volume": null,
+        "issue": null,
+        "page": null,
+        "type": "book-chapter",
+        "score": 45.409515
+      },
+      {
+        "doi": "10.1002/9780470756119.ch38",
+        "title": "From the Civil War in France (1871)",
+        "authors": [],
+        "container": "Marx and Modernity",
+        "publisher": "Wiley",
+        "year": 2003,
+        "volume": null,
+        "issue": null,
+        "page": "233-244",
+        "type": "other",
+        "score": 39.38617
+      },
+      {
+        "doi": "10.1515/9783050076171-085",
+        "title": "Official Declaration of the British Federal Council of the International Working Men's Association on the Paris Commune of 1871",
+        "authors": [
+          "Karl Marx"
+        ],
+        "container": "Karl Marx / Friedrich Engels: Werke, Artikel, Entwürfe, Dezember 1872 bis Mai 1875",
+        "publisher": "De Gruyter",
+        "year": 1984,
+        "volume": null,
+        "issue": null,
+        "page": "728-738",
+        "type": "book-chapter",
+        "score": 38.98319
+      }
+    ]
+  },
+  {
+    "label": "Merriman, John (2014).",
+    "entry": "Merriman, John (2014). Massacre: The Life and Death of the Paris Commune of 1871. New York: Basic Books.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.1111/hisn.12559",
+        "title": "<i>Massacre: The Life and Death of the Paris Commune</i>. By John Merriman. (New York, NY: Basic Books, 2014. Pp. xxvi, 327. $29.99.)",
+        "authors": [
+          "Julius R. Ruff"
+        ],
+        "container": "The Historian",
+        "publisher": "Informa UK Limited",
+        "year": 2017,
+        "volume": "79",
+        "issue": "2",
+        "page": "396-397",
+        "type": "journal-article",
+        "score": 74.395775
+      },
+      {
+        "doi": "10.1162/jinh_r_00846",
+        "title": "<i>Massacre: The Life and Death of the Paris Commune</i>. By John Merriman (New York, Basic Books, 2014) 360 pp. $29.99",
+        "authors": [
+          "Gay L. Gullickson"
+        ],
+        "container": "The Journal of Interdisciplinary History",
+        "publisher": "MIT Press - Journals",
+        "year": 2015,
+        "volume": "46",
+        "issue": "2",
+        "page": "282-284",
+        "type": "journal-article",
+        "score": 71.1483
+      },
+      {
+        "doi": "10.1086/687449",
+        "title": "<i>Massacre: The Life and Death of the Paris Commune</i>. By John Merriman. New York: Basic, 2014. Pp. xxvi+328. $29.99.",
+        "authors": [
+          "Donald M. Reid"
+        ],
+        "container": "The Journal of Modern History",
+        "publisher": "University of Chicago Press",
+        "year": 2016,
+        "volume": "88",
+        "issue": "3",
+        "page": "690-692",
+        "type": "journal-article",
+        "score": 65.54823
+      }
+    ]
+  },
+  {
+    "label": "Hansen, Mogens Herman (1991).",
+    "entry": "Hansen, Mogens Herman (1991). The Athenian Democracy in the Age of Demosthenes: Structure, Principles, and Ideology. Norman: University of Oklahoma Press.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.1017/s0009840x00284199",
+        "title": "Fourth-Century Athenian Democracy - Mogens Herman Hansen: The Athenian Democracy in the Age of Demosthenes: Structure, Principles and Ideology. (The Ancient World.) Pp. xvi + 410; 6 maps and plans. Oxford: Blackwell, 1991. £49.50 (Paper, £15.95).",
+        "authors": [
+          "P. J. Rhodes"
+        ],
+        "container": "The Classical Review",
+        "publisher": "Cambridge University Press (CUP)",
+        "year": 1992,
+        "volume": "42",
+        "issue": "2",
+        "page": "365-367",
+        "type": "journal-article",
+        "score": 75.15597
+      },
+      {
+        "doi": "10.1086/ahr/98.5.1578",
+        "title": "Mogens Herman Hansen. <i>The Athenian Democracy in the Age of Demosthenes: Structure, Principles and Ideology</i>. Translated by J. A. Crook. (The Ancient World.) Cambridge, Mass.: Blackwell. 1991. Pp. xvi, 410. Cloth $69.95, paper $24.95",
+        "authors": [
+          "Richard Garner"
+        ],
+        "container": "The American Historical Review",
+        "publisher": "Oxford University Press (OUP)",
+        "year": 1993,
+        "volume": "98",
+        "issue": "5",
+        "page": "1578-1578",
+        "type": "journal-article",
+        "score": 70.825584
+      },
+      {
+        "doi": "10.1017/s003467050001679x",
+        "title": "Athenian Democracy after the War - Mogens Herman Hansen: The Athenian Democracy in the Age of Demosthenes: Structure, Principles, and ldeology. Translated by J. A. Crook. (Oxford: Basil Blackwell, 1991. Pp. xii, 410. $59.95. $24.95, paper.)",
+        "authors": [
+          "Robert Vacca"
+        ],
+        "container": "The Review of Politics",
+        "publisher": "Cambridge University Press (CUP)",
+        "year": 1993,
+        "volume": "55",
+        "issue": "1",
+        "page": "165-167",
+        "type": "journal-article",
+        "score": 70.31333
+      }
+    ]
+  },
+  {
+    "label": "Freeman, Jo (1972).",
+    "entry": "Freeman, Jo (1972). ``The Tyranny of Structurelessness.'' The Second Wave 2, no. 1 / Berkeley Journal of Sociology 17: 151-164.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.1353/wsq.2013.0072",
+        "title": "The Tyranny of Structurelessness",
+        "authors": [
+          "Jo Freeman"
+        ],
+        "container": "WSQ: Women's Studies Quarterly",
+        "publisher": "Project MUSE",
+        "year": 2013,
+        "volume": "41",
+        "issue": "3-4",
+        "page": "231-246",
+        "type": "journal-article",
+        "score": 38.845688
+      },
+      {
+        "doi": "10.2307/j.ctt1bkm5nd.38",
+        "title": "Beware the tyranny of structurelessness",
+        "authors": [
+          "Josh Bolotsky"
+        ],
+        "container": "Beautiful Trouble",
+        "publisher": "OR Books",
+        "year": null,
+        "volume": null,
+        "issue": null,
+        "page": "102-103",
+        "type": "book-chapter",
+        "score": 33.019203
+      },
+      {
+        "doi": "10.1007/978-3-662-67712-4_13",
+        "title": "Administering Emancipation. Verwaltung zwischen der »Tyranny of Structurelessness« und der »Tyranny of Tyranny«",
+        "authors": [
+          "Lara Scherrieble",
+          "Lukas Stolz"
+        ],
+        "container": "AdminiStudies. Formen und Medien der Verwaltung",
+        "publisher": "Springer Berlin Heidelberg",
+        "year": 2024,
+        "volume": null,
+        "issue": null,
+        "page": "193-199",
+        "type": "book-chapter",
+        "score": 30.181038
+      }
+    ]
+  },
+  {
+    "label": "Graeber, David (2013).",
+    "entry": "Graeber, David (2013). The Democracy Project: A History, a Crisis, a Movement. New York: Spiegel \\& Grau.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.1177/0038038514543129",
+        "title": "Book Review: David Graeber,\n                    <i>The Democracy Project: A History. A Crisis. A Movement</i>\n                    GraeberDavidThe Democracy Project: A History. A Crisis. A MovementLondon: Allen Lane, 2013, £14.99 pbk (ISBN: 9781846146633), 352 pp.",
+        "authors": [
+          "Kate Burrell"
+        ],
+        "container": "Sociology",
+        "publisher": "SAGE Publications",
+        "year": 2014,
+        "volume": "48",
+        "issue": "5",
+        "page": "1066-1067",
+        "type": "journal-article",
+        "score": 53.922207
+      },
+      {
+        "doi": "10.1553/archaeologia106s337",
+        "title": "Review - David Graeber, David Wengrow, The Dawn of Everything: A New History of Humanity (Farrar, Strauss and Giroux, New York 2021)",
+        "authors": [
+          "Andre Gingrich"
+        ],
+        "container": "Archaeologia Austriaca",
+        "publisher": "Osterreichische Akademie der Wissenschaften, Verlag",
+        "year": 2022,
+        "volume": "Band 106/2022",
+        "issue": null,
+        "page": "337-344",
+        "type": "journal-article",
+        "score": 35.061172
+      },
+      {
+        "doi": "10.5617/pt.10054",
+        "title": "David Graeber og David Wengrow (2021), The Dawn of Everything: A New History of Humanity, Farrar, Straus and Giroux, New York. 704 sider. ISBN: 9780374157357",
+        "authors": [
+          "Hallvard Nikolai Bruvoll"
+        ],
+        "container": "Primitive Tider",
+        "publisher": "University of Oslo Library",
+        "year": 2022,
+        "volume": null,
+        "issue": "24",
+        "page": "119-121",
+        "type": "journal-article",
+        "score": 33.9375
+      }
+    ]
+  },
+  {
+    "label": "Ostrom, Elinor (1990).",
+    "entry": "Ostrom, Elinor (1990). Governing the Commons: The Evolution of Institutions for Collective Action. Cambridge: Cambridge University Press.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.1007/978-3-531-90400-9_93",
+        "title": "Elinor Ostrom, Governing the Commons. The Evolution of Institutions for Collective Action, Cambridge 1990",
+        "authors": [
+          "Paul Kevenhörster"
+        ],
+        "container": "Schlüsselwerke der Politikwissenschaft",
+        "publisher": "VS Verlag für Sozialwissenschaften",
+        "year": null,
+        "volume": null,
+        "issue": null,
+        "page": "349-352",
+        "type": "book-chapter",
+        "score": 96.05595
+      },
+      {
+        "doi": "10.7146/politica.v24i1.69395",
+        "title": "Elinor Ostrom, Governing the Commons. The Evolution of Institutions for Collective Action, New York: Cambridge University Press, 1990, 280 s., $ 14.95.",
+        "authors": [
+          "Jørgen Grønnegård Christensen"
+        ],
+        "container": "Politica",
+        "publisher": "Det Kgl. Bibliotek/Royal Danish Library",
+        "year": 1992,
+        "volume": "24",
+        "issue": "1",
+        "page": "103",
+        "type": "journal-article",
+        "score": 93.25467
+      },
+      {
+        "doi": "10.2307/1964069",
+        "title": "Governing the Commons: The Evolution of Institutions for Collective Action. By Elinor Ostrom. Cambridge: Cambridge University Press, 1990. 279p. $14.95 paper.",
+        "authors": [
+          "Paul A. Sabatier"
+        ],
+        "container": "American Political Science Review",
+        "publisher": "Cambridge University Press (CUP)",
+        "year": 1992,
+        "volume": "86",
+        "issue": "1",
+        "page": "248-249",
+        "type": "journal-article",
+        "score": 89.8975
+      }
+    ]
+  },
+  {
+    "label": "Whyte, William Foote, and Kathleen King Whyte (1991).",
+    "entry": "Whyte, William Foote, and Kathleen King Whyte (1991). Making Mondrag\\'on: The Growth and Dynamics of the Worker Cooperative Complex, 2nd ed. Ithaca, NY: ILR Press.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.7202/050485ar",
+        "title": "William FOOTE WHITE, Kathleen KING WHYTE : Making Mondragon : The Growth and Dynamics of the Worker Cooperative Complex. Ithaca, ILR Press, 1988, 317 pp., ISBN 0-87546-137-9",
+        "authors": [
+          "Hem C. Jain"
+        ],
+        "container": "Relations industrielles",
+        "publisher": "Consortium Erudit",
+        "year": 1989,
+        "volume": "44",
+        "issue": "1",
+        "page": "289",
+        "type": "journal-article",
+        "score": 103.549416
+      },
+      {
+        "doi": "10.1177/017084068901000414",
+        "title": "Book Reviews : William Foote Whyte and Kathleen King Whyte: Making Mondragon: The Growth and Dynamics of the Worker Co-operative Complex",
+        "authors": [
+          "Gillian D. Ursell"
+        ],
+        "container": "Organization Studies",
+        "publisher": "SAGE Publications",
+        "year": 1989,
+        "volume": "10",
+        "issue": "4",
+        "page": "594-597",
+        "type": "journal-article",
+        "score": 100.038155
+      },
+      {
+        "doi": "10.1093/sf/68.4.1337",
+        "title": "Making Mondragon: The Growth and Dynamics of the Worker Cooperative Complex. By William Foote Whyte and Kathleen King Whyte. ILR Press. 315 pp. Cloth, $36.00; paper, $14.95",
+        "authors": [
+          "J. L. Hammond"
+        ],
+        "container": "Social Forces",
+        "publisher": "Oxford University Press (OUP)",
+        "year": 1990,
+        "volume": "68",
+        "issue": "4",
+        "page": "1337-1338",
+        "type": "journal-article",
+        "score": 99.33582
+      }
+    ]
+  },
+  {
+    "label": "Goulart, Paul J., and Yuwen Chen (2026).",
+    "entry": "Goulart, Paul J., and Yuwen Chen (2026). ``Clarabel: An Interior-Point Solver for Conic Programs with Quadratic Objectives.'' Mathematical Programming Computation. DOI: https://doi.org/10.1007/s12532-026-00320-7. Software: https://github.com/oxfordcontrol/Clarabel.rs.",
+    "method": "doi",
+    "given_doi": "10.1007/s12532-026-00320-7",
+    "crossref": {
+      "doi": "10.1007/s12532-026-00320-7",
+      "title": "Clarabel: An interior-point solver for conic programs with quadratic objectives",
+      "authors": [
+        "Paul J. Goulart",
+        "Yuwen Chen"
+      ],
+      "container": "Mathematical Programming Computation",
+      "publisher": "Springer Science and Business Media LLC",
+      "year": 2026,
+      "volume": null,
+      "issue": null,
+      "page": null,
+      "type": "journal-article"
+    }
+  },
+  {
+    "label": "O'Connor, Jack, Jean-Philippe Aumasson, Samuel Neves, and Zooko Wilcox-O'Hearn (2020).",
+    "entry": "O'Connor, Jack, Jean-Philippe Aumasson, Samuel Neves, and Zooko Wilcox-O'Hearn (2020). BLAKE3 specification. https://github.com/BLAKE3-team/BLAKE3-specs. ``BLAKE3 targets 128-bit security for all of its security goals.'' Accessed November 2026.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.1007/s10791-025-09650-x",
+        "title": "Boolean semiring key-exchange with BLAKE3 security (BKEX-B3)",
+        "authors": [
+          "Alvary Kefas Kwala",
+          "Alpna Mishra",
+          "Shri Kant"
+        ],
+        "container": "Discover Computing",
+        "publisher": "Springer Science and Business Media LLC",
+        "year": 2025,
+        "volume": "28",
+        "issue": "1",
+        "page": null,
+        "type": "journal-article",
+        "score": 76.70998
+      },
+      {
+        "doi": "10.1007/978-981-96-8350-5_12",
+        "title": "Boolean Key-Exchange Protocol with BLAKE3 Security (BKEX-B3)",
+        "authors": [
+          "Alvary K. Kwala",
+          "Alpna Mishra",
+          "Shri Kant"
+        ],
+        "container": "Lecture Notes in Networks and Systems",
+        "publisher": "Springer Nature Singapore",
+        "year": 2026,
+        "volume": null,
+        "issue": null,
+        "page": "165-180",
+        "type": "book-chapter",
+        "score": 66.61187
+      },
+      {
+        "doi": "10.1007/978-981-95-4452-3_16",
+        "title": "Key-Exchange Protocol with (p, q)-Transform: Leveraging on BLAKE3 Hash Function",
+        "authors": [
+          "Alvary Kefas Kwala",
+          "Alpna Mishra",
+          "Shri Kant"
+        ],
+        "container": "Lecture Notes in Electrical Engineering",
+        "publisher": "Springer Nature Singapore",
+        "year": 2026,
+        "volume": null,
+        "issue": null,
+        "page": "177-186",
+        "type": "book-chapter",
+        "score": 60.071423
+      }
+    ]
+  },
+  {
+    "label": "NIST (2024a, 2024b, 2024c).",
+    "entry": "NIST (2024a, 2024b, 2024c). FIPS 203 (ML-KEM), FIPS 204 (ML-DSA), and FIPS 205 (SLH-DSA). National Institute of Standards and Technology, August 13, 2024.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.28925/2663-4023.2026.33.1210",
+        "title": "EMPIRICAL PERFORMANCE EVALUATION OF NIST POST-QUANTUM CRYPTOGRAPHIC ALGORITHMS ML-KEM, ML-DSA, AND SLH-DSA ACROSS JDK VERSIONS",
+        "authors": [
+          "Yurii Oleksiichuk"
+        ],
+        "container": "Cybersecurity Education Science Technique",
+        "publisher": "Borys Grinchenko Kyiv Metropolitan University",
+        "year": 2026,
+        "volume": "1",
+        "issue": "33",
+        "page": "165",
+        "type": "journal-article",
+        "score": 85.963036
+      },
+      {
+        "doi": "10.6028/nist.fips.58-1997",
+        "title": "Federal information processing standards publications (FIPS PUBS) index",
+        "authors": [
+          ""
+        ],
+        "container": "",
+        "publisher": "National Institute of Standards and Technology (U.S.)",
+        "year": 1997,
+        "volume": null,
+        "issue": null,
+        "page": null,
+        "type": "report",
+        "score": 79.8739
+      },
+      {
+        "doi": "10.22541/au.177490757.79743995/v1",
+        "title": "Multi-Language Implementations of NIST FIPS 203/204/205 with Hybrid Key Exchange, Composite Signatures, and TLS 1.3 Integration",
+        "authors": [
+          "Liviu Ionut Epure"
+        ],
+        "container": "",
+        "publisher": "Wiley",
+        "year": 2026,
+        "volume": null,
+        "issue": null,
+        "page": null,
+        "type": "posted-content",
+        "score": 78.299866
+      }
+    ]
+  },
+  {
+    "label": "Kleppmann, Martin, et al.\\ (2019).",
+    "entry": "Kleppmann, Martin, et al.\\ (2019). ``Local-First Software: You Own Your Data, in spite of the Cloud.'' ACM Onward! '19, pp. 154-178.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.1145/3359591.3359737",
+        "title": "Local-first software: you own your data, in spite of the cloud",
+        "authors": [
+          "Martin Kleppmann",
+          "Adam Wiggins",
+          "Peter van Hardenberg",
+          "Mark McGranaghan"
+        ],
+        "container": "Proceedings of the 2019 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software",
+        "publisher": "ACM",
+        "year": 2019,
+        "volume": null,
+        "issue": null,
+        "page": "154-178",
+        "type": "proceedings-article",
+        "score": 87.084694
+      },
+      {
+        "doi": "10.1145/3306307.3328180",
+        "title": "Why you should(n't) build your own game engine",
+        "authors": [
+          "Andrés Rivela"
+        ],
+        "container": "ACM SIGGRAPH 2019 Talks",
+        "publisher": "ACM",
+        "year": 2019,
+        "volume": null,
+        "issue": null,
+        "page": "1-2",
+        "type": "proceedings-article",
+        "score": 38.12259
+      },
+      {
+        "doi": "10.5040/9798216401896.ch-009",
+        "title": "When Your Own Body Gives You Away",
+        "authors": [],
+        "container": "Privacy in the Age of Big Data",
+        "publisher": "Rowman & Littlefield",
+        "year": 2014,
+        "volume": null,
+        "issue": null,
+        "page": "139-154",
+        "type": "other",
+        "score": 37.49253
+      }
+    ]
+  },
+  {
+    "label": "Shapiro, Marc, et al.\\ (2011).",
+    "entry": "Shapiro, Marc, et al.\\ (2011). ``Conflict-Free Replicated Data Types.'' SSS 2011, LNCS 6976, pp. 386-400.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.1007/978-3-642-24550-3_29",
+        "title": "Conflict-Free Replicated Data Types",
+        "authors": [
+          "Marc Shapiro",
+          "Nuno Preguiça",
+          "Carlos Baquero",
+          "Marek Zawirski"
+        ],
+        "container": "Lecture Notes in Computer Science",
+        "publisher": "Springer Berlin Heidelberg",
+        "year": 2011,
+        "volume": null,
+        "issue": null,
+        "page": "386-400",
+        "type": "book-chapter",
+        "score": 64.05814
+      },
+      {
+        "doi": "10.1007/978-3-319-63962-8_185-2",
+        "title": "Conflict-Free Replicated Data Types (CRDTs)",
+        "authors": [
+          "Nuno Preguiça",
+          "Carlos Baquero",
+          "Marc Shapiro"
+        ],
+        "container": "Encyclopedia of Big Data Technologies",
+        "publisher": "Springer International Publishing",
+        "year": 2022,
+        "volume": null,
+        "issue": null,
+        "page": "1-10",
+        "type": "book-chapter",
+        "score": 48.657295
+      },
+      {
+        "doi": "10.1007/978-3-319-63962-8_185-1",
+        "title": "Conflict-Free Replicated Data Types CRDTs",
+        "authors": [
+          "Nuno Preguiça",
+          "Carlos Baquero",
+          "Marc Shapiro"
+        ],
+        "container": "Encyclopedia of Big Data Technologies",
+        "publisher": "Springer International Publishing",
+        "year": 2018,
+        "volume": null,
+        "issue": null,
+        "page": "1-10",
+        "type": "book-chapter",
+        "score": 48.502808
+      }
+    ]
+  },
+  {
+    "label": "Buchman, Ethan, Jae Kwon, and Zarko Milosevic (2018).",
+    "entry": "Buchman, Ethan, Jae Kwon, and Zarko Milosevic (2018). ``The Latest Gossip on BFT Consensus.'' arXiv:1807.04938.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.1145/3464298.3493395",
+        "title": "Gossip consensus",
+        "authors": [
+          "Daniel Cason",
+          "Nenad Milosevic",
+          "Zarko Milosevic",
+          "Fernando Pedone"
+        ],
+        "container": "Proceedings of the 22nd International Middleware Conference",
+        "publisher": "ACM",
+        "year": 2021,
+        "volume": null,
+        "issue": null,
+        "page": "198-209",
+        "type": "proceedings-article",
+        "score": 36.702694
+      },
+      {
+        "doi": "10.22541/au.175112285.54776217/v1",
+        "title": "Boosting Blockchain Consensus with Semantic Gossip",
+        "authors": [
+          "Daniel Cason",
+          "Ricardo Guimaraes",
+          "Nenad Milosevic",
+          "Patrick Eugster",
+          "Zarko Milosevic",
+          "Fernando Dotti"
+        ],
+        "container": "",
+        "publisher": "Wiley",
+        "year": 2025,
+        "volume": null,
+        "issue": null,
+        "page": null,
+        "type": "posted-content",
+        "score": 36.376816
+      },
+      {
+        "doi": "10.1109/bloc.2019.8751327",
+        "title": "Scalable BFT Consensus Mechanism Through Aggregated Signature Gossip",
+        "authors": [
+          "Jieyi Long",
+          "Ribao Wei"
+        ],
+        "container": "2019 IEEE International Conference on Blockchain and Cryptocurrency (ICBC)",
+        "publisher": "IEEE",
+        "year": 2019,
+        "volume": null,
+        "issue": null,
+        "page": "360-367",
+        "type": "proceedings-article",
+        "score": 34.125393
+      }
+    ]
+  },
+  {
+    "label": "Boyd, Stephen, et al.\\ (2011).",
+    "entry": "Boyd, Stephen, et al.\\ (2011). ``Distributed Optimization and Statistical Learning via the Alternating Direction Method of Multipliers.'' Foundations and Trends in Machine Learning 3, no. 1: 1-122, https://doi.org/10.1561/2200000016",
+    "method": "doi",
+    "given_doi": "10.1561/2200000016",
+    "crossref": {
+      "doi": "10.1561/2200000016",
+      "title": "Distributed Optimization and Statistical Learning via the Alternating Direction Method of Multipliers",
+      "authors": [
+        "Stephen Boyd",
+        "Neal Parikh",
+        "Eric Chu",
+        "Borja Peleato",
+        "Jonathan Eckstein"
+      ],
+      "container": "Foundations and Trends® in Machine Learning",
+      "publisher": "Emerald",
+      "year": 2011,
+      "volume": "3",
+      "issue": "1",
+      "page": "1-122",
+      "type": "journal-article"
+    }
+  },
+  {
+    "label": "Deng, Wei, Ming-Jun Lai, Zhimin Peng, and Wotao Yin (2017).",
+    "entry": "Deng, Wei, Ming-Jun Lai, Zhimin Peng, and Wotao Yin (2017). ``Parallel Multi-Block ADMM with $o(1/k)$ Convergence.'' Journal of Scientific Computing 71, no. 2: 712-736, https://doi.org/10.1007/s10915-016-0318-2 (read in the arXiv version, 1312.3040v2)",
+    "method": "doi",
+    "given_doi": "10.1007/s10915-016-0318-2",
+    "crossref": {
+      "doi": "10.1007/s10915-016-0318-2",
+      "title": "Parallel Multi-Block ADMM with o(1 / k) Convergence",
+      "authors": [
+        "Wei Deng",
+        "Ming-Jun Lai",
+        "Zhimin Peng",
+        "Wotao Yin"
+      ],
+      "container": "Journal of Scientific Computing",
+      "publisher": "Springer Science and Business Media LLC",
+      "year": 2016,
+      "volume": "71",
+      "issue": "2",
+      "page": "712-736",
+      "type": "journal-article"
+    }
+  },
+  {
+    "label": "Hong, Mingyi, Zhi-Quan Luo, and Meisam Razaviyayn (2016).",
+    "entry": "Hong, Mingyi, Zhi-Quan Luo, and Meisam Razaviyayn (2016). ``Convergence Analysis of Alternating Direction Method of Multipliers for a Family of Nonconvex Problems.'' SIAM Journal on Optimization 26, no. 1: 337-364, https://doi.org/10.1137/140990309.",
+    "method": "doi",
+    "given_doi": "10.1137/140990309",
+    "crossref": {
+      "doi": "10.1137/140990309",
+      "title": "Convergence Analysis of Alternating Direction Method of Multipliers for a Family of Nonconvex Problems",
+      "authors": [
+        "Mingyi Hong",
+        "Zhi-Quan Luo",
+        "Meisam Razaviyayn"
+      ],
+      "container": "SIAM Journal on Optimization",
+      "publisher": "Society for Industrial & Applied Mathematics (SIAM)",
+      "year": 2016,
+      "volume": "26",
+      "issue": "1",
+      "page": "337-364",
+      "type": "journal-article"
+    }
+  },
+  {
+    "label": "Scarf, Herbert (1960).",
+    "entry": "Scarf, Herbert (1960). ``Some Examples of Global Instability of the Competitive Equilibrium.'' International Economic Review 1, no. 3: 157-172",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.2307/2556215",
+        "title": "Some Examples of Global Instability of the Competitive Equilibrium",
+        "authors": [
+          "Herbert Scarf"
+        ],
+        "container": "International Economic Review",
+        "publisher": "JSTOR",
+        "year": 1960,
+        "volume": "1",
+        "issue": "3",
+        "page": "157",
+        "type": "journal-article",
+        "score": 89.45118
+      },
+      {
+        "doi": "10.2307/2526290",
+        "title": "Comment on: \"On the Stability of Competitive Equilibrium and the Patterns of Initial Holdings: An Example\"",
+        "authors": [
+          "Herbert Scarf"
+        ],
+        "container": "International Economic Review",
+        "publisher": "JSTOR",
+        "year": 1981,
+        "volume": "22",
+        "issue": "2",
+        "page": "469",
+        "type": "journal-article",
+        "score": 41.268486
+      },
+      {
+        "doi": "10.1017/cbo9780511614330.004",
+        "title": "Solving Dynamic Stochastic Competitive General Equilibrium Models",
+        "authors": [
+          "Kenneth L. Judd"
+        ],
+        "container": "Frontiers in Applied General Equilibrium Modeling",
+        "publisher": "Cambridge University Press",
+        "year": 2005,
+        "volume": null,
+        "issue": null,
+        "page": "45-66",
+        "type": "book-chapter",
+        "score": 39.360085
+      }
+    ]
+  },
+  {
+    "label": "Sonnenschein, Hugo (1973).",
+    "entry": "Sonnenschein, Hugo (1973). ``Do Walras' Identity and Continuity Characterize the Class of Community Excess Demand Functions?'' Journal of Economic Theory 6, no. 4: 345-354.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.1016/0022-0531(73)90066-5",
+        "title": "Do Walras' identity and continuity characterize the class of community excess demand functions?",
+        "authors": [
+          "Hugo Sonnenschein"
+        ],
+        "container": "Journal of Economic Theory",
+        "publisher": "Elsevier BV",
+        "year": 1973,
+        "volume": "6",
+        "issue": "4",
+        "page": "345-354",
+        "type": "journal-article",
+        "score": 121.10838
+      },
+      {
+        "doi": "10.1016/0022-0531(76)90073-9",
+        "title": "Homothetic preferences and community excess demand functions",
+        "authors": [
+          "Rolf R Mantel"
+        ],
+        "container": "Journal of Economic Theory",
+        "publisher": "Elsevier BV",
+        "year": 1976,
+        "volume": "12",
+        "issue": "2",
+        "page": "197-201",
+        "type": "journal-article",
+        "score": 42.644077
+      },
+      {
+        "doi": "10.2307/1913184",
+        "title": "Market Excess Demand Functions",
+        "authors": [
+          "Hugo Sonnenschein"
+        ],
+        "container": "Econometrica",
+        "publisher": "JSTOR",
+        "year": 1972,
+        "volume": "40",
+        "issue": "3",
+        "page": "549",
+        "type": "journal-article",
+        "score": 41.068176
+      }
+    ]
+  },
+  {
+    "label": "Starr, Ross M.\\ (1969).",
+    "entry": "Starr, Ross M.\\ (1969). ``Quasi-Equilibria in Markets with Non-Convex Preferences (Appendix 2: The Shapley-Folkman Theorem).'' Econometrica 37, no. 1: 25-38.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.2307/1909201",
+        "title": "Quasi-Equilibria in Markets with Non-Convex Preferences",
+        "authors": [
+          "Ross M. Starr"
+        ],
+        "container": "Econometrica",
+        "publisher": "JSTOR",
+        "year": 1969,
+        "volume": "37",
+        "issue": "1",
+        "page": "25",
+        "type": "journal-article",
+        "score": 96.16836
+      },
+      {
+        "doi": "10.2307/1910435",
+        "title": "Competitive Equilibria in Markets with a Continuum of Traders and Incomplete Preferences",
+        "authors": [
+          "David Schmeidler"
+        ],
+        "container": "Econometrica",
+        "publisher": "JSTOR",
+        "year": 1969,
+        "volume": "37",
+        "issue": "4",
+        "page": "578",
+        "type": "journal-article",
+        "score": 54.275112
+      },
+      {
+        "doi": "10.1057/9780230226203.3523",
+        "title": "Shapley–Folkman theorem",
+        "authors": [
+          "Ross M. Starr"
+        ],
+        "container": "The New Palgrave Dictionary of Economics",
+        "publisher": "Nature Publishing Group",
+        "year": null,
+        "volume": null,
+        "issue": null,
+        "page": "1",
+        "type": "reference-entry",
+        "score": 50.468555
+      }
+    ]
+  },
+  {
+    "label": "Hurwicz, Leonid (1972).",
+    "entry": "Hurwicz, Leonid (1972). ``On Informationally Decentralized Systems.'' In Decision and Organization: A Volume in Honor of Jacob Marschak, ed.\\ C. B.\\ McGuire and Roy Radner, pp. 297-336. Amsterdam: North-Holland Publishing Co.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.1017/s0770451800031055",
+        "title": "Decision and Organization. A Volume in Honor of Jacob Marschak. Edited by C.B. Mc Guire and Roy Radner. Studies in Mathematical and Managerial Economics, volume 12. Amsterdam, London, North-Holland Publishing Company, 1972 X p. 361 p., fl. 63.00.",
+        "authors": [],
+        "container": "Recherches économiques de Louvain",
+        "publisher": "CAIRN",
+        "year": 1973,
+        "volume": "39",
+        "issue": "3",
+        "page": "380-381",
+        "type": "journal-article",
+        "score": 78.73619
+      },
+      {
+        "doi": "10.2307/2231324",
+        "title": "Decision and Organisation: A Volume in Honor of Jacob Marschak.",
+        "authors": [
+          "B. J. Loasby",
+          "C. B. McGuire",
+          "R. Radner"
+        ],
+        "container": "The Economic Journal",
+        "publisher": "Oxford University Press (OUP)",
+        "year": 1972,
+        "volume": "82",
+        "issue": "328",
+        "page": "1414",
+        "type": "journal-article",
+        "score": 70.494835
+      },
+      {
+        "doi": "10.2307/2284123",
+        "title": "Decision and Organization: A Volume in Honor of Jacob Marschak.",
+        "authors": [
+          "M. H. D.",
+          "C. B. McGuire",
+          "R. Radner"
+        ],
+        "container": "Journal of the American Statistical Association",
+        "publisher": "JSTOR",
+        "year": 1973,
+        "volume": "68",
+        "issue": "342",
+        "page": "500",
+        "type": "journal-article",
+        "score": 62.85303
+      }
+    ]
+  },
+  {
+    "label": "Weitzman, Martin L.\\ (1974).",
+    "entry": "Weitzman, Martin L.\\ (1974). ``Prices vs.\\ Quantities.'' Review of Economic Studies 41, no. 4: 477-491",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.2307/2296698",
+        "title": "Prices vs. Quantities",
+        "authors": [
+          "Martin L. Weitzman"
+        ],
+        "container": "The Review of Economic Studies",
+        "publisher": "Oxford University Press (OUP)",
+        "year": 1974,
+        "volume": "41",
+        "issue": "4",
+        "page": "477",
+        "type": "journal-article",
+        "score": 79.49655
+      },
+      {
+        "doi": "10.2307/2296983",
+        "title": "Ideal Prices vs. Prices vs. Quantities",
+        "authors": [
+          "N. J. Ireland"
+        ],
+        "container": "The Review of Economic Studies",
+        "publisher": "Oxford University Press (OUP)",
+        "year": 1977,
+        "volume": "44",
+        "issue": "1",
+        "page": "183",
+        "type": "journal-article",
+        "score": 48.72888
+      },
+      {
+        "doi": "10.2307/2297097",
+        "title": "Reply to \"Prices vs. Quantities: A Critical Note on the Use of Approximations\" by James M. Malcomson",
+        "authors": [
+          "M. L. Weitzman"
+        ],
+        "container": "The Review of Economic Studies",
+        "publisher": "Oxford University Press (OUP)",
+        "year": 1978,
+        "volume": "45",
+        "issue": "1",
+        "page": "209-210",
+        "type": "journal-article",
+        "score": 47.299923
+      }
+    ]
+  },
+  {
+    "label": "Weitzman, Martin L.\\ (1980).",
+    "entry": "Weitzman, Martin L.\\ (1980). ``The `Ratchet Principle' and Performance Incentives.'' Bell Journal of Economics 11, no. 1: 302-308.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.2307/3003414",
+        "title": "The \"Ratchet Principle\" and Performance Incentives",
+        "authors": [
+          "Martin L. Weitzman"
+        ],
+        "container": "The Bell Journal of Economics",
+        "publisher": "JSTOR",
+        "year": 1980,
+        "volume": "11",
+        "issue": "1",
+        "page": "302",
+        "type": "journal-article",
+        "score": 82.740105
+      },
+      {
+        "doi": "10.1016/0147-5967(87)90097-7",
+        "title": "The Ratchet principle: A diagrammatic interpretation",
+        "authors": [
+          "Tikva Darvish",
+          "Nava Kahana"
+        ],
+        "container": "Journal of Comparative Economics",
+        "publisher": "Elsevier BV",
+        "year": 1987,
+        "volume": "11",
+        "issue": "2",
+        "page": "245-249",
+        "type": "journal-article",
+        "score": 31.902151
+      },
+      {
+        "doi": "10.2307/3003394",
+        "title": "Advertising and Welfare: Comment",
+        "authors": [
+          "Carl Shapiro"
+        ],
+        "container": "The Bell Journal of Economics",
+        "publisher": "JSTOR",
+        "year": 1980,
+        "volume": "11",
+        "issue": "2",
+        "page": "749",
+        "type": "journal-article",
+        "score": 30.240738
+      }
+    ]
+  },
+  {
+    "label": "Kornai, J\\'anos (1980).",
+    "entry": "Kornai, J\\'anos (1980). Economics of Shortage. Amsterdam: North-Holland Publishing Co.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.5652/kokusaikeizai.1980.222",
+        "title": "R.W.Jones, International Trade: Essays in Theory, studies in International Economics, Volume4, North-Holland Publishing Company, Amsterdam, 1979. xi+pp.330",
+        "authors": [],
+        "container": "The International Economy",
+        "publisher": "The Japan Society of International Economics",
+        "year": 1980,
+        "volume": "1980",
+        "issue": "31",
+        "page": "222-225",
+        "type": "journal-article",
+        "score": 41.774956
+      },
+      {
+        "doi": "10.24201/edu.v7i03.207",
+        "title": "G. Hadley y M. C. Kemp. Finite mathematics in busines and economics. Amsterdam : North Holland Publishing Co., 1972. 520 p.",
+        "authors": [
+          "Adalberto García Rocha"
+        ],
+        "container": "Estudios Demográficos y Urbanos",
+        "publisher": "El Colegio de Mexico, A.C.",
+        "year": 1973,
+        "volume": "7",
+        "issue": "03",
+        "page": "375",
+        "type": "journal-article",
+        "score": 38.538773
+      },
+      {
+        "doi": "10.2307/2054319",
+        "title": "Indian Mediaeval Sculpture. By Aschwin de Lippe, Amsterdam: North Holland Publishing Co., 1978. xxiii, 411 pp. Plates, Bibliography, Glossary, Index. $64.50.",
+        "authors": [
+          "Wayne E. Begley"
+        ],
+        "container": "The Journal of Asian Studies",
+        "publisher": "Duke University Press",
+        "year": 1980,
+        "volume": "39",
+        "issue": "2",
+        "page": "381-383",
+        "type": "journal-article",
+        "score": 38.423737
+      }
+    ]
+  },
+  {
+    "label": "Kornai, J\\'anos (1986).",
+    "entry": "Kornai, J\\'anos (1986). ``The Soft Budget Constraint.'' Kyklos 39, no. 1: 3-30.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.1111/j.1467-6435.1986.tb01252.x",
+        "title": "The Soft Budget Constraint",
+        "authors": [
+          "JÁNOS KORNAI*"
+        ],
+        "container": "Kyklos",
+        "publisher": "Wiley",
+        "year": 1986,
+        "volume": "39",
+        "issue": "1",
+        "page": "3-30",
+        "type": "journal-article",
+        "score": 79.50182
+      },
+      {
+        "doi": "10.1556/aoecon.64.2014.s1.2",
+        "title": "The soft budget constraint",
+        "authors": [
+          "János Kornai"
+        ],
+        "container": "Acta Oeconomica",
+        "publisher": "Akademiai Kiado Zrt.",
+        "year": 2014,
+        "volume": "64",
+        "issue": "Supplement-1",
+        "page": "25-79",
+        "type": "journal-article",
+        "score": 43.07246
+      },
+      {
+        "doi": "10.32609/0042-8736-2004-11-4-33",
+        "title": "Understanding the Soft Budget Constraint",
+        "authors": [
+          "J. Kornai",
+          "E. Maskin",
+          "G. Roland"
+        ],
+        "container": "Voprosy Ekonomiki",
+        "publisher": "NP Voprosy Ekonomiki",
+        "year": 2004,
+        "volume": null,
+        "issue": "11",
+        "page": "4-33",
+        "type": "journal-article",
+        "score": 41.044765
+      }
+    ]
+  },
+  {
+    "label": "Casanova, Juli\\'an (2005).",
+    "entry": "Casanova, Juli\\'an (2005). Anarchism, the Republic and Civil War in Spain: 1931-1939, trans.\\ Andrew Dowling and Graham Pollok. London \\& New York: Routledge.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.4324/9780203022801",
+        "title": "Anarchism, the Republic and Civil War in Spain: 1931-1939",
+        "authors": [
+          "Julián Casanova"
+        ],
+        "container": "",
+        "publisher": "Routledge",
+        "year": 2004,
+        "volume": null,
+        "issue": null,
+        "page": null,
+        "type": "monograph",
+        "score": 74.78539
+      },
+      {
+        "doi": "10.4324/9780203684115",
+        "title": "Anarchism, the Republic and Civil War in Spain",
+        "authors": [
+          "Julián Casanova"
+        ],
+        "container": "",
+        "publisher": "Taylor & Francis",
+        "year": 1997,
+        "volume": null,
+        "issue": null,
+        "page": null,
+        "type": "monograph",
+        "score": 73.48127
+      },
+      {
+        "doi": "10.4324/9780203684115_chapter_10",
+        "title": "Fundraising",
+        "authors": [],
+        "container": "Anarchism, the Republic and Civil War in Spain",
+        "publisher": "Taylor & Francis",
+        "year": null,
+        "volume": null,
+        "issue": null,
+        "page": null,
+        "type": "book-chapter",
+        "score": 65.282555
+      }
+    ]
+  },
+  {
+    "label": "Seidman, Michael (1991).",
+    "entry": "Seidman, Michael (1991). Workers Against Work: Labour in Paris and Barcelona during the Popular Fronts. Berkeley: University of California Press",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.1086/ahr/97.1.185",
+        "title": "Michael Seidman. <i>Workers against Work: Labor in Paris and Barcelona during the Popular Fronts</i>. Berkeley and Los Angeles: University of California Press. 1991. Pp. xiv, 399. $39.95",
+        "authors": [
+          "Nathanael Greene"
+        ],
+        "container": "The American Historical Review",
+        "publisher": "Oxford University Press (OUP)",
+        "year": 1992,
+        "volume": "97",
+        "issue": "1",
+        "page": "185-185",
+        "type": "journal-article",
+        "score": 90.827415
+      },
+      {
+        "doi": "10.1017/s002085900011123x",
+        "title": "Michael Seidman. Workers Against Work. Labor in Paris and Barcelona During the Popular Fronts. University of California Press, Berkeley [etc.] 1991. xiv, 399 pp. $ 39.95.",
+        "authors": [
+          "Helen Graham"
+        ],
+        "container": "International Review of Social History",
+        "publisher": "Cambridge University Press (CUP)",
+        "year": 1992,
+        "volume": "37",
+        "issue": "2",
+        "page": "276-281",
+        "type": "journal-article",
+        "score": 89.192375
+      },
+      {
+        "doi": "10.1017/s0147547900010656",
+        "title": "Michael Seidman, Workers Against Work: Labor in Paris and Barcelona during the Popular Fronts. Berkeley: University of California Press, 1991. xiv + 399 pp. - Herrick Chapman, State Capitalism and Working-Class Radicalism in the French Aircraft Industry. Berkeley: University of California Press, 1991. xvii + 412 pp.",
+        "authors": [
+          "Irwin Wall"
+        ],
+        "container": "International Labor and Working-Class History",
+        "publisher": "Cambridge University Press (CUP)",
+        "year": 1992,
+        "volume": "41",
+        "issue": null,
+        "page": "102-107",
+        "type": "journal-article",
+        "score": 85.861435
+      }
+    ]
+  },
+  {
+    "label": "Seidman, Michael (2002).",
+    "entry": "Seidman, Michael (2002). Republic of Egos: A Social History of the Spanish Civil War. Madison: University of Wisconsin Press.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.1353/jsh.2004.0131",
+        "title": "Republic of Egos: A Social History of the Spanish Civil War. By Michael Seidman (Madison: The University of Wisconsin Press, 2002. xi plus 304 pp.)",
+        "authors": [
+          "M. Miller"
+        ],
+        "container": "Journal of Social History",
+        "publisher": "Oxford University Press (OUP)",
+        "year": 2004,
+        "volume": "38",
+        "issue": "2",
+        "page": "528-530",
+        "type": "journal-article",
+        "score": 91.06208
+      },
+      {
+        "doi": "10.1086/ahr/109.2.623",
+        "title": "Michael Seidman. <i>Republic of Egos: A Social History of the Spanish Civil War</i>. Madison: University of Wisconsin Press. 2002. Pp. xi, 304. Cloth $55.00, paper $24.95",
+        "authors": [
+          "Pamela Beth Radcliff"
+        ],
+        "container": "The American Historical Review",
+        "publisher": "Oxford University Press (OUP)",
+        "year": 2004,
+        "volume": "109",
+        "issue": "2",
+        "page": "623-624",
+        "type": "journal-article",
+        "score": 86.089775
+      },
+      {
+        "doi": "10.1086/427596",
+        "title": "<i>Republic of Egos: A Social History of the Spanish Civil War</i>. By Michael  Seidman. Madison: University of Wisconsin Press, 2002. Pp. xi+304. $55.00 (cloth); $24.95 (paper).",
+        "authors": [
+          "Paloma Aguilar"
+        ],
+        "container": "The Journal of Modern History",
+        "publisher": "University of Chicago Press",
+        "year": 2004,
+        "volume": "76",
+        "issue": "4",
+        "page": "978-980",
+        "type": "journal-article",
+        "score": 83.273544
+      }
+    ]
+  },
+  {
+    "label": "Finley, M. I.\\ (1981).",
+    "entry": "Finley, M. I.\\ (1981). Economy and Society in Ancient Greece, ed.\\ Brent D.\\ Shaw and Richard P.\\ Saller. London: Chatto \\& Windus",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.1017/s0009840x00115549",
+        "title": "M. I. Finley: Economy and Society in Ancient Greece. (Edited by Brent D. Shaw and Richard P. Saller.) Pp. xxvi + 326. London: Chatto and Windus, 1981. £15.",
+        "authors": [
+          "John Briscoe"
+        ],
+        "container": "The Classical Review",
+        "publisher": "Cambridge University Press (CUP)",
+        "year": 1982,
+        "volume": "32",
+        "issue": "2",
+        "page": "287-288",
+        "type": "journal-article",
+        "score": 93.68424
+      },
+      {
+        "doi": "10.1017/s0022050700034689",
+        "title": "Economy and Society in Ancient Greece. By M. I. Finley. Edited with an introduction by Brent D. Shaw and Richard P. Saller. New York: Viking Press, 1982. Pp. xxvi, 326. $22.50.",
+        "authors": [
+          "J. F. Gilliam"
+        ],
+        "container": "The Journal of Economic History",
+        "publisher": "Cambridge University Press (CUP)",
+        "year": 1985,
+        "volume": "45",
+        "issue": "3",
+        "page": "724-725",
+        "type": "journal-article",
+        "score": 56.640842
+      },
+      {
+        "doi": "10.1017/s0009840x00236561",
+        "title": "Ancient Slavery - M. I. Finley: Ancient Slavery and Modern Ideology. Pp. 202. London: Chatto and Windus, 1980. £8.50.",
+        "authors": [
+          "P. A. Brunt"
+        ],
+        "container": "The Classical Review",
+        "publisher": "Cambridge University Press (CUP)",
+        "year": 1981,
+        "volume": "31",
+        "issue": "1",
+        "page": "70-72",
+        "type": "journal-article",
+        "score": 54.452248
+      }
+    ]
+  },
+  {
+    "label": "Ste.\\ Croix, G. E. M.\\ de (1981).",
+    "entry": "Ste.\\ Croix, G. E. M.\\ de (1981). The Class Struggle in the Ancient Greek World. Ithaca, NY: Cornell University Press.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.1086/ahr/87.5.1369",
+        "title": "G. E. M. De Ste. Croix. <i>The Class Struggle in the Ancient Greek World: From the Archaic Age to the Arab Conquests</i>. Ithaca: Cornell University Press. 1981. Pp. xi, 732. $49.50",
+        "authors": [
+          "W. E. Higgins"
+        ],
+        "container": "The American Historical Review",
+        "publisher": "Oxford University Press (OUP)",
+        "year": 1982,
+        "volume": "87",
+        "issue": "5",
+        "page": "1369-1370",
+        "type": "journal-article",
+        "score": 74.46658
+      },
+      {
+        "doi": "10.2307/3166717",
+        "title": "The Class Struggle in the Ancient Greek World from the Archaic Age to the Arab Conquests. By G. E. M. De Ste Crolx. Ithaca, New York; Cornell University Press, 1981. xi + 732 pp. $49.50.",
+        "authors": [
+          "Robert M. Grant"
+        ],
+        "container": "Church History",
+        "publisher": "Cambridge University Press (CUP)",
+        "year": 1983,
+        "volume": "52",
+        "issue": "3",
+        "page": "346-347",
+        "type": "journal-article",
+        "score": 66.86326
+      },
+      {
+        "doi": "10.1017/s0009840x00101404",
+        "title": "The Class Struggle in the Ancient World - G. E. M. de Ste. Croix: The Class Struggle in the Ancient Greek World. Pp. xii + 732. London: Duckworth, 1981. £38.",
+        "authors": [
+          "J. A. Crook"
+        ],
+        "container": "The Classical Review",
+        "publisher": "Cambridge University Press (CUP)",
+        "year": 1983,
+        "volume": "33",
+        "issue": "1",
+        "page": "71-72",
+        "type": "journal-article",
+        "score": 63.793667
+      }
+    ]
+  },
+  {
+    "label": "Mansbridge, Jane J.\\ (1980).",
+    "entry": "Mansbridge, Jane J.\\ (1980). Beyond Adversary Democracy. New York: Basic Books",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.1177/009059178100900408",
+        "title": "Books in Review : BEYOND ADVERSARY DEMOCRACY by Jane J. Mansbridge. New York: Basic Books, 1980. Pp. 398. $20.00",
+        "authors": [
+          "Elaine Spitz"
+        ],
+        "container": "Political Theory",
+        "publisher": "SAGE Publications",
+        "year": 1981,
+        "volume": "9",
+        "issue": "4",
+        "page": "573-576",
+        "type": "journal-article",
+        "score": 75.17929
+      },
+      {
+        "doi": "10.2307/1960978",
+        "title": "Beyond Adversary Democracy. By Jane J. Mansbridge. (New York: Basic Books, 1980. Pp. xiii + 398. $20.00.)",
+        "authors": [
+          "D. A. Strickland"
+        ],
+        "container": "American Political Science Review",
+        "publisher": "Cambridge University Press (CUP)",
+        "year": 1981,
+        "volume": "75",
+        "issue": "3",
+        "page": "747-748",
+        "type": "journal-article",
+        "score": 70.55432
+      },
+      {
+        "doi": "10.1017/s0034670500051202",
+        "title": "The Democratic Dichotomy - Jane J. Mansbridge: Beyond Adversary Democracy. (New York: Basic Books, Publishers, 1980. Pp. 398. $20.00.)",
+        "authors": [
+          "Donald V. Weatherman"
+        ],
+        "container": "The Review of Politics",
+        "publisher": "Cambridge University Press (CUP)",
+        "year": 1981,
+        "volume": "43",
+        "issue": "4",
+        "page": "631-633",
+        "type": "journal-article",
+        "score": 70.47718
+      }
+    ]
+  },
+  {
+    "label": "Dahl, Robert A., and Edward R.\\ Tufte (1973).",
+    "entry": "Dahl, Robert A., and Edward R.\\ Tufte (1973). Size and Democracy. Stanford, CA: Stanford University Press.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.2307/1959169",
+        "title": "Size and Democracy. By Robert A. Dahl and Edward R. Tufte. (Stanford, Calif.: Stanford University Press, 1973. Pp. x, 148. $6.95.)",
+        "authors": [
+          "Heinz Eulau"
+        ],
+        "container": "American Political Science Review",
+        "publisher": "Cambridge University Press (CUP)",
+        "year": 1974,
+        "volume": "68",
+        "issue": "3",
+        "page": "1301-1303",
+        "type": "journal-article",
+        "score": 82.22408
+      },
+      {
+        "doi": "10.1017/s0048840200005141",
+        "title": "Robert A. Dahl e Edward R. Tufte, Size and Democracy, Stanford, Stanford University Press, 1973, pp. 148 [$ 6.95]",
+        "authors": [
+          "Gianfranco Pasquino"
+        ],
+        "container": "Italian Political Science Review/Rivista Italiana di Scienza Politica",
+        "publisher": "Cambridge University Press (CUP)",
+        "year": 1976,
+        "volume": "6",
+        "issue": "1",
+        "page": "183-185",
+        "type": "journal-article",
+        "score": 76.03934
+      },
+      {
+        "doi": "10.1080/17419166.2012.710464",
+        "title": "Robert Mandel:<i>Dark Logic: Transnational Criminal Tactics and Global Security</i>",
+        "authors": [
+          "Paul Griffiths"
+        ],
+        "container": "Democracy and Security",
+        "publisher": "Informa UK Limited",
+        "year": 2012,
+        "volume": "8",
+        "issue": "3",
+        "page": "335-336",
+        "type": "journal-article",
+        "score": 57.402264
+      }
+    ]
+  },
+  {
+    "label": "Corrigan-Gibbs, Henry, and Dan Boneh (2017).",
+    "entry": "Corrigan-Gibbs, Henry, and Dan Boneh (2017). ``Prio: Private, Robust, and Scalable Computation of Aggregate Statistics.'' USENIX NSDI '17, pp. 259-282",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.1109/sp40001.2021.00048",
+        "title": "Lightweight Techniques for Private Heavy Hitters",
+        "authors": [
+          "Dan Boneh",
+          "Elette Boyle",
+          "Henry Corrigan-Gibbs",
+          "Niv Gilboa",
+          "Yuval Ishai"
+        ],
+        "container": "2021 IEEE Symposium on Security and Privacy (SP)",
+        "publisher": "IEEE",
+        "year": 2021,
+        "volume": null,
+        "issue": null,
+        "page": "762-776",
+        "type": "proceedings-article",
+        "score": 39.08062
+      },
+      {
+        "doi": "10.56553/popets-2024-0104",
+        "title": "Divisible E-Cash for Billing in Private Ad Retargeting",
+        "authors": [
+          "Kevin Liao",
+          "Henry Corrigan-Gibbs",
+          "Dan Boneh"
+        ],
+        "container": "Proceedings on Privacy Enhancing Technologies",
+        "publisher": "Privacy Enhancing Technologies Symposium Advisory Board",
+        "year": 2024,
+        "volume": "2024",
+        "issue": "4",
+        "page": "5-23",
+        "type": "journal-article",
+        "score": 39.025063
+      },
+      {
+        "doi": "10.1145/3102980.3102993",
+        "title": "Quantum Operating Systems",
+        "authors": [
+          "Henry Corrigan-Gibbs",
+          "David J. Wu",
+          "Dan Boneh"
+        ],
+        "container": "Proceedings of the 16th Workshop on Hot Topics in Operating Systems",
+        "publisher": "ACM",
+        "year": 2017,
+        "volume": null,
+        "issue": null,
+        "page": "76-81",
+        "type": "proceedings-article",
+        "score": 38.03131
+      }
+    ]
+  },
+  {
+    "label": "Boneh, Dan, et al.\\ (2019).",
+    "entry": "Boneh, Dan, et al.\\ (2019). ``Zero-Knowledge Proofs on Secret-Shared Data via Fully Linear PCPs.'' CRYPTO 2019",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.1007/978-3-030-26954-8_3",
+        "title": "Zero-Knowledge Proofs on Secret-Shared Data via Fully Linear PCPs",
+        "authors": [
+          "Dan Boneh",
+          "Elette Boyle",
+          "Henry Corrigan-Gibbs",
+          "Niv Gilboa",
+          "Yuval Ishai"
+        ],
+        "container": "Lecture Notes in Computer Science",
+        "publisher": "Springer International Publishing",
+        "year": 2019,
+        "volume": null,
+        "issue": null,
+        "page": "67-97",
+        "type": "book-chapter",
+        "score": 83.64166
+      },
+      {
+        "doi": "10.1145/3319535.3363227",
+        "title": "Practical Fully Secure Three-Party Computation via Sublinear Distributed Zero-Knowledge Proofs",
+        "authors": [
+          "Elette Boyle",
+          "Niv Gilboa",
+          "Yuval Ishai",
+          "Ariel Nof"
+        ],
+        "container": "Proceedings of the 2019 ACM SIGSAC Conference on Computer and Communications Security",
+        "publisher": "ACM",
+        "year": 2019,
+        "volume": null,
+        "issue": null,
+        "page": "869-886",
+        "type": "proceedings-article",
+        "score": 43.31658
+      },
+      {
+        "doi": "10.3390/e24070970",
+        "title": "Shielding Probabilistically Checkable Proofs: Zero-Knowledge PCPs from Leakage Resilience",
+        "authors": [
+          "Mor Weiss"
+        ],
+        "container": "Entropy",
+        "publisher": "MDPI AG",
+        "year": 2022,
+        "volume": "24",
+        "issue": "7",
+        "page": "970",
+        "type": "journal-article",
+        "score": 42.09785
+      }
+    ]
+  },
+  {
+    "label": "Barnes, Richard, et al.\\ (2026).",
+    "entry": "Barnes, Richard, et al.\\ (2026). Verifiable Distributed Aggregation Functions (VDAFs), IETF CFRG draft-irtf-cfrg-vdaf-22 (14 August 2026; Informational; IRSG poll). https://datatracker.ietf.org/doc/html/draft-irtf-cfrg-vdaf-22.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.1353/fair.2026.a986971",
+        "title": "Notes for Rough Draft",
+        "authors": [
+          "Adrianna Jereb"
+        ],
+        "container": "Fairy Tale Review",
+        "publisher": "Project MUSE",
+        "year": 2026,
+        "volume": "22",
+        "issue": "1",
+        "page": "107-126",
+        "type": "journal-article",
+        "score": 41.70544
+      },
+      {
+        "doi": "10.1017/9781009535946.193",
+        "title": "Emancipation Proclamation – First Draft [July 22, 1862]",
+        "authors": [],
+        "container": "The Political Writings of Abraham Lincoln",
+        "publisher": "Cambridge University Press",
+        "year": 2026,
+        "volume": null,
+        "issue": null,
+        "page": "488-488",
+        "type": "book-chapter",
+        "score": 38.840546
+      },
+      {
+        "doi": "10.4155/bio-2019-0255",
+        "title": "Perspectives on the Draft Ich M10 Guidance: An Interview with Kelly Dong",
+        "authors": [
+          "Kelly Dong"
+        ],
+        "container": "Bioanalysis",
+        "publisher": "Informa UK Limited",
+        "year": 2019,
+        "volume": "11",
+        "issue": "22",
+        "page": "2025-2026",
+        "type": "journal-article",
+        "score": 35.453957
+      }
+    ]
+  },
+  {
+    "label": "Crites, Elizabeth, and Alistair Stewart (2025).",
+    "entry": "Crites, Elizabeth, and Alistair Stewart (2025). ``On Reed-Solomon Proximity Gaps Conjectures.'' IACR Cryptology ePrint Archive 2025/2046 (https://eprint.iacr.org/2025/2046.pdf).",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.62056/a0ljbkrz",
+        "title": "Proximity Gaps in Interleaved Codes",
+        "authors": [
+          "Benjamin Diamond",
+          "Angus Gruen"
+        ],
+        "container": "IACR Communications in Cryptology",
+        "publisher": "International Association for Cryptologic Research",
+        "year": 2025,
+        "volume": "1",
+        "issue": "4",
+        "page": null,
+        "type": "journal-article",
+        "score": 74.76736
+      },
+      {
+        "doi": "10.62056/a6n59qxqi",
+        "title": "Advances in Reed-Solomon Code-Based Masking and Application to ML-KEM",
+        "authors": [
+          "Pierre-Augustin Berthet",
+          "Yoan Rougeolle",
+          "Cédric Tavernier",
+          "Laurent Sauvage"
+        ],
+        "container": "IACR Communications in Cryptology",
+        "publisher": "International Association for Cryptologic Research",
+        "year": 2025,
+        "volume": "2",
+        "issue": "3",
+        "page": null,
+        "type": "journal-article",
+        "score": 64.68225
+      },
+      {
+        "doi": "10.1007/978-3-032-35398-6_5",
+        "title": "On Reed–Solomon Proximity Gaps Conjectures",
+        "authors": [
+          "Elizabeth Crites",
+          "Alistair Stewart"
+        ],
+        "container": "Lecture Notes in Computer Science",
+        "publisher": "Springer Nature Switzerland",
+        "year": 2026,
+        "volume": null,
+        "issue": null,
+        "page": "128-156",
+        "type": "book-chapter",
+        "score": 64.53987
+      }
+    ]
+  },
+  {
+    "label": "Aas, Josh, Tim Geoghegan, Christopher Patton, Karl Tarbe, et al.\\ (2026).",
+    "entry": "Aas, Josh, Tim Geoghegan, Christopher Patton, Karl Tarbe, et al.\\ (2026). prio Rust crate, version 0.18.1 (implements draft-irtf-cfrg-vdaf-18). https://crates.io/crates/prio; source https://github.com/divviup/libprio-rs. Compiled and executed for Table tab:prio3-bench.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.64187/gh.2026010105",
+        "title": "1.\tCisternas, Y.C. Aging of balance and risk of falls in elderly. MOJ Gerontol Geriatr. 2019;4(6):255–7. https://doi.org/10.15406/mojgg.2019.04.00216 2.\tSorock, G.S. Falls among the elderly: Epidemiology and Prevention. Am J Prev Med. 1988;4(5):282–288. https://doi.org/10.1016/s0749-3797(18)31162-0   3.\tVan Dieën, J.H., Pijnappels, M., Bobbert, M.F. Age-related intrinsic limitations in preventing a trip and regaining balance after a trip. Saf Sci. 2005;43(7):437–453. https://doi.org/10.1016/j.ssci.2005.08.008   4.\tAkyol, A.D. Falls in the elderly: what can be done? Int Nurs Rev. 2007;54(2):191–196. https://doi.org/10.1111/j.1466-7657.2007.00505.x   5.\tWorld Population Prospects 2019: Highlights. Available online: https://www.un.org/en/desa/world-population-prospects-2019-highlights  6.\tPingping Wang: Population Decline Slows While Quality Continues to Improve. Available online: https://www.stats.gov.cn/xxgk/jd/sjjd2020/202501/t20250117_1958337.html  7.\tStevens, J.A., Thomas, K.E., Sogolow, E.D. Seasonal patterns of fatal and nonfatal falls among older adults in the U.S. Accid Anal Prev. 2007;39(6):1239–1244. https://doi.org/10.1016/j.aap.2007.03.011 8.\tNational Cause-of-Death Surveillance Dataset of China (2021). Available online: https://ncncd.chinacdc.cn/jcysj/siyinjcx/syfxbg/202403/W020230317353700905354.pdf  9.\tPrevent Falls, Stay Away from the “Last Fracture” in Life. Available online: https://ncrcgdxy.csu.edu.cn/info/1042/2886.htm  10.\tKey Statistics from the Seventh National Population Census. Available online: https://www.stats.gov.cn/sj/pcsj/rkpc/d7c/  11.\tArias-Fernández, L., Carcedo-Argüelles, L., García-Esquinas, E., et al. Association of neighborhood physical environment with falls and fear of falling in older adults: A prospective cohort study. Arch Gerontol Geriatr. 2025;133:105831. https://doi.org/10.1016/j.archger.2025.105831   12.\tReider, L., Falvey, J.R., Okoye, S.M., et al. Cost of U.S emergency department and inpatient visits for fall injuries in older adults. Injury. 2024;55(2):111199. https://doi.org/10.1016/j.injury.2023.111199  13.\tClimate Change 2021: The Physical Science Basis. Available online: https://www.ipcc.ch/report/ar6/wg1/   14.\tThe impact of disasters and crises on agriculture and food security: 2021. Available online: https://openknowledge.fao.org/items/e5a5771a-6127-4e4a-ae1c-9f26fe8aa770   15.\tDube, O., Vargas, J.F. Commodity price shocks and civil conflict: evidence from Colombia. Rev Econ Stud. 2013;80(4):1384–1421. https://doi.org/10.1093/restud/rdt009   16.\tClimatic Variation. Available online: https://www.who.int/zh/news-room/fact-sheets/detail/climate-change-and-health   17.\tMertz, K.J., Lee, D.C., Sui, X., et al. Falls among adults: the association of cardiorespiratory fitness and physical activity with walking-related falls. Am J Prev Med. 2010;39(1):15-24. https://doi.org/10.1016/j.amepre.2010.03.013  18.\tMondor, L., Charland, K., Verma, A., et al. Weather warnings predict fall-related injuries among older adults. Age Ageing. 2015;44(3):403–408. https://doi.org/10.1093/ageing/afu199   19.\tNguyen, A.T., Nguyen, L.H., Nguyen, T.X., et al. Frailty Prevalence and Association with Health-Related Quality of Life Impairment among Rural Community-Dwelling Older Adults in Vietnam. Int J Environ Res Public Health. 2019;16(20):3869. https://doi.org/10.3390/ijerph16203869   20.\tPorto Gautério, D., Zortea, B., Costa Santos, S.S., et al. Risk Factors for new accidental falls in elderly patients at traumatology ambulatory center. Invest Educ Enferm. 2015;33(1):35–43. https://doi.org/10.17533/udea.iee.v33n1a05   21.\tChang, V.C., Do, M.T. Risk factors for falls among seniors: implications of gender. Am J Epidemiol. 2015;181(7):521–531. https://doi.org/10.1093/aje/kwu268   22.\tTsai, L.Y., Tsay, S.L., Hsieh, R.K., et al. Fall injuries and related factors of elderly patients at a medical center in Taiwan. Int J Gerontol. 2014;8(4):203–208. https://doi.org/10.1016/j.ijge.2013.10.007   23.\tGyllencreutz, L., Björnstig, J., Rolfsman, E., et al. Outdoor pedestrian fall-related injuries among Swedish senior citizens--injuries and preventive strategies. Scand J Caring Sci. 2015;29(2):225–233. https://doi.org/10.1111/scs.12153   24.\tde Almeida, S.T., Soldera, C.L.C., de Carli, G.A., et al. Analysis of extrinsic and intrinsic factors that predispose elderly individuals to fall. Rev Assoc Med Bras. 2012;58(4):427–433. https://doi.org/10.1016/s2255-4823(12)70224-2   25.\tLawlor, D.A., Patel, R., Ebrahim, S. Association between falls in elderly women and chronic diseases and drug use: cross sectional study. BMJ. 2003;327(7417):712–717. https://doi.org/10.1136/bmj.327.7417.712   26.\tYoo, J.S., Kim, C.G., Yim, J., et al. Factors influencing falls in the frail elderly individuals in urban and rural areas. Aging Clin Exp Res. 2016;28(4):687–697. https://doi.org/10.1007/s40520-015-0469-2   27.\tLin, W.Q., Lin, L., Yuan, L.X., et al. Association between meteorological factors and elderly falls in injury surveillance from 2014 to 2018 in Guangzhou, China. Heliyon. 2022;8(10):e10863. https://doi.org/10.1016/j.heliyon.2022.e10863   28.\tLin, Y., Qi, J., Hu, J., et al. Age inequality in temperature-related fall mortality among old people in China in a warming climate. npj Clim Atmos Sci. 2025;8(1):58. https://doi.org/10.1038/s41612-025-00939-8   29.\tGevitz, K., Madera, R., Newbern, C., et al. Risk of Fall-Related Injury due to Adverse Weather Events, Philadelphia, Pennsylvania, 2006-2011. Public Health Rep. 2017;132(1_suppl):53S–58S. https://doi.org/10.1177/0033354917706968   30.\tDriedger, M.R., Gupta, A., Wells, B., et al. “Oh the weather outside is frightful”: severe injury secondary to falls while installing residential Christmas lights. Injury. 2016;47(1):277–279. https://doi.org/10.1016/j.injury.2015.09.014   31.\tCollins, K.J., Easton, J.C., Belfield-Smith, H., et al. Effects of age on body temperature and blood pressure in cold environments. Clin Sci (Lond). 1985;69(4):465–470. https://doi.org/10.1042/cs0690465   32.\tKeatinge, W.R., Coleshaw, S.R., Cotter, F., et al. Increases in platelet and red cell counts, blood viscosity, and arterial pressure during mild surface cooling: factors in mortality from coronary and cerebral thrombosis in winter. Br Med J. 1984;289(6456):1405–1408. https://doi.org/10.1136/bmj.289.6456.1405   33.\tKenney, W.L., Munce, T.A. Invited review: aging and human temperature regulation. J Appl Physiol (1985). 2003;95(6):2598–2603. https://doi.org/10.1152/japplphysiol.00202.2003   34.\tSu, X., Cheng, Y., Wang, Y., et al. Regional Temperature-Sensitive Diseases and Attributable Fractions in China. Int J Environ Res Public Health. 2019;17(1):184. https://doi.org/10.3390/ijerph17010184   35.\tArbuthnott, K., Hajat. S., Heaviside, C., et al. Years of life lost and mortality due to heat and cold in the three largest English cities. Environ Int. 2020;144:105966. https://doi.org/10.1016/j.envint.2020.105966   36.\tLai, D.W.L., Ou, X., Jin, J. A Quasi-Experimental Study on the Effect of an Outdoor Physical Activity Program on the Well-Being of Older Chinese People in Hong Kong. Int J Environ Res Public Health. 2022;19(15):8950. https://doi.org/10.3390/ijerph19158950   37.\tAkehurst, E., Scott, D., Rodriguez, J.P., et al. Associations of sarcopenia components with physical activity and nutrition in Australian older adults performing exercise training. BMC Geriatr. 2021;21(1):276. https://doi.org/10.1186/s12877-021-02212-y   38.\tYu, R., Leung, J., Woo, J. Housework reduces all-cause and cancer mortality in Chinese men. PLoS One. 2013;8(5):e61529. https://doi.org/10.1371/journal.pone.0061529   39.\tStahl, S.T., Albert, S.M. Gender differences in physical activity patterns among older adults who fall. Prev Med. 2015;71:94–100. https://doi.org/10.1016/j.ypmed.2014.12.016   40.\tCheng, H., Yang, Z., Ren, Y. Understanding elderly rural stayers in China: a new model for active ageing. Tour Manag Perspect. 2022;43:100995. https://doi.org/10.1016/j.tmp.2022.100995   41.\tHuber, D., Milne, S., Hyde, K.F. Constraints and facilitators for senior tourism. Tour Manag Perspect. 2018;27:55–67. https://doi.org/10.1016/j.tmp.2018.04.003   42.\tWijlhuizen, G.J., de Jong, R., Hopman-Rock, M. Older persons afraid of falling reduce physical activity to prevent outdoor falls. Prev Med. 2007;44(3):260–264. https://doi.org/10.1016/j.ypmed.2006.11.003   43.\tCheuvront, S.N., Kenefick, R.W. Dehydration: physiology, assessment, and performance effects. Compr Physiol. 2014;4(1):257–285. https://doi.org/10.1002/cphy.c130017   44.\tArbes, S., Berzlanovich, A. Injury pattern in correlation with the height of fatal falls. Wien Klin Wochenschr. 2015;127(1–2):57–61. https://doi.org/10.1007/s00508-014-0639-9   45.\tSophonratanapokin, B., Sawangdee, Y., Soonthorndhada, K. Effect of the living environment on falls among the elderly in Thailand. Southeast Asian J Trop Med Public Health. 2012;43(6):1537–1547. Available online: https://pubmed.ncbi.nlm.nih.gov/23413718/   46.\tMeijering, L., Osborne, T., van Doorne, M., et al. Seasonal differences in mobility and activity space in later life: a case study of older adults in the Northern Netherlands. Mobilities. 2023;19(4):736–755. https://doi.org/10.1080/17450101.2023.2289453   47.\tMeade, R.D., Akerman, A.P., Notley, S.R., et al. Physiological factors characterizing heat-vulnerable older adults: A narrative review. Environ Int. 2020;144:105909. https://doi.org/10.1016/j.envint.2020.105909   48.\tMorency, P., Voyer, C., Burrows, S., et al. Outdoor falls in an urban context: winter weather impacts and geographical variations. Can J Public Health. 2012;103(3):218–222. https://doi.org/10.1007/BF03403816   49.\tModarres, R., Ouarda, T.B., Vanasse, A., et al. Modeling seasonal variation of hip fracture in Montreal, Canada. Bone. 2012;50(4):909–916. https://doi.org/10.1016/j.bone.2012.01.004",
+        "authors": [
+          "Olga Strizhitskaya",
+          "Tatiana Konovalchik"
+        ],
+        "container": "Geriatrics and Healthcare",
+        "publisher": "LUMOSCIENCE PUBLISHING LIMITED",
+        "year": 2026,
+        "volume": "1",
+        "issue": "1",
+        "page": "65",
+        "type": "journal-article",
+        "score": 25.66084
+      },
+      {
+        "doi": "10.61927/igmin343",
+        "title": "Divyajanani S, Harithpriya K, Ganesan K, Ramkumar KM. Dietary polyphenols remodel DNA methylation patterns of NRF2 in chronic disease. Nutrients. 2023;15:3347. Available from:  https://doi.org/10.3390/nu15153347   2.\tQi J, Pan Z, Wang X, Zhang N, He G, Jiang X. Research advances of Zanthoxylum bungeanum Maxim. polyphenols in inflammatory diseases. Front Immunol. 2024;15:1305886. Available from: https://doi.org/10.3389/fimmu.2024.1305886   3.\tChong Y, Kim BG, Park YJ, Yang Y, Lee SW, Lee Y,et al. Production of four flavonoid C-glucosides in Escherichia coli. J Agric Food Chem. 2023;71:5302-5313. Available from: https://doi.org/10.1021/acs.jafc.3c00297  4.\tVajdi M, Karimi A, Hassanizadeh S, Farhangi MA, Bagherniya M, Askari G, et al. Effect of polyphenols against complications of COVID-19: current evidence and potential efficacy. Pharmacol Rep. 2024;76:307-327. Available from: https://doi.org/10.1007/s43440-024-00585-6   5.\tLiu W, Cui X, Zhong Y. Phenolic metabolites as therapeutic in inflammation and neoplasms: molecular pathways explaining their efficacy. Pharmacol Res. 2023;193:106812. Available from: https://doi.org/10.1016/j.phrs.2023.106812  6.\tOtręba M, Kośmider L, Stojko J, Rzepecka-Stojko A. Cardioprotective activity of selected polyphenols based on epithelial and aortic cell lines: a review. Molecules. 2020;25:5343. Available from: https://doi.org/10.3390/molecules25225343  7.\tDias MC, Pinto DCGA, Silva AMS. Plant flavonoids: chemical characteristics and biological activity. Molecules. 2021;26:5377. Available from: https://doi.org/10.3390/molecules26175377   8.\tMedini F, Ksouri R, Msaada K, Legault J. Phenolic compounds from Limonium densiflorum: antioxidant, anti-inflammatory, anticancer, and anti-influenza activities. Int J Environ Health Res. 2025;35:94-104. Available from: https://doi.org/10.1080/09603123.2024.2342572  9.\tRathod NB, Elabed N, Punia S, Ozogul F, Kim S-K, et al. Recent developments in polyphenol applications on human health: a review. Plants. 2023;12:1217. Available from:  https://doi.org/10.3390/plants12061217   10.\tMoar K, Yadav S, Pant A, et al. Anti-tumor effects of polyphenols via targeting cancer-driving signaling pathways: a review. Indian J Clin Biochem. 2024;39:470-488. Available from:  https://doi.org/10.1007/s12291-024-01222-y   11.\tSerreli G, Deiana M. Role of dietary polyphenols in the activity and expression of nitric oxide synthases: a review. Antioxidants. 2023;12:147. Available from: https://doi.org/10.3390/antiox12010147  12.\tKumar K, Debnath P, Singh S, Kumar N. An overview of plant phenolics and their involvement in abiotic stress tolerance. Stresses. 2023;3:570-585. Available from: https://doi.org/10.3390/stresses3030040   13.\tZhou Z, Duan Y, Li Y, Zhang P, Li Q, Yu L, et al. CYP98A monooxygenases: a key enzyme family in plant phenolic compound biosynthesis. Hortic Res. 2025;12:uhaf074. Available from: https://doi.org/10.1093/hr/uhaf074   14.\tChen S, Wang X, Cheng Y, Gao H, Chen X. A review of classification, biosynthesis, biological activities, and applications of flavonoids. Molecules. 2023;28:4982. Available from: https://doi.org/10.3390/molecules28134982  15.\tHan S, Cai H, Yu H. UV-C regulation of phenolic biosynthesis in peach fruit during storage. LWT. 2023;190:115573. Available from: https://doi.org/10.1016/j.lwt.2023.115573  16.\tWang S, Xu Y, Wang F. Postharvest changes in phenolic and volatile compounds in grapes. Food Chem. 2025;465:141958. Available from: https://doi.org/10.1016/j.foodchem.2024.141958  17.\tMolnar M, Jakovljević Kovač M, Pavić V. Diversity, structure, biosynthesis, and extraction of tannins using deep eutectic solvents. Molecules. 2024;29:2615. Available from: https://doi.org/10.3390/molecules29112615   18.\tSharma P, Dhiman T, Negi RS. Molecular mechanisms of skin photoaging and therapeutic advances using polyphenols. S Afr J Bot. 2024;166:466-482. Available from: https://doi.org/10.1016/j.sajb.2024.01.035   19.\tChrostowski PC, Dietrich AM, Suffet IH. Ozone and oxygen induced oxidative coupling of aqueous phenolics. Water Res. 1983;17:1627-1633. Available from: https://doi.org/10.1016/0043-1354(83)90021-0   20.\tSpyroudis S. Hydroxyquinones: synthesis and reactivity. Molecules. 2000;5:1291-1330. Available from: https://doi.org/10.3390/51201291  21.\tAlcalde B, Granados M, Saurina J. Exploring the antioxidant features of polyphenols by spectroscopic and electrochemical methods. Antioxidants. 2019;8:523-532. Available from: https://doi.org/10.3390/antiox8110523  22.\tBas TG. Dietary polyphenols (flavonoids) derived from plants for therapeutic health: antioxidant performance, ROS, molecular mechanisms, and bioavailability limitations. Int J Mol Sci. 2026;27:1404. Available from: https://doi.org/10.3390/ijms27031404   23.\tRudrapal M, De Oliveira AM, Singh RP. Dietary polyphenols maintain human health through modulation of gut microbiota. Front Pharmacol. 2026;16:1710088. Available from: https://doi.org/10.3389/fphar.2025.1710088   24.\tStromsnes K, Lagzdina R, Olaso-Gonzalez G, et al. Pharmacological properties of polyphenols: bioavailability, mechanisms of action, and biological effects. Biomedicines. 2021;9:1074. Available from: https://doi.org/10.3390/biomedicines9081074   25.\tWang Y, Chen J, He G, Yin L, Liao Y. Unlocking the potential of flavonoid biosynthesis through integrated metabolic engineering. Front Plant Sci. 2025;16:1597007. Available from: https://doi.org/10.3389/fpls.2025.1597007   26.\tChouhan S, Sharma K, Zha J, Guleria S, Koffas MAG. Recent advances in recombinant biosynthesis of polyphenols. Front Microbiol. 2017;8:2259. Available from: https://doi.org/10.3389/fmicb.2017.02259   27.\tTariq H, Asif S, Andleeb A, Hano C, Abbasi BH. Flavonoid production: plant metabolic engineering and de novo microbial production. Metabolites. 2023;13:124. Available from: https://doi.org/10.3390/metabo13010124    28.\tRosa GP, Barreto MC, Seca AML. Ionic liquids and deep eutectic solvents for polyphenol extraction: opportunities and limitations. Int J Mol Sci. 2026;27:3538. Available from: https://doi.org/10.3390/ijms2708353  29.\tFredsgaard M, Fussy A, Nybo GK. Polyphenols in food and food wastes: extraction, isolation, and health applications. Food Chem Mol Sci. 2026;12:100351. Available from: https://doi.org/10.1016/j.fochms.2025.100351  30.\tPalos-Hernández A, González-Paramás AM, Santos-Buelga C. Advances in green extraction of polyphenols from plants and food by-products. Molecules. 2024;30:55. Available from: https://doi.org/10.3390/molecules30010055   31.\tTzin V, Malitsky S, Zvi MMB. Expression of bacterial feedback-insensitive DAHP synthase in Arabidopsis and metabolic bottlenecks. New Phytol. 2012;194:430-439. Available from: https://doi.org/:10.1111/j.1469-8137.2012.04052.x      32.\tYuan J, Zhong S, Long Y. Shikimate kinase plays important roles in anthocyanin synthesis in Petunia. Int J Mol Sci. 2022;23:15964. Available from: https://doi.org/10.3390/ijms232415964   33.\tAzizyan R, Abdollahi Mandoulakani B. Gene expression and phenolic compounds in Sonchus arvensis under drought stress. Ind Crops Prod. 2024;209:118030. Available from: https://doi.org/10.1016/j.indcrop.2024.118030  34.\tYao L, Wu X, Jiang X. Subcellular compartmentalization in biosynthesis and engineering of plant natural products. Biotechnol Adv. 2023;69:108258. Available from: https://doi.org/10.1016/j.biotechadv.2023.10825 35.\tJeandet P, Sobarzo-Sánchez E, Silva AS, et al. Biocatalytic and green chemistry methods for resveratrol production. Biotechnol Adv. 2020;39:107461. Available from: https://doi.org/10.1016/j.biotechadv.2019.107461  36.\tLiu Q, Li S, Ding W. Aphid-induced tobacco resistance and salicylic acid changes in rhizosphere. Eur J Plant Pathol. 2020;157:465-483. Available from: https://doi.org/10.1007/s10658-020-02005-w  37.\tWang X, Zeng L, Liao Y. Herbivore-induced α-farnesene formation in tea plants. Int J Mol Sci. 2019;20:4151. Available from: https://doi.org/10.3390/ijms20174151   38.\tJi N, Wang J, Li Y. PpWRKY70 involvement in disease resistance via phenylpropanoid pathway in peach. Postharvest Biol Technol. 2021;174:111466. Available from: https://doi.org/10.1016/j.postharvbio.2021.111466   39.\tXie M, Zhang J, Yao T. ANGUSTIFOLIA regulates MYB46 and WRKY33 transcription in Arabidopsis. New Phytol. 2020;228:1627-1639. Available from: https://doi.org/:10.1111/nph.16826   40.\tHodaei M, Rahimmalek M, Arzani A. Water stress effects on flavonoid biosynthesis in chrysanthemum. Ind Crops Prod. 2018;120:295-304. Available from: https://doi.org/10.1016/j.indcrop.2018.04.07  41.\tDing X, Zhu X, Zheng W. BTH treatment delays senescence of postharvest pitaya fruit via antioxidant system and phenylpropanoid pathway. Foods. 2021;10:846. Available from: https://doi.org/10.3390/foods10040846  42.\tMouden S, Bac-Molenaar JA, Kappers IF. Elicitor application in strawberry increases plant resilience without yield loss. Front Plant Sci. 2021;12:695908. Available from: https://doi.org/10.3389/fpls.2021.695908    43.\tManoharan B, Qi SS, Dhandapani V. Gene expression profiling reveals enhanced defense responses in invasive weed vs native congener. Int J Mol Sci. 2019;20:4916. Available from: https://doi.org/10.3390/ijms20194916   44.\tDuhan L, Kumar D, Pasrija R. Exogenous salicylic acid mitigates Fusarium stress in Vigna mungo. Plant Cell Rep. 2025;44:2. Available from: https://doi.org/10.1007/s00299-024-03394-6  45.\tGuo M, Hou J, Li C. Calcium signaling mediates lignin synthesis in pear exocarp. Plant Physiol Biochem. 2022;190:174-183. Available from:  https://doi.org/10.1016/j.plaphy.2022.09.00   46.\tZeng Y, Song H, Xia L. Defensive responses of poplars to fungal pathogens. Front Plant Sci. 2023;14:1107583. Available from: https://doi.org/10.3389/fpls.2023.1107583   47.\tPant SR, Irigoyen S, Liu J. Phenylalanine ammonia lyase promotes antiviral defenses in Brachypodium. mBio. 2021;12:e03518-20. Available from: https://doi.org/10.1128/mBio.03518-20  48.\tCarbonaro M, Mattera M. Polyphenoloxidase activity in organic vs conventional fruits. Food Chem. 2001;72:419-424. Available from: https://doi.org/10.1016/S0308-8146(00)00248-X   49.\tMerino J, Pedreros A, Fischer S. Weed interference affects polyphenol content in quinoa. Chil J Agric Res. 2019;79:405-414. Available from: https://doi.org/10.4067/S0718-58392019000300405   50.\tTyagi K, Maoz I, Kochanek B. Cytokinin effects on phenylpropanoid pathway in grape. Hortic Res. 2021;8:51-65. Available from: https://doi.org/10.1038/s41438-021-00488-0   51.\tChen Z, Zhang L, Peng M. Selenite enhances Chinese flowering cabbage quality via antioxidant regulation. Food Res Int. 2023;163:112229. Available from: https://doi.org/10.1016/j.foodres.2022.112229   52.\tReshi ZA, Ahmad W, Lukatkin AS. Secondary metabolite biosynthesis pathways and environmental influences. Metabolites. 2023;13:895. Available from: https://doi.org/10.3390/metabo13080895  53.\tYeshi K, Crayn D, Ritmejerytė E. Secondary metabolites under abiotic stress and pharmaceutical applications. Molecules. 2022;27:313. Available from: https://doi.org/10.3390/molecules27010313  54.\tWang Y, Fan K, Wang J. Proteomic analysis of Camellia sinensis under drought stress. J Plant Physiol. 2017;219:91-99. Available from: https://doi.org/10.1016/j.jplph.2017.10.001   55.\tGhotbzadeh Kermani S, Saeidi G, Sabzalian MR. Drought stress influences sesamin and polyphenols in sesame. Food Chem. 2019;289:360-368. Available from: https://doi.org/10.1016/j.foodchem.2019.03.004   56.\tXu N, Liu S, Lu Z. Flavonoid accumulation under salt stress in Ginkgo biloba. Plants. 2020;9:1162. Available from: https://doi.org/10.3390/plants9091162 57.\tFraser DP, Sharma A, Fletcher T. UV-B increases flavonoid quercetin in coriander. Sci Rep. 2017;7:17758. Available from: https://doi.org/10.1038/s41598-017-18073-8  58.\tMosadegh H, Trivellini A, Lucchesini M. UV-B effects on sweet basil physiology. Plants. 2019;8:396. Available from: https://doi.org/10.3390/plants8100396  59.\tChen X, Zhang R, Xin Y. Multi-omics analysis of Betula platyphylla under UV-B stress. Ind Crops Prod. 2024;214:118565. Available from: https://doi.org/10.1016/j.indcrop.2024.118565     60.\tIzbiańska K, Arasimowicz-Jelonek M, Deckert J. Phenylpropanoid metabolites improve lupine root tolerance to lead stress. Ecotoxicol Environ Saf. 2014;110:61-67. Available from: https://doi.org/:10.1016/j.ecoenv.2014.08.014   61.\tGonzález-Mendoza D, Méndez-Trujillo V, Grimaldo-Juárez O, et al. Changes in photochemical efficiency and epidermal polyphenols in Prosopis species exposed to heavy metals. Open Life Sci. 2017;12:373-378. https://doi.org/10.1515/biol-2017-0043  62.\tRen T, Zheng P, Zhang K, et al. GABA enhances polyphenol accumulation and antioxidant activity in tea under heat stress. Plant Physiol Biochem. 2021;159:363-371. Available from: https://doi.org/10.1016/j.plaphy.2021.01.003   63.\tZhu H, Chen C, Zeng J. MicroRNA528 regulates ROS homeostasis in monocots via copper protein genes. New Phytol. 2020;225:385-399. Available from: https://doi.org/10.1111/nph.16130   64.\tSchwartzberg EG, Tumlinson JH. Aphid honeydew alters plant defence responses. Funct Ecol. 2014;28:386-394. Available from: https://doi.org/10.1111/1365-2435.12182  65.\tMa X, Chen B, Yang L. GhWRKY55 regulates cotton resistance via lignin biosynthesis and jasmonic acid signaling. Ind Crops Prod. 2024;210:118154. Available from: https://doi.org/10.1016/j.indcrop.2024.118154   66.\tTalukder P, Dasgupta M, Hazra A. Impact of invasive weeds on secondary metabolites in okra. Biotechnol Appl Biochem. 2025:e2751. Available from: https://doi.org/10.1002/bab.2751  67.\tYu Y, Wang P, Bai Y. GmFBX176 regulates ABA-mediated drought and salt responses in soybean. Environ Exp Bot. 2020;176:104056. Available from: https://doi.org/10.1016/j.envexpbot.2020.104056  68.\tChen S, Wu F, Li Y. MYB4 and CHS1 regulate flavonoid biosynthesis under salinity stress. Front Plant Sci. 2019;10:178. Available from: https://doi.org/10.3389/fpls.2019.00178  69.\tWang X, Dai WW, Liu C. Physiological responses of purple sweet potato under salinity stress. Genes. 2022;13:1350. Available from: https://doi.org/10.3390/genes13081350   70.\tSahin S, Kısa D, Ataklı SB. Heavy metal effects on antioxidant contents in maize. Rom Agric Res. 2022;39:57-66. Available from: https://doi.org/10.59665/rar3906   71.\tHerrmann HA, Dyson BC, Miller MAE. Chloroplast metabolic flux signals cold acclimation in Arabidopsis thaliana. Plant Cell Environ. 2021;44:171-185. Available from: https://doi.org/10.1111/pce.13896   72.\tSridhar A, Ponnuchamy M, Kumar PS. Techniques and modeling of polyphenol extraction: a review. Environ Chem Lett. 2021;19:3409-3443. Available from: https://doi.org/10.1007/s10311-021-01217-8   73.\tDobrinčić A, Repajić M, Garofulić IE. Comparison of extraction methods for olive leaf polyphenols. Processes. 2020;8:1008. Available from: https://doi.org/10.3390/pr8091008   74.\tDing Q, Jiang H, Chen Y. Nitrogen protection in ultrasonic-assisted extraction of rapeseed polyphenols. J Food Process Eng. 2019;42:e13104. Available from: https://doi.org/10.1111/jfpe.13104   75.\tSedraoui S, Badr A, Barba MGM. Optimization of ultrahigh-pressure extraction of phenolics from dates. Food Anal Methods. 2020;13:1556-1569. Available from: https://doi.org/10.1007/s12161-020-01764-w  76.\tTan MJ, Li Y, Zhao SQ. Synergistic ultrasound and pulsed electric field extraction of litchi peel polyphenols. Int J Biol Macromol. 2024;260:129613. Available from: https://doi.org/10.1016/j.ijbiomac.2024.129613   77.\tZhou Z, Shao H, Han X. Enzyme-assisted extraction enhancement of polyphenols from Ulmus pumila. Ind Crops Prod. 2017;97:401-408. Available from: https://doi.org/10.1016/j.indcrop.2016.12.060   78.\tAvilés-Betanzos KA, Scampicchio M, Ferrentino G. Supercritical fluid extraction of Capsicum chinense phenolics using RSM. Processes. 2023;11:2055. Available from: https://doi.org/10.3390/pr11072055  79.\tLi L, Lv J, Wang X. Green extraction of polyphenols from Elaeagnus angustifolia using natural deep eutectic solvents. Molecules. 2024;29:2412. Available from: https://doi.org/10.3390/molecules29112412   80.\tAntony A, Farid M. Effect of temperature on polyphenol extraction. Appl Sci. 2022;12:2107. Available from: https://doi.org/10.3390/app12042107  81.\tPark SY, Kang TM, Kim MJ. Enzymatic browning reaction of apple juices prepared using different juicing systems. Biosci Biotechnol Biochem. 2018;82:2000-2006. Available from: https://doi.org/10.1080/09168451.2018.149794  82.\tOlszowy-Tomczyk M, Paprotny Ł, Wianowska D. Stability of phenolic acids under extraction conditions. Molecules. 2024;29:5861. Available from: https://doi.org/10.3390/molecules29245861  83.\tWang G, Kumar Y. Mechanisms of initial non-enzymatic oxidation of wine: a mini review. J Food Sci. 2024;89:2530-2545. Available from: https://doi.org/10.1111/1750-3841.17038  84.\tMussio C, Garcia-Perez P, Moret E. Natural chelating agents in food stability: mechanisms and applications. Food Chem. 2025;496:146682. Available from: https://doi.org/10.1016/j.foodchem.2025.14668 .  85.\tWang P, Cheng C, Ma Y. Degradation of polyphenols in aqueous extraction systems under ultrasound. Sep Purif Technol. 2020;247:116967. Available from: https://doi.org/10.1016/j.seppur.2020.116967   86.\tArnold M, Gramza-Michałowska A. Enzymatic browning in apple products: inhibition strategies. Compr Rev Food Sci Food Saf. 2022;21:5038-5076. Available from: https://doi.org/10.1111/1541-4337.13059   87.\tTilley A, McHenry MP, McHenry JA. Role of substrates in polyphenol oxidase-mediated browning. Curr Res Food Sci. 2023;7:100623. Available from: https://doi.org/10.1016/j.crfs.2023.100623  88.\tEbrahimi P, Bayram I, Lante A. Phenolic extract of parsley inhibits lipid oxidation in emulsions. Food Res Int. 2024;187:114452. Available from: doi:10.1016/j.foodres.2024.114452.  89.\tOerlemans K, Barrett DM, Suades CB. Thermal degradation of glucosinolates in red cabbage. Food Chem. 2006;95:19-29. Available from: https://doi.org/10.1016/j.foodchem.2004.12.013  90.\tSoong Y, Barlow P. Quantification of gallic and ellagic acid in fruit seeds and kernels. Food Chem. 2006;97:524-530. Available from: https://doi.org/10.1016/j.foodchem.2005.05.033   91.\tIkeda T, Masuda T, Takayama M. Solvent-induced emission of organogels. Org Biomol Chem. 2016;14:36-39. Available from: https://doi.org/10.1039/C5OB01898F   92.\tHerrera-Pool E, Ramos-Díaz AL, Lizardi-Jiménez MA. Solvent polarity in ultrasound-assisted extraction of phenolics from habanero pepper leaves. Ultrason Sonochem. 2021;76:105658. Available from: https://doi.org/10.1016/j.ultsonch.2021.105658  93.\tWibisono Y, Rachmawati SA, Mylani VS. Cellulose acetate membrane with Olea europaea nanosolids. Alexandria Eng J. 2023;64:119-129. Available from: https://doi.org/10.1016/j.aej.2022.08.036  94.\tDilokpimol A, Mäkelä MR, Aguilar-Pontes MV. Diversity of fungal feruloyl esterases and applications. Biotechnol Biofuels. 2016;9:231. Available from: https://doi.org/10.1186/s13068-016-0651-6   95.\tGulsunoglu-Konuskan Z, Kilic-Akyilmaz M. Microbial bioconversion of phenolic compounds in agro-industrial wastes. J Agric Food Chem. 2022;70:6901-6910. Available from: https://doi.org/10.1021/acs.jafc.1c06888   96.\tMéndez DA, Fabra MJ, Odriozola-Serrano I. Extraction effects on pectin and phenolics from persimmon waste streams. Food Hydrocolloids. 2022;123:107066. Available from: https://doi.org/10.1016/j.foodhyd.2021.107066   97.\tMahamoud R, Bowman DT, Ward WE. Stability of polyphenols in red rooibos tea. Food Chem. 2024;448:139068. Available from: https://doi.org/10.1016/j.foodchem.2024.139068   98.\tFu X, Du Y, Zou L, et al. Acidified glycerol extraction and stabilization of blueberry anthocyanins. Food Chem. 2022;390:133226. Available from: https://doi.org/10.1016/j.foodchem.2022.133226  99.\tHosseini Taheri SE, Bazargan M, Rahnama Vosough P. Composition and oxidation of peanut: a review. J Food Compos Anal. 2024;125:105770. Available from: https://doi.org/10.1016/j.jfca.2023.105770   100.\tAlean J, Chejne F, Rojano B. Degradation of polyphenols during cocoa drying. J Food Eng. 2016;189:99-105. Available from: https://doi.org/10.1016/j.jfoodeng.2016.05.026 101.\tLeangnim N, Unban K, Thangsunan P. Ultrasonic-assisted enzymatic improvement of polyphenol content and antioxidant activity of miang extracts. Ultrason Sonochem. 2023;94:106351. Available from: https://doi.org/10.1016/j.ultsonch.2023.106351   102.\tChen J, Wang H. Processing characteristics of chia seed: changes in physicochemical properties and structure. Food Biosci. 2024;59:103813. Available from: https://doi.org/10.1016/j.fbio.2024.103813   103.\tKotsou K, Stoikou M, Athanasiadis V. Optimization of extraction to enhance antioxidant properties of Prunus spinosa fruit. Horticulturae. 2023;9:942-957.Available from:  https://doi.org/10.3390/horticulturae9080942  104.\tChamali S, Bendaoud H, Bouajila J. Optimization of accelerated solvent extraction of bioactive compounds from Eucalyptus intertexta. J Appl Res Med Aromat Plants. 2023;35:100464. Available from: https://doi.org/10.1016/j.jarmap.2023.100464   105.\tWang D, Wang Y, Zhang Z. Degradation and isomerization of dicaffeoylquinic acids under ultrasound. Ultrason Sonochem. 2023;95:106401. Available from: https://doi.org/10.1016/j.ultsonch.2023.106401  106.\tXie C, Yu K, Zhong D, Yuan T, Ye F, Jarrell JA, et al. Isomeric transformations of chlorogenic acid under different conditions. J Agric Food Chem. 2011;59:11078-11087. Available from: https://doi.org/10.1021/jf203104k   107.\tGao Y, Song O, Wang M, Guo X, Zhang G, Liu X, et al. Hydrogen protection enhances bioactivity of chrysanthemum extract. Antioxidants. 2023;12:1019. Available from: https://doi.org/10.3390/antiox12051019   108.\tWagner A, Dussling S, Scansani S, Bach P, Ludwig M, Steingass CB, et al. Juice production systems and storage effects in red-fleshed apples. Molecules. 2022;27:2459. Available from: https://doi.org/10.3390/molecules27082459  109.\tBrewer MS. Natural antioxidants: sources, mechanisms, and applications. Compr Rev Food Sci Food Saf. 2011;10:221-247. Available from: https://doi.org/10.1111/j.1541-4337.2011.00156  110.\tLosada-Barreiro S, Sezgin-Bayindir Z, Paiva-Martins F, Bravo-Díaz C. Biochemistry of antioxidants: mechanisms and applications. Biomedicines. 2022;10:3051. Available from: https://doi.org/10.3390/biomedicines10123051   111.\tVladić J, Jakovljević Kovač M, Pavić V. Green biomass valorization using supercritical fluids and deep eutectic solvents. Antibiotics. 2023;12:1031. Available from: https://doi.org/10.3390/antibiotics12061031   112.\tLojková L, Pluháčková H, Benešová K. Trends in quercetin extraction methods. TrAC Trends Anal Chem. 2023;167:117229. Available from: https://doi.org/10.1016/j.trac.2023.11722   113.\tGarcía-Roldán A, Piriou L, Jauregi P. Natural deep eutectic solvents for polyphenol extraction from coffee grounds. Front Plant Sci. 2023;13:1072592. Available from: https://doi.org/10.3389/fpls.2022.1072592   114.\tWang H, Fu Y, Zhao Q. Processing effects on millet polyphenols and anti-diabetic potential. Front Nutr. 2022;9:780499. Available from: https://doi.org/10.3389/fnut.2022.780499  115.\tUsenko OM, Guseynova VP, Sakevich AI. Polyphenol influence on algae under pH changes. Hydrobiol J. 2008;44:37-44. Available from: https://doi.org/10.1615/HydrobJ.v44.i5.40  116.\tZeng L, Ma M, Li C. Stability of tea polyphenols at different pH and temperatures. Int J Food Prop. 2017;20:1-18. Available from: https://doi.org/10.1080/10942912.2014.983605   117.\tLi C, Arroo RRJ, Shpigelman A. Aminated polyphenols from Strecker degradation in food processing. Food Chem Int. 2025;1:16-23. Available from: https://doi.org/10.1002/fci2  118.\tLuo Q, Zhang D, Zhou J. Oxidation of tea polyphenols during black tea fermentation. Food Res Int. 2024;196:115016. Available from: https://doi.org/10.1016/j.foodres.2024.115016  119.\tAlmeida FDL, Gomes WF, Cavalcante RS, et al. Cold plasma and high-pressure processing effects on orange juice compounds. Food Res Int. 2017;102:282-290. Available from: https://doi.org/10.1016/j.foodres.2017.09.072  120.\tMoon KM, Kwon EB, Lee B. Trends in controlling enzymatic browning in fruits and vegetables. Molecules. 2020;25:2754. Available from: https://doi.org/10.3390/molecules25122754   121.\tOrtiz-Ruiz CV, Berna J, Rodriguez-Lopez JN. Tyrosinase-catalyzed hydroxylation and antibrowning mechanisms. J Agric Food Chem. 2015;63:7032-7040. Available from: https://doi.org/10.1021/acs.jafc.5b02523   122.\tZawawi NAF, Hazmi NAM, How MS. Inactivation of polyphenol oxidase using thermal and non-thermal methods. Appl Sci. 2022;12:1864. Available from: https://doi.org/10.3390/app12041864  123.\tChacha JS, Zhang L, Ofoedu CE. Non-thermal food processing methods: mechanisms and applications. Foods. 2021;10:1430. Available from: https://doi.org/10.3390/foods10061430   124.\tToro-Uribe S, Godoy-Chivatá J, Villamizar-Jaimes AR, Perea-Flores MJ, López-Giraldo LJ. Polyphenol oxidase inhibition in cocoa beans. Antioxidants. 2020;9:458. Available from: https://doi.org/10.3390/antiox9060458   125.\tYadav AS. Antioxidant and metal chelating properties of spices and acacia. Food Chem Adv. 2023;2:100257. Available from: https://doi.org/10.1016/j.focha.2023.100257  126.\tNguyen MM, Karboune S. Antioxidant interactions of essential oils and polyphenols. Antioxidants. 2023;12:486. Available from: https://doi.org/10.3390/antiox12020486   127.\tLiu XY, Wang WZ, Yao SP. Antioxidant enhancement via hydrogen bonding in rosemary compounds. J Phys Chem B. 2024;128:7627-7638. Available from: https://doi.org/10.1021/acs.jpcb.4c02949  128.\tHamdan N, Lee CH, Wong SL. Prevention of enzymatic browning: natural extracts and genome editing. Molecules. 2022;27:1101. Available from: https://doi.org/10.3390/molecules27031101   Marrufo-Hernández NA, Nájera H, González Chávez F. Polyphenol oxidase inactivation using metal–organic frameworks in apple juice. Food Chem. 2024;439:138178. Available from: https://doi.org/10.1016/j.foodchem.2023.138178",
+        "authors": [
+          "Li Yuna",
+          "Huang Guangwei",
+          "Ruan Roger",
+          "Cheng Yanling"
+        ],
+        "container": "IgMin Research",
+        "publisher": "IgMin Publications Inc.",
+        "year": 2026,
+        "volume": "4",
+        "issue": "6",
+        "page": "175-190",
+        "type": "journal-article",
+        "score": 20.971497
+      },
+      {
+        "doi": "10.51843/measure.13.1.6",
+        "title": "Full Issue Download Vol. 13 No. 1 2021   The Importance of the Measurement Infrastructure in Economic Recovery from the COVID-19 Pandemic  Richard J. C. Brown , Fiona Auty, Eugenio Renedo, Mike King  NCSLI Measure | Vol. 13 No. 1 (2021) | doi.org/10.51843/measure.13.1.1 Publisher NCSL International | Published February 2021 | Pages 18-21  Abstract: This paper describes the many, evidenced-based benefits to the economy of a well-developed measurement infrastructure. In particular, it explains how assuring confidence in measurement may be used to accelerate economic recovery from the COVID-19 pandemic including in emerging sectors such as the digital economy. Recommendations are made for providing near term support for national economic recovery whilst also demonstrating the advantages of sustained development of the measurement infrastructure in the medium-term to maximize the potential of future innovative and disruptive technologies. These recommendations, whilst focused on consideration of the UK, should apply globally.  References:  [1] G. Tassey, \"Underinvestment in public good technologies,\" J Technol. Transfer, Vol. 30, pp. 89-113, 2004. https://doi.org/10.1007/s10961-004-4360-0 [2] M. King, and E. Renedo, \"Achieving the 2.4% GDP target: The role of measurement in increasing investment in R&amp;D and innovation,\" NPL Report IEA 3, NPL, Teddington, UK, March 2020. [3] M. King and G. Tellett, \"The National Measurement System: A Customer Survey for Three of the Core Labs in the National Measurement System,\" NMS Customer Survey Report 2018, NPL Teddington, UK, April 2020 [4] H. Kunzmann, T. Pfeifer, R. Schmitt, H. Schwenke, and A.Weckenmann, \"Productive metrology-adding value to manufacture,\" CIRP Annals, vol. 54, pp. 155-168, 2005. https://doi.org/10.1016/S0007-8506(07)60024-9 [5] N. G. Orji, R. G. Dixson, A. Cordes, B. D. Bunday, and J. A. Allgair, \"Measurement traceability and quality assurance in a nanomanufacturing environment,\" Instrumentation, Metrology, and Standards for Nanomanufacturing III, Proceedings Vol. 7405, 740505, August 2009. https://doi.org/10.1117/12.826606 [6] Belmana, Analysis for Policy \"Public Support for Innovation and Business Outcomes,\" Belmana: London, UK, 2020. [7] R. Hawkins, Standards, systems of innovation and policy in Handbook of Innovation and Standards. Cheltenham, UK: Edward Elgar, 2019. [8] N. Nwaigbo, and M. King, \"Evaluating the Impact of the NMS Consultancy Projects on Supported Firms (Working Paper)\" NPL, Teddington, UK, 2020. [9] M. King, R. Lambert, and P. Temple, Measurement, standards and productivity spillovers in Handbook of Innovation and Standards. Cheltenham, UK: Edward Elgar, 2017, p. 162. https://doi.org/10.4337/9781783470082.00016 [10] A. Font, K. de Hoogh, M. Leal-Sanchez, D. C. Ashworth, R. J. C. Brown, A. L. Hansell, and G. W. Fuller, \"Using metal ratios to detect emissions from municipal waste incinerators in ambient air pollution data,\" Atmos. Environ., vol. 113, pp. 177-186, July 2015. https://doi.org/10.1016/j.atmosenv.2015.05.002 [11] S. Giannis, M. R. L. Gower, G. D. Sims, G. Pask, and G. Edwards, \"Increasing UK competitiveness by enhancing the composite materials regulatory infrastructure,\" NPL Report MAT 90, NPL, Teddington, UK, October 2019. [12] HM Government, UK Research and Development Roadmap, BEIS, London, July 2020. [13] M. R. Mehra, S. S. Desai, F. Ruschitzka, and A. N. Patel, \"Hydroxychloroquine or chloroquine with or without a macrolide for treatment of COVID-19: a multinational registry analysis,\" Lancet, 2020, https://doi.org/10.1016/S0140-6736(20)31180-6  (Print: ISSN 1931-5775) (Online: ISSN 2381-0580) ©2021 NCSL International   Smart Power Supply Calibration System  Iraj Vasaeli , Brandon Umansky  NCSLI Measure | Vol. 13 No. 1 (2021) | doi.org/10.51843/measure.13.1.2 Publisher: NCSL International | Published February 2021 | Pages 22-27  Abstract: This paper details the development of an automated procedure to conduct calibrations of power supplies at Jet Propulsion Laboratory, California Institute of Technology (JPL). The fundamentals of power supply calibrations are given, and discussion on the method by which this custom software handles that calibration. Additionally, this technique provides real time uncertainty quantification of the calibrations. This automated system has demonstrated a time savings over existing automated techniques in use today.  References:  [1] Keysight, \"Low-Profile Modular Power System Series N6700 Service Guide\", Part Number: 5969 2938, Edition 7, January 2015. [2] B. N. Taylor and C. E. Kuyatt, \"Guidelines for Evaluating and Expressing the Uncertainty of NIST Measurement Results\", NIST Technical Note 1297, 1994. https://doi.org/10.6028/NIST.TN.1297 [3] JCGM, \"Evaluation of measurement data - Guide to the expression of uncertainty in measurement,\" first edition (GUM 1995 with minor corrections),\" JCGM 100, 2008.  (Print: ISSN 1931-5775) (Online: ISSN 2381-0580) © 2021 NCSL International   Computer Aided Verification of Voltage Dips and Short Interruption Generators for Electromagnetic Compatibility Immunity Test in Accordance with IEC 61000-4-11: 2004 + AMD: 2017  Hau Wah Lai , Cho Man Tsui , Hing Wah Li  NCSLI Measure | Vol. 13 No. 1 (2021) | doi.org/10.51843/measure.13.1.3 Publisher: NCSL International | Published February 2021 | Pages 28-39  Abstract: This paper describes a procedure and a computer-aided system developed by the Standards and Calibration Laboratory (SCL) for verification of voltage dip and short interruption generators in accordance with the international standard IEC 61000-4-11:2004+AMD1:2017. The verification is done by calibrating the specified parameters and comparing with the requirements stated in the standard. The parameters that should be calibrated are the ratios of the residual voltages to the rated voltage, the accuracy of the phase angle at switching, and the rise time, fall time, overshoot and undershoot of the switching waveform. A specially built adapter is used to convert the high voltage output waveforms of the generators to lower level signals to be acquired by a digital oscilloscope. The other circuits required for the testing are also provided. In addition, the paper discusses the uncertainty evaluations for the measured parameters.  References:  [1] T. Williams, and K. Armstrong, \"EMC for Systems and Installations Part 6 - Low-Frequency Magnetics Fields (Emissions and Immunity) Mains Dips, Dropouts, Interruptions, Sags, Brownouts and Swells,\" EMC Compliance Journal, August 2000.  [2] M.I. Montrose, and E. M. Nakauchi, Testing for EMC Compliance: Approaches and Techniques, Wiley Interscience, 2004. https://doi.org/10.1002/047164465X  [3] International Standard IEC 61000-4-11:2004+AMD1:2017:Electromagnetic Compatibility (EMC) Part 4-11: Testing and measurement techniques - Voltage dips, short interruptions and voltage variations immunity tests.  [4] Evaluation of measurement data - Guide to the expression of uncertainty in measurement, First Edition JCGM 100:2008.  (Print: ISSN 1931-5775) (Online: ISSN 2381-0580) © 2021 NCSL International   Validation of the Photometric Method Used for Micropipette Calibration  Elsa Batista , Isabel Godinho, George Rodrigues, Doreen Rumery  NCSLI Measure | Vol. 13 No. 1 (2021) | doi.org/10.51843/measure.13.1.4 Publisher: NCSL International | Published February 2021 | Pages 40-45  Abstract: There are two methods generally used for calibration of micropipettes: the gravimetric method described in ISO 8655-6:2002 and the photometric method described in ISO 8655-7:2005. In order to validate the photometric method, several micropipettes of different capacities from 0.1 µL to 1000 µL were calibrated using both methods (gravimetric and photometric) in two different laboratories, IPQ (Portuguese Institute for Quality) and Artel. These tests were performed by six different operators. The uncertainty for both methods was determined and it was verified that the uncertainty component that has a higher contribution to the final uncertainty budget depends on the volume delivered. In the photometric method for small volumes, the repeatability of the pipette is the largest uncertainty component, but for volumes, larger than 100 µL, the photometric instrument is the most significant source of uncertainty. Based on all the results obtained with this study, one may consider the photometric method validated.  References:  [1] ISO 8655-1/2/6/7, Piston-operated volumetric apparatus, 2002.  [2] BIPM, International Vocabulary of Metrology, 3rd edition, JCGM 200:2012.  [3] George Rodrigues, Bias and transferability in standards methods of pipette calibration, Artel, June 2003.  [4] Taylor, et.al. The definition of primary method of measurement (PMM) of the 'highest metrological quality': a challenge in understanding and communication, Accred. Qual.Assur (2001) 6:103-106. https://doi.org/10.1007/PL00010444  [5] EURAMET project 1353, Volume comparison on Calibration of micropipettes - Gravimetric and photometric methods.  [6] ASTM E542: Standard Practice for Calibration of laboratory Volumetric Apparatus, 2000.  [7] ISO 4787; Laboratory glassware - Volumetric glassware - Methods for use and testing of capacity, 2010 .  [8] ISO 13528:2005 - Statistical methods used in proficiency testing by interlaboratory comparisons.  [9] BIPM et al, Guide to the Expression of Uncertainty in Measurement (GUM), 2nd ed., International Organization for Standardization, Genève, 1995.  [10] EURAMET guide, cg 19, - Guidelines on the determination of uncertainty in gravimetric volume calibration, version 3.0, 2012.  [11] E. Batista et all, A Study of Factors that Influence Micropipette Calibrations, Measure Vol. 10 No. 1, 2015 https://doi.org/10.1080/19315775.2015.11721717  [12] www.BIPM.org.  (Print: ISSN 1931-5775) (Online: ISSN 2381-0580) © 2021 NCSL International   Material Flow Rate Estimation in Material Extrusion Additive Manufacturing  G. P. Greeff  NCSLI Measure | Vol. 13 No. 1 (2021) | doi.org/10.51843/measure.13.1.5 Publisher: NCSL International | Published February 2021 | Pages 46-56   Abstract: The additive manufacturing of products promises exciting possibilities. Measurement methodologies, which measure an in-process dataset of these products and interpret the results, are essential. However, before developing such a level of quality assurance several in-process measurands must be realized. One of these is the material flow rate, or rate of adding material during the additive manufacturing process. Yet, measuring this rate directly in material extrusion additive manufacturing presents challenges. This work presents two indirect methods to estimate the volumetric flow rate at the liquefier exit in material extrusion, specifically in Fused Deposition Modeling or Fused Filament Fabrication. The methods are cost effective and may be applied in future sensor integration. The first method is an optical filament feed rate and width measurement and the second is based on the liquefier pressure. Both are used to indirectly estimate the volumetric flow rate. The work also includes a description of linking the G-code command to the final print result, which may be used to create a per extrusion command model of the part.  References:  [1] T. Wohlers, I. Campbell, O. Diegel, J. Kowen, I. Fidan, and D.L. Bourell, \"Wohlers Report 2017: 3D Printing and Additive Manufacturing State of the Industry Annual Worldwide Progress Report,\" 2017.  [2] Additive manufacturing -- General principles -- Terminology. Geneva, CH: International Organization for Standardization, 2015.  [3] R. Jones et al., \"Reprap - The replicating rapid prototyper,\" Robotica, vol. 29, no. 1 SPEC. ISSUE, pp. 177-191, 2011, https://doi.org/10.1017/S026357471000069X  [4] T. Wohlers and T. Gornet, \"History of Additive Manufacturing 2017,\" 2017.  [5] S. A. M. Tofail, E. P. Koumoulos, A. Bandyopadhyay, S. Bose, L. O'Donoghue, and C. Charitidis, \"Additive manufacturing: scientific and technological challenges, market uptake and opportunities, \"Materials Today, vol. 21, no. 1, pp. 22-37, Jan. 2018, https://doi.org/10.1016/j.mattod.2017.07.001  [6] G. Moroni and S. Petrò, \"Managing uncertainty in the new manufacturing era,\" Procedia CIRP, vol. 75, pp. 1-2, 2018, https://doi.org/10.1016/j.procir.2018.07.001  [7] R. Leach et al., \"Information-rich manufacturing metrology,\"in Eighth International Precision Assembly Seminar (IPAS), 2018, no. January. https://doi.org/10.1007/978-3-030-05931-6_14 [8] S. Moylan, J. Slotwinski, A. Cooke, K. Jurrens, M. A. Donmez, and A. Donmez, \"Proposal for a Standardized Test Artifact for Additive Manufacturing Machines and Processes,\" Solid Freeform Fabrication Symposium Proceedings, pp. 902-920, 2012. https://doi.org/10.6028/NIST.IR.7858  [9] ASME Y14.46-2017 Product Definition for Additive Manufacturing. New York:The American Society of Mechanical Engineers, 2017.  [10] H. Li, T. Wang, J. Sun, and Z. Yu, \"The effect of process parameters in fused deposition modelling on bonding degree and mechanical properties,\" Rapid Prototyping Journal, vol. 24, no. 1, pp. 80-92, Jan. 2018, https://doi.org/10.1108/RPJ-06-2016-0090  [11] A. W. Gebisa and H. G. Lemu, \"Investigating effects of Fused-deposition modeling (FDM) processing parameters on flexural properties of ULTEM 9085 using designed experiment, \"Materials, vol.11, no. 4, pp. 1-23, 2018, https://doi.org/10.3390/ma11040500 PMid:29584674 PMCid:PMC5951346 [12] B. Wittbrodt and J. M. Pearce, \"The effects of PLA color on material properties of 3-D printed components,\" Additive Manufacturing, vol. 8, pp. 110-116, 2015, https://doi.org/10.1016/j.addma.2015.09.006  [13] O. A. Mohamed, S. H. Masood, and J. L. Bhowmik, \"Optimization of fused deposition modeling process parameters: a review of current research and future prospects,\" Advances in Manufacturing, vol. 3, no. 1, pp. 42-53, Mar. 2015, https://doi.org/10.1007/s40436-014-0097-7  [14] S. K. Everton, M. Hirsch, P. Stravroulakis, R. K. Leach and A. T. Clare, \"Review of in-situ process monitoring and in-situ metrology for metal additive manufacturing,\" Materials and Design, vol. 95, pp. 431-445, 2016, https://doi.org/10.1016/j.matdes.2016.01.099  [15] P. K. Rao, J. P. Liu, D. Roberson, Z. J. Kong, and C. Williams,\"Online Real-Time Quality Monitoring in Additive Manufacturing Processes Using Heterogeneous Sensors,\" Journal of Manufacturing Science and Engineering, vol. 137, no. 6, p.061007, Sep. 2015, https://doi.org/10.1115/1.4029823  [16] J. Pellegrino, T. Makila, S. McQueen, and E. Taylor, \"Measurement science roadmap for polymer-based additive manufacturing,\" Gaithersburg, MD, Dec. 2016. https://doi.org/10.6028/NIST.AMS.100-5  [17] T. R. Kramer, F. M. Proctor, and E. Messina, \"The NIST RS274NGC Interpreter -Version 3,\" Gaithersburg, Maryland, 2000. https://doi.org/10.6028/NIST.IR.6556  [18] B. N. Turner, R. Strong, and S. A. Gold, \"A review of melt extrusion additive manufacturing processes: I. Process design and modeling,\" Rapid Prototyping Journal, vol. 20, no. 3, pp.192-204, Apr. 2014, https://doi.org/10.1108/RPJ-01-2013-0012  [19] Conrad Electronic, \"Renkforce RF1000 3D Drucker,\" 2016. https://www.conrad.de/de/renkforce-rf1000-3d-drucker-single-extruder-inkl-software-franzis-designcad-v24-3d-printrenkforce-edition-1007508.html (accessed Sep. 20, 2016).  [20] G. Hodgson, A. Ranellucci, and J. Moe, \"Slic3r Manual - Flow Math,\" 2016. http://manual.slic3r.org/advanced/flow-math (accessed Jun. 21, 2016).  [21] Repetier, \"Repetier-Firmware Documentation.\" https://www.repetier.com/documentation/repetier firmware/repetier-firmware-introduction/ (accessed Apr. 17, 2018).  [22] B. Weiss, D. W. Storti, and M. A. Ganter, \"Low-cost closedloop control of a 3D printer gantry,\" Rapid Prototyping  Journal, vol. 21, no. 5, pp. 482-490, Aug. 2015, https://doi.org/10.1108/RPJ-09-2014-0108  [23] R. L. Zinniel and J. S. Batchelder, \"Volumetric Feed Control for Flexible Filament,\" US 6085957, 2000.  [24] W. J. Heij, Applied Metrology in Additive Manufacturing. Delft: Delft University of Technology, 2016.  [25] G. P. Greeff and M. Schilling, \"Closed loop control of slippage during filament transport in molten material extrusion,\" Additive Manufacturing, vol. 14, pp. 31-38, 2017, https://doi.org/10.1016/j.addma.2016.12.005  [26] G. P. Greeff, Applied Metrology in Additive Manufacturing, vol. 60. Berlin: Mensch und Buch, 2019.  [27] G. P. Greeff and M. Schilling, \"Comparing Retraction Methods with Volumetric Exit Flow Measurement in Molten Material Extrusion,\" in Special Interest Group meeting on Dimensional Accuracy and Surface Finish in Additive Manufacturing, 2017, no. October, pp. 70-74.  [28] G. P. Greeff and M. Schilling, \"Single print optimisation of fused filament fabrication parameters,\" The International Journal of Advanced Manufacturing Technology, Aug. 2018, https://doi.org/10.1007/s00170-018-2518-4  [29] A. Bellini, S. Güçeri, and M. Bertoldi, \"Liquefier Dynamics in Fused Deposition,\" Journal of Manufacturing Science and Engineering, vol. 126, no. 2, p. 237, 2004, https://doi.org/10.1115/1.1688377  [30] P. Virtanen et al., \"SciPy 1.0: fundamental algorithms for scientific computing in Python,\" Nature Methods, vol. 17, no. 3, pp. 261-272, Mar. 2020, https://doi.org/10.1038/s41592-019-0686-2 PMid:32015543 PMCid:PMC7056644  (Print: ISSN 1931-5775) (Online: ISSN 2381-0580) © 2021 NCSL International   Software to Maximize End-User Uptake of Conformity Assessment with Measurement Uncertainty, Including Bivariate Cases. The European EMPIR CASoft Project",
+        "authors": [
+          "L.R. Pendrill",
+          "A. Allard",
+          "N. Fischer",
+          "P.M. Harris",
+          "J. Nguyen",
+          "I.M. Smith"
+        ],
+        "container": "NCSL International measure",
+        "publisher": "NCSL International",
+        "year": 2021,
+        "volume": "13",
+        "issue": "1",
+        "page": "58-69",
+        "type": "journal-article",
+        "score": 11.772094
+      }
+    ]
+  },
+  {
+    "label": "Leval, Gaston (1971).",
+    "entry": "Leval, Gaston (1971). Espagne Libertaire (1936-1939). Paris: \\'Editions du Monde Libertaire. Cited through Dolgoff's (1974) translation.",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.3406/autog.1972.1028",
+        "title": "Conceptions constructives du socialisme libertaire",
+        "authors": [
+          "Gaston Leval"
+        ],
+        "container": "Autogestion et socialisme : études, débats, documents",
+        "publisher": "PERSEE Program",
+        "year": 1972,
+        "volume": "18",
+        "issue": "1",
+        "page": "11-55",
+        "type": "journal-article",
+        "score": 50.410477
+      },
+      {
+        "doi": "10.3917/parti.042.0061",
+        "title": "Du « municipe libre » à la révolution communaliste de 1936. Histoire ­­d’un projet politique libertaire en Espagne",
+        "authors": [
+          "David Hamou"
+        ],
+        "container": "Participations",
+        "publisher": "CAIRN.INFO",
+        "year": 2026,
+        "volume": "N° 42",
+        "issue": "2",
+        "page": "61-90",
+        "type": "journal-article",
+        "score": 50.335705
+      },
+      {
+        "doi": "10.3917/ag.705.0595",
+        "title": "Pelletier Philippe. Géographie et anarchie. Reclus, Kropotkine, Metchnikoff . Paris, Éditions du Monde Libertaire, 2013, 640 p.",
+        "authors": [
+          "Alain Musset"
+        ],
+        "container": "Annales de géographie",
+        "publisher": "CAIRN",
+        "year": 2015,
+        "volume": "N° 705",
+        "issue": "5",
+        "page": "595-595",
+        "type": "journal-article",
+        "score": 49.003944
+      }
+    ]
+  },
+  {
+    "label": "Peirats, Jos\\'e.",
+    "entry": "Peirats, Jos\\'e. Contributions on pay scales and on the Aragon federation, in Dolgoff (1974), Chs. 6 and 9 (Ch. 9 read via the marxists.org edition).",
+    "method": "query",
+    "crossref_top": [
+      {
+        "doi": "10.2307/1530832",
+        "title": "Rural Development, Income Distribution and Fertility Decline",
+        "authors": [
+          "J.-C. Ch.",
+          "James E. Kocher"
+        ],
+        "container": "Population (French Edition)",
+        "publisher": "JSTOR",
+        "year": 1974,
+        "volume": "29",
+        "issue": "2",
+        "page": "372",
+        "type": "journal-article",
+        "score": 25.312109
+      },
+      {
+        "doi": "10.7748/ns.26.30.32.s44",
+        "title": "Pension contributions penalise nurses on the lower pay scales",
+        "authors": [
+          "Malcolm Harrison"
+        ],
+        "container": "Nursing Standard",
+        "publisher": "RCN Publishing Ltd.",
+        "year": 2012,
+        "volume": "26",
+        "issue": "30",
+        "page": "32-32",
+        "type": "journal-article",
+        "score": 25.274536
+      },
+      {
+        "doi": "10.7748/ns2012.03.26.30.32.p7898",
+        "title": "Pension contributions penalise nurses on the lower pay scales",
+        "authors": [
+          "Malcolm Harrison"
+        ],
+        "container": "Nursing Standard",
+        "publisher": "RCN Publishing Ltd.",
+        "year": 2012,
+        "volume": "26",
+        "issue": "30",
+        "page": "32-32",
+        "type": "journal-article",
+        "score": 25.159391
+      }
+    ]
+  }
+]

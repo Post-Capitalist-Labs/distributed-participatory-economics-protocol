@@ -1,9 +1,84 @@
 # Security, Privacy, Membership, and Post-Quantum Cryptography Review
 
+**Deliverable:** `research/SECURITY_REVIEW.md`
+**Status:** Working Draft (third refinement, 4 November 2026)
+**Canonical text:** `book/dpep_book.tex` Chapter 7. Earlier passes are kept below as a historical record.
+
+---
+
+## Third refinement
+
+### R3-08: Prio3 benchmark (run)
+
+`research/analysis/bench_prio3/` uses `prio` 0.18.1, which implements **VDAF draft 18** (crate README), not draft 22; the `Prio3SumVec` encoding is the same layout. Prio3SumVec, 3 aggregators, Field128, `chunk_length` from libprio's `optimal_chunk_length`. Medians of 30 runs on one core of an Apple M4 Pro (macOS 26.6.2, rustc/cargo 1.98.1, `--release`, thin LTO).
+
+| Length × bits | Leader share | Upload | Shard | verify_init leader | verify_init helper |
+|---|---|---|---|---|---|
+| 100×20 | 35,088 B | 35,312 B | 0.55 ms | 0.21 ms | 0.23 ms |
+| 100×32 | 54,896 B | 55,120 B | 0.65 ms | 0.21 ms | 0.22 ms |
+| 100×64 | 107,728 B | 107,952 B | 1.13 ms | 0.30 ms | 0.32 ms |
+| 230×20 | 78,032 B | 78,256 B | 0.81 ms | 0.23 ms | 0.25 ms |
+| 230×32 | 123,568 B | 123,792 B | 1.28 ms | 0.33 ms | 0.35 ms |
+| 230×64 | 243,344 B | 243,568 B | 2.52 ms | 0.82 ms | 0.86 ms |
+| 3000×20 | 975,760 B | 975,984 B | 10.6 ms | 3.46 ms | 3.64 ms |
+| 3000×32 | 1,556,272 B | 1,556,496 B | 16.2 ms | 4.85 ms | 5.21 ms |
+| 3000×64 | 3,100,432 B | 3,100,656 B | 33.3 ms | 12.0 ms | 12.7 ms |
+
+Helper shares 64 B; public share 96 B; combining verifier shares and `verify_next` take under 5 µs. `parameters.py` now predicts all nine leader and upload sizes **byte-for-byte**. The second-pass formula used gadget arity 2 instead of `2·chunk_length` and understated sizes by about 1%. The book's "1 ms per report" illustration was optimistic for dense reports even on a desktop: $10^6$ dense reports cost about 61 core-minutes per aggregator, and helpers cost as much as the leader. These are desktop numbers, not phone or Raspberry Pi results.
+
+### R3-04: sparse row
+
+VDAF-22 §7.4.3: "Each measurement is a vector of positive integers with length equal to the length parameter. Each element of the measurement is an integer in the range [0, max_measurement]." Coordinates are fixed, so a 50-coordinate report cannot carry 50 items chosen from 3,000 without revealing which. The row and the "fits a sparse report" claim are removed.
+
+### R3-05: units
+
+At the fixed $10^{-6}$ scale, $b$ bits express at most $(2^b-1)/10^6$ units: 0.066 (16 bits), 1.05 (20 bits), 4,295 (32 bits). The book now defines a per-category Household Reporting Unit (HRU, 16 bits, integer scale $s_g$ micro-units per HRU). Conversion to protocol totals is exact; rounding happens once at the client (≤ ½ HRU per category per person; aggregate s.d. $s_g\sqrt{N/12}$). Size tables now come from the benchmark. Per-year upload: 9.8 MB for ten dense reports against 0.17 MB for three coarse milestone reports.
+
+### R3-06: privacy baseline (recommendation for author ratification)
+
+Coarse `Prio3SumVec`, 200 categories × 16-bit HRU, 55,120 B upload, about 0.25 ms per verification, as the household-crypto baseline. Council-level trust (no household cryptography) for Phase 1H and the first Phase 3 pilots. Dense 3,000 is not a baseline. This is tied to P5, P13 and Kill Gate 3 in the book.
+
+### R3-07: prices, carry-forward, replay
+
+- The budget predicate depends on $P^{(t)}$, which must be circuit constants, so there is one VDAF instance per price vector. `ctx` binds epoch, round, price hash and aggregator set, but does not enter the arithmetic.
+- **VDAF-22 §7.2.3: "Prio3 only permits a report to be aggregated once"; §9.4: re-aggregation "risks re-using correlated randomness, which might compromise confidentiality".** Carrying individual reports into later rounds, and re-running a round from stored reports with a replacement aggregator, are therefore not available as specified. The reviewer did not raise this; it is the strongest reason to change the carry-forward design.
+- Proposed rule: fresh budget-checked reports at milestone rounds (t = 1, 4, 8); between milestones, aggregate shares are reused as constants and an aggregate check is applied at current prices with tolerance κ = 5%; offline people are counted at their council's per-capita average and flagged. Nonces are retained per epoch for replay rejection (§9.2). Input shares are retained encrypted until $T_{challenge}$ (proposed 14 days), then deleted. This reconciles "ephemeral shares" (§11.2) with retention (§7.5).
+
+### R3-09: credentials and correctness
+
+- Present-tense credential claims (§7.3) are reworded as an unbuilt design goal. The only other present-tense instance found was §11.2 GDPR ("using ephemeral Prio3 shares"), which is reworded.
+- BBS signatures are pairing-based, so a "post-quantum adaptation of BBS-style" credential is not an established object. Lattice-based anonymous credentials are research without a standard. Checking a credential inside an FLP circuit is unrealistic (signature or hash verification is a large circuit, and the credential would have to be secret-shared). Proposed: verify at upload outside the VDAF with a per-epoch nullifier, bound to the report by nonce/`ctx`; binding the secret-shared $B_u$ remains open.
+- The public check $p\cdot\sum y\le\sum B_u$ cannot detect category shifting, permits inflation up to unspent budget, and cannot detect deflation at all.
+- Recommended for Phase 3 (proposed): three **non-nested** aggregators from organisations with different interests, plus the public check and published aggregate-share commitments. Nested CC/Ward/Federation should not be the default. Robust MPC is deferred.
+- Individual wallets versus household reports: $u$ is now defined as one budget-holding person throughout.
+
+### R3-10 / R3-11: proposal sizes and light clients
+
+The 5.2 kB proposal minus one 3,373 B signature leaves 1,827 B, about 152 items at 12 B. A neighbourhood's sum over 3,000 goods is about 36 kB, and each extra multi-signature signer adds 3,437 B (hybrid). Councils use k-of-n multi-signatures until a PQ threshold scheme exists (Table 7.1 note; P12). Round archive at $10^6$: 0.24-1.46 GB raw; 40k-200k signature verifications per round; per-signature time not benchmarked here, so the old 9-27 s figure is withdrawn and Kill Gate 2 measures it. Light-client options are tabulated (all 86 signatures at 296 kB; coordinator attestation at 3.4 kB; sampling 8 at 27 kB, with an all-pass probability of (42/86)^8 ≈ 0.3% if only the corrupt minority really signed; full checks at milestones). Proposed mobile cap: ≤150 kB per ordinary round and ≤450 kB per full-verification round.
+
+### Table 7.1
+
+The caption now says the latency columns are placeholders; they are marked ᵖ, and the ~80 µs hybrid KEM figure is flagged as optimistic. No device benchmark was run; ML-KEM and ML-DSA were not benchmarked in this pass.
+
+---
+
+# Historical record (earlier passes)
+
+# Security, Privacy, Membership, and Post-Quantum Cryptography Review
+
 **Deliverable:** `research/SECURITY_REVIEW.md`  
-**Status:** Working Draft  
-**Date:** November 4, 2026  
-**Scope:** Verification and remediation of security, privacy, membership, and post-quantum cryptography findings (`R-SEC-01` through `R-SEC-11`, `R-TECH-02`, `R-TECH-04`, `R-POL-01`, `R-POL-02`, `R-POL-05`, and `R-POL-06`).
+**Status:** Working Draft (corrected 4 November 2026, second refinement)  
+**Canonical text:** `book/dpep_book.tex` Chapters 5 and 7. This file is a working note; where it conflicts with the book, the book wins.
+
+**Withdrawn figures in this note:** “100% Binding / 100% Post-Quantum / zero lattice”; “18–35 KB” and “<15 ms” `Prio3` costs; “uniform NIST Level 3” including BLAKE3; VDAF-16 as a Category A standard; 1-of-3 privacy as if it were correctness; n=64 / 145 KB / 616 KB after n=128. See `research/analysis/parameters.py`, `verify_r2.py`, and `SECOND_REFINEMENT_DISPOSITIONS.md` (R2-01–R2-08, R2-20, R2-22).
+
+**VDAF-22 §9 (HTML, IETF Datatracker, accessed this pass):** privacy needs one honest aggregator; an aggregator can modify its aggregate share undetected; DP and Sybil/rate-limits are out of scope; no post-quantum claim. Report sizes: Field128 `Prio3SumVec`, `MEAS_LEN = length × bits`; leader share is the full measurement, helpers are seeds.
+
+**Threat model, equivocation, recovery, ballots, sortition beacon, and $B_u$ credentials** are now in the monograph (§7). They remain largely **Open**.
+
+---
+
+# Historical note (first-pass text below; do not quote the 18–35 KB / 100% rows)
 
 ---
 

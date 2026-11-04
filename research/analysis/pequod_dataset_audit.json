@@ -1,16 +1,16 @@
 {
   "R_ECON_06_clj_audit": {
     "clj_dataset_files_count": 70,
-    "total_wc_records_audited": 150000,
+    "total_wc_records_audited": 750000,
     "baseline_sum_b_plus_c_over_k_range": [
-      0.7706,
-      0.8756
+      0.7696,
+      0.8781
     ],
     "toothache_sum_b_plus_c_over_k_range": [
-      1.0712,
+      1.0696,
       1.6652
     ],
-    "toothache_concavity_violations": 150000,
+    "toothache_concavity_violations": 750000,
     "toothache_violation_rate": 1.0
   },
   "R_ECON_12_csv_audit": {
