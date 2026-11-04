@@ -119,15 +119,15 @@
 
 % --- Audience Callout Macro (For Advocates, Economists, Programmers) ---
 \newcommand{\audiencebox}[3]{%
-  \par\vspace{2pt}\noindent
+  \par\smallskip\noindent
   \colorbox{SoftBg}{%
     \parbox{\dimexpr\textwidth-2\fboxsep\relax}{%
-      \vspace{2pt}
-      {\scriptsize\textbf{\textcolor{CrimsonAccent}{\MakeUppercase{#1}} --- \textcolor{NavyPrimary}{#2}}}\par\vspace{1.5pt}
-      {\footnotesize #3}
-      \vspace{2pt}
+      \vspace{5pt}
+      {\footnotesize\textbf{\textcolor{CrimsonAccent}{\MakeUppercase{#1}} --- \textcolor{NavyPrimary}{#2}}}\par\vspace{3pt}
+      {\small #3}
+      \vspace{5pt}
     }%
-  }\par\vspace{2pt}
+  }\par\smallskip
 }
 
 % --- Headers and Footers ---
@@ -163,12 +163,13 @@
 \setcounter{secnumdepth}{3}
 
 \begin{document}
+\frontmatter
 
 % ==============================================================================
-% FULL-BLEED VECTOR FRONT COVER DESIGN
+% FULL-BLEED VECTOR FRONT COVER DESIGN (PDF PAGE 1)
 % ==============================================================================
-\begin{titlepage}
 \thispagestyle{empty}
+\noindent\null
 \begin{tikzpicture}[remember picture, overlay]
   % Deep Navy Background
   \fill[NavyPrimary] (current page.south west) rectangle (current page.north east);
@@ -244,45 +245,65 @@
     {\textbf{\textcolor{GoldAccent}{POST-CAPITALIST LABS IMPRINT}} $\cdot$ \texttt{https://github.com/Post-Capitalist-Labs} \hfill \textcolor{GoldAccent}{\textbf{Draft Edition $\cdot$ Nov 2026}}\\[2pt]
      {\tiny\color{white!75!black} Leveraging technology to amplify social movements $\cdot$ Decentralised consensus, mechanism design, and democratic economic coordination}};
 \end{tikzpicture}
-\end{titlepage}
+\clearpage
 
 % ==============================================================================
-% FRONT MATTER (Half-Title, Copyright/Colophon, Reader's Guide, TOC)
+% FRONT MATTER (PDF Page 2: Imprint Colophon; Page 3: Reader's Guide; Page 4: TOC)
 % ==============================================================================
-\frontmatter
 
+% --- PDF PAGE 2: TITLE-VERSO / PUBLISHER IMPRINT & COLOPHON PAGE ---
 \thispagestyle{empty}
-\vspace*{-0.18in}
-\begin{flushleft}
-{\footnotesize\scshape\bfseries\textcolor{CrimsonAccent}{Post-Capitalist Labs Imprint $\cdot$ Open-Source Research Monograph (Working Draft)}}\\[0.25em]
-{\Large\bfseries\color{NavyPrimary} Distributed Participatory Economics Protocol (DPEP)}\\[0.3em]
-{\small\itshape\color{SlateDark} Feasibility Study, Formal Economic Model, Historical Institutional Analysis,\\and Post-Quantum Distributed Systems Specification}\\[0.45em]
-\rule{\textwidth}{0.6pt}
-\end{flushleft}
+\noindent{\footnotesize\scshape\bfseries\textcolor{CrimsonAccent}{Post-Capitalist Labs Imprint $\cdot$ Open-Source Research Monograph Series}}\\[0.35em]
+{\Large\bfseries\color{NavyPrimary} Distributed Participatory Economics Protocol (DPEP)}\\[0.25em]
+{\normalsize\itshape\color{SlateDark} A Rigorous, Source-Grounded Feasibility Study and Post-Quantum Technical Architecture for Democratic Planning, Self-Management, and the Productive Commons}\\[0.6em]
+\rule{\textwidth}{0.6pt}\\[0.8em]
 
-\noindent\colorbox{NavyPrimary!6!white}{%
+\noindent\colorbox{SoftBg}{%
   \parbox{\dimexpr\textwidth-2\fboxsep\relax}{%
+    \vspace{6pt}
+    {\normalsize\bfseries\color{NavyPrimary} About Post-Capitalist Labs (PCL)}\par\vspace{4pt}
+    {\small\color{SlateDark}
+    At \textbf{Post-Capitalist Labs}, we harness the transformative power of technology to bolster social movements and build directly democratic alternatives to capitalism. Our work spans decentralized consensus, applied cryptography, operations research, and democratic mechanism design.\par\vspace{4pt}
+    \textbf{Our Vision:} We envisage a world where solidarity, care, classlessness, diversity, self-reflection, and direct democracy are not just ideals, but the foundations of everyday life. Our goal is to make this vision a reality through the thoughtful application of open-source technology, where people remain in control.\par\vspace{4pt}
+    \textbf{Our Approach:}
+    \begin{itemize}[leftmargin=1.5em,itemsep=2pt,topsep=2pt]
+      \item \textbf{Learning from History:} Analyzing past and present democratic movements and self-managed collectives to guide institutional design.
+      \item \textbf{Emancipatory Modeling:} Developing rigorous mathematical and computational models for equitable, non-market resource coordination.
+      \item \textbf{Open-Source Engineering:} Turning theoretical models into verifiable, accessible, community-driven proofs of concept and protocols.
+    \end{itemize}
     \vspace{2pt}
-    {\scriptsize\textbf{\textcolor{NavyPrimary}{PUBLISHED UNDER THE POST-CAPITALIST LABS IMPRINT}} (\url{https://github.com/Post-Capitalist-Labs} $\cdot$ \url{https://github.com/titancassini})}\par\vspace{1.5pt}
-    {\scriptsize\color{SlateDark} \textbf{About Post-Capitalist Labs (PCL):} At Post-Capitalist Labs, we harness the transformative power of technology to bolster social movements and build directly democratic alternatives to capitalism. We envisage a world where solidarity, care, classlessness, diversity, self-reflection, and direct democracy are the foundations of everyday life. Through historical analysis, emancipatory economic modeling, mechanism design, and open-source protocol engineering, PCL develops practical tools where people remain in control. \textbf{Note:} This volume is currently released in \textbf{Working Draft} form for community review and collaborative iteration.}
-    \vspace{2pt}
+    \textbf{Organization Profile:} \url{https://github.com/Post-Capitalist-Labs}\\
+    \textbf{Repository \& Maintainer Profile:} \url{https://github.com/titancassini/distributed-participatory-economics-protocol}}
+    \vspace{6pt}
   }%
-}\par\smallskip
-\noindent{\small\textbf{How to Read This Book Across Disciplines:}}
+}
 
-\audiencebox{For Advocates \& Organizers}{Institutional Self-Management Without Hierarchy}{
-Start with \textbf{Chapter 1 (Executive Summary)} and \textbf{Chapter 2 (Historical \& Institutional Inspirations)} to see how lessons from the 1936 Spanish Revolution, the 1871 Paris Commune, Classical Athens, Occupy, and Mondrag\'on are translated into concrete safeguards against bureaucratic capture, meeting fatigue, and inter-regional inequality. Then read \textbf{Chapter 3} for the exact traceability matrix linking Albert and Hahnel's 1991 and 2021 books to our design.}
+\vfill
+\noindent\rule{\textwidth}{0.4pt}\\[0.4em]
+{\footnotesize\color{SlateDark}
+\textbf{Publication \& Edition Metadata:}\\
+\textbf{Imprint:} Post-Capitalist Labs Imprint (\url{https://github.com/Post-Capitalist-Labs})\\
+\textbf{Status:} \textbf{Working Draft Edition} (November 2026) --- Released in draft form for community review, critique, and collaborative iteration prior to Proof-of-Concept implementation.\\[0.4em]
+\textbf{Source Provenance \& Copyright Compliance Notice:} All primary and secondary sources cited in this monograph were verified on November 4, 2026. In strict compliance with academic and copyright standards, full copyrighted book texts (Princeton University Press, South End Press, AK Press, Routledge) are cited with exact chapter and page references and footnoted throughout without unauthorized verbatim reproduction. Open-access simulation code (\texttt{pequod-cljs}) and CC BY 4.0 algorithmic papers (Szczepanczyk 2023) were audited directly from source.}
+\clearpage
 
-\audiencebox{For Economists \& Operations Researchers}{Formal Models, Accounting \& Non-Convexity}{
-Focus on \textbf{Chapter 4 (Formal Economic Model)}, which unites Albert and Hahnel's Formal Model of a Participatory Economy (FMPE) with Anders Sandstr\"om's double-entry \emph{Society Account} and Robin Hahnel's Pollution Demand-Revealing Mechanism (PDRM). See \textbf{Section 4.3} for our code audit of \texttt{pequod-cljs} and \textbf{Algorithm 3} (Safeguarded Primal-Dual / ADMM Proximal Regularization), alongside \textbf{Chapter 8} and \textbf{Chapter 10} for the critique of value incommensurability and non-convex convergence.}
+% --- PDF PAGE 3: INTERDISCIPLINARY READER'S GUIDE ---
+\thispagestyle{empty}
+\noindent{\footnotesize\scshape\bfseries\textcolor{CrimsonAccent}{Interdisciplinary Navigation Guide}}\\[0.3em]
+{\Large\bfseries\color{NavyPrimary} How to Read This Book Across Disciplines}\\[0.4em]
+\rule{\textwidth}{0.6pt}\\[0.6em]
+{\small\color{SlateDark} This monograph bridges libertarian-socialist institutional theory, formal welfare and planning economics, and modern distributed systems cryptography. Depending on your primary background, we recommend the following reading paths:}\\[0.6em]
 
-\audiencebox{For Programmers \& Cryptographers}{Local-First P2P, Merkle-Sum Trees \& Post-Quantum Security}{
-Jump directly to \textbf{Chapter 4 (Section 4.7 Protobuf Schemas)}, \textbf{Chapter 5 (Four-Layer Architecture D)}, \textbf{Chapter 6 (Weighted Stack Comparison)}, \textbf{Chapter 7 (NIST FIPS 203/204/205 PQC \& Zero-Knowledge Budget Proofs)}, and \textbf{Chapter 9 (Implementable Proof-of-Concept Specification \& Benchmark Programme)}.}
+\audiencebox{For Advocates, Cooperators \& Organizers}{Institutional Self-Management Without Hierarchy}{
+Start with \textbf{Chapter 1 (Executive Summary)} and \textbf{Chapter 2 (Historical \& Institutional Inspirations)} to see how lessons from the 1936--1939 Spanish Revolution, the 1871 Paris Commune, Classical Athens, Occupy Wall Street, Mondrag\'on, Porto Alegre Participatory Budgeting, Rojava, and Elinor Ostrom's commons principles are translated into concrete protocol safeguards against bureaucratic capture, meeting fatigue, and inter-regional inequality. Then read \textbf{Chapter 3} for the complete traceability matrix linking Michael Albert and Robin Hahnel's 1991 and 2021 books to our design.}
 
 \vspace{4pt}
-\noindent\rule{\textwidth}{0.4pt}\par\vspace{2pt}
-\noindent{\tiny\color{SlateDark}
-\textbf{Source Provenance \& Copyright Compliance Notice:} All primary and secondary sources cited in this monograph were verified on November 4, 2026. Full copyrighted book texts (Princeton University Press, South End Press, AK Press, Routledge) are cited with exact chapter and page references without unauthorized verbatim reproduction. Open-access simulation code (\texttt{pequod-cljs}) and CC BY 4.0 papers (Szczepanczyk 2023) were audited directly from source.}
+\audiencebox{For Economists \& Operations Researchers}{Formal Models, Accounting \& Non-Convex Convergence}{
+Focus on \textbf{Chapter 4 (Formal Economic Model)}, which unites Albert and Hahnel's Formal Model of a Participatory Economy (FMPE) with Anders Sandstr\"om's double-entry \emph{Society Account} and Robin Hahnel's Pollution Demand-Revealing Mechanism (PDRM). See \textbf{Section 4.4} for our source-code audit of \texttt{pequod-cljs} and \textbf{Algorithm 3} (Safeguarded Primal-Dual / ADMM Proximal Regularization), alongside \textbf{Chapter 8} and \textbf{Chapter 10} for our synthesis of John O'Neill's (2024) ecological incommensurability critique and non-convex convergence experiments.}
+
+\vspace{4pt}
+\audiencebox{For Systems Programmers \& Cryptographers}{Local-First P2P, Merkle-Sum Trees \& Post-Quantum Security}{
+Jump directly to \textbf{Chapter 4 (Section 4.5 State Machine \& Protobuf Schemas)}, \textbf{Chapter 5 (Four-Layer Architecture D \& 6-Role Mobile Taxonomy)}, \textbf{Chapter 6 (Weighted Stack Comparison)}, \textbf{Chapter 7 (NIST FIPS 203/204/205 Post-Quantum Cryptography, Non-Plutocratic Sybil Resistance \& Zero-Knowledge Budget Proofs)}, and \textbf{Chapter 9 (Implementable Proof-of-Concept Specification \& Multi-Scale Benchmark Programme)}.}
 \clearpage
 
 \tableofcontents
@@ -1320,5 +1341,18 @@ All sources below were verified for identity, provenance, and completeness on No
   \item \textbf{Buchman, Ethan, Jae Kwon, and Zarko Milosevic (2018).} ``The Latest Gossip on BFT Consensus.'' \emph{arXiv:1807.04938}.
   \item \textbf{Boyd, Stephen, et al.\ (2011).} ``Distributed Optimization and Statistical Learning via the Alternating Direction Method of Multipliers.'' \emph{Foundations and Trends in Machine Learning} 3, no. 1: 1--122.
 \end{enumerate}
+
+\vfill
+\noindent\rule{\textwidth}{0.6pt}\\[0.4em]
+\noindent\colorbox{NavyPrimary}{%
+  \parbox{\dimexpr\textwidth-2\fboxsep\relax}{%
+    \vspace{6pt}
+    \centering
+    {\footnotesize\bfseries\textcolor{GoldAccent}{POST-CAPITALIST LABS IMPRINT $\cdot$ OPEN-SOURCE RESEARCH MONOGRAPH (WORKING DRAFT)}}\\[3pt]
+    {\scriptsize\color{white} Leveraging technology to amplify social movements $\cdot$ Decentralised consensus, mechanism design, and democratic economic coordination}\\[3pt]
+    {\scriptsize\color{GoldAccent} \texttt{https://github.com/Post-Capitalist-Labs} $\quad\cdot\quad$ \texttt{https://github.com/titancassini}}
+    \vspace{6pt}
+  }%
+}
 
 \end{document}
