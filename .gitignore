@@ -5,5 +5,3 @@
 *.toc
 book/previews/
 book/previews_check/
-book/build_book.py
-book/gen_chapters_*.py

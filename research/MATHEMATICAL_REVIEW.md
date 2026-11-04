@@ -1,9 +1,71 @@
 # Mathematical Review of Economic Models, Algorithms, and Convergence Guarantees
 
+**Deliverable:** `research/MATHEMATICAL_REVIEW.md`
+**Status:** Working Draft (third refinement, 4 November 2026)
+**Canonical text:** `book/dpep_book.tex` Chapter 4. Where this note conflicts with the book, the book wins. Earlier passes are kept below as a historical record.
+
+---
+
+## Third refinement
+
+All figures: `research/analysis/reference_tests_r3.py` (the reviewer's tests, verbatim) and `research/analysis/verify_r3.py` (extensions). Standard library only.
+
+### 1. One-sided feasibility is not success (R3-02)
+
+`Test A` reproduces exactly: with $S = 100\cdot\mathbb 1[p\ge10]$, $D = 70-p$, $p_0=8$ and Eq. 4.14-4.15, $D\le S$ first holds at round 3 ($p=11.52$, $D=58.48$), with 41.5% of output unused. The test represents the book fairly: it uses the book's price rule with $\min(0.25,\rho^{(t-1)})$ initialised at 0.25, and Algorithm 3a's printed halt rule.
+
+`verify_r3.py` section A adds value-weighted measures (unused-output share, unmet-demand share) and three tiers:
+
+| Case | First feasible round | Unused at that round | First *cleared* round | Share of 500 rounds cleared |
+|---|---|---|---|---|
+| Single plant | 3 | 41.5% | never | 0% |
+| $K=20$ identical thresholds | 3 | 41.5% | never | 0% |
+| $K=20$ staggered thresholds | 3 | 8.4% | 5 | 56.8% |
+| Scarf (3,000 rounds) | never | - | never | 0% |
+
+*Cleared* = feasible, $\max\rho\le5\%$, unused-output share $\le5\%$. Book: Definition 4.2 (feasible / cleared / socially acceptable) with proposed thresholds; Algorithm 3a halts only when cleared; Kill Gate 1 is stated in terms of clearing.
+
+### 2. Algorithm 3b as printed was not Deng et al. (R3-12)
+
+Read Deng, Lai, Peng & Yin, arXiv 1312.3040v2. Algorithm 4 (Proximal Jacobian ADMM) is
+$x_i^{k+1}=\arg\min f_i(x_i)+\tfrac\rho2\|A_ix_i+\sum_{j\ne i}A_jx_j^k-c-\lambda^k/\rho\|^2+\tfrac12\|x_i-x_i^k\|^2_{P_i}$, $\lambda^{k+1}=\lambda^k-\gamma\rho(\sum_iA_ix_i^{k+1}-c)$,
+with Lemma 2.2 / eq. (2.8): $P_i\succ\rho(1/\epsilon_i-1)A_i^\top A_i$, $\sum\epsilon_i<2-\gamma$, reducing to (2.11): $P_i\succ\rho(\tfrac N{2-\gamma}-1)A_i^\top A_i$; for $P_i=\tau_iI$, $\tau_i>\rho(\tfrac N{2-\gamma}-1)\|A_i\|^2$; for prox-linear $P_i=\tau_iI-\rho A_i^\top A_i$, $\tau_i>\tfrac{\rho N}{2-\gamma}\|A_i\|^2$. Theorem 2.4: $\|u^k-u^{k+1}\|^2_{G'}=o(1/k)$, primal and dual together.
+
+The book's printed update dropped the augmented residual term, which makes it an Arrow-Hurwicz-type primal-dual proximal iteration. The book's condition $P_c\succeq\rho N A_c^\top A_c$ is sufficient for $\gamma=1$ only with strictness, which holds when $A_c$ has full column rank. `Test B` reproduces: the printed form oscillates on linear welfare (residual 0.9998, $\lambda\in[0,2]$) and converges on log welfare; adding the residual converges in both. `verify_r3.py` section B also runs Deng's Algorithm 4 exactly, with a slack block $s\ge0$ for the inequality ($N=3$, $\gamma=1$, $\tau=2.01>\rho(N-1)=2$): residual 0, price 1 (linear) and 0.667 (log).
+
+Book: 3b reprinted as Deng Algorithm 4 with slack block, condition, dual damping and the scope of the theorem; the old form named and disowned; a new method-family row.
+
+### 3. Endogenous income (R3-13)
+
+- **Candidate solver:** Algorithm 3d, a damped outer fixed point on budgets around a fixed-budget inner solve (3b or 3c), with a PATH-type MCP solver as a small-instance cross-check (licence to be checked) and Lemke only for the linear case. No convergence theorem is claimed.
+- **3c and endogenous income:** 3c is run inside 3d, and binary decisions are re-checked after each budget update.
+- **Eq. 4.7:** the cap now uses accredited labour $\sum_\ell(l^0_{j,\ell}+\Delta l_{j,\ell})$, the same quantity charged in Eq. 4.12. The second pass had addressed Eq. 4.12 instead, which was already correct.
+- **Eq. 4.15:** $\tilde\delta\in[0.05,0.80]>0$ and $\min(0.25,\cdot)\le0.25$, so $\min(\tilde\delta,\tilde\delta\cdot\min(0.25,\rho))=\tilde\delta\cdot\min(0.25,\rho)$ always. Upstream `csvgen.clj` line 392 has exactly this form; the commented-out line 395 is the variant where the outer `min` binds. The equation is simplified, with a note. Upstream line numbers are corrected to 391-392 and 463-469.
+- **Simultaneity:** $B_u=B_u(P,D)$ through $Y^{GDP}$. The book now states the one-round lag $B_u^{(t)}=B_u(P^{(t)},D^{(t-1)})$, that it is consistent only at a fixed point, and that at a cleared plan $\sigma_{inv}Y^{GDP}=p\cdot D^{inv}$, so $\sigma_{inv}$ and $D^{inv}$ cannot both be chosen independently. DPEP ratifies $\sigma_{inv}$ and scales $D^{inv}$.
+
+### 4. Toothache audit, all 70 generators
+
+After fetching the 20 LFS objects: 750,000 worker-council records; baseline $\sum b+c/k\in[0.7696,0.8781]$; with the +0.1 increment, $[1.0696,1.6652]$ for every record. The previous range [1.0712, 1.6652] came from 50 files only. CSV statistics are unchanged.
+
+### 5. Table 6.1 (R3-18)
+
+`Test C` reproduces the reviewer's figures on the second-pass cells (baseline D 4.32; A beats D on criteria 11 and 13, so D equals or beats A on 12 of 14, not 13; 70% weighting A 4.08 / D 4.32; harsher D 3.92). After rescoring D on rows 4, 5, 6, 9 and 12 in light of the benchmark and the proposal-size rework: baseline D 4.065 (printed 4.07), equal weights 4.04, harsher 3.82; A overtakes D once criteria 4, 11 and 12 carry ≥63% of the weight (70%: A 4.08, D 3.92); under U(-1,1) perturbation of every cell D ranks first in 99.2% of 20,000 draws (median lead 0.50, 5th percentile 0.15).
+
+---
+
+# Historical record (earlier passes)
+
+# Mathematical Review of Economic Models, Algorithms, and Convergence Guarantees
+
 **Deliverable:** `research/MATHEMATICAL_REVIEW.md`  
-**Status:** Working Draft  
-**Date:** November 4, 2026  
-**Scope:** Mathematical verification of `R-ECON-01` through `R-ECON-13` and reproducible script outputs from `research/analysis/verify_economics.py` and `research/analysis/verify_pequod_datasets.py`.
+**Status:** Working Draft (corrected 4 November 2026, second refinement)  
+**Canonical text:** `book/dpep_book.tex` Chapter 4. Where this note conflicts with the book, the book wins.
+
+**Corrections this pass:** Deng et al. (2017) give an $o(1/k)$ residual rate for convex multi-block Jacobi-proximal ADMM on a *fixed* problem; they do not cover endogenous-income DPEP, comparable $\sum W_c$, or $w_{\text{base}}$ rescaling. Algorithm 3b is a research candidate with **no stated rate** for the full model. Shapley–Folkman 0.40% is the *minimum* across 500 rounds; last-100-round max at $a=70$ is 8.4% (`verify_r2.py`). Toothache: 50 real `dep1ex*.clj` files, 20 LFS unfetched, 20% selection, perverse supply predicted not observed. Macro identity reopened if $Y^{\text{allow}}$ includes public services. “Theorem 2.1” is only in this file, not the book.
+
+---
+
+# Historical note (first-pass text below)
 
 ---
 

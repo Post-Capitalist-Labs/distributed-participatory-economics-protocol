@@ -1,0 +1,393 @@
+{
+  "R2_03_prio3_sizes": {
+    "len3000_bits20": {
+      "length": 3000,
+      "bits": 20,
+      "meas_len": 60000,
+      "proof_len": 983,
+      "leader_share_bytes": 975760,
+      "helper_share_bytes": 64,
+      "public_share_bytes": 96,
+      "client_upload_bytes": 975984,
+      "leader_share_kib": 952.9,
+      "client_upload_kib": 953.1,
+      "client_upload_mib": 0.931
+    },
+    "len10000_bits20": {
+      "length": 10000,
+      "bits": 20,
+      "meas_len": 200000,
+      "proof_len": 1807,
+      "leader_share_bytes": 3228944,
+      "helper_share_bytes": 64,
+      "public_share_bytes": 96,
+      "client_upload_bytes": 3229168,
+      "leader_share_kib": 3153.3,
+      "client_upload_kib": 3153.5,
+      "client_upload_mib": 3.08
+    },
+    "len230_bits20": {
+      "length": 230,
+      "bits": 20,
+      "meas_len": 4600,
+      "proof_len": 275,
+      "leader_share_bytes": 78032,
+      "helper_share_bytes": 64,
+      "public_share_bytes": 96,
+      "client_upload_bytes": 78256,
+      "leader_share_kib": 76.2,
+      "client_upload_kib": 76.4,
+      "client_upload_mib": 0.075
+    },
+    "len50_bits20": {
+      "length": 50,
+      "bits": 20,
+      "meas_len": 1000,
+      "proof_len": 129,
+      "leader_share_bytes": 18096,
+      "helper_share_bytes": 64,
+      "public_share_bytes": 96,
+      "client_upload_bytes": 18320,
+      "leader_share_kib": 17.7,
+      "client_upload_kib": 17.9,
+      "client_upload_mib": 0.017
+    },
+    "len3000_bits64": {
+      "length": 3000,
+      "bits": 64,
+      "meas_len": 192000,
+      "proof_len": 1775,
+      "leader_share_bytes": 3100432,
+      "helper_share_bytes": 64,
+      "public_share_bytes": 96,
+      "client_upload_bytes": 3100656,
+      "leader_share_kib": 3027.8,
+      "client_upload_kib": 3028.0,
+      "client_upload_mib": 2.957
+    },
+    "len50_bits64": {
+      "length": 50,
+      "bits": 64,
+      "meas_len": 3200,
+      "proof_len": 229,
+      "leader_share_bytes": 54896,
+      "helper_share_bytes": 64,
+      "public_share_bytes": 96,
+      "client_upload_bytes": 55120,
+      "leader_share_kib": 53.6,
+      "client_upload_kib": 53.8,
+      "client_upload_mib": 0.053
+    },
+    "items_fitting_75kib_leader_meas_only_20bit": 240,
+    "book_75kb_claim_fits_full_G_priv": false
+  },
+  "R2_11_shapley_folkman": {
+    "K20_a70_staggered": {
+      "min_over_rounds": 0.003955,
+      "last100_max": 0.083756,
+      "final_rho": 0.004896,
+      "final_price": 10.2471
+    },
+    "K20_a70_identical_thresholds": {
+      "min_over_rounds": 0.50374,
+      "last100_max": 2.0,
+      "final_rho": 2.0,
+      "final_price": 11.2279
+    },
+    "sweep_n": 41,
+    "sweep_median_last100_max": 0.06014,
+    "sweep_worst_last100_max": 0.094681,
+    "sweep_share_last100_max_le_5pct": 0.2439,
+    "sweep_worst_best_achievable": 0.048417,
+    "note": "One-good staggered-threshold test; says nothing about interdependent Leontief markets."
+  },
+  "R2_18_pequod_subsets": {
+    "clj_real": [
+      "dep1ex01.clj",
+      "dep1ex02.clj",
+      "dep1ex03.clj",
+      "dep1ex04.clj",
+      "dep1ex05.clj",
+      "dep1ex06.clj",
+      "dep1ex07.clj",
+      "dep1ex08.clj",
+      "dep1ex09.clj",
+      "dep1ex10.clj",
+      "dep1ex11.clj",
+      "dep1ex12.clj",
+      "dep1ex13.clj",
+      "dep1ex14.clj",
+      "dep1ex15.clj",
+      "dep1ex16.clj",
+      "dep1ex17.clj",
+      "dep1ex18.clj",
+      "dep1ex19.clj",
+      "dep1ex20.clj",
+      "dep1ex21.clj",
+      "dep1ex22.clj",
+      "dep1ex23.clj",
+      "dep1ex24.clj",
+      "dep1ex25.clj",
+      "dep1ex26.clj",
+      "dep1ex27.clj",
+      "dep1ex28.clj",
+      "dep1ex29.clj",
+      "dep1ex30.clj",
+      "dep1ex31.clj",
+      "dep1ex32.clj",
+      "dep1ex33.clj",
+      "dep1ex34.clj",
+      "dep1ex35.clj",
+      "dep1ex36.clj",
+      "dep1ex37.clj",
+      "dep1ex38.clj",
+      "dep1ex39.clj",
+      "dep1ex40.clj",
+      "dep1ex41.clj",
+      "dep1ex42.clj",
+      "dep1ex43.clj",
+      "dep1ex44.clj",
+      "dep1ex45.clj",
+      "dep1ex46.clj",
+      "dep1ex47.clj",
+      "dep1ex48.clj",
+      "dep1ex49.clj",
+      "dep1ex50.clj",
+      "dep1ex51.clj",
+      "dep1ex60.clj",
+      "dep1ex61.clj",
+      "dep1ex62.clj",
+      "dep1ex63.clj",
+      "dep1ex64.clj",
+      "dep1ex65.clj",
+      "dep1ex66.clj",
+      "dep1ex67.clj",
+      "dep1ex68.clj",
+      "dep1ex69.clj",
+      "dep1ex70.clj",
+      "dep1ex71.clj",
+      "dep1ex72.clj",
+      "dep1ex73.clj",
+      "dep1ex74.clj",
+      "dep1ex75.clj",
+      "dep1ex76.clj",
+      "dep1ex77.clj",
+      "dep1ex78.clj"
+    ],
+    "clj_lfs_pointers": [],
+    "clj_real_count": 70,
+    "clj_lfs_count": 0,
+    "dep1ex01_50": {
+      "n": 50,
+      "missing": [],
+      "Y1_5pct": 11.18,
+      "Y1_3pct": 19.26,
+      "Y2_5pct": 5.2,
+      "Y2_3pct": 9.04
+    },
+    "dep1ex51_90": {
+      "n": 40,
+      "missing": [],
+      "Y1_5pct": 11.85,
+      "Y1_3pct": 19.25,
+      "Y2_5pct": 6.525,
+      "Y2_3pct": 9.65
+    },
+    "dep1ex61_100": {
+      "n": 40,
+      "missing": [],
+      "Y1_5pct": 11.85,
+      "Y1_3pct": 19.2,
+      "Y2_5pct": 6.575,
+      "Y2_3pct": 9.575
+    },
+    "dep1ex01_99_excluding_100": {
+      "n": 99,
+      "missing": [],
+      "Y1_5pct": 11.505,
+      "Y1_3pct": 19.232,
+      "Y2_5pct": 5.848,
+      "Y2_3pct": 9.323
+    },
+    "dep1ex_exponent_sum_jumps": {
+      "n": 0,
+      "max_abs_jump": null,
+      "mean_abs_jump": null
+    },
+    "dep2ex_exponent_sum_jumps": {
+      "n": 0,
+      "max_abs_jump": null,
+      "mean_abs_jump": null
+    },
+    "dep2ex_csv_count": 50,
+    "dep2ex_clj_count": 0
+  },
+  "R2_19_architecture_sensitivity": {
+    "baseline": {
+      "A": 3.095,
+      "B": 3.585,
+      "C": 2.535,
+      "D": 4.505
+    },
+    "equal_weights": {
+      "A": 3.3214,
+      "B": 3.6071,
+      "C": 2.4643,
+      "D": 4.4643
+    },
+    "seventy_pct_on_4_11_12": {
+      "A": 4.0843,
+      "B": 3.7461,
+      "C": 2.3014,
+      "D": 4.3925
+    },
+    "D_theoretical_floor_70pct_on_lowest": 3.65,
+    "D_lowest_score": 3.5,
+    "D_beats_or_equals_A_on": 13,
+    "book_claimed_A_4.65_D_3.60_reproducible": false,
+    "note": "Weight changes alone cannot make D score 3.60; D's minimum cell is 3.5."
+  },
+  "R2_20_committee": {
+    "64": {
+      "p10": {
+        "k_fail": 22,
+        "single_draw": 1.2020746138529458e-07,
+        "single_draw_pct": 1.202e-05,
+        "annual_if_435_independent_pct": 0.0052
+      },
+      "p15": {
+        "k_fail": 22,
+        "single_draw": 9.503081143556184e-05,
+        "single_draw_pct": 0.00950308,
+        "annual_if_435_independent_pct": 4.0498
+      },
+      "p20": {
+        "k_fail": 22,
+        "single_draw": 0.005085566548231989,
+        "single_draw_pct": 0.50855665,
+        "annual_if_435_independent_pct": 89.1159
+      },
+      "p25": {
+        "k_fail": 22,
+        "single_draw": 0.059622694035137036,
+        "single_draw_pct": 5.9622694,
+        "annual_if_435_independent_pct": 100.0
+      },
+      "p30": {
+        "k_fail": 22,
+        "single_draw": 0.26172699471120564,
+        "single_draw_pct": 26.17269947,
+        "annual_if_435_independent_pct": 100.0
+      }
+    },
+    "128": {
+      "p10": {
+        "k_fail": 43,
+        "single_draw": 3.712801643833674e-13,
+        "single_draw_pct": 0.0,
+        "annual_if_435_independent_pct": 0.0
+      },
+      "p15": {
+        "k_fail": 43,
+        "single_draw": 1.2739496293168214e-07,
+        "single_draw_pct": 1.274e-05,
+        "annual_if_435_independent_pct": 0.0055
+      },
+      "p20": {
+        "k_fail": 43,
+        "single_draw": 0.00021755996936401398,
+        "single_draw_pct": 0.021756,
+        "annual_if_435_independent_pct": 9.0308
+      },
+      "p25": {
+        "k_fail": 43,
+        "single_draw": 0.018218515932540265,
+        "single_draw_pct": 1.82185159,
+        "annual_if_435_independent_pct": 99.9664
+      },
+      "p30": {
+        "k_fail": 43,
+        "single_draw": 0.21314971840368274,
+        "single_draw_pct": 21.31497184,
+        "annual_if_435_independent_pct": 100.0
+      }
+    }
+  },
+  "R2_21_derived": {
+    "n_participants": 1000000,
+    "G_catalogue": 10000,
+    "G_priv": 3000,
+    "quorum_64": {
+      "n": 64,
+      "f": 21,
+      "quorum_2f1": 43,
+      "quorum_ceil_2n3": 43,
+      "bytes_2f1": 145039,
+      "bytes_ceil_2n3": 145039,
+      "kib_2f1": 141.6,
+      "kib_ceil_2n3": 141.6
+    },
+    "quorum_128": {
+      "n": 128,
+      "f": 42,
+      "quorum_2f1": 85,
+      "quorum_ceil_2n3": 86,
+      "bytes_2f1": 286705,
+      "bytes_ceil_2n3": 290078,
+      "kib_2f1": 280.0,
+      "kib_ceil_2n3": 283.3
+    },
+    "block_64": {
+      "arrays_bytes": 400000,
+      "sigs_bytes": 145039,
+      "bitmap_bytes": 10000,
+      "total_bytes": 555103,
+      "kib": 542.1
+    },
+    "block_128": {
+      "arrays_bytes": 400000,
+      "sigs_bytes": 290078,
+      "bitmap_bytes": 10000,
+      "total_bytes": 700142,
+      "kib": 683.7
+    },
+    "layer1_year_10rounds_n128_mb": 283.8,
+    "layer1_year_20rounds_n128_mb": 290.5,
+    "prio3_full_G_priv_20bit": {
+      "length": 3000,
+      "bits": 20,
+      "meas_len": 60000,
+      "proof_len": 983,
+      "leader_share_bytes": 975760,
+      "helper_share_bytes": 64,
+      "public_share_bytes": 96,
+      "client_upload_bytes": 975984,
+      "leader_share_kib": 952.9,
+      "client_upload_kib": 953.1,
+      "client_upload_mib": 0.931
+    },
+    "prio3_sparse_50_20bit": {
+      "length": 50,
+      "bits": 20,
+      "meas_len": 1000,
+      "proof_len": 129,
+      "leader_share_bytes": 18096,
+      "helper_share_bytes": 64,
+      "public_share_bytes": 96,
+      "client_upload_bytes": 18320,
+      "leader_share_kib": 17.7,
+      "client_upload_kib": 17.9,
+      "client_upload_mib": 0.017
+    },
+    "mobile_round_n128_if_prio_were_75kb": {
+      "sigs_kib": 283.3,
+      "deltas_kib": "15-40",
+      "prio_claimed_kib": 75,
+      "merkle_b": 512,
+      "low_kib": 373.8,
+      "high_kib": 398.8
+    },
+    "leaf_archive_10rounds_raw_gb": 2.08,
+    "leaf_archive_10rounds_zstd_gb": 0.6
+  }
+}

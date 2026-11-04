@@ -1,9 +1,56 @@
 # Scientific Claims, Evidence, and Validation Status Register
 
+**Deliverable:** `research/CLAIMS_REGISTER.md`
+**Status:** Working Draft (third refinement, 4 November 2026)
+**Canonical register:** Appendix A of `book/dpep_book.tex` (`tab:claims-reg`). The table below is generated from it, so the two cannot drift. Earlier registers are kept below as a historical record and must not be quoted.
+
+**Classification terms:** Established (peer-reviewed theorem or standard) · Source-supported (checked in primary literature, audited code or a measurement) · Analytical (derived from models or arithmetic in the monograph) · Conjectural (hypothesis or judgement) · Experimental target (a goal to be tested).
+**Status terms:** Verified · Partially verified · Unverified · Refuted. "Narrowed" and "reopened" are no longer used.
+
+**Coverage:** economic convergence (ECON-01–09), computational scalability (TECH-02), democratic scalability (POL-01, POL-02), censorship resistance (SEC-02), cryptographic integrity (SEC-04), post-quantum security (SEC-03), privacy (SEC-01, SEC-08), Sybil resistance (SEC-05, SEC-06), mobile feasibility (TECH-04), operating costs (TECH-05).
+
+| Claim ID | Claim | Classification | Evidence | Assumptions | Limitations | Validation | Status |
+|---|---|---|---|---|---|---|---|
+| CLM-ECON-01 | Economic convergence (reference): the continuous-time FMPE gradient process converges. | Established | Arrow–Hurwicz–Uzawa (1958); Heal (1973), Tier 3. | Strict convexity; gross substitutability. | Fails on Scarf-type and non-convex economies. | Reference only. | Verified (as a cited theorem; not a DPEP result) |
+| CLM-ECON-02 | dep1ex61–100.csv: Year 1 reaches 5% in 11.85 rounds and 3% in 19.20; Year 2 5% in 6.58. | Source-supported | verify_r2.py on pequod-cljs @ 8bd46b5c. | Fixed 5,000 incomes; Cobb–Douglas FOCs. | Other subsets differ (01–50: 11.18); no wall-clock log. | Reproduce in the Phase 1 simulator. | Verified |
+| CLM-ECON-03 | Eq. 4.15 plus trust regions does not clear Scarf's cycle or a single lumpy plant. | Analytical | verify_economics.py: min imbalance 10.5% and 50.4%. | The stress-test economies. | Not a general impossibility proof. | Instance families 3–4 in Phase 1. | Verified |
+| CLM-ECON-04 | With the toothache increment, $\sum b + c/k > 1$ for every one of 750,000 worker-council records in the 70 generators. | Source-supported | verify_pequod_datasets.py; LFS objects SHA-256 checked. | 20% of councils selected at run time. | Perverse supply predicted, not observed in CSVs; Clojure not run. | Run pequod-cljs with toothaches. | Partially verified |
+| CLM-ECON-05 | One good, $K=20$ staggered plants: min imbalance 0.40% over 500 rounds; last-100-round max 8.4%. | Analytical | verify_r2.py; sweep median 6.0%, worst 9.5%. | $a\in[60,80]$; thresholds in $[8.5,11.5]$. | One good; not Leontief. | Lumpy Leontief family in Phase 1. | Partially verified |
+| CLM-ECON-06 | $\sum_u B_u = (1-\sigma_{\text{inv}})Y^{\text{GDP}}$, and $\sigma_{\text{inv}}Y^{\text{GDP}} = p\cdot D^{\text{inv}}$ at a cleared plan. | Analytical | Algebra in Section 4.2 and the book table. | $Y^{\text{allow}}$ is cash transfers only. | No numerical test on a full Society Account ledger. | Phase 1 ledger test. | Partially verified |
+| CLM-ECON-07 | Algorithm 3b (Deng et al. Algorithm 4 with slack) converges on fixed-budget convex problems. | Established | Deng et al. (2017) Thm. 2.3–2.4 (read in full); verify_r3.py test B. | Convex $\mathcal{T}_c$; fixed budgets; $P_i$ condition (2.11). | Not endogenous income, non-convexity or dual renormalisation. | Phase 1 convex families. | Partially verified |
+| CLM-ECON-08 | Some candidate (3a–3d) clears full DPEP instances (Leontief, lumpy, endogenous income, strategic). | Experimental target | None yet. | Pre-registered instance set. | Toy tests only; 3d has no convergence result. | Kill Gate 1. | Unverified |
+| CLM-ECON-09 | One-sided feasibility ($D\le S$) is an adequate success criterion. | Analytical | Single plant: feasible at round 3 with 42% unused output (reference_tests_r3.py). | – | – | Replaced by Definition 4.2. | Refuted |
+| CLM-TECH-01 | Leaf transport plus BFT takes 9–27 s per round at $N=10^6$. | Analytical | Assumed 5.2 kB proposals; reworked sizes give 0.24–1.46 GB per round (the book table). | – | Omitted report verification and signature checks. | Replaced by Kill Gate 2 thresholds. | Refuted |
+| CLM-TECH-02 | Computational scalability: Prio3 verification costs $\approx 0.25$ ms (coarse) to 3.5 ms (dense) per report per aggregator. | Source-supported | libprio 0.18.1 benchmark (the book table). | One desktop core; VDAF draft 18 code. | No phone or Raspberry Pi measurement; network excluded. | Device benchmarks, Kill Gate 3. | Partially verified |
+| CLM-TECH-03 | Prio3SumVec report sizes follow the VDAF size formula. | Source-supported | parameters.py matches libprio byte-for-byte on 9 configurations. | libprio chunk-length rule. | Custom budget circuit sizes unknown. | Recompute when the circuit is specified. | Verified |
+| CLM-TECH-04 | Mobile feasibility: $\le 150$ kB per ordinary round and $\le 450$ kB with a full quorum check; RAM $\le 150$ MB. | Experimental target | Byte budget analytical (the book section). | Coarse 55 kB report; coordinator attestation. | No device test. | Kill Gate 3. | Unverified |
+| CLM-TECH-05 | Operating cost: hosting 100 servers $\approx$ $3k–$6k/month. | Analytical | $30–$60 per server-month (assumed). | Commodity servers. | Excludes audits, facilitation, research and energy. | Phase 2 and 3 cost accounting. | Unverified |
+| CLM-TECH-06 | Architecture D outranks A, B and C at baseline weights. | Conjectural | Expert scores; arithmetic and perturbation test in verify_r3.py. | the book table scores. | A overtakes D when simplicity, throughput and cost carry $\ge 63%$ of the weight. | Phases 2–3 replace judgements with measurements. | Partially verified |
+| CLM-SEC-01 | Privacy: Prio3 hides an individual report if at least one aggregator is honest. | Source-supported | VDAF-22 \S 9 (full text). | Non-colluding aggregators; $m_{\min}=30$. | Budget circuit unspecified; differencing between releases. | Phase 3 audit. | Partially verified |
+| CLM-SEC-02 | Censorship resistance: Two-Root aggregation with receipts detects omitted or tampered proposals. | Analytical | Design argument (the book section). | $\ge 1$ honest relay; clients keep receipts. | Does not bind aggregator shares. | Kill Gate 2(a). | Unverified |
+| CLM-SEC-03 | Post-quantum security: the FIPS 203/204/205 primitives are standardised. | Established | NIST FIPS 203–205 (2024). | Module-LWE/SIS and hash assumptions. | No whole-system PQ claim; BLAKE3 128-bit; VDAF no PQ claim. | Phase 3 review. | Verified |
+| CLM-SEC-04 | Cryptographic integrity: aggregate correctness requires every aggregator to be honest. | Source-supported | VDAF-22 \S 9 quotation. | Standard Prio3. | The public budget check limits only gross overspend. | Non-nested aggregators in pilots. | Verified |
+| CLM-SEC-05 | Sybil resistance (partial): INV-4B bounds credited hours given a true roster. | Analytical | Eq. 4.7. | Roster and $SB/SC$ honest. | Falsified rosters and carousel fraud need physical audit. | Pilot audits. | Partially verified |
+| CLM-SEC-06 | Sybil resistance (household): one report per person without a population register. | Conjectural | No construction (the book section). | A post-quantum anonymous credential with nullifiers. | None identified as standard. | Research; council-level trust meanwhile. | Unverified |
+| CLM-SEC-07 | An $n=128$ annual draw with $p=20%$ corrupt gives a 0.022% unsafe committee. | Analytical | Exact binomial, verify_r2.py. | i.i.d. draws; failure at $k\ge 43$. | $p=30%$ gives 21%; capture lasts a year. | Beacon design. | Verified |
+| CLM-SEC-08 | Prio3 reports cannot be carried forward into later rounds' aggregates. | Source-supported | VDAF-22 \S 7.2.3, \S 9.4. | Standard Prio3. | Aggregate-level carry-forward is still possible. | – | Verified |
+| CLM-POL-01 | Democratic scalability: ordinary participants complete, understand and genuinely shape multi-round planning. | Experimental target | None yet. | Phase 1H design. | $n=30$–60 self-selected volunteers. | Kill Gate 1H. | Unverified |
+| CLM-POL-02 | No technical elite dominates proposals and defaults. | Experimental target | None yet. | Influence measure of Kill Gate 1H(e). | Small, short probe. | Kill Gate 1H and pilots. | Unverified |
+| CLM-POL-03 | Neighbourhood councils of $\sim 50$–200 are workable. | Conjectural | Speaking-time arithmetic. | One shared meeting hour. | Not a finding of Mansbridge or Dahl \ | Tufte. | Unverified |
+
+---
+
+# Historical record (earlier passes; superseded)
+
+# Scientific Claims, Evidence, and Validation Status Register
+
 **Deliverable:** `research/CLAIMS_REGISTER.md`  
-**Status:** Working Draft  
-**Date:** November 4, 2026  
-**Scope:** Master register of scientific, mathematical, economic, cryptographic, and engineering claims.
+**Status:** Working Draft (corrected 4 November 2026)  
+**Canonical register:** Appendix of `book/dpep_book.tex` (`tab:claims-reg`). Fields are Claim, Assumptions, Limitations, Validation/Status, kept separate.
+
+Added this pass: CLM-TECH-03 (hosting vs operations), CLM-TECH-04 (architecture scores), CLM-SEC-05 (committee binomials), CLM-POL-02 (assembly-size heuristic). Narrowed or reopened: CLM-ECON-04, 05, 06; CLM-TECH-01, 02; CLM-SEC-01, 03.
+
+The 15-row table below is **superseded** by the book appendix. Do not quote it.
 
 ---
 

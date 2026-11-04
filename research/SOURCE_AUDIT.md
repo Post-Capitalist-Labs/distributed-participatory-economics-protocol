@@ -1,9 +1,148 @@
 # Source Audit and Provenance Verification
 
+**Deliverable:** `research/SOURCE_AUDIT.md`
+**Status:** Working Draft (third refinement, 4 November 2026)
+**Canonical bibliography:** back matter of `book/dpep_book.tex`. Earlier sections of this file are kept below as a historical record; where they conflict with this section, this section wins.
+
+---
+
+## Third refinement (this pass)
+
+### How sources were accessed in this pass
+
+| Source | Access | Used for |
+|---|---|---|
+| Laibman (2014), *Science & Society* 78(2) | Crossref record and publisher abstract (via Crossref API). Full text paywalled; not read. | R3-15: authorship, pages, §8.2 limited to the abstract |
+| Hahnel (2014), *Science & Society* 78(3) 379-389 | Crossref bibliographic record only | R3-15: identified the response |
+| Ackerman, "The Red and the Black", *Jacobin* (20 Dec 2012) | Jacobin page: author and date visible, body paywalled; secondary commentary via web search | R3-15: bibliographic identity confirmed, but its treatment of participatory economics could not be read, so it is **not** cited in the book |
+| EJPE 17(2), Winter 2024 (O'Neill, Kuch, Dapprich) | Open-access issue PDF downloaded from `ejpe.org/journal/issue/download/35/67` this pass (2.0 MB, 271 pp.) plus each article's landing page metadata. **No copy is in the repository**; the earlier claim of an "issue PDF" was not backed by a stored file. Not committed, to avoid redistributing the issue. | R3-17: titles, pages, DOIs; abstracts and conclusions of Kuch and Dapprich; abstracts of both O'Neill pieces |
+| Deng, Lai, Peng & Yin (2017) | arXiv 1312.3040v2 PDF, read in full for Algorithms 3-4, Lemma 2.2, eq. (2.8)/(2.11), Thm 2.3-2.4 | R3-12 |
+| `draft-irtf-cfrg-vdaf-22` | Full text (`.txt`) from ietf.org archive | R3-04 (§7.4.3 SumVec), R3-07 (§7.2.3, §9.2, §9.4) |
+| `prio` 0.18.1 (libprio-rs) | crates.io; source in the Cargo registry; compiled and run | R3-08 benchmark; README states it implements VDAF draft 18 |
+| Leval, *Collectives in the Spanish Revolution*, Part 2 Ch. V | libcom.org online edition (first 100k characters) | R3-16: 24 cantonal federations, 275 villages, 141,430 families; Caspe 14-15 Feb 1937 |
+| Peirats, in Dolgoff (1974), Part 2 Ch. 9 | marxists.org edition | R3-16: 500 collectives / 433,000 members (Souchy's estimate); Caspe 14 Feb 1937 |
+| Wikipedia, "Regional Defence Council of Aragon" | web page | R3-16: Bujaraloz plenary 6 Oct 1936; "500 delegates representing 80,000 collectivists" (no inline source); dissolution 10-11 Aug 1937 |
+| `msszczep/pequod-cljs` @ `8bd46b5c` | Existing clone plus the 20 Git LFS objects fetched from `media.githubusercontent.com`; each checked against the SHA-256 in its pointer (5 needed a retry after truncated downloads) | All 70 generators audited |
+| Upstream `csvgen.clj` | Clone, lines 391-395 and 463-469 | R3-13 (redundant `min`), corrected line numbers |
+| Every bibliography entry | Crossref API by DOI or bibliographic query (`research/analysis/audit_bibliography.py`, output `bibliography_audit.json`), plus the pages above | R3-15 bibliography audit |
+
+Not accessed: paywalled books (Hahnel 2021 print, Sandström 2020/2025, Mintz, Casanova, Seidman, Hansen, Mansbridge, Dahl & Tufte, Kornai 1980); the full text of Laibman (2014) and of Ackerman's Jacobin article. No paywall was bypassed.
+
+### R3-15: Laibman, not Ackerman
+
+Crossref for DOI `10.1521/siso.2014.78.2.207` returns author **David Laibman**, pages **207-234**. The book attributed the article to Seth Ackerman with pages 207-239 in the bibliography, the §8.2 citation list, the §8.2 dynamic-entry item and a footnote. All are corrected. §8.2 now states only what the abstract says (an "abstractly speculative" design approach, a fear of authority rooted in classical anarchism, an "uncanny resemblance to Walrasian competitive market equilibrium") and cites Hahnel's response, `10.1521/siso.2014.78.3.379`, pp. 379-389. Ackerman's "The Red and the Black" (*Jacobin*, 20 December 2012) exists, but its participatory-economics argument could not be read, so it is not cited.
+
+### R3-16: Caspe and Aragon
+
+The book's "about 450 collectives and 300,000 members" and "established in October 1936" are not supported by the sources checked. October 1936 (the 6th, at Bujaraloz) is the founding of the Regional Defence Council of Aragon. The Federation of Collectives was constituted at Caspe on 14-15 February 1937. Reported sizes: Leval 24 cantonal federations / 275 villages / 141,430 families; Peirats citing Souchy 500 collectives / 433,000 members; Wikipedia 500 delegates / 80,000 collectivists (unsourced). All are sympathetic or participant sources. The book now gives the range, attributions and dates. Other Chapter 2 headline figures were reworded: the "70-80% of Catalan industry" figure is flagged as untraced, Mintz's and Leval's participation estimates are attributed and their partisan character noted, and the Mondragón membership split is no longer stated as a precise figure.
+
+### R3-17: other gaps
+
+- **Levy (1991):** no such work identified by Crossref or web search. Removed from the bibliography and from §8.2.
+- **Freundlich (2015):** no 2015 work of that title found (web search; Mondragon Unibertsitatea's research portal lists a 2017 *lecture* of that title, not a publication). Removed; Mondragón figures now cite Whyte & Whyte and are hedged.
+- **Dapprich, Kuch, O'Neill:** see above. Fairness check: the book's Dapprich summary was broadly fair, but it omitted his central liberty argument about domination by the majority of one's own workers' council, and his word "algorithmic planning process" (so "algorithmic" is his, though "algorithmic centralism" is not). Kuch's title was wrong ("Decentralisation, Federations, and Authority..."; actually "Centralization Tendencies in Participatory Planning"), and his thesis (federations as "central planning authorities in disguise") is now stated. O'Neill's effort-surveillance criticism and his "consumption and production corridors" were missing and are now included.
+- **Tier 3 page-level claims:** reworded where they implied a reading ("this pass did not re-read" became "consulted at bibliographic level", and page-specific claims for Casanova and Seidman are withdrawn).
+
+### Bibliography audit (R3-15 extension)
+
+**72 entries reviewed:** 39 confirmed, 9 corrected and now confirmed, 9 partially confirmed, 12 not confirmed this pass, 3 removed.
+
+| Entry | Result | How checked |
+|---|---|---|
+| Albert & Hahnel (1991a) PEPE | Confirmed | DOI 10.2307/j.ctv131bvr2 resolves to title/authors/publisher |
+| Albert & Hahnel (1991b) Looking Forward | Confirmed | Crossref: review in J. Comparative Economics 16(4) confirms title/authors |
+| Hahnel & Albert (1990) Quiet Revolution | Corrected, now confirmed | Printed DOI 10.1515/9780691216034 resolved to Paret, *Understanding War*; corrected to 10.1515/9781400887057 |
+| Albert (2003) Parecon | Confirmed | Crossref: review in Sustainable Development 13(4) quotes title, Verso 2003, 311 pp. |
+| Hahnel (2021) DEP | Confirmed | DOI 10.4324/9781003173700 |
+| Hahnel (2022) A Participatory Economy | Not confirmed this pass | No Crossref match; AK Press page not checked |
+| Sandström (2020) | Confirmed | DOI 10.4324/9781003036005 |
+| Sandström (2023) web article | Not confirmed this pass | URL not re-fetched |
+| Sandström (2025) | Partially confirmed | Crossref DOI 10.4324/9781003732174 (dated 2026); subtitle not in record |
+| Szczepanczyk (2023) | Confirmed | DOI 10.58567/jie01030004 (pages not in record) |
+| PEP (2023) User Story Mapping | Not confirmed this pass | URL not re-fetched |
+| Arrow, Hurwicz & Uzawa (1958) | Confirmed | Crossref: reviews in Canadian Math. Bull. 3(3) and Math. Gazette 44 |
+| Heal (1973) | Not confirmed this pass | No Crossref match |
+| Henry (1972) | Corrected, now confirmed | Title corrected to 'Differential equations with discontinuous right-hand side for planning procedures'; JET 4(3) 545-551 confirmed |
+| Hurwicz (1973) | Partially confirmed | Reprint in Collected Papers found; AER 63(2) details not directly confirmed |
+| Hayek (1945) | Partially confirmed | Reprints found; AER 35(4) 519-530 not directly confirmed |
+| Lange & Taylor (1938/1964) | Confirmed | Crossref: 1939 and 1940 reviews |
+| Nove (1983) | Confirmed | Crossref: Slavic Review 42(4) review |
+| Buchanan (1985) | Confirmed | Crossref: Review of Politics 49(3) review |
+| Cockshott & Cottrell (1993) | Confirmed | Crossref: QJAE 7(1) review |
+| Devine (1988) | Partially confirmed | Crossref: 2020 Routledge reissue; 1988 Westview edition not directly confirmed |
+| Schweickart (1993) | Confirmed | Crossref: Phil. Soc. Sci. 27(3) review |
+| Laibman (2014) [was 'Ackerman (2014)'] | Corrected, now confirmed | DOI 10.1521/siso.2014.78.2.207: author David Laibman, pp. 207-234 (printed 207-239) |
+| Hahnel (2014) response | Confirmed | DOI 10.1521/siso.2014.78.3.379, pp. 379-389 (added) |
+| Hahnel & Wright (2016) | Confirmed | Crossref: JWSR 24(2) review |
+| O'Neill (2024) two pieces | Corrected, now confirmed | EJPE landing pages: pp. 27-48 and 117-124, DOIs added |
+| Kuch (2024) | Corrected, now confirmed | Title corrected to 'Centralization Tendencies in Participatory Planning', pp. 49-72, DOI .885 |
+| Dapprich (2024) | Confirmed | EJPE landing page: full title confirmed, pp. 73-93, DOI .867 |
+| Dolgoff (1974) | Confirmed | Crossref: Review of Politics 37(1) review |
+| Leval (1975) | Partially confirmed | Crossref: review of a later (Oakland) edition; Freedom Press 1975 not confirmed; Ch. V read online |
+| Leval (1971) Espagne Libertaire | Not confirmed this pass | Added from existing epigraph footnote; not checked |
+| Peirats, in Dolgoff | Partially confirmed | Ch. 9 read on marxists.org; Ch. 6 not checked |
+| Mintz (2013) | Not confirmed this pass | No Crossref match |
+| Marx (1871) | Partially confirmed | Reprints found; original publication details not confirmed |
+| Merriman (2014) | Confirmed | Crossref: reviews in The Historian and J. Interdisciplinary History |
+| Hansen (1991) | Confirmed | Crossref: Classical Review 42(2) review |
+| Freeman (1972) | Partially confirmed | Crossref: WSQ 2013 reprint; 1972 journal details not confirmed |
+| Graeber (2013) | Confirmed | Crossref: Sociology 48(5) review |
+| Ostrom (1990) | Confirmed | Crossref: Politica 24(1) review |
+| Whyte & Whyte (1991) | Confirmed | Crossref: 1989 reviews of the first edition; 2nd ed. (1991) not directly confirmed |
+| Freundlich (2015) | Removed | Removed: no such 2015 work found (web search; Mondragon research portal lists none) |
+| Levy (1991) | Removed | Removed: could not be identified |
+| Groves & Ledyard (1977) | Removed | Removed: confirmed (DOI 10.2307/1912672) but not cited in the text |
+| Goulart & Chen | Corrected, now confirmed | Now published: Math. Programming Computation (2026), DOI 10.1007/s12532-026-00320-7 |
+| O'Connor et al. (2020) BLAKE3 spec | Not confirmed this pass | Not re-fetched this pass |
+| NIST FIPS 203/204/205 | Not confirmed this pass | Not re-fetched this pass |
+| Kleppmann et al. (2019) | Confirmed | Crossref: DOI 10.1145/3359591.3359737, pp. 154-178 |
+| Shapiro et al. (2011) | Confirmed | Crossref: LNCS, pp. 386-400 |
+| Buchman, Kwon & Milosevic (2018) | Not confirmed this pass | arXiv not in Crossref; not fetched |
+| Boyd et al. (2011) | Corrected, now confirmed | Confirmed, DOI added; title spelling restored to 'Optimization' |
+| Deng, Lai, Peng & Yin (2017) | Confirmed | DOI 10.1007/s10915-016-0318-2, 71(2) 712-736; arXiv full text read |
+| Hong, Luo & Razaviyayn (2016) | Corrected, now confirmed | Title and journal spelling corrected ('Alternating Direction Method of Multipliers', 'Optimization'); DOI added |
+| Scarf (1960) | Confirmed | Crossref: IER 1(3) 157; DOI 10.2307/2556215 |
+| Sonnenschein (1973) | Confirmed | Crossref: JET 6(4) 345-354 |
+| Starr (1969) | Confirmed | Crossref: Econometrica 37(1) 25 |
+| Hurwicz (1972) | Corrected, now confirmed | Volume confirmed via reviews; title spellings restored ('Decentralized', 'Organization'); pages not confirmed |
+| Weitzman (1974) | Confirmed | Crossref: RES 41(4) 477 |
+| Weitzman (1980) | Confirmed | Crossref: Bell J. Econ. 11(1) 302 |
+| Kornai (1980) | Not confirmed this pass | No Crossref match |
+| Kornai (1986) | Confirmed | Crossref: Kyklos 39(1) 3-30 |
+| Casanova (2005) | Partially confirmed | Crossref: Routledge DOI 10.4324/9780203022801 dated 2004 |
+| Seidman (1991) | Confirmed | Crossref: AHR 97(1) review |
+| Seidman (2002) | Confirmed | Crossref: J. Social History 38(2) review |
+| Finley (1981) | Confirmed | Crossref: Classical Review 32(2) review |
+| Ste. Croix (1981) | Confirmed | Crossref: AHR 87(5) review |
+| Mansbridge (1980) | Confirmed | Crossref: Political Theory 9(4) review |
+| Dahl & Tufte (1973) | Confirmed | Crossref: APSR 68(3) review |
+| Corrigan-Gibbs & Boneh (2017) | Not confirmed this pass | USENIX proceedings not in Crossref; not fetched |
+| Boneh et al. (2019) | Confirmed | Crossref: LNCS, pp. 67-97 |
+| Barnes et al. (2026) VDAF-22 | Confirmed | Full text fetched from ietf.org this pass |
+| Crites & Stewart (2025) | Not confirmed this pass | Not re-fetched this pass |
+| Aas et al. (2026) prio 0.18.1 | Confirmed | crates.io metadata and source inspected; compiled and run |
+
+
+---
+
+# Historical record (earlier passes)
+
+# Source Audit and Provenance Verification
+
 **Deliverable:** `research/SOURCE_AUDIT.md`  
-**Status:** Working Draft  
-**Audit Date:** November 4, 2026  
-**Scope:** Source provenance and quotation audit incorporating verification of review findings `R-SRC-01` through `R-SRC-06`, `R-HIST-01`, and `R-ECON-12`.
+**Status:** Working Draft (corrected 4 November 2026)  
+**This file was previously named `SECOND_EDITION_SOURCE_AUDIT.md`.**
+
+**Access this pass (state how, do not claim unread books were read):**
+- VDAF-22: IETF Datatracker HTML, 14 August 2026, Informational, IRSG poll as of 18 October 2026.
+- BLAKE3 spec: GitHub BLAKE3-specs (“128-bit security for all of its security goals”).
+- Dapprich, O’Neill, Kuch: Winter 2024 EJPE issue PDF (`/journal/issue/download/35/67`). Single-article `/article/download/867/605` returned 404. Phrase “algorithmic centralism” not found in that extract. O’Neill titles: “Incommensurability, Environment and Planning: A Response to Hahnel’s Reply” and “Pluralism, Ecology and Planning” (not “Socialism, Ecology and Economic Calculation”).
+- Deng, Lai, Peng, Yin (2017): PDF from UGA/UCLA pages; $o(1/k)$ on $\|x^{k+1}-x^k\|_M^2$ for convex multi-block Jacobi-proximal ADMM.
+- `pequod-cljs` @ `8bd46b5c`: clone under `$PEQUOD_DIR`; 50 real `dep1ex01–50.clj`; 20 Git LFS pointers unfetched (`git-lfs` not installed); Clojure not run.
+- Hansen, Mintz, Leval (1975), Merriman, Mansbridge, Dahl & Tufte, Casanova, Seidman, Kornai, Weitzman: **Tier 3** — bibliographic identity only; page-level claims unchecked. Front-matter now lists them.
+- Hahnel (2021) increasing-returns pages: not independently re-read; secondary notes only.
+
+The bibliography line “verified for identity, provenance, and completeness” is withdrawn in the book.
 
 ---
 

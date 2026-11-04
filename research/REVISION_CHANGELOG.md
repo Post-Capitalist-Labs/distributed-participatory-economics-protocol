@@ -1,9 +1,58 @@
 # Draft Revision Changelog and Disposition of Review Findings
 
+**Deliverable:** `research/REVISION_CHANGELOG.md`
+**Status:** Working Draft
+**Latest pass:** third refinement, 4 November 2026. Dispositions: `research/THIRD_REFINEMENT_DISPOSITIONS.md`.
+
+This file holds revision history so that the monograph does not. Phrases removed from the book because they addressed a reviewer or recorded history rather than informing a reader are listed in §T.3.
+
+---
+
+## T. Third refinement (starting point: `399065b` plus the uncommitted second-pass working copy)
+
+### T.1 Monograph changes (all present in `book/dpep_book.tex`)
+
+- **Front matter:** colophon access notice rewritten and condensed (all 70 pequod generators; EJPE issue; Deng; VDAF-22; libprio executed; Laibman at Tier 2). Reading guide: "Merkle-Sum Trees" → "Two-Root Aggregation"; solvers 3a–3d. Abbreviations: PoC (proposed, unbuilt), BLAKE3 (Two-Root trees, 128-bit target), ADMM (3b as Deng Alg. 4), NASA-TLX (proposed for 1H/3), HRU added, DA archive size, τ as the clearing tolerance. `\mainmatter` no longer forces a blank recto page; float placement parameters tightened.
+- **Ch. 1:** new "established / estimated / unknown" statement in §1.3; "engineering guarantees" removed; §1.2 O(N²) framed as arithmetic; Table 1.1 updated (measured Prio3, archive sizes, no 9–27 s claim, clearing); §1.4 score 4.07, with A overtaking D at 70% simplicity weight; Table 1.2 replaced (proposed budget at one assumed rate, Phase 1 at 4–6 months, ethics costs, Phase 3 vs programme distinguished); decisions and final recommendation reworded.
+- **Ch. 2:** Spanish participation figures attributed and hedged; Caspe rewritten (Council 6 Oct 1936; Federation 14–15 Feb 1937; sourced range; dissolution Aug 1937); Mondragón figures hedged and Freundlich removed; Table 2.2 assembly row framed as a heuristic; Athens sortition sentence no longer claims a working beacon.
+- **Ch. 4:** Eq. 4.7 uses $l^0+\Delta l$; simultaneity paragraph ($B_u(P,D)$, one-round lag, $\sigma_{inv}Y=p\cdot D^{inv}$); Eq. 4.15 simplified with explanation; upstream line numbers corrected; toothache audit over 750,000 records; §4.4.4 rewritten (Definition 4.2; 3a halt on clearing; 3b = Deng Alg. 4 with slack and condition (2.11); Arrow–Hurwicz form named; new 3d; 3c objective adds unused output, runs inside 3d); Table 4.2 ten families; Listing 4.1 split into Listings 4.1–4.2, `R-` labels removed, domain tags `DPEP-WD-v0-*`, multi-signature fields.
+- **Ch. 5:** proposal sizes by council type (new Table 5.1); signature-verification claim made a Kill Gate 2 measurement; threshold signatures replaced by k-of-n multi-signatures throughout.
+- **Ch. 6:** Table 6.1 rows 4, 5, 6, 9, 12 rescored with rationale; compact layout (fits the page); note replaces the overlapping footnote; §6.1.1 sensitivity rewritten from `verify_r3.py`.
+- **Ch. 7:** credentials and individual budgets reworded (§7.3); §7.4 rewritten: what SumVec checks, price-dependent circuit, `ctx`, public-check analysis, aggregator-options table plus recommendation, HRU, measured Table 7.4, sparse claim removed, privacy-baseline table and recommendation, carry-forward options and rule, replay/retention, credentials; Table 7.1 placeholder latencies flagged; threat model wording; light-client table and mobile target.
+- **Ch. 8:** heading fixed ("Critics (,)"); Laibman replaces Ackerman; Dapprich, Kuch and O'Neill re-summarised from the EJPE issue; Levy removed.
+- **Ch. 9:** gates rewritten as tests (Table 9.2), pre-registration, instance set, scale caveat, ethics section, effort-default section; Table 9.3 recomputed (archive, checkpoints, CPU, mobile targets; round time not estimated).
+- **Ch. 10–12:** P2, P5, P12, P13 updated; §11.2 GDPR wording; Table 12.1 rebuilt with severity, settling evidence, phase and "could stop?", adding participation-at-scale and technical-elite criticisms.
+- **Appendix A:** eight separate fields per claim, defined classification and status terms, 26 claims covering the required areas.
+- **Bibliography:** Laibman and Hahnel (2014); QRWE DOI; Henry title; Kuch title; Dapprich/O'Neill pages and DOIs; Hurwicz, Boyd, Hong original spellings; Clarabel publication; Deng authors and DOI; Sandström 2025 DOI; libprio, Leval 1971 and Peirats added; Freundlich, Levy and the uncited Groves & Ledyard removed.
+
+### T.2 Analysis
+
+New: `reference_tests_r3.py` (verbatim reviewer tests), `verify_r3.py`, `check_book.py`, `audit_bibliography.py`, `bench_prio3/` (Rust). Changed: `parameters.py` (Prio3 proof length corrected to arity 2·chunk_length; libprio chunk rule; HRU, proposal and budget helpers). Regenerated all JSON outputs from a clean state.
+
+### T.3 Revision-history phrasing removed from the monograph
+
+"not because of a 3.60 score" (§1.6, §6.1.1, Table 9.1); "does not licence misquoting Dapprich"; "returned 404 from this environment"; "the earlier figure is retired" / "the earlier m ≥ 500 figure is retired" / "20-round figure ... is retired"; "Do not cite BLAKE3 as '256b preimage'"; "previously published pair"; "previously quoted"; "this pass did not re-read" (several); "the figure previously quoted in Table 1.1"; "Score cut from"; "A VDF was mentioned in an earlier security note"; "'100% of toothache records' would be the counterfactual"; "250–400 KB assumed a 75 KB dense report". Access limits are now stated neutrally ("consulted at bibliographic level").
+
+---
+
+# Historical record (earlier passes)
+
+
 **Deliverable:** `research/REVISION_CHANGELOG.md`  
 **Status:** Working Draft  
 **Date:** November 4, 2026  
 **Baseline Reviewed:** Initial Working Draft (`Post-Capitalist-Labs/distributed-participatory-economics-protocol` @ `4a89e91331f281dc4de55a6609b715c93dec53b4`) and `msszczep/pequod-cljs` @ `8bd46b5c233f0e48c767ad6d5069b9437a67c38b`.
+
+---
+
+## 0. Corrections to this changelog (second refinement, starting commit `399065b`)
+
+Several entries below reported monograph edits that were **not** in `book/dpep_book.tex` at `399065b`, or that overclaimed independent testing. Treat those rows as a first-pass note, not as evidence. In particular:
+
+- The first-pass disposition table marked every finding **Confirmed**. That is not an independent check. Second-refinement dispositions are in `research/SECOND_REFINEMENT_DISPOSITIONS.md`.
+- Claims of a 4-regime sensitivity table with A 4.65 / D 3.60, of Shapley–Folkman stable 0.40%, of `Prio3` 75 KB / 18–35 KB / <15 ms, of “100% Binding / 100% Post-Quantum / zero lattice”, of uniform NIST Level 3 including BLAKE3, of `draft-irtf-cfrg-vdaf-16` as standardised, of n=64 bandwidth figures after n=128 was chosen, of environmental-justice floors in the book, and of `$0 (self-fuzz)` having been removed from Table 1.2, were **not** all true of the monograph at `399065b`. They are corrected in the book in this pass, or withdrawn.
+- `SECOND_EDITION_SOURCE_AUDIT.md` was renamed to `SOURCE_AUDIT.md`; citations of the old filename are stale.
+- Theorem 2.1 exists only in `research/MATHEMATICAL_REVIEW.md`, not in the book.
 
 ---
 

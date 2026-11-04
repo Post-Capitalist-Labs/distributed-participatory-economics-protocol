@@ -1,0 +1,640 @@
+{
+  "A_success_measures": {
+    "definitions": {
+      "feasible": "D_g <= S_g for every good and every hard cap (one-sided)",
+      "cleared": "feasible and max_rho <= 0.05 and value-weighted unused output <= 0.05",
+      "socially_acceptable": "cleared, unmet need below a ratified threshold, and welfare gap to an oracle below a ratified threshold (requires an oracle; not computable for these toy cases)"
+    },
+    "single_plant": {
+      "first_feasible": {
+        "feasible": true,
+        "cleared": false,
+        "max_rho": 0.524,
+        "unused_share": 0.4152,
+        "unmet_share": 0.0,
+        "round": 3,
+        "price": 11.52,
+        "S": 100.0,
+        "D": 58.48
+      },
+      "first_cleared_round": null,
+      "share_of_rounds_feasible": 0.664,
+      "share_of_rounds_cleared": 0.0,
+      "last100_feasible_unused_share_max": 0.4123,
+      "last100_unmet_share_max": 1.0
+    },
+    "K20_staggered_a70": {
+      "first_feasible": {
+        "feasible": true,
+        "cleared": false,
+        "max_rho": 0.0877,
+        "unused_share": 0.084,
+        "unmet_share": 0.0,
+        "round": 3,
+        "price": 10.4607,
+        "S": 65.0,
+        "D": 59.5393
+      },
+      "first_cleared_round": 5,
+      "share_of_rounds_feasible": 0.57,
+      "share_of_rounds_cleared": 0.568,
+      "last100_feasible_unused_share_max": 0.0049,
+      "last100_unmet_share_max": 0.0804
+    },
+    "K20_identical_a70": {
+      "first_feasible": {
+        "feasible": true,
+        "cleared": false,
+        "max_rho": 0.524,
+        "unused_share": 0.4152,
+        "unmet_share": 0.0,
+        "round": 3,
+        "price": 11.52,
+        "S": 100.0,
+        "D": 58.48
+      },
+      "first_cleared_round": null,
+      "share_of_rounds_feasible": 0.664,
+      "share_of_rounds_cleared": 0.0,
+      "last100_feasible_unused_share_max": 0.4123,
+      "last100_unmet_share_max": 1.0
+    },
+    "scarf": {
+      "share_rounds_feasible": 0.0,
+      "first_feasible_round": null,
+      "unused_share_when_feasible_min": NaN,
+      "unused_share_when_feasible_median": null,
+      "share_rounds_cleared": 0.0,
+      "min_max_rho": 0.1054
+    }
+  },
+  "B_algorithm_3b": {
+    "linear": {
+      "as_printed": {
+        "max_abs_resid_last2000": 0.9998,
+        "lambda_range_last2000": [
+          0.0,
+          2.0
+        ]
+      },
+      "deng_alg4_slack": {
+        "tau": 2.01,
+        "max_violation_last2000": 0.0,
+        "price_range_last2000": [
+          1.0,
+          1.0
+        ],
+        "sum_x_final": 1.0
+      }
+    },
+    "log": {
+      "as_printed": {
+        "max_abs_resid_last2000": 0.0,
+        "lambda_range_last2000": [
+          0.6667,
+          0.6667
+        ]
+      },
+      "deng_alg4_slack": {
+        "tau": 2.01,
+        "max_violation_last2000": 0.0,
+        "price_range_last2000": [
+          0.6667,
+          0.6667
+        ],
+        "sum_x_final": 1.0
+      }
+    },
+    "condition_note": "Deng et al. (2.8)/(2.11): P_i > rho*(N/(2-gamma) - 1)*A_i^T A_i (strict), N = number of blocks including any slack block; standard proximal P_i = tau I needs tau > rho*(N/(2-gamma)-1)*||A_i||^2, prox-linear P_i = tau I - rho A_i^T A_i needs tau > rho*N/(2-gamma)*||A_i||^2. The book's P_c >= rho*N*A_c^T A_c is sufficient for gamma = 1 only when A_c has full column rank (strictness)."
+  },
+  "C_table_6_1": {
+    "reviewer_reference": {
+      "baseline": {
+        "A": 3.095,
+        "B": 3.585,
+        "C": 2.535,
+        "D": 4.32
+      },
+      "seventy_pct_4_11_12": {
+        "A": 4.084,
+        "B": 3.746,
+        "C": 2.301,
+        "D": 4.325
+      },
+      "harsher_D": {
+        "A": 3.095,
+        "B": 3.585,
+        "C": 2.535,
+        "D": 3.92
+      },
+      "A_beats_D_on": [
+        11,
+        13
+      ],
+      "D_ge_A_count": 12
+    },
+    "rescored_D_row": [
+      4.5,
+      4.0,
+      4.5,
+      4.0,
+      3.5,
+      4.0,
+      5.0,
+      4.0,
+      3.5,
+      4.0,
+      3.5,
+      4.0,
+      4.0,
+      4.0
+    ],
+    "rescored": {
+      "baseline": {
+        "A": 3.095,
+        "B": 3.585,
+        "C": 2.535,
+        "D": 4.065
+      },
+      "equal_weights": {
+        "A": 3.321,
+        "B": 3.607,
+        "C": 2.464,
+        "D": 4.036
+      },
+      "seventy_pct_4_11_12": {
+        "A": 4.084,
+        "B": 3.746,
+        "C": 2.301,
+        "D": 3.918
+      },
+      "harsher_D": {
+        "A": 3.095,
+        "B": 3.585,
+        "C": 2.535,
+        "D": 3.82
+      },
+      "A_overtakes_D_at_focus_weight": 0.63,
+      "A_beats_D_on": [
+        4,
+        5,
+        6,
+        11,
+        13
+      ],
+      "D_ge_A_count": 9,
+      "perturbation_U(-1,1)_wins_share": {
+        "A": 0.0,
+        "B": 0.008,
+        "C": 0.0,
+        "D": 0.992
+      },
+      "perturbation_D_lead_p05_p50": [
+        0.151,
+        0.498
+      ]
+    },
+    "book_table_rows_parsed": 14,
+    "book_table_matches_rescored": true
+  },
+  "D_household_reports": {
+    "sizes": {
+      "3000x20": {
+        "encoded_measurement_bytes": 960000,
+        "leader_share_bytes": 975760,
+        "client_upload_bytes": 975984,
+        "fits_75kB_leader": false,
+        "chunk_length": 236
+      },
+      "3000x64": {
+        "encoded_measurement_bytes": 3072000,
+        "leader_share_bytes": 3100432,
+        "client_upload_bytes": 3100656,
+        "fits_75kB_leader": false,
+        "chunk_length": 376
+      },
+      "10000x64": {
+        "encoded_measurement_bytes": 10240000,
+        "leader_share_bytes": 10292816,
+        "client_upload_bytes": 10293040,
+        "fits_75kB_leader": false,
+        "chunk_length": 626
+      },
+      "230x20": {
+        "encoded_measurement_bytes": 73600,
+        "leader_share_bytes": 78032,
+        "client_upload_bytes": 78256,
+        "fits_75kB_leader": false,
+        "chunk_length": 74
+      },
+      "100x32": {
+        "encoded_measurement_bytes": 51200,
+        "leader_share_bytes": 54896,
+        "client_upload_bytes": 55120,
+        "fits_75kB_leader": true,
+        "chunk_length": 51
+      },
+      "100x20": {
+        "encoded_measurement_bytes": 32000,
+        "leader_share_bytes": 35088,
+        "client_upload_bytes": 35312,
+        "fits_75kB_leader": true,
+        "chunk_length": 32
+      },
+      "230x32": {
+        "encoded_measurement_bytes": 117760,
+        "leader_share_bytes": 123568,
+        "client_upload_bytes": 123792,
+        "fits_75kB_leader": false,
+        "chunk_length": 117
+      },
+      "3000x32": {
+        "encoded_measurement_bytes": 1536000,
+        "leader_share_bytes": 1556272,
+        "client_upload_bytes": 1556496,
+        "fits_75kB_leader": false,
+        "chunk_length": 377
+      },
+      "100x64": {
+        "encoded_measurement_bytes": 102400,
+        "leader_share_bytes": 107728,
+        "client_upload_bytes": 107952,
+        "fits_75kB_leader": false,
+        "chunk_length": 102
+      },
+      "230x64": {
+        "encoded_measurement_bytes": 235520,
+        "leader_share_bytes": 243344,
+        "client_upload_bytes": 243568,
+        "fits_75kB_leader": false,
+        "chunk_length": 116
+      },
+      "100x16": {
+        "encoded_measurement_bytes": 25600,
+        "leader_share_bytes": 28304,
+        "client_upload_bytes": 28528,
+        "fits_75kB_leader": true,
+        "chunk_length": 52
+      },
+      "150x16": {
+        "encoded_measurement_bytes": 38400,
+        "leader_share_bytes": 41712,
+        "client_upload_bytes": 41936,
+        "fits_75kB_leader": true,
+        "chunk_length": 39
+      },
+      "200x16": {
+        "encoded_measurement_bytes": 51200,
+        "leader_share_bytes": 54896,
+        "client_upload_bytes": 55120,
+        "fits_75kB_leader": true,
+        "chunk_length": 51
+      },
+      "250x16": {
+        "encoded_measurement_bytes": 64000,
+        "leader_share_bytes": 68112,
+        "client_upload_bytes": 68336,
+        "fits_75kB_leader": true,
+        "chunk_length": 64
+      },
+      "200x20": {
+        "encoded_measurement_bytes": 64000,
+        "leader_share_bytes": 68112,
+        "client_upload_bytes": 68336,
+        "fits_75kB_leader": true,
+        "chunk_length": 64
+      },
+      "3000x16": {
+        "encoded_measurement_bytes": 768000,
+        "leader_share_bytes": 782256,
+        "client_upload_bytes": 782480,
+        "fits_75kB_leader": false,
+        "chunk_length": 189
+      }
+    },
+    "bench_check": [
+      {
+        "length": 100,
+        "bits": 20,
+        "measured_leader": 35088,
+        "predicted_leader": 35088,
+        "match": true,
+        "measured_upload": 35312,
+        "predicted_upload": 35312,
+        "verify_init_leader_ms": 0.212,
+        "verify_init_helper_ms": 0.23,
+        "shard_ms": 0.554
+      },
+      {
+        "length": 100,
+        "bits": 32,
+        "measured_leader": 54896,
+        "predicted_leader": 54896,
+        "match": true,
+        "measured_upload": 55120,
+        "predicted_upload": 55120,
+        "verify_init_leader_ms": 0.209,
+        "verify_init_helper_ms": 0.222,
+        "shard_ms": 0.652
+      },
+      {
+        "length": 100,
+        "bits": 64,
+        "measured_leader": 107728,
+        "predicted_leader": 107728,
+        "match": true,
+        "measured_upload": 107952,
+        "predicted_upload": 107952,
+        "verify_init_leader_ms": 0.296,
+        "verify_init_helper_ms": 0.324,
+        "shard_ms": 1.134
+      },
+      {
+        "length": 230,
+        "bits": 20,
+        "measured_leader": 78032,
+        "predicted_leader": 78032,
+        "match": true,
+        "measured_upload": 78256,
+        "predicted_upload": 78256,
+        "verify_init_leader_ms": 0.231,
+        "verify_init_helper_ms": 0.249,
+        "shard_ms": 0.808
+      },
+      {
+        "length": 230,
+        "bits": 32,
+        "measured_leader": 123568,
+        "predicted_leader": 123568,
+        "match": true,
+        "measured_upload": 123792,
+        "predicted_upload": 123792,
+        "verify_init_leader_ms": 0.327,
+        "verify_init_helper_ms": 0.354,
+        "shard_ms": 1.281
+      },
+      {
+        "length": 230,
+        "bits": 64,
+        "measured_leader": 243344,
+        "predicted_leader": 243344,
+        "match": true,
+        "measured_upload": 243568,
+        "predicted_upload": 243568,
+        "verify_init_leader_ms": 0.819,
+        "verify_init_helper_ms": 0.856,
+        "shard_ms": 2.521
+      },
+      {
+        "length": 3000,
+        "bits": 20,
+        "measured_leader": 975760,
+        "predicted_leader": 975760,
+        "match": true,
+        "measured_upload": 975984,
+        "predicted_upload": 975984,
+        "verify_init_leader_ms": 3.46,
+        "verify_init_helper_ms": 3.635,
+        "shard_ms": 10.605
+      },
+      {
+        "length": 3000,
+        "bits": 32,
+        "measured_leader": 1556272,
+        "predicted_leader": 1556272,
+        "match": true,
+        "measured_upload": 1556496,
+        "predicted_upload": 1556496,
+        "verify_init_leader_ms": 4.849,
+        "verify_init_helper_ms": 5.206,
+        "shard_ms": 16.23
+      },
+      {
+        "length": 3000,
+        "bits": 64,
+        "measured_leader": 3100432,
+        "predicted_leader": 3100432,
+        "match": true,
+        "measured_upload": 3100656,
+        "predicted_upload": 3100656,
+        "verify_init_leader_ms": 11.989,
+        "verify_init_helper_ms": 12.713,
+        "shard_ms": 33.276
+      }
+    ],
+    "max_quantity_at_1e-6_scale_by_bits": {
+      "16": 0.065535,
+      "20": 1.048575,
+      "32": 4294.967295,
+      "64": 18446744073709.55
+    },
+    "aggregator_cpu_1e6_reports_desktop": {
+      "100x20": {
+        "core_minutes_per_aggregator_1e6": 3.8,
+        "minutes_on_16_cores": 0.2
+      },
+      "100x32": {
+        "core_minutes_per_aggregator_1e6": 3.7,
+        "minutes_on_16_cores": 0.2
+      },
+      "100x64": {
+        "core_minutes_per_aggregator_1e6": 5.4,
+        "minutes_on_16_cores": 0.3
+      },
+      "230x20": {
+        "core_minutes_per_aggregator_1e6": 4.2,
+        "minutes_on_16_cores": 0.3
+      },
+      "230x32": {
+        "core_minutes_per_aggregator_1e6": 5.9,
+        "minutes_on_16_cores": 0.4
+      },
+      "230x64": {
+        "core_minutes_per_aggregator_1e6": 14.3,
+        "minutes_on_16_cores": 0.9
+      },
+      "3000x20": {
+        "core_minutes_per_aggregator_1e6": 60.6,
+        "minutes_on_16_cores": 3.8
+      },
+      "3000x32": {
+        "core_minutes_per_aggregator_1e6": 86.8,
+        "minutes_on_16_cores": 5.4
+      },
+      "3000x64": {
+        "core_minutes_per_aggregator_1e6": 211.9,
+        "minutes_on_16_cores": 13.2
+      }
+    },
+    "per_year_upload": {
+      "3000x20": {
+        "per_fresh_report_bytes": 975984,
+        "per_year_10_rounds_MB": 9.76,
+        "per_year_3_milestones_MB": 2.93
+      },
+      "200x16": {
+        "per_fresh_report_bytes": 55120,
+        "per_year_10_rounds_MB": 0.55,
+        "per_year_3_milestones_MB": 0.17
+      }
+    },
+    "hru_rounding": {
+      "s_g=100000 micro (0.1 unit), N=200": {
+        "worst_case_micro": 10000000,
+        "sd_micro": 408248.3
+      },
+      "s_g=100000 micro (0.1 unit), N=10^6": {
+        "worst_case_micro": 50000000000,
+        "sd_micro": 28867513.5
+      }
+    },
+    "sparse_note": "Prio3SumVec sums fixed coordinates (VDAF-22 s7.4.3); a 50-coordinate vector cannot encode 50 items chosen from 3,000 without revealing which."
+  },
+  "E_proposals_archive": {
+    "checks": {
+      "book_5200_minus_one_sig": 1827,
+      "items_in_remainder": 152,
+      "neighbourhood_dense_3000_items_bytes": 36000
+    },
+    "proposal_types": {
+      "worker_council_150_items_1sig": 5637,
+      "worker_council_150_items_5sig": 19385,
+      "consumer_council_coarse200_1sig": 6237,
+      "consumer_council_coarse200_5sig": 19985,
+      "consumer_council_3000_items_1sig": 39837,
+      "consumer_council_3000_items_5sig": 53585
+    },
+    "archive_scenarios_1e6": {
+      "coarse200_single_key": {
+        "raw_MB_per_round": 237.5,
+        "raw_GB_per_year_10_rounds": 2.37,
+        "signature_verifications_per_round": 40000
+      },
+      "coarse200_5_signers": {
+        "raw_MB_per_round": 787.4,
+        "raw_GB_per_year_10_rounds": 7.87,
+        "signature_verifications_per_round": 200000
+      },
+      "dense3000_single_key": {
+        "raw_MB_per_round": 909.5,
+        "raw_GB_per_year_10_rounds": 9.09,
+        "signature_verifications_per_round": 40000
+      },
+      "dense3000_5_signers": {
+        "raw_MB_per_round": 1459.4,
+        "raw_GB_per_year_10_rounds": 14.59,
+        "signature_verifications_per_round": 200000
+      }
+    },
+    "table92_layer2_recomputed": {
+      "100": {
+        "raw_MB_per_year": 1.04,
+        "zstd_MB_per_year": 0.3
+      },
+      "1000": {
+        "raw_MB_per_year": 2.08,
+        "zstd_MB_per_year": 0.6
+      },
+      "10000": {
+        "raw_MB_per_year": 20.8,
+        "zstd_MB_per_year": 6.0
+      },
+      "100000": {
+        "raw_MB_per_year": 208.0,
+        "zstd_MB_per_year": 60.0
+      },
+      "1000000": {
+        "raw_MB_per_year": 2080.0,
+        "zstd_MB_per_year": 600.0
+      }
+    },
+    "light_client_options": {
+      "fetch_all_86_sigs_bytes": 290078,
+      "fetch_all_86_hybrid_sigs_bytes": 295582,
+      "coordinator_attestation_bytes": 3437,
+      "sample_8_of_86_bytes": 27496
+    }
+  },
+  "F_layer1_units": {
+    "block_bytes": 700142,
+    "block_kB": 700.1,
+    "block_KiB": 683.7,
+    "sigs_bytes": 290078,
+    "sigs_kB": 290.1,
+    "sigs_KiB": 283.3,
+    "year_425_MB": 297.6,
+    "year_425_MiB": 283.8,
+    "year_435_MB": 304.6,
+    "convention": "SI units (kB = 1,000 B, MB = 10^6 B) throughout the book; KiB only where libprio prints them"
+  },
+  "G_budget": {
+    "Phase 1 + 1H": {
+      "fte_years": [
+        0.333,
+        0.5
+      ],
+      "implied_labour_per_fte_year_at_matched_ends": [
+        75000,
+        90000
+      ]
+    },
+    "Phase 2": {
+      "fte_years": [
+        0.5,
+        1.0
+      ],
+      "implied_labour_per_fte_year_at_matched_ends": [
+        300000,
+        280000
+      ]
+    },
+    "Phase 3": {
+      "fte_years": [
+        2.0,
+        8.0
+      ],
+      "implied_labour_per_fte_year_at_matched_ends": [
+        95000,
+        95000
+      ]
+    },
+    "Phase 1 per Table 9.1": {
+      "fte_years": [
+        0.16666666666666666,
+        0.25
+      ],
+      "implied_per_fte_year": [
+        150000,
+        180000
+      ]
+    },
+    "Phase 3 incl. audit and hosting": {
+      "implied_per_fte_year": [
+        125000,
+        118750
+      ]
+    },
+    "proposed_reconciliation_at_120k_180k": {
+      "Phase 1": [
+        41000.0,
+        93000.0
+      ],
+      "Phase 1H": [
+        38000.0,
+        85000.0
+      ],
+      "Phase 2": [
+        102000.0,
+        230000.0
+      ],
+      "Phase 3": [
+        440000.0,
+        950000.0
+      ],
+      "Programme total": [
+        621000.0,
+        1358000.0
+      ]
+    }
+  }
+}
