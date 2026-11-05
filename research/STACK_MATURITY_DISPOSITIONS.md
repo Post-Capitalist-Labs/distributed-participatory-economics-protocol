@@ -68,6 +68,12 @@ Deliberately left in place:
 - Bibliography entries that say where a source copy is preserved in `research/sources/`.
 - `council_participation_bitmap`, a protocol field name.
 
+## Fifth batch (same day): list of abbreviations
+
+The author noted that NIST was missing. A scripted comparison of capitalised tokens in the body against both abbreviation lists found more. Added to list A: CLT, DAANES, GDPR, SDF, TFEU. Added to list B: AI, BBS, BHT, BLS, CFRG, CPU / RAM, CSV, DAP, DP, FN-DSA, FOC, GC, HCI, HPKE, HQC, IDL, IETF / IRTF, IIS, KEM, LAN / WAN, LFS, LLM, LWE / SIS, M0–M5, MCP, NIST, PQ, PRG, RFC, SDK, SHA-2 / SHA-3, SQL / REST, TLS, UCAN, UI / UX, VRF / VDF, X25519 / Ed25519, XOF. Both lists are now sorted alphabetically (they were partly unsorted). Book is 113 pages; checks pass.
+
+Not added: units (kB, MB, GB), country and region codes (EU, UK, US), publisher and venue names in citations (ACM, IACR, USENIX), requirement, claim and question identifiers (REQ-…, CLM-…, P1–P15), source-classification tags ([ORIGINAL-1991] and similar, defined in Chapter 3), and protocol names that are not abbreviations (STIR, WHIR).
+
 ## Corrections to the dossier made during this pass
 
 - Bootle, Lyubashevsky, Nguyen and Sorniotti is CRYPTO 2023, not PKC 2025. Corrected in the dossier §5.1.
