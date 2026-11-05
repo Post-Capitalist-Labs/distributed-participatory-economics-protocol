@@ -58,6 +58,16 @@ Eight TikZ figures were added in the existing figure style. Shared styles (`dbox
 
 Known limitation: bold text does not render in the tectonic build (Palladio bold shapes are substituted, as noted in the third-refinement dispositions). This affects the existing figures and design-principle headings in the same way.
 
+## Fourth batch (same day): repository paths moved to footnotes
+
+At the author's request, references to scripts and files in this repository were moved out of running text into footnotes giving the full path: colophon source list; executive-summary Table 1.1 (one footnote via mark and note, as the table already did for Hurwicz); §4.4 audit, stress-test and reference-test results; §6.1.1 sensitivity analysis; §6.3 maturity dossier; §7.6 binomial tails; §9.1 pre-registration directory; Table 9.3 methodological note; Appendix A evidence fields (ten footnotes); bibliography introduction. Book now 112 pages; checks pass.
+
+Deliberately left in place:
+- Table notes below Tables 1.2, 5.1, 6.1 and 7.5 ("Source: …"). These already sit outside the running text as each table's own note.
+- Upstream `pequod-cljs` file names (`dep1ex*.csv`, `csvgen.clj`, `wcs.clj`). They name the external material audited, not this repository's scripts.
+- Bibliography entries that say where a source copy is preserved in `research/sources/`.
+- `council_participation_bitmap`, a protocol field name.
+
 ## Corrections to the dossier made during this pass
 
 - Bootle, Lyubashevsky, Nguyen and Sorniotti is CRYPTO 2023, not PKC 2025. Corrected in the dossier §5.1.

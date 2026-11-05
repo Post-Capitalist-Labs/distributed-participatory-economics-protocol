@@ -12,7 +12,7 @@ This file holds revision history so that the monograph does not. Phrases removed
 
 - New §6.3 Component Maturity (Table 6.3) and §7.2.1 on post-quantum urgency and crypto agility (Table 7.3; later Chapter 7 tables renumbered by one).
 - Two author decisions recorded: interim classical credentials and beacon under crypto agility; no commitment to pure ML-DSA at the consensus layer (CometBFT provisional).
-- Corrections F1–F14 from `reports/STACK_MATURITY.md` (two batches); six bibliography entries; four claims added (CLM-TECH-07, CLM-SEC-09–11); new script `verify_sync_committee.py`. Eight protocol diagrams added (Figs. 5.2–5.4, 7.1–7.5). Book now 111 pages.
+- Corrections F1–F14 from `reports/STACK_MATURITY.md` (two batches); six bibliography entries; four claims added (CLM-TECH-07, CLM-SEC-09–11); new script `verify_sync_committee.py`. Eight protocol diagrams added (Figs. 5.2–5.4, 7.1–7.5). Repository script and file references moved from running text to footnotes. Book now 112 pages.
 - Full list and the findings not yet applied: `research/STACK_MATURITY_DISPOSITIONS.md`.
 
 ---
