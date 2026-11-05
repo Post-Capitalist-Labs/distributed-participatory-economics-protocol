@@ -34,6 +34,16 @@
 \definecolor{CodeBg}{HTML}{F1F5F9}
 \definecolor{BorderGray}{HTML}{CBD5E1}
 \definecolor{RuleGray}{HTML}{94A3B8}
+\tikzset{
+  dbox/.style={rectangle, rounded corners=2pt, draw=NavyPrimary, fill=SoftBg, thick, align=flush center, font=\tiny, inner sep=2.5pt},
+  dhead/.style={dbox, fill=NavyPrimary!10!white, font=\tiny\bfseries},
+  dcrypto/.style={dbox, draw=TealAccent, fill=TealAccent!8!white},
+  dinst/.style={dbox, draw=GoldAccent!80!black, fill=GoldAccent!14!white},
+  dwarn/.style={dbox, draw=CrimsonAccent, fill=CrimsonAccent!7!white},
+  darr/.style={-{Stealth[length=1.7mm]}, thick, color=SlateDark},
+  dlab/.style={font=\tiny, fill=white, inner sep=1pt, align=flush center},
+  dlife/.style={RuleGray, dashed, thin}
+}
 
 % --- Tables, Lists, Code Listings & Callout Boxes ---
 \usepackage{booktabs}
@@ -321,7 +331,7 @@
 \textbf{Publication Metadata:}\\
 \textbf{Imprint:} Post-Capitalist Labs Imprint (\url{https://github.com/Post-Capitalist-Labs})\\
 \textbf{Status:} \textbf{Working Draft Monograph (November 2026)} --- Released for community feedback and peer technical review; separates demonstrated results, analytical estimates and open hypotheses ahead of gated Phase 1--3 experiments.\\[0.35em]
-\textbf{Source Access \& Copyright Notice:} Sources are classified by how they were accessed (full list: \path{research/SOURCE_AUDIT.md}); this is not a claim that every page was re-read. \textbf{Tier 1 (full text or code):} Albert \& Hahnel (1991a, 1991b), Albert (2003), Dolgoff (1974), Szczepanczyk (2023), all 70 \texttt{pequod-cljs} generators and 150 CSV logs @ \texttt{8bd46b5c}, the Winter 2024 \emph{EJPE} issue, Deng et al.\ (2017), VDAF draft~22, the \texttt{prio} 0.18.1 crate (executed), the BLAKE3 specification, and Leval (1975, Ch.~V). \textbf{Tier 2 (preview, abstract or summary):} Hahnel (2021, 2022), Sandstr\"om (2020, 2025), Laibman (2014). \textbf{Tier 3 (standards or bibliographic record only):} NIST FIPS 202--205 and the remaining historical, economic and political works. \textbf{Tier 4:} \texttt{pequod-cljs} audited by script, not run. Short quotations and epigraphs are reproduced with attribution under fair dealing / fair use.}
+\textbf{Source Access \& Copyright Notice:} Sources are classified by how they were accessed;\footnote{Full list: \path{research/SOURCE_AUDIT.md} in the project repository.} this is not a claim that every page was re-read. \textbf{Tier 1 (full text or code):} Albert \& Hahnel (1991a, 1991b), Albert (2003), Dolgoff (1974), Szczepanczyk (2023), all 70 \texttt{pequod-cljs} generators and 150 CSV logs @ \texttt{8bd46b5c}, the Winter 2024 \emph{EJPE} issue, Deng et al.\ (2017), VDAF draft~22, the \texttt{prio} 0.18.1 crate (executed), the BLAKE3 specification, and Leval (1975, Ch.~V). \textbf{Tier 2 (preview, abstract or summary):} Hahnel (2021, 2022), Sandstr\"om (2020, 2025), Laibman (2014). \textbf{Tier 3 (standards or bibliographic record only):} NIST FIPS 202--205 and the remaining historical, economic and political works. \textbf{Tier 4:} \texttt{pequod-cljs} audited by script, not run. Short quotations and epigraphs are reproduced with attribution under fair dealing / fair use.}
 \clearpage
 
 % --- PDF PAGE 3: INTERDISCIPLINARY READER'S GUIDE ---
@@ -373,9 +383,11 @@ Jump directly to \textbf{Chapter 4 (Section 4.5 State Machine \& Canonical CBOR 
 \textbf{CAP} & Community of Affected Parties & Ecological/geographic collective of residents impacted by a specific pollutant in an airshed or watershed (DEP Ch.~7). \\
 \textbf{CC} ($CC_h$) & Consumers' Council & Democratic neighbourhood consumer council or nested ward/city/regional consumer federation. \\
 \textbf{CFB} & Consumption Facilitation Board & Informational board assisting consumer councils and federations in evaluating collective consumption projects (LF Ch.~6). \\
+\textbf{CLT} & Community Land Trust & Member-controlled trust holding land or long-lived assets outside market sale (Chapter~11). \\
 \textbf{CLUEA} & \emph{Consejo Levantino Unificado de Exportaci\'on Agr\'icola} & Unified Levantine Council for Agricultural Export organised by the CNT and UGT in Valencia (1936--1939). \\
 \textbf{CNT} & \emph{Confederaci\'on Nacional del Trabajo} & Anarcho-syndicalist National Confederation of Labour in the 1936--1939 Spanish Revolution. \\
 \textbf{CPR} & Common-Pool Resource & Shared natural or human-made resource system governed by collective-choice rules (Ostrom 1990). \\
+\textbf{DAANES} & Democratic Autonomous Administration of North and East Syria & Rojava's confederal administration, discussed as a historical precedent (Chapter~2). \\
 \textbf{DEP} & \emph{Democratic Economic Planning} & Primary reference volume by Robin Hahnel et al.\ (Routledge, 2021). \\
 \textbf{DPEP} & Distributed Participatory Economics Protocol & The open-source decentralised coordination protocol specified in this monograph. \\
 \textbf{EFB} & Employment Facilitation Board & Facilitation board assisting workers transferring between councils and balancing cross-workplace BJCs (LF Ch.~6). \\
@@ -384,6 +396,7 @@ Jump directly to \textbf{Chapter 4 (Section 4.5 State Machine \& Canonical CBOR 
 \textbf{FTE} & Full-Time Equivalent & Unit of engineering or research staffing effort across roadmap scenarios. \\
 \textbf{GA} & General Assembly & Direct plenary deliberative assembly of a workplace, village collective, or horizontal movement. \\
 \textbf{GDP} & Gross Domestic Product & Aggregate social value of net final output ($Y^{\text{GDP}}$) cleared in the Society Account. \\
+\textbf{GDPR} & General Data Protection Regulation & EU data-protection law governing pilot data handling, retention and erasure. \\
 \textbf{GHG} & Greenhouse Gas & Atmospheric emissions ($\text{CO}_2$-equivalent) subject to hard biophysical ceilings ($E_z^{\max}$). \\
 \textbf{HFB} & Household Facilitation Board & Facilitation board assisting individuals and families with housing and neighbourhood membership (LF Ch.~6). \\
 \textbf{IF} ($IF_k$) & Industry Federation & Federation of worker councils within industry $k$ managing sector capacity, R\&D, and $SB/SC$ appeals. \\
@@ -395,11 +408,13 @@ Jump directly to \textbf{Chapter 4 (Section 4.5 State Machine \& Canonical CBOR 
 \textbf{PDRM} & Pollution Demand-Revealing Mechanism & Iterative procedure pricing local pollutant damages via CAP emission tolerances and credits (DEP Ch.~7). \\
 \textbf{PEP} & Participatory Economy Project & Research collective maintaining \texttt{participatoryeconomy.org} and the 2023 User Story Mapping. \\
 \textbf{PEPE} & \emph{The Political Economy of Participatory Economics} & Primary technical reference volume by Michael Albert and Robin Hahnel (Princeton University Press, 1991). \\
-\textbf{PLAC} & \emph{Parecon: Life After Capitalism} & Comprehensive institutional and daily-life synthesis of Participatory Economics by Michael Albert (Verso Books, 2003). \\
 \textbf{PFB} & Production Facilitation Board & Board assisting worker councils with production externalities, scale economies, and technology choice (LF Ch.~6). \\
 \textbf{PIPA} & Practically Identical Production Activities & Equivalence classes $\{PIPA\}_i$ partitioning workplace tasks by qualitative empowerment effect (PEPE Ch.~2, p.~26). \\
+\textbf{PLAC} & \emph{Parecon: Life After Capitalism} & Comprehensive institutional and daily-life synthesis of Participatory Economics by Michael Albert (Verso Books, 2003). \\
 \textbf{SB / SC} & Social Benefit / Social Cost & Ratio $SB_j(P)/SC_j(P)$ measuring the social value of a worker council's outputs relative to the opportunity cost of its inputs and endowments ($\ge 1$ constraint). \\
+\textbf{SDF} & Syrian Democratic Forces & Military coalition of North and East Syria; party to the 2026 integration agreement (Chapter~2). \\
 \textbf{SKU} & Stock Keeping Unit & Granular product variant (size, color, style) resolved at intra-year fulfilment from coarse planning categories. \\
+\textbf{TFEU} & Treaty on the Functioning of the European Union & EU treaty whose Article~101 governs coordination between independent enterprises (Chapter~11). \\
 \textbf{UFB} & Updating Facilitation Board & Facilitation board mediating intra-year plan adjustments when demand shifts or supply shocks exceed slack (LF Ch.~6). \\
 \textbf{UGT} & \emph{Uni\'on General de Trabajadores} & Socialist General Union of Workers that co-organised industrial and agrarian collectives in Spain (1936--1939). \\
 \textbf{WC} ($WC_j$) & Workers' Council & Democratic workplace collective where each worker has one vote and holds a Balanced Job Complex. \\
@@ -420,48 +435,86 @@ Jump directly to \textbf{Chapter 4 (Section 4.5 State Machine \& Canonical CBOR 
 \bottomrule
 \endlastfoot
 \textbf{ADMM} & Alternating Direction Method of Multipliers & Augmented-Lagrangian primal-dual method; Algorithm~3b is the proximal Jacobian variant of Deng et al.\ (2017), a research candidate. \\
+\textbf{AI} & Artificial Intelligence & Machine-learned models; restricted in DPEP to advisory and accessibility roles (Chapter~8). \\
 \textbf{AP / CP} & Availability / Consistency under Partition & CAP theorem properties: local-first drafting is AP (available offline), while Epoch BFT price finality is CP. \\
 \textbf{ARIMA / ETS} & AutoRegressive Integrated Moving Average / Error-Trend-Seasonality & Classical statistical time-series forecasting models used for baseline demand and SKU disaggregation. \\
+\textbf{BBS} & Boneh--Boyen--Shacham signatures & Pairing-based signatures used for anonymous credentials; not post-quantum. \\
 \textbf{BFT} & Byzantine Fault Tolerance & Distributed consensus property guaranteeing safety even when up to $f < n/3$ validator nodes act maliciously. \\
+\textbf{BHT} & Brassard--H{\o}yer--Tapp algorithm & Quantum collision-finding algorithm; relevant to hash security margins. \\
 \textbf{BLAKE3} & BLAKE3 Cryptographic Hash & Hash function with 256-bit output and a 128-bit security target; used for the Two-Root aggregation trees and content addressing. \\
+\textbf{BLS} & Boneh--Lynn--Shacham signatures & Pairing-based aggregatable signatures; used in threshold randomness beacons; not post-quantum. \\
 \textbf{BSP} & Bulk-Synchronous Parallel & Execution model alternating parallel local computation rounds with synchronised global aggregation checkpoints. \\
+\textbf{CapCert} & Capability Certificate & Chained, signed certificates encoding council membership and revocable delegation. Format to be chosen (UCAN 1.0 and Biscuit are candidates); signed under the active \texttt{CryptoSuiteId} (Section~\ref{sec:pq-urgency}). \\
 \textbf{CBOR (CDE)} & Concise Binary Object Representation & RFC 8949 Canonical Deterministic Encoding used for all signed DPEP messages with fixed $10^{-6}$ micro-unit scale. \\
+\textbf{CFRG} & Crypto Forum Research Group & IRTF group that develops cryptographic specifications such as VDAF. \\
 \textbf{CID} & Content Identifier & Self-certifying cryptographic hash address referencing a redactable qualitative \texttt{List} or plan blob. \\
-\textbf{DA} & Data Availability & Verification that all leaf proposals of a round root are downloadable by auditing nodes (0.24--1.46~GB raw per round at $N=10^6$; Table~\ref{tab:proposal-sizes}). \\
-\textbf{FLP} & Fully Linear Proof & VDAF-22 proof on secret shares; binds report validity, not aggregator honesty. \\
-\textbf{Prio3 / VDAF} & Verifiable Distributed Aggregation Function & IETF CFRG \texttt{draft-irtf-cfrg-vdaf-22} (Informational). Privacy needs one honest aggregator; correct totals need all of them. \\
+\textbf{CPU / RAM} & Central Processing Unit / Random-Access Memory & Processor time and working memory, used in device and server cost estimates. \\
 \textbf{CRDT} & Conflict-Free Replicated Data Type & Data structure (Loro / Automerge) allowing offline concurrent edits in council workspaces that merge deterministically. \\
 \textbf{CRQC} & Cryptographically Relevant Quantum Computer & Future fault-tolerant quantum computer capable of breaking classical elliptic-curve and RSA cryptography via Shor's algorithm. \\
+\textbf{CSV} & Comma-Separated Values & Plain-text table format of the \texttt{pequod-cljs} run logs. \\
+\textbf{DA} & Data Availability & Verification that all leaf proposals of a round root are downloadable by auditing nodes (0.24--1.46~GB raw per round at $N=10^6$; Table~\ref{tab:proposal-sizes}). \\
 \textbf{DAO} & Decentralised Autonomous Organisation & Blockchain governance construct critiqued in Chapter 2 for conflating token voting with council democracy. \\
+\textbf{DAP} & Distributed Aggregation Protocol & IETF protocol for running VDAFs between clients and aggregators. \\
+\textbf{DP} & Differential Privacy & Calibrated noise added to released totals to bound what can be learned about one person. \\
 \textbf{DTN} & Delay-Tolerant Networking & Store-and-forward networking (including LoRa mesh and USB data-mules) for intermittently connected regions. \\
 \textbf{EEIO / LCA} & Environmentally Extended Input-Output / Lifecycle Assessment & Matrix accounting methods estimating cradle-to-gate resource and emission footprints across supply chains. \\
 \textbf{FIPS} & Federal Information Processing Standards & NIST post-quantum cryptographic standards finalised in August 2024: FIPS 203, FIPS 204, and FIPS 205. \\
+\textbf{FLP} & Fully Linear Proof & VDAF-22 proof on secret shares; binds report validity, not aggregator honesty. \\
+\textbf{FN-DSA} & FFT over NTRU-Lattice Digital Signature Algorithm & Falcon-based signature standard (FIPS~206, draft) with smaller signatures than ML-DSA. \\
+\textbf{FOC} & First-Order Conditions & Optimality conditions from setting derivatives of the objective to zero. \\
 \textbf{FRI / STARK} & Fast Reed-Solomon IOP / Scalable Transparent ARgument of Knowledge & Discarded household-budget design; not part of Architecture D. \\
+\textbf{GC} & Garbage Collection & Automatic memory reclamation in managed language runtimes. \\
+\textbf{HCI} & Human--Computer Interaction & Study of interface usability, used in the Phase~1H probe. \\
+\textbf{HPKE} & Hybrid Public Key Encryption & IETF scheme (RFC~9180) used by DAP to encrypt report shares to aggregators. \\
+\textbf{HQC} & Hamming Quasi-Cyclic & Code-based key-encapsulation mechanism selected by NIST in 2025 as a backup to ML-KEM. \\
+\textbf{HRU} & Household Reporting Unit & Per-category integer unit for household \texttt{Prio3} reports, converted exactly to protocol micro-units (Section~\ref{sec:prio3-cost}). \\
+\textbf{IDL} & Interface Definition Language & Language-neutral description of message schemas (Listings~4.1--4.2). \\
 \textbf{IEEE-754} & IEEE Floating-Point Standard & Hardware floating-point representation replaced in DPEP core rules by deterministic 64-bit fixed-point integers. \\
+\textbf{IETF / IRTF} & Internet Engineering / Research Task Force & Bodies that publish Internet standards (RFCs) and research drafts. \\
+\textbf{IIS} & Irreducible Infeasible Subsystem & Minimal set of constraints that makes an optimisation problem infeasible. \\
+\textbf{KEM} & Key-Encapsulation Mechanism & Public-key method for establishing a shared secret key (e.g.\ ML-KEM). \\
 \textbf{KKT} & Karush-Kuhn-Tucker Conditions & First-order necessary and sufficient optimality conditions for constrained nonlinear/conic optimisation. \\
+\textbf{LAN / WAN} & Local / Wide Area Network & Council-premises network versus links between councils and federations. \\
+\textbf{LFS} & Large File Storage & Git extension storing large data files outside the repository history. \\
+\textbf{LLM} & Large Language Model & Generative text model; restricted in DPEP to translation, accessibility and summaries. \\
 \textbf{LP / QP / MILP} & Linear / Quadratic / Mixed-Integer Linear Programming & Mathematical optimisation paradigms solved locally via \texttt{Clarabel.rs} and \texttt{HiGHS}. \\
+\textbf{LWE / SIS} & Learning With Errors / Short Integer Solution & Lattice problems whose module variants underlie ML-KEM and ML-DSA. \\
+\textbf{M0--M5} & Maturity levels & Component maturity scale from unspecified (M0) to ubiquitous (M5) (Section~\ref{sec:maturity}). \\
 \textbf{MAPE} & Mean Absolute Percentage Error & Accuracy metric used to audit and backtest statistical demand forecasts. \\
+\textbf{MCP} & Mixed Complementarity Problem & Joint formulation of optimality and market-clearing conditions solved by PATH (Algorithm~3d). \\
 \textbf{ML-DSA-65} & Module-Lattice Digital Signature Algorithm & NIST FIPS 204 (Dilithium3) post-quantum digital signature scheme combined in hybrid mode with Ed25519. \\
 \textbf{ML-KEM-768} & Module-Lattice Key-Encapsulation Mechanism & NIST FIPS 203 (Kyber-768) post-quantum key-establishment scheme combined in hybrid mode with X25519. \\
 \textbf{MLS} & Messaging Layer Security & IETF RFC 9420 protocol providing end-to-end encrypted group messaging inside councils. \\
 \textbf{MPC} & Secure Multiparty Computation & Candidate hardening of aggregator correctness (Table~\ref{tab:agg-options}); not the Phase-1 construction. \\
-\textbf{Two-Root} & Two-Root BLAKE3 aggregation & Proposal Merkle root plus category-totals root (Section~\ref{sec:two-root}). Replaces internal-vector Sparse Merkle-Sum Trees. \\
 \textbf{NASA-TLX} & NASA Task Load Index & Standardised workload questionnaire proposed for measuring participation fatigue in Phase 1H and Phase 3. \\
-\textbf{HRU} & Household Reporting Unit & Per-category integer unit for household \texttt{Prio3} reports, converted exactly to protocol micro-units (Section~\ref{sec:prio3-cost}). \\
+\textbf{NIST} & National Institute of Standards and Technology & US standards body that published FIPS 203--205 (post-quantum cryptography). \\
 \textbf{NMT / TTS} & Neural Machine Translation / Text-to-Speech & Local accessibility models translating qualitative \texttt{Lists} across languages and assisting visually impaired users. \\
 \textbf{OR} & Operations Research & Discipline of mathematical optimisation, linear programming, and supply-chain clearing. \\
 \textbf{P2P} & Peer-to-Peer & Decentralised networking architecture without central client-server gatekeepers. \\
 \textbf{PoC} & Proof of Concept & A proposed, unbuilt reference implementation (Phases 1--3, Chapter~9); no implementation exists. \\
-\textbf{PQ-UCAN} & Post-Quantum User Controlled Authorisation Network & Chained, cryptographically signed capability certificates encoding council membership and revocable delegation. \\
+\textbf{PQ} & Post-Quantum & Prefix for schemes designed to resist quantum attacks (see PQC). \\
 \textbf{PQC} & Post-Quantum Cryptography & Cryptographic algorithms resistant to both classical and quantum (Shor/Grover) attacks. \\
+\textbf{PRG} & Pseudorandom Generator & Deterministic expansion of a short random seed into a long pseudorandom string. \\
+\textbf{Prio3 / VDAF} & Verifiable Distributed Aggregation Function & IETF CFRG \texttt{draft-irtf-cfrg-vdaf-22} (Informational). Privacy needs one honest aggregator; correct totals need all of them. \\
 \textbf{PWA} & Progressive Web Application & Offline-capable cross-platform web client running the Rust/WASM \texttt{Role-LP} engine on smartphones and desktops. \\
 \textbf{QUIC} & Quick UDP Internet Connections & Modern encrypted, multiplexed transport protocol (\texttt{quinn} / \texttt{iroh}) used for Layer 2 federation sync. \\
+\textbf{RFC} & Request for Comments & IETF document series that includes Internet standards. \\
 \textbf{Role-LP / CC / SR / PCW / BFT / GW} & DPEP Node Roles 1--6 & Lightweight Participant (\texttt{LP}), Council Coordinator (\texttt{CC}), Storage Replica (\texttt{SR}), Planning Compute Worker (\texttt{PCW}), Epoch Validator (\texttt{BFT}), and Delay-Tolerant Gateway (\texttt{GW}). \\
+\textbf{SDK} & Software Development Kit & Libraries and tools for building on a platform (e.g.\ Cosmos SDK). \\
+\textbf{SHA-2 / SHA-3} & Secure Hash Algorithm 2 / 3 & NIST hash-function families (e.g.\ SHA-256, SHA3-256; FIPS 180-4, 202). \\
 \textbf{SLH-DSA} & Stateless Hash-Based Digital Signature Algorithm & NIST FIPS 205 (SPHINCS+) signature standard relying solely on hash functions, used for long-term root anchors. \\
+\textbf{SQL / REST} & Structured Query Language / Representational State Transfer & Relational database queries and web APIs of the conventional Architecture~A. \\
+\textbf{TLS} & Transport Layer Security & Standard protocol for encrypted network channels; used inside QUIC. \\
 \textbf{TPS} & Transactions Per Second & Throughput metric shown in Chapter 5 to be irrelevant to epoch-synchronised participatory planning. \\
 \textbf{TTL} & Time-To-Live & Hard expiration timer on delegate capability certificates and emergency replanning playbooks. \\
+\textbf{Two-Root} & Two-Root BLAKE3 aggregation & Proposal Merkle root plus category-totals root (Section~\ref{sec:two-root}). Replaces internal-vector Sparse Merkle-Sum Trees. \\
+\textbf{UCAN} & User Controlled Authorization Network & Capability-token format; a candidate format for CapCerts. \\
+\textbf{UI / UX} & User Interface / User Experience & Screens and interaction design of participant clients. \\
 \textbf{UniFFI} & Universal Foreign Function Interface & Mozilla binding generator exposing the Rust \texttt{dpep-core} library to native Kotlin (Android) and Swift (iOS). \\
+\textbf{VRF / VDF} & Verifiable Random / Delay Function & Primitives for unbiasable public randomness; candidate post-quantum beacon building blocks. \\
 \textbf{WASM} & WebAssembly & Deterministic, sandboxed binary instruction format (\texttt{Wasmtime}) executing IFB price-update rules. \\
+\textbf{X25519 / Ed25519} & Curve25519 key exchange / signatures & Classical elliptic-curve halves of DPEP's hybrid schemes. \\
+\textbf{XOF} & Extendable-Output Function & Hash function with output of any requested length (e.g.\ TurboSHAKE128 in VDAF). \\
 \end{longtable}}
 
 \subsection*{C. Summary of Core Mathematical Notation (Chapter 4)}
@@ -526,7 +579,7 @@ Contemporary distributed computing, post-quantum cryptography, and mathematical 
 A core mandate of this monograph is to separate what has been \textbf{shown}, what has been \textbf{estimated}, and what is \textbf{unknown}.
 
 \paragraph{What is established, estimated and unknown (plain statement).}
-\emph{Established:} the 1991 model and its later formalisations exist and are internally coherent at the level of accounting identities; the \texttt{pequod-cljs} Cobb--Douglas simulations reach a 5\% imbalance in about 12 rounds (fixed incomes, smooth convex technology); the unmodified price rule fails on Scarf's cycle and on a single indivisible plant; the NIST post-quantum primitives are standardised; and \texttt{Prio3SumVec} report sizes and desktop timings have been measured with \texttt{libprio}. \emph{Estimated (not measured at scale):} round latency, archive sizes, mobile bandwidth, hosting cost, and aggregator CPU at $10^6$ participants. \emph{Unknown:} whether any candidate solver clears economies with Leontief inputs, lumpy plants, endogenous incomes and strategic reporting; whether ordinary people can and will take part in multi-round planning without a technical elite forming around the software; how household budgets can be checked privately when prices change between rounds; and whether a credential scheme can enforce one report per person without a population register. Phase~1 and Phase~1H (Chapter~9) are designed to settle the first two unknowns, or to stop the programme if they cannot be settled.
+\emph{Established:} the 1991 model and its later formalisations exist and are internally coherent at the level of accounting identities; the \texttt{pequod-cljs} Cobb--Douglas simulations reach a 5\% imbalance in about 12 rounds (fixed incomes, smooth convex technology); the unmodified price rule fails on Scarf's cycle and on a single indivisible plant; the NIST post-quantum primitives are standardised, and every function in the stack except threshold signatures, anonymous credentials, the sortition beacon, capability-certificate formats and post-quantum HPKE has a standardised, deployed primitive (Table~\ref{tab:maturity}), although almost every way DPEP combines them is original; and \texttt{Prio3SumVec} report sizes and desktop timings have been measured with \texttt{libprio}. \emph{Estimated (not measured at scale):} round latency, archive sizes, mobile bandwidth, hosting cost, and aggregator CPU at $10^6$ participants. \emph{Unknown:} whether any candidate solver clears economies with Leontief inputs, lumpy plants, endogenous incomes and strategic reporting; whether ordinary people can and will take part in multi-round planning without a technical elite forming around the software; how household budgets can be checked privately when prices change between rounds; and whether a credential scheme can enforce one report per person without a population register. Phase~1 and Phase~1H (Chapter~9) are designed to settle the first two unknowns, or to stop the programme if they cannot be settled.
 
 \begin{table}[htbp]
 \centering
@@ -538,15 +591,16 @@ A core mandate of this monograph is to separate what has been \textbf{shown}, wh
 \toprule
 \textbf{Category A: Empirically Demonstrated (Code / Data Audited)} & \textbf{Category B: Analytical Estimates (Schema / Complexity Models)} & \textbf{Category C: Open Research Targets (Require Phase 1--3 Validation)} \\
 \midrule
-\textbf{1. Smooth Cobb-Douglas Convergence (\texttt{pequod-cljs} CSVs):} Across the 40 large-run logs the book cites (\texttt{dep1ex61--100.csv}; \texttt{verify\_r2.py}), Year 1 reaches $\rho_i \le 5\%$ in \textbf{11.85 rounds} and $\rho_i \le 3\%$ in \textbf{19.20 rounds}; Year 2 reaches 5\% in \textbf{6.58 rounds}. The 50 small-run files (\texttt{dep1ex01--50.csv}) average \textbf{11.18} Year-1 5\% rounds. All 70 \texttt{dep1ex*.clj} generators (20 stored via Git LFS) were audited. & \textbf{1. Distributed Round Latency ($N=10^6$):} A round moves a 0.24--1.5~GB raw archive of 40k council proposals (Table~\ref{tab:proposal-sizes}) plus a BFT checkpoint, and verifying $10^6$ household reports costs each aggregator $\approx 4$ (coarse) to $\approx 61$ (dense) desktop core-minutes. No round-latency figure is claimed; Kill Gate~2 measures it against a pre-registered threshold. & \textbf{1. Non-Convex \& Leontief Convergence (Kill Gate 1):} Whether any of Algorithms 3a--3d \emph{clears} (not merely satisfies one-sided feasibility; Definition~\ref{def:success}) Leontief + lumpy setup-cost economies in $\le 25$ rounds on pre-registered instances, including Scarf cycles, infeasible plans and endogenous income. \\
+\textbf{1. Smooth Cobb-Douglas Convergence (\texttt{pequod-cljs} CSVs):} Across the 40 large-run logs the book cites (\texttt{dep1ex61--100.csv}),\footnotemark{} Year 1 reaches $\rho_i \le 5\%$ in \textbf{11.85 rounds} and $\rho_i \le 3\%$ in \textbf{19.20 rounds}; Year 2 reaches 5\% in \textbf{6.58 rounds}. The 50 small-run files (\texttt{dep1ex01--50.csv}) average \textbf{11.18} Year-1 5\% rounds. All 70 \texttt{dep1ex*.clj} generators (20 stored via Git LFS) were audited. & \textbf{1. Distributed Round Latency ($N=10^6$):} A round moves a 0.24--1.5~GB raw archive of 40k council proposals (Table~\ref{tab:proposal-sizes}) plus a BFT checkpoint, and verifying $10^6$ household reports costs each aggregator $\approx 4$ (coarse) to $\approx 61$ (dense) desktop core-minutes. No round-latency figure is claimed; Kill Gate~2 measures it against a pre-registered threshold. & \textbf{1. Non-Convex \& Leontief Convergence (Kill Gate 1):} Whether any of Algorithms 3a--3d \emph{clears} (not merely satisfies one-sided feasibility; Definition~\ref{def:success}) Leontief + lumpy setup-cost economies in $\le 25$ rounds on pre-registered instances, including Scarf cycles, infeasible plans and endogenous income. \\
 \addlinespace[4pt]
-\textbf{2. Refutation of Unregularised T\^atonnement on Scarf \& Single-Plant Jumps:} Fails Scarf's 3-good Leontief cycle ($\min \rho = 10.5\%$ over 3,000 rounds) and single indivisible plants ($\min \rho = 50.4\%$). & \textbf{2. One-Good Shapley--Folkman Stress Test ($K=20$):} The \emph{minimum} imbalance across 500 rounds is \textbf{0.40\%}, but the maximum in the last 100 rounds is \textbf{8.4\%} at $a=70$; a sweep $a\in[60,80]$ has median last-100-round max \textbf{6.0\%} and worst \textbf{9.5\%} (\texttt{verify\_r2.py}). This says nothing about interdependent Leontief markets. & \textbf{2. Human Override \& Agency (Kill Gate 1H):} Whether 30--60 self-selected volunteers modify solver drafts, and what that can and cannot show about democratic agency. \\
+\textbf{2. Refutation of Unregularised T\^atonnement on Scarf \& Single-Plant Jumps:} Fails Scarf's 3-good Leontief cycle ($\min \rho = 10.5\%$ over 3,000 rounds) and single indivisible plants ($\min \rho = 50.4\%$). & \textbf{2. One-Good Shapley--Folkman Stress Test ($K=20$):} The \emph{minimum} imbalance across 500 rounds is \textbf{0.40\%}, but the maximum in the last 100 rounds is \textbf{8.4\%} at $a=70$; a sweep $a\in[60,80]$ has median last-100-round max \textbf{6.0\%} and worst \textbf{9.5\%}. This says nothing about interdependent Leontief markets. & \textbf{2. Human Override \& Agency (Kill Gate 1H):} Whether 30--60 self-selected volunteers modify solver drafts, and what that can and cannot show about democratic agency. \\
 \addlinespace[4pt]
 \textbf{3. NIST PQC Standards and measured \texttt{Prio3} sizes:} FIPS 203/204/205 are standardised. \texttt{draft-irtf-cfrg-vdaf-22} is an Informational IRTF draft with no post-quantum claim. \texttt{Prio3SumVec} sizes and desktop timings were measured with \texttt{libprio} 0.18.1 (Table~\ref{tab:prio3-bench}): a dense 3,000-category, 20-bit report is $975{,}760\text{ B}$ to the leader and costs $\approx 3.5\text{ ms}$ to verify per aggregator on one desktop core. & \textbf{3. Mobile Round Bandwidth (\texttt{Role-LP}):} Quorum signatures at $n=128$ are $\approx 290\text{ kB}$ ($86 \times 3{,}373\text{ B}$). A proposed coarse 200-category, 16-bit household report is $55\text{ kB}$; a dense 3,000-category report does not fit the budget. Kill Gate 3 sets separate light-client and full-verification caps (Table~\ref{tab:gates}). & \textbf{3. Incentive \& Soft-Budget Resistance:} Mitigating capacity understatement (Weitzman 1980), soft-budget appeals (Kornai 1980), and carousel fraud (Hurwicz 1972) remains an open mechanism-design problem.\footnotemark \\
 \bottomrule
 \end{tabularx}
 \end{table}
-\footnotetext{Leonid Hurwicz, ``On Informationally Decentralized Systems,'' in \emph{Decision and Organization}, ed.\ C.~B.\ McGuire and R.\ Radner (Amsterdam: North-Holland, 1972), pp.~297--336; Hurwicz, ``The Design of Mechanisms for Resource Allocation,'' \emph{American Economic Review} 63, no. 2 (1973): 1--30.}
+\addtocounter{footnote}{-1}\footnotetext{Rows 1 and 2 of Category~A are computed by \path{research/analysis/verify_r2.py} (Scarf's cycle by \path{research/analysis/verify_economics.py}) in the project repository.}
+\stepcounter{footnote}\footnotetext{Leonid Hurwicz, ``On Informationally Decentralized Systems,'' in \emph{Decision and Organization}, ed.\ C.~B.\ McGuire and R.\ Radner (Amsterdam: North-Holland, 1972), pp.~297--336; Hurwicz, ``The Design of Mechanisms for Resource Allocation,'' \emph{American Economic Review} 63, no. 2 (1973): 1--30.}
 
 \section{The Most Promising Architecture: Why We Reject a Global Blockchain}
 
@@ -557,9 +611,9 @@ Participatory planning is not a stream of high-frequency financial trades; it is
 Instead, our weighted evaluation (Chapter 6: \textbf{4.07 / 5.00} for D against \textbf{3.10} for a federated SQL service and \textbf{2.54} for a blockchain; expert judgements, not measurements, and A overtakes D when simplicity, throughput and cost carry 70\% of the weight) selects \textbf{Architecture D --- A Four-Layer Hybrid Local-First, Federated P2P, and Selective Epoch-BFT Architecture}:
 \begin{enumerate}[leftmargin=1.8em,itemsep=2pt]
   \item \textbf{Layer 4 (Human Deliberation \& Local Solver Edge):} Accessible mobile/desktop Progressive Web App (PWA) and native clients running an embedded interior-point conic/quadratic solver (\texttt{Clarabel.rs} / \texttt{HiGHS} in WASM) for instant local proposal drafting and ``what-if'' collective-good exploration.
-  \item \textbf{Layer 3 (Local-First Council \& Household State):} Encrypted local \textbf{SQLite (SQLCipher)} for structured vectors and accounting ledgers + \textbf{Loro/Automerge CRDTs} for offline-capable workplace and neighbourhood council deliberation, authorised via revocable post-quantum capability tokens (\textbf{\texttt{PQ-UCAN}}).
+  \item \textbf{Layer 3 (Local-First Council \& Household State):} Encrypted local \textbf{SQLite (SQLCipher)} for structured vectors and accounting ledgers + \textbf{Loro/Automerge CRDTs} for offline-capable workplace and neighbourhood council deliberation, authorised via revocable capability certificates (\textbf{CapCert}; format to be chosen, signed under the active \texttt{CryptoSuiteId}).
   \item \textbf{Layer 2 (Federated Aggregation \& Content-Addressed Data Plane):} Peer-to-peer \textbf{QUIC (\texttt{quinn} / \texttt{iroh})} transport organising councils into nested Ward $\to$ City $\to$ Region and Industry Federation \textbf{Two-Root BLAKE3 authenticated aggregation} (proposal Merkle root + category-totals root; Section~\ref{sec:two-root}), paired with content-addressed storage for qualitative council narratives (\texttt{Lists}).
-  \item \textbf{Layer 1 (Selective Epoch-BFT Checkpoint \& Deterministic IFB Engine):} A rotating BFT committee of $n=128$ validators (drawn by sortition; the randomness beacon is an open problem, Section~\ref{sec:sortition}) that commits one checkpoint per planning round, plus daily operational rollups and scoped replans---\textbf{425 blocks/year at a 10-round plan} ($10+365+50$), or 435 at 20 rounds---anchoring the two aggregation roots, executing the deterministic WASM price-update rule, and settling Sandstr\"om's macro \textbf{Society Account}. ``10--20 checkpoint blocks'' refers only to the annual \emph{planning} rounds, not the Layer-1 archive.
+  \item \textbf{Layer 1 (Selective Epoch-BFT Checkpoint \& Deterministic IFB Engine):} A rotating BFT committee of $n=128$ validators (drawn by sortition; an interim classical threshold beacon is adopted and a post-quantum beacon is open, Sections~\ref{sec:pq-urgency} and~\ref{sec:sortition}) that commits one checkpoint per planning round, plus daily operational rollups and scoped replans---\textbf{425 blocks/year at a 10-round plan} ($10+365+50$), or 435 at 20 rounds---anchoring the two aggregation roots, executing the deterministic WASM price-update rule, and settling Sandstr\"om's macro \textbf{Society Account}. ``10--20 checkpoint blocks'' refers only to the annual \emph{planning} rounds, not the Layer-1 archive.
 \end{enumerate}
 
 \section{Where AI Adds Value---and Where It Must Be Excluded}
@@ -728,7 +782,7 @@ Table \ref{tab:hist-matrix} synthesizes the eight core institutional mechanisms 
 \midrule
 \textbf{1. General Assembly}\newline {\tiny\color{SlateDark}Spain 1936; Athens \emph{Ekklesia}; Occupy; Mondrag\'on} & Builds face-to-face solidarity; surfaces qualitative context. & Strains as attendance grows (working heuristic: $\sim$50--150 speakers; Section~2.5); meeting fatigue. & Scoped strictly to work teams (10--30) and neighborhood councils (50--200) with async pre-reading queues. \\
 \addlinespace[4pt]
-\textbf{2. Revocable Delegation}\newline {\tiny\color{SlateDark}Paris Commune 1871; Spain CNT; Porto Alegre PB} & Enables multi-tier federation scaling while tethering delegates to base. & Delegates ossify if recall is procedurally slow or difficult. & \textbf{Scoped \texttt{PQ-UCAN} Delegate Certificates:} Issued by council $k$-of-$n$ multi-signature; revocable in a single council vote. \\
+\textbf{2. Revocable Delegation}\newline {\tiny\color{SlateDark}Paris Commune 1871; Spain CNT; Porto Alegre PB} & Enables multi-tier federation scaling while tethering delegates to base. & Delegates ossify if recall is procedurally slow or difficult. & \textbf{Scoped CapCert Delegate Certificates:} Issued by council $k$-of-$n$ multi-signature; revocable in a single council vote. \\
 \addlinespace[4pt]
 \textbf{3. Sortition + Rotation}\newline {\tiny\color{SlateDark}Classical Athens (\emph{Boule}, \emph{Logistai}, \emph{Dikasteria})} & Prevents factional elections, charismatic capture, and coordinator elites. & Unsuitable for rare specialist tasks unless drawn from qualified pool. & \textbf{Sortition (beacon open):} Intended to select rotating IFB oversight, audit panels, and dispute juries (Section~\ref{sec:sortition}). \\
 \addlinespace[4pt]
@@ -965,10 +1019,10 @@ the damped percentage price delta $\delta_i^{(t)}$ and multiplicative price upda
   P_i^{(t+1)} &= P_i^{(t)} \left(1 + \text{sign}\big(D_i^{(t)} - S_i^{(t)}\big)\delta_i^{(t)}\right) \label{eq:pequod-rule}
 \end{align}
 The upstream code computes $\max(0.001, \min(\tilde\delta, \tilde\delta \cdot \min(0.25,\rho^{(t-1)})))$. Because $\tilde\delta \in [0.05, 0.80]$ is positive and $\min(0.25,\cdot) \le 0.25$, the inner $\min$ always returns its second argument, so the simplified form above is identical. (A commented-out variant in the same file, $\min(\tilde\delta, \rho^{(t-1)})$, is the one in which the outer $\min$ would bind.)
-Our programmatic audit of the committed CSV files (\path{research/analysis/verify_r2.py}) reports the subsets the book actually cites. Across \texttt{dep1ex61--100.csv} ($n=40$), Year 1 reaches the 5\% threshold (\texttt{:green}) in \textbf{11.85 rounds} on average and the 3\% threshold (\texttt{:blue}) in \textbf{19.20 rounds}; Year 2 reaches 5\% in \textbf{6.58 rounds}. Averaging all 99 files other than \texttt{dep1ex100.csv} yields 11.505 Year-1 5\% rounds and must not be quoted as 11.85. File \texttt{dep1ex100.csv} is a committed large-run log; there is no matching \texttt{dep1ex100.clj}. The 50 \texttt{dep2ex*.csv} files have no corresponding \texttt{.clj} generators in the clone; a code comment in \texttt{csvgen.clj} associates a second experiment family with toothaches, but committed \texttt{dep2ex} CSVs do not show the large between-section exponent jump that would mark a toothache run. Because no wall-clock timing log exists in the upstream repository, any per-iteration wall-clock figure ($\sim 2.5\text{ s}$) is an unverified estimate. Hahnel (2021) Ch.~9 reports the Cobb--Douglas simulations; that chapter was consulted only through secondary notes and does not claim a page-level reading of increasing-returns results.
+Our programmatic audit of the committed CSV files\footnote{Performed by \path{research/analysis/verify_r2.py} in the project repository.} reports the subsets the book actually cites. Across \texttt{dep1ex61--100.csv} ($n=40$), Year 1 reaches the 5\% threshold (\texttt{:green}) in \textbf{11.85 rounds} on average and the 3\% threshold (\texttt{:blue}) in \textbf{19.20 rounds}; Year 2 reaches 5\% in \textbf{6.58 rounds}. Averaging all 99 files other than \texttt{dep1ex100.csv} yields 11.505 Year-1 5\% rounds and must not be quoted as 11.85. File \texttt{dep1ex100.csv} is a committed large-run log; there is no matching \texttt{dep1ex100.clj}. The 50 \texttt{dep2ex*.csv} files have no corresponding \texttt{.clj} generators in the clone; a code comment in \texttt{csvgen.clj} associates a second experiment family with toothaches, but committed \texttt{dep2ex} CSVs do not show the large between-section exponent jump that would mark a toothache run. Because no wall-clock timing log exists in the upstream repository, any per-iteration wall-clock figure ($\sim 2.5\text{ s}$) is an unverified estimate. Hahnel (2021) Ch.~9 reports the Cobb--Douglas simulations; that chapter was consulted only through secondary notes and does not claim a page-level reading of increasing-returns results.
 
 \subsection{Audit of \texttt{pequod-cljs} and the ``Toothache'' Construction}
-Direct inspection of \texttt{wcs.clj}, \texttt{ccs.clj}, \texttt{csvgen.clj}, and all 70 \texttt{dep1ex*.clj} generators establishes four structural properties of \texttt{pequod-cljs}. Fifty files (\texttt{dep1ex01--50}) are stored directly; twenty (\texttt{dep1ex51}, \texttt{dep1ex60--78}) are Git LFS objects of about 160~MB each, fetched from the repository's media endpoint and checked against the SHA-256 in their pointers. Together they hold 750,000 Worker Council records (\texttt{verify\_pequod\_datasets.py}).
+Direct inspection of \texttt{wcs.clj}, \texttt{ccs.clj}, \texttt{csvgen.clj}, and all 70 \texttt{dep1ex*.clj} generators establishes four structural properties of \texttt{pequod-cljs}. Fifty files (\texttt{dep1ex01--50}) are stored directly; twenty (\texttt{dep1ex51}, \texttt{dep1ex60--78}) are Git LFS objects of about 160~MB each, fetched from the repository's media endpoint and checked against the SHA-256 in their pointers. Together they hold 750,000 Worker Council records.\footnote{Checked by \path{research/analysis/verify_pequod_datasets.py} in the project repository.}
 \begin{enumerate}[leftmargin=1.8em,itemsep=2pt]
   \item \textbf{Unconstrained Closed-Form Cobb-Douglas Optimisation:} Each $WC_j$ maximises $\Pi(x,e) = \lambda a e^c \prod_{m=1}^n x_m^{b_m} - \sum_{m=1}^n p_m x_m - s e^k$ via symbolic Mathematica first-order conditions (\texttt{solution-1..8}, upstream lines 221--401) without enforcing $SB_j / SC_j \ge 1$ or labour stock conservation $\sum_j \Delta l_j = 0$.
   \item \textbf{``Increasing returns'' (\texttt{create-toothaches}) and unboundedness:} In \texttt{wcs.clj} (lines 31--70), each $WC_j$ has $n \in \{3, \dots, 8\}$ inputs with baseline exponents $\sum_{m=1}^n b_m \in [0.75, 0.85]$, effort elasticity $c \in [0.05, 0.10]$, and effort disutility exponent $k \in [3, 4]$ (\texttt{:du}). Along the ray $x_m(t)=t$, $e(t)=t^{1/k}$, revenue scales as $t^{\sum b_m + c/k}$ against linear cost, so $\Pi$ is \textbf{bounded with an interior maximum along that ray iff} $\sum b_m + c/k < 1$. (Joint concavity of $\Pi$ on $(x,e)$ is a stronger, distinct condition and is not claimed.) \texttt{create-toothaches} in \texttt{csvgen.clj} selects 20\% of councils and adds $0.1$ to each $b_m$. Across all 750,000 records the baseline index $\sum b_m + c/k$ lies in $[0.7696, 0.8781]$; with the toothache increment it would lie in $[1.0696, 1.6652] > 1$ for every record, and hence for every selected council, so the FOC is a saddle along the scale ray and the formula predicts \textbf{downward-sloping supply}. That prediction is \textbf{not observed} in committed CSVs: \texttt{-main} currently sets \texttt{toothaches? true}, yet the largest Year-1/Year-2 \texttt{exponent-sum} field change found in \texttt{dep1ex*.csv} and \texttt{dep2ex*.csv} is empty (those rows carry no numeric exponent), and the largest first-green-round change between year sections is 0.03 on the files inspected.
@@ -979,8 +1033,8 @@ Direct inspection of \texttt{wcs.clj}, \texttt{ccs.clj}, \texttt{csvgen.clj}, an
 \subsection{Why General Convergence Cannot Be Guaranteed by Heuristic T\^atonnement}
 Simply adding heuristic proximal regularisation and trust regions to Eq.~(\ref{eq:pequod-rule}) cannot guarantee convergence under Leontief complementarities and non-convexities, on both theoretical and empirical grounds:
 \begin{itemize}[leftmargin=1.6em,itemsep=2pt]
-  \item \textbf{Scarf's (1960) Leontief Instability \& Trust-Region Stalling:} By the Sonnenschein--Mantel--Debreu theorem and Herbert Scarf's (1960) counterexample,\footnote{Herbert Scarf, ``Some Examples of Global Instability of the Competitive Equilibrium,'' \emph{International Economic Review} 1, no. 3 (1960): 157--172; Hugo Sonnenschein, ``Do Walras' Identity and Continuity Characterize the Class of Community Excess Demand Functions?'' \emph{Journal of Economic Theory} 6, no. 4 (1973): 345--354.} price t\^atonnement can cycle indefinitely when income effects violate gross substitutability. Running Eq.~(\ref{eq:pequod-rule}) on Scarf's 3-good Leontief economy (\texttt{verify\_economics.py}) confirms that over 3,000 rounds, $\max_i \rho_i^{(t)}$ never drops below \textbf{10.54\%} ($\beta \in \{\text{None}, 0.25, 0.10, 0.02\}$), while a decaying trust region ($\beta^{(t)} = 0.25 \cdot 0.99^t$) freezes proposals at a \textbf{56.60\% imbalance}---shrinking trust regions stall, they do not clear the cycle.
-  \item \textbf{Indivisible Plants vs.\ One-Good Shapley--Folkman Smoothing:} For a single indivisible facility with $S(p) = 100 \cdot \mathbb{I}_{p \ge 10}$ and demand $D(p) = 70 - p$, no clearing price exists: the theoretical minimum imbalance is $\rho = 50.0\%$, and over 500 rounds Eq.~(\ref{eq:pequod-rule}) never falls below \textbf{50.37\%}. Disaggregating that capacity across $K=20$ plants of size $100/K$ with staggered thresholds $8.5+3i/(K-1)$ yields a \emph{minimum} imbalance of \textbf{0.40\%} across 500 rounds. That is the best round, not a stable gap. From \texttt{verify\_r2.py}: the last-100-round maximum at $a=70$ is \textbf{8.4\%}; a sweep $a\in[60,80]$ in steps of $0.5$ has median last-100-round max \textbf{6.0\%}, worst \textbf{9.5\%}, and only 24\% of cases stay $\le 5\%$ in the last 100 rounds; identical thresholds at 10 give no smoothing ($\min\rho\approx 50\%$). Starr (1969) bounds the Hausdorff gap between the sum of non-convex sets and its convex hull; this one-good staggered-threshold test does not instantiate that theorem for interdependent Leontief markets.\footnote{Ross M.\ Starr, ``Quasi-Equilibria in Markets with Non-Convex Preferences,'' \emph{Econometrica} 37, no. 1 (1969): 25--38.}
+  \item \textbf{Scarf's (1960) Leontief Instability \& Trust-Region Stalling:} By the Sonnenschein--Mantel--Debreu theorem and Herbert Scarf's (1960) counterexample,\footnote{Herbert Scarf, ``Some Examples of Global Instability of the Competitive Equilibrium,'' \emph{International Economic Review} 1, no. 3 (1960): 157--172; Hugo Sonnenschein, ``Do Walras' Identity and Continuity Characterize the Class of Community Excess Demand Functions?'' \emph{Journal of Economic Theory} 6, no. 4 (1973): 345--354.} price t\^atonnement can cycle indefinitely when income effects violate gross substitutability. Running Eq.~(\ref{eq:pequod-rule}) on Scarf's 3-good Leontief economy\footnote{Run with \path{research/analysis/verify_economics.py} in the project repository.} confirms that over 3,000 rounds, $\max_i \rho_i^{(t)}$ never drops below \textbf{10.54\%} ($\beta \in \{\text{None}, 0.25, 0.10, 0.02\}$), while a decaying trust region ($\beta^{(t)} = 0.25 \cdot 0.99^t$) freezes proposals at a \textbf{56.60\% imbalance}---shrinking trust regions stall, they do not clear the cycle.
+  \item \textbf{Indivisible Plants vs.\ One-Good Shapley--Folkman Smoothing:} For a single indivisible facility with $S(p) = 100 \cdot \mathbb{I}_{p \ge 10}$ and demand $D(p) = 70 - p$, no clearing price exists: the theoretical minimum imbalance is $\rho = 50.0\%$, and over 500 rounds Eq.~(\ref{eq:pequod-rule}) never falls below \textbf{50.37\%}. Disaggregating that capacity across $K=20$ plants of size $100/K$ with staggered thresholds $8.5+3i/(K-1)$ yields a \emph{minimum} imbalance of \textbf{0.40\%} across 500 rounds. That is the best round, not a stable gap. The last-100-round maximum at $a=70$ is \textbf{8.4\%}; a sweep $a\in[60,80]$ in steps of $0.5$ has median last-100-round max \textbf{6.0\%}, worst \textbf{9.5\%}, and only 24\% of cases stay $\le 5\%$ in the last 100 rounds.\footnote{Computed by \path{research/analysis/verify_r2.py} in the project repository.} Identical thresholds at 10 give no smoothing ($\min\rho\approx 50\%$). Starr (1969) bounds the Hausdorff gap between the sum of non-convex sets and its convex hull; this one-good staggered-threshold test does not instantiate that theorem for interdependent Leontief markets.\footnote{Ross M.\ Starr, ``Quasi-Equilibria in Markets with Non-Convex Preferences,'' \emph{Econometrica} 37, no. 1 (1969): 25--38.}
 \end{itemize}
 
 \subsection{Research-Candidate Solvers (Algorithms 3a--3d)}
@@ -997,7 +1051,7 @@ Let $u^{\text{out}} = \sum_g p_g \max(0, S_g - D_g) / \sum_g p_g S_g$ be the val
 Proposed defaults for Phase~1 (for author ratification): $\tau = 5\%$, $\bar u^{\text{out}} = \bar u^{\text{lab}} = \bar u^{\text{cap}} = 5\%$ beyond planned slack, $\bar u^{\text{need}} = 2\%$, $\bar\Delta = 5\%$ median and 15\% at the 90th percentile.
 \end{definition}
 
-The distinction matters. In the single-plant case of Section~4.4.3, Eq.~(\ref{eq:pequod-rule}) reaches one-sided feasibility at round~3 with $S=100$ and $D=58.48$: 42\% of output is unused, and the case has no clearing price. Under the definition above the run is reported as \emph{feasible but not cleared} in every one of 500 rounds. With $K=20$ staggered plants the first feasible round (round~3) still leaves 8.4\% unused, the first cleared round is round~5, and 57\% of rounds are cleared. Scarf's cycle is never even feasible: some good is over-demanded in every one of 3,000 rounds (\texttt{verify\_r3.py}).
+The distinction matters. In the single-plant case of Section~4.4.3, Eq.~(\ref{eq:pequod-rule}) reaches one-sided feasibility at round~3 with $S=100$ and $D=58.48$: 42\% of output is unused, and the case has no clearing price. Under the definition above the run is reported as \emph{feasible but not cleared} in every one of 500 rounds. With $K=20$ staggered plants the first feasible round (round~3) still leaves 8.4\% unused, the first cleared round is round~5, and 57\% of rounds are cleared. Scarf's cycle is never even feasible: some good is over-demanded in every one of 3,000 rounds.\footnote{Computed by \path{research/analysis/verify_r3.py} in the project repository.}
 
 \paragraph{Algorithm 3a --- Proximal damped t\^atonnement (heuristic).}
 \begin{enumerate}[leftmargin=1.6em,itemsep=1pt]
@@ -1019,7 +1073,7 @@ Deng et al.\ treat $\min \sum_{i=1}^N f_i(x_i)$ subject to $\sum_i A_i x_i = c$ 
 \end{enumerate}
 Deng et al.\ prove convergence and an $o(1/k)$ rate on the successive-iterate quantity $\|u^k-u^{k+1}\|_{G'}^2$ (primal and dual together), not a rate to optimal welfare. The theorem does not cover endogenous budgets, $\varepsilon$-caps that depend on prices, renormalising duals so that $w_{\text{base}}\equiv1$ mid-run, or non-convex $\mathcal{T}_c$ (convergence results for ADMM on non-convex problems, such as Hong, Luo and Razaviyayn 2016, need structural conditions that DPEP's lumpy technologies do not meet). Writing the objective as $\sum_c W_c$ assumes cardinal, interpersonally comparable well-being. Because $N$ includes every active council, $\tau_i$ grows with $N_{\text{active}}$; whether that makes convergence too slow at $N=10^6$ is untested.
 
-A simpler-looking iteration, $x_c^{t+1} = \arg\min -W_c(x) + \langle\lambda^t, A_c x\rangle + \tfrac12\|x - x_c^t\|_{P_c}^2$ with a projected dual ascent, is easily mistaken for ADMM. It is an \textbf{Arrow--Hurwicz-type primal--dual proximal iteration}: it omits the augmented residual term, and the Deng et al.\ theorem does not apply to it. In a two-council test with linear welfare and a shared capacity of~1, it oscillates indefinitely (residual $\approx 1.0$, price swinging between 0 and 2 over 20,000 rounds), while Algorithm~4 with a slack block converges to residual~0 and price~1; both converge when welfare is strictly concave (\texttt{reference\_tests\_r3.py}, \texttt{verify\_r3.py}).
+A simpler-looking iteration, $x_c^{t+1} = \arg\min -W_c(x) + \langle\lambda^t, A_c x\rangle + \tfrac12\|x - x_c^t\|_{P_c}^2$ with a projected dual ascent, is easily mistaken for ADMM. It is an \textbf{Arrow--Hurwicz-type primal--dual proximal iteration}: it omits the augmented residual term, and the Deng et al.\ theorem does not apply to it. In a two-council test with linear welfare and a shared capacity of~1, it oscillates indefinitely (residual $\approx 1.0$, price swinging between 0 and 2 over 20,000 rounds), while Algorithm~4 with a slack block converges to residual~0 and price~1; both converge when welfare is strictly concave.\footnote{Computed by \path{research/analysis/reference_tests_r3.py} and \path{research/analysis/verify_r3.py} in the project repository.}
 
 \paragraph{Algorithm 3d --- Damped budget fixed point around a fixed-budget inner solve (candidate for endogenous income).}
 Endogenous income makes full DPEP an equilibrium problem: budgets $B_u(P,D)$ (Eq.~\ref{eq:warranted-budget}) depend on the prices and quantities they help determine, and the effort cap couples incomes to $SB/SC$. The natural formulation is a mixed complementarity problem (MCP) in $(x, P, B)$. Phase~1 needs a solver it can actually run, so the proposed candidate is an outer loop:
@@ -1217,7 +1271,7 @@ When we examine the computational structure formalised in Chapter 4, three archi
   \node[layer, fill=CodeBg, below=of l4] (l3) {
     {\footnotesize\textbf{\textcolor{NavyPrimary}{LAYER 3: LOCAL-FIRST COUNCIL \& HOUSEHOLD STATE LAYER (ASYNC / OFFLINE)}}}\par\vspace{3.5pt}
     $\bullet$ Encrypted SQLite (SQLCipher) Vector Ledger + Loro/Automerge Delta-CRDT Council Workspaces (\texttt{Role-CC})\par\vspace{2pt}
-    $\bullet$ \texttt{Prio3} VDAF shares to $K=3$ aggregators + Revocable \texttt{PQ-UCAN} Capability Certificates\par\vspace{1pt}
+    $\bullet$ \texttt{Prio3} VDAF shares to $K=3$ aggregators + Revocable Capability Certificates (CapCert)\par\vspace{1pt}
   };
   \node[layer, fill=SoftBg, below=of l3] (l2) {
     {\footnotesize\textbf{\textcolor{TealAccent}{LAYER 2: FEDERATED AGGREGATION \& CONTENT-ADDRESSED DATA PLANE (P2P / QUIC)}}}\par\vspace{3.5pt}
@@ -1236,6 +1290,49 @@ When we examine the computational structure formalised in Chapter 4, three archi
 \end{tikzpicture}
 \caption{Four-Layer Architecture of the Distributed Participatory Economics Protocol (Architecture D)}
 \label{fig:arch-d}
+\end{figure}
+
+Figure~\ref{fig:round-seq} traces one planning round message by message across the layers, and Figure~\ref{fig:topology} (Section~\ref{sec:roles}) shows where each node role sits.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1in,y=1in]
+  \foreach \x/\t in {0.47/{Person\\[-1pt]\normalfont(Role-LP, phone)},
+                     1.46/{Council\\[-1pt]\normalfont(Role-CC)},
+                     2.45/{Prio3 aggregators\\[-1pt]\normalfont(A, B, C)},
+                     3.44/{Federation servers\\[-1pt]\normalfont(Role-PCW, Role-SR)},
+                     4.43/{BFT committee\\[-1pt]\normalfont(Role-BFT, $n{=}128$)}}{
+    \node[dhead, text width=0.8in, minimum height=0.34in] at (\x,0) {\t};
+    \draw[dlife] (\x,-0.2) -- (\x,-5.0);
+  }
+  % 1
+  \draw[darr] (4.43,-0.45) -- node[dlab, pos=0.5]{1\; checkpoint $t{-}1$ with prices $P^{(t)}$} (0.47,-0.45);
+  % 2
+  \node[dbox, text width=0.8in] at (0.47,-0.82) {2\; local solver drafts the request; the person edits it};
+  % 3
+  \draw[darr, TealAccent] (0.47,-1.22) -- node[dlab, pos=0.5]{3\; report in 3 shares\\(milestone rounds only)} (2.45,-1.22);
+  % 4
+  \draw[darr, TealAccent] (2.45,-1.62) -- node[dlab, above=1pt, pos=0.5, fill=none]{4\; neighbourhood total ($\ge 30$)} (1.46,-1.62);
+  % 5
+  \node[dbox, text width=0.8in] at (1.46,-2.02) {5\; council deliberates; $k$ of $n$ members sign $\pi_c^{(t)}$};
+  % 6
+  \draw[darr] (1.46,-2.42) -- node[dlab, pos=0.5]{6\; $\pi_c^{(t)}$ to primary server + $\ge 2$ relays} (3.44,-2.42);
+  % 7
+  \draw[darr] (3.44,-2.74) -- node[dlab, pos=0.5]{7\; signed \texttt{SubmissionReceipt}} (1.46,-2.74);
+  % 8
+  \node[dbox, text width=0.8in] at (3.44,-3.14) {8\; Two-Root reduction, conservation check, WASM price update};
+  % 9
+  \draw[darr] (3.44,-3.56) -- node[dlab, above=1pt, pos=0.5, fill=none]{9\; roots, bitmap, $P^{(t+1)}$} (4.43,-3.56);
+  % 10
+  \draw[darr, CrimsonAccent, dashed] (1.46,-3.96) -- node[dlab, pos=0.42, text=CrimsonAccent]{10\; if omitted: receipt within $T_{\text{challenge}}$} (4.43,-3.96);
+  % 11
+  \node[dbox, text width=0.8in] at (4.43,-4.34) {11\; $\ge 86$ of 128 validators sign checkpoint $t$};
+  % 12
+  \draw[darr] (4.43,-4.74) -- node[dlab, pos=0.5]{12\; checkpoint $t$ with $P^{(t+1)}$ (coordinator attestation or sync committee)} (0.47,-4.74);
+  \node[font=\tiny\itshape, text=SlateDark] at (2.45,-5.14) [text width=4.7in, align=flush center] {Next round: $t \leftarrow t+1$ until the plan clears. Steps 3--4 run only at milestone rounds; otherwise councils revise at council level.};
+\end{tikzpicture}
+\caption{One planning round as a message sequence. Teal steps carry private household data and run only at milestone rounds; the dashed crimson step is the censorship challenge (Section~\ref{sec:two-root}).}
+\label{fig:round-seq}
 \end{figure}
 
 \subsection{Two-Root Authenticated Aggregation, Completeness Bitmaps, and Physical Boundaries}
@@ -1280,7 +1377,57 @@ Even at these sizes, a round's proposals are small enough that full replication 
   \item \textbf{Explicit Cryptographic vs.\ Physical Boundary:} Cryptography verifies digital authenticity, inclusion, and arithmetic conservation; it \textbf{cannot} verify that physical grain was harvested or that emissions sensors were not bypassed, which remain governed by federated physical \emph{euthynai} spot-audits and counterparty delivery reconciliation.
 \end{itemize}
 
+Figure~\ref{fig:two-root} shows the two trees, the phone's inclusion path, the participation bitmap and the challenge that turns an omission into a public fault.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1in,y=1in,
+  hn/.style={circle, draw=NavyPrimary, fill=SoftBg, thick, minimum size=0.11in, inner sep=0pt},
+  hp/.style={hn, draw=CrimsonAccent, fill=CrimsonAccent!25!white},
+  hs/.style={hn, draw=GoldAccent!80!black, fill=GoldAccent!35!white},
+  tl/.style={thin, NavyPrimary}]
+  % checkpoint on top
+  \node[dhead, text width=4.6in] (cp) at (2.45,3.95) {Checkpoint $t$ (Layer 1): $H_{\text{proposals}}$, $H_{\text{totals}}$, participation bitmap, $\ge 86$ of 128 hybrid signatures};
+  % ---- left tree: proposals
+  \foreach \ox/\name in {0/L, 2.5/R}{
+    \node[hn] (\name r) at (\ox+1.2,3.25) {};
+    \node[hn] (\name a) at (\ox+0.66,2.75) {};  \node[hn] (\name b) at (\ox+1.74,2.75) {};
+    \node[hn] (\name c) at (\ox+0.39,2.25) {};  \node[hn] (\name d) at (\ox+0.93,2.25) {};
+    \node[hn] (\name e) at (\ox+1.47,2.25) {};  \node[hn] (\name f) at (\ox+2.01,2.25) {};
+    \foreach \i in {0,...,7}{ \node[hn] (\name l\i) at (\ox+0.25+\i*0.27,1.75) {}; }
+    \draw[tl] (\name r)--(\name a) (\name r)--(\name b) (\name a)--(\name c) (\name a)--(\name d) (\name b)--(\name e) (\name b)--(\name f)
+              (\name c)--(\name l0) (\name c)--(\name l1) (\name d)--(\name l2) (\name d)--(\name l3)
+              (\name e)--(\name l4) (\name e)--(\name l5) (\name f)--(\name l6) (\name f)--(\name l7);
+  }
+  % highlight proof path in left tree: leaf 2 -> d -> a -> r ; siblings l3, c, b
+  \node[hp] at (Ll2) {}; \node[hp] at (Ld) {}; \node[hp] at (La) {}; \node[hp] at (Lr) {};
+  \node[hs] at (Ll3) {}; \node[hs] at (Lc) {}; \node[hs] at (Lb) {};
+  \draw[very thick, CrimsonAccent] (Ll2)--(Ld)--(La)--(Lr);
+  \draw[darr] (Lr) -- (Lr |- cp.south);
+  \draw[darr] (Rr) -- (Rr |- cp.south);
+  \node[font=\tiny\bfseries, anchor=east] at (Lr.west) {$H_{\text{proposals}}$\,};
+  \node[font=\tiny\bfseries, anchor=west] at (Rr.east) {\,$H_{\text{totals}}$};
+  \node[dbox, text width=2.2in] at (1.2,1.27) {Leaf per council: $(\mathrm{id}_c,\ \mathrm{BLAKE3}(\mathrm{CBOR}(\pi_c^{(t)})))$\\
+    \textcolor{CrimsonAccent}{\textbf{path}} + \textcolor{GoldAccent!70!black}{\textbf{siblings}}: a phone checks its council's\\leaf with 16 levels $\times$ 32 B $=$ \textbf{512 B}};
+  \node[dbox, text width=2.2in] at (3.7,1.27) {Leaf per category: $(i,\ S_i^{(t)},\ D_i^{(t)},\ P_i^{(t+1)})$\\
+    auditors holding the full leaf archive (0.24--1.46 GB)\\recompute every sum: \textbf{conservation check}};
+  % ---- bitmap and censorship
+  \node[font=\tiny\bfseries, anchor=west] at (0.02,0.78) {Participation bitmap (2 bits per council):};
+  \foreach \i/\v/\c in {0/01/TealAccent, 1/01/TealAccent, 2/10/GoldAccent!80!black, 3/01/TealAccent, 4/00/CrimsonAccent, 5/01/TealAccent, 6/01/TealAccent, 7/10/GoldAccent!80!black}{
+    \node[rectangle, draw=\c, thick, fill=white, minimum width=0.22in, minimum height=0.15in, font=\tiny\ttfamily, inner sep=0pt] at (2.2+\i*0.25,0.78) {\v};
+  }
+  \node[font=\tiny, anchor=west, align=left] at (0.02,0.55) {\texttt{01} fresh proposal \quad \texttt{10} carried forward (timeout or partition) \quad \texttt{00} excluded};
+  \node[dwarn, text width=1.35in] (x1) at (0.72,0.2) {Council wrongly marked \texttt{00} or \texttt{10}};
+  \node[dbox, text width=1.35in] (x2) at (2.45,0.2) {shows its signed \texttt{SubmissionReceipt} within $T_{\text{challenge}}$};
+  \node[dinst, text width=1.35in] (x3) at (4.18,0.2) {forced inclusion; the censoring server is publicly faulted};
+  \draw[darr] (x1)--(x2); \draw[darr] (x2)--(x3);
+\end{tikzpicture}
+\caption{Two-Root authenticated aggregation. A phone verifies its council's leaf with a 512-byte path; auditors with the leaf archive recompute every category sum; the participation bitmap and signed receipts separate censorship from partition.}
+\label{fig:two-root}
+\end{figure}
+
 \section{Granular Consistency Mapping and Node Role Taxonomy}
+\label{sec:roles}
 
 \begin{table}[htbp]
 \centering
@@ -1308,6 +1455,42 @@ Even at these sizes, a round's proposals are small enough that full replication 
 \footnotetext{Marc Shapiro, Nuno Pregui\c{c}a, Carlos Baquero, and Marek Zawirski, ``Conflict-Free Replicated Data Types,'' \emph{Symposium on Self-Stabilizing Systems (SSS 2011)}, LNCS 6976, pp.~386--400.}
 \stepcounter{footnote}
 \footnotetext{Ethan Buchman, Jae Kwon, and Zarko Milosevic, ``The Latest Gossip on BFT Consensus,'' \emph{arXiv:1807.04938} (2018); Maofan Yin et al., ``HotStuff: BFT Consensus with Linearity and Responsiveness,'' \emph{ACM PODC '19}, pp.~347--356.}
+
+Figure~\ref{fig:topology} places the six node roles of Table~\ref{tab:node-roles} in the federation structure.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1in,y=1in, tree/.style={thick, NavyPrimary}]
+  \node[dhead, text width=3.3in] (bft) at (2.45,4.2) {Epoch BFT committee: 128 validators drawn by sortition (Role-BFT)};
+  \node[dbox, text width=1.75in] (cf) at (1.2,3.5) {\textbf{Consumer federation}\\region and city};
+  \node[dbox, text width=1.45in] (if) at (3.85,3.5) {\textbf{Industry federation}};
+  \node[dbox, text width=1.75in] (ws) at (1.2,2.8) {\textbf{Ward and city servers}\\Role-PCW, Role-SR (community servers)};
+  \node[dbox, text width=1.45in] (is) at (3.85,2.8) {\textbf{Industry servers}\\Role-PCW, Role-SR};
+  \node[dbox, text width=0.62in] (c1) at (0.4,2.0) {Neighbourhood council\\Role-CC (Pi,~5~W)};
+  \node[dbox, text width=0.62in] (c2) at (1.2,2.0) {Neighbourhood council\\Role-CC};
+  \node[dbox, text width=0.62in, dashed] (c3) at (2.0,2.0) {Offline hamlet council\\Role-CC};
+  \node[dbox, text width=0.62in] (w1) at (3.45,2.0) {Worker council\\Role-CC};
+  \node[dbox, text width=0.62in] (w2) at (4.25,2.0) {Worker council\\Role-CC};
+  \foreach \n/\x in {p1/0.4, p2/1.2, p3/2.0, q1/3.45, q2/4.25}{
+    \node[dcrypto, text width=0.62in] (\n) at (\x,1.22) {members' phones\\Role-LP};
+  }
+  \draw[tree] (bft.south -| cf.north) -- (cf.north);  \draw[tree] (bft.south -| if.north) -- (if.north);
+  \draw[tree] (cf)--(ws); \draw[tree] (if)--(is);
+  \draw[tree] (ws.south)--(c1.north); \draw[tree] (ws.south)--(c2.north);
+  \draw[tree, dashed] (ws.south)-- node[dlab, pos=0.55]{Role-GW\\data mule} (c3.north);
+  \draw[tree] (is.south)--(w1.north); \draw[tree] (is.south)--(w2.north);
+  \foreach \c/\p in {c1/p1, c2/p2, c3/p3, w1/q1, w2/q2}{ \draw[tree] (\c)--(\p); }
+  \draw[SlateDark, densely dotted, thick] (p2.south east) to[bend right=14] node[dlab, pos=0.5]{the same person: one consumer and one worker council} (q1.south west);
+  % aggregators outside the tree
+  \node[dcrypto, text width=1.2in] (A) at (0.75,0.12) {\textbf{Aggregator A}\\consumer-side operator};
+  \node[dcrypto, text width=1.2in] (B) at (2.45,0.12) {\textbf{Aggregator B}\\producer-side operator};
+  \node[dcrypto, text width=1.2in] (C) at (4.15,0.12) {\textbf{Aggregator C}\\external operator};
+  \foreach \t in {A,B,C}{ \draw[darr, TealAccent, dashed] (p1.south) -- (\t.north); }
+  \node[font=\tiny\itshape, text=TealAccent, align=center] at (2.45,-0.22) {Each member's phone sends its \texttt{Prio3} report shares to three aggregators that sit \emph{outside} the federation tree (non-nested).};
+\end{tikzpicture}
+\caption{Federation topology and node placement (illustrative). Councils and servers nest by geography and industry; the three \texttt{Prio3} aggregators sit outside that nesting, and the BFT committee is drawn by sortition across federations.}
+\label{fig:topology}
+\end{figure}
 
 \begin{table}[htbp]
 \centering
@@ -1357,7 +1540,7 @@ We compare the four candidate architectures across all 14 required criteria: \te
 \textbf{Criterion} & \textbf{Wt.} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{Rationale for D (judgement, not measurement)} \\
 \midrule
 1. Decentralisation & 9\% & 2.0 & 5.0 & 3.0 & \textbf{4.5} & Local autonomy plus rotating BFT; A centralises database administration, C heavy validators. \\
-2. Trust Assumptions & 10\% & 2.0 & 3.0 & 4.5 & \textbf{4.0} & One honest aggregator for privacy, \emph{all} for correct totals (VDAF-22 \S 9). \\
+2. Trust Assumptions & 10\% & 2.0 & 3.0 & 4.5 & \textbf{4.0} & One honest aggregator for privacy, \emph{all} for correct totals (VDAF-22 \S 9); correctness rests on institutions, not cryptography. \\
 3. Censorship Resistance & 8\% & 2.0 & 4.5 & 4.0 & \textbf{4.5} & Signed receipts let a censored council prove omission. \\
 4. Throughput \& Latency & 8\% & 5.0 & 4.0 & 2.0 & \textbf{4.0} & $10^6$ report verifications cost each aggregator 4--61 desktop core-minutes; A has no such cost. \\
 5. Network Bandwidth & 7\% & 4.5 & 2.5 & 1.5 & \textbf{3.5} & No $\mathcal{O}(N^2)$ gossip, but 290~kB quorum signatures and 0.24--1.46~GB round archives. \\
@@ -1381,7 +1564,7 @@ We compare the four candidate architectures across all 14 required criteria: \te
 \FloatBarrier
 \subsection{Sensitivity Analysis of Architecture Rankings}
 \label{sec:arch-sensitivity}
-All figures below are computed from the cells of Table~\ref{tab:arch-comp} by \texttt{verify\_r3.py}, which parses the table from the book source.
+All figures below are computed from the cells of Table~\ref{tab:arch-comp} by a script that parses the table from the book source.\footnote{The script is \path{research/analysis/verify_r3.py} in the project repository.}
 \begin{itemize}[leftmargin=1.6em,itemsep=1pt]
   \item \textbf{Baseline weights:} D~4.07, B~3.59, A~3.10, C~2.54. \textbf{Equal weights} ($1/14$ each): D~4.04, B~3.61, A~3.32, C~2.46.
   \item \textbf{Weight on simplicity, throughput and cost.} Put a share $w$ of the weight on criteria 4, 11 and 12 equally and spread the rest in proportion to the baseline. A overtakes D at $w \approx 0.63$; at $w=0.70$ the scores are A~4.08, D~3.92, B~3.75, C~2.30. The ranking of A against D therefore depends on how much a community values operational simplicity, and that is a legitimate reason to use A for Phase~1H and the earliest pilots.
@@ -1395,7 +1578,7 @@ D's lead at baseline weights is robust to plausible errors in individual scores,
 Rather than locking the project prematurely into systems-level Rust before the non-convex economic coordination algorithms are validated, we adopt a \textbf{two-stage implementation strategy}:
 \begin{enumerate}[leftmargin=1.8em,itemsep=2pt]
   \item \textbf{Phase 1 (Economic Coordination Research) --- Python Scientific Stack (\texttt{NumPy}/\texttt{SciPy}, \texttt{highspy} MILP/LP, \texttt{Clarabel} Python bindings):} Minimises iteration time and maximises reproducibility for testing candidate ADMM, MILP federation decomposition, and Scarf/Leontief stress tests.
-  \item \textbf{Phase 2 \& 3 (Validated Distributed Protocol \& Mobile Engine) --- Rust + WebAssembly (\texttt{dpep-core}, \texttt{dpep-node}):} Translates the Phase-1-validated clearing rules into memory-safe Rust (\texttt{Clarabel.rs},\footnote{Paul J.\ Goulart and Yuwen Chen, ``Clarabel: An Interior-Point Solver for Conic Programs with Quadratic Objectives,'' \emph{Mathematical Programming Computation} (2026), \url{https://doi.org/10.1007/s12532-026-00320-7}; software at \url{https://github.com/oxfordcontrol/Clarabel.rs}.} \texttt{RustCrypto} FIPS 203/204/205, \texttt{quinn} QUIC, \texttt{Wasmtime}, and Mozilla UniFFI). Local council solvers use IEEE-754 floating-point heuristics to \emph{draft} proposals. Protocol-level checks ($SB_j/SC_j \ge 1$, $SC_h \le B_h$, IFB price updates) are specified in deterministic 64/128-bit fixed-point arithmetic (Section~\ref{sec:fixed-point-bounds}). Those checks verify constraint satisfaction after rounding, not a truthful objective or MILP optimality.
+  \item \textbf{Phase 2 \& 3 (Validated Distributed Protocol \& Mobile Engine) --- Rust + WebAssembly (\texttt{dpep-core}, \texttt{dpep-node}):} Translates the Phase-1-validated clearing rules into memory-safe Rust (\texttt{Clarabel.rs},\footnote{Paul J.\ Goulart and Yuwen Chen, ``Clarabel: An Interior-Point Solver for Conic Programs with Quadratic Objectives,'' \emph{Mathematical Programming Computation} (2026), \url{https://doi.org/10.1007/s12532-026-00320-7}; software at \url{https://github.com/oxfordcontrol/Clarabel.rs}.} FIPS 203/204/205 implementations with independent assurance (\texttt{libcrux}, formally verified with hax and F$^\ast$; \texttt{aws-lc-rs}, FIPS 140-3 validated; the unaudited \texttt{RustCrypto} crates only as a WASM fallback),\footnote{The \texttt{RustCrypto} \texttt{ml-kem} documentation states that the implementation ``has never been independently audited'' (\url{https://docs.rs/ml-kem}); \texttt{libcrux-ml-kem} is verified with hax and F$^\ast$ (\url{https://docs.rs/libcrux-ml-kem}) and its generated C is vendored in Mozilla NSS; AWS-LC FIPS~3.0 is a FIPS 140-3 validated module including ML-KEM (\url{https://aws.amazon.com/blogs/security/aws-lc-fips-3-0-first-cryptographic-library-to-include-ml-kem-in-fips-140-3-validation}). Checked November 2026.} \texttt{quinn} QUIC with \texttt{rustls} and its hybrid \texttt{X25519MLKEM768} key exchange, \texttt{Wasmtime}, and Mozilla UniFFI). Local council solvers use IEEE-754 floating-point heuristics to \emph{draft} proposals. Protocol-level checks ($SB_j/SC_j \ge 1$, $SC_h \le B_h$, IFB price updates) are specified in deterministic 64/128-bit fixed-point arithmetic (Section~\ref{sec:fixed-point-bounds}). Those checks verify constraint satisfaction after rounding, not a truthful objective or MILP optimality.
 \end{enumerate}
 
 \begin{table}[htbp]
@@ -1409,7 +1592,7 @@ Rather than locking the project prematurely into systems-level Rust before the n
 \textbf{Technical Dimension} & \textbf{Rust} & \textbf{Go} & \textbf{TypeScript} & \textbf{Kotlin} & \textbf{Swift} & \textbf{WASM (from Rust)} \\
 \midrule
 Memory Safety \& Zero GC Pauses & \textbf{5.0} & 3.5 & 2.5 & 3.0 & 4.0 & \textbf{5.0} (Sandboxed linear memory) \\
-NIST PQC (\texttt{ml-kem}, \texttt{ml-dsa}, \texttt{slh-dsa}) & \textbf{5.0} & 4.0 & 2.0 & 2.5 & 2.5 & \textbf{5.0} (Direct compilation) \\
+NIST PQC (\texttt{libcrux}, \texttt{aws-lc-rs}, \texttt{RustCrypto}) & \textbf{5.0} & 4.0 & 2.0 & 2.5 & 2.5 & \textbf{5.0} (Direct compilation) \\
 Local-First \& P2P (\texttt{iroh}, CRDT, SQLite) & \textbf{5.0} & 4.5 & 4.0 & 3.0 & 3.0 & \textbf{4.5} (Browser worker target) \\
 Operations Research (\texttt{Clarabel.rs}, \texttt{HiGHS}) & \textbf{4.5} & 2.5 & 2.0 & 2.5 & 2.5 & \textbf{5.0} (Runs on every phone/PC) \\
 Cross-Platform Mobile Reuse (UniFFI) & \textbf{5.0} & 3.0 & 4.5 & 3.0 & 1.5 & \textbf{5.0} (Universal execution) \\
@@ -1417,6 +1600,46 @@ Accessible UI \& Screen-Reader Tooling & 2.5 & 1.5 & \textbf{5.0} & \textbf{4.5}
 \bottomrule
 \end{tabularx}
 \end{table}
+
+\section{Component Maturity}
+\label{sec:maturity}
+
+A component can be mature at one level and not at another, so Table~\ref{tab:maturity} rates three levels separately: the \textbf{algorithm or protocol}, the \textbf{library} this book names, and the \textbf{DPEP combination} (the way DPEP uses it). The scale runs from M5 (\emph{ubiquitous}: final standard, several independent implementations, billions of users, ten or more years of public analysis) through M4 (\emph{production-proven} by several major operators, with audits or formal verification), M3 (\emph{early production}: a new standard, an Internet-Draft, or few operators), M2 (\emph{pre-production}: unaudited, pre-1.0 or beta), M1 (\emph{research}) to M0 (\emph{unspecified}). Ratings are judgements as of November 2026, not measurements. Evidence, production users, the researchers behind each component and sources are in the project's maturity dossier and register.\footnote{\path{reports/STACK_MATURITY.md} and \path{research/stack_maturity_register.csv} in the project repository.}
+
+\begin{table}[htbp]
+\centering
+\caption{Component maturity at three levels (M0--M5; judgement as of November 2026)}
+\label{tab:maturity}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabularx}{\textwidth}{L{1.30in} C{0.42in} C{0.62in} C{0.46in} Y}
+\toprule
+\textbf{Component} & \textbf{Algorithm} & \textbf{Library} & \textbf{DPEP use} & \textbf{Main gap} \\
+\midrule
+X25519 / Ed25519 & M5 & M4--M5 & M4 & None material. \\
+Hybrid X25519 + ML-KEM-768 & M4 & M4 & M2 & Default in major browsers, OpenSSH~10 and Apple OS~26 TLS; the gap is DPEP's own use. \\
+Hybrid Ed25519 + ML-DSA-65 & M3 & M2--M3 & M2 & Composite format is a draft; 3.4~kB per signature. \\
+SLH-DSA-SHA2-192s & M3 & M2--M3 & M3 & Little production use; acceptable for rare root signing. \\
+BLAKE3 & M3 & M4 & M3 & Not standardised; SHA3-256 registered as alternative. \\
+\texttt{Prio3} VDAF / DAP & M3 & M3 & M1 & Budget circuit unspecified; library tracks draft~18. \\
+Post-quantum HPKE for shares & M2 & M2 & M1 & No standard suite yet. \\
+Two-Root aggregation & M5 & M4 & M1 & Merkle logs mature (Certificate Transparency); DPEP protocol original. \\
+One-report-per-person credentials & M4 / M1\textsuperscript{a} & --- & M1 & Interim classical (Section~\ref{sec:pq-urgency}); $B_u$ binding open. \\
+Sortition beacon & M4 / M1\textsuperscript{a} & --- & M1 & Interim threshold beacon; key generation and custody unspecified. \\
+Capability certificates (CapCert) & M2 & M2 & M0 & Format not chosen (UCAN 1.0 release candidate, Biscuit). \\
+QUIC: \texttt{quinn} + \texttt{rustls} & M5 & M4 & M3 & Hybrid key exchange must be enabled explicitly. \\
+\texttt{iroh} & M3 & M3 & M2 & 1.0 released June 2026; relays must be self-hosted. \\
+SQLite / SQLCipher; CRDTs & M5 / M4 & M3--M5 & M3 & CRDT schema evolution and metadata growth. \\
+CometBFT & M4--M5 & M4 / M2\textsuperscript{b} & M2 & Post-quantum keys are pure ML-DSA, not hybrid. \\
+Fixed-point WASM on \texttt{Wasmtime} & M4 & M4 & M2 & Pin a long-term-support release; fix NaN and fuel settings. \\
+\texttt{HiGHS} / \texttt{Clarabel} & M4 & M4 / M2\textsuperscript{c} & M2 & No phone benchmark. \\
+Mozilla UniFFI & M3--M4 & M3--M4 & M2 & Interface still changing. \\
+\bottomrule
+\end{tabularx}
+\par\smallskip{\scriptsize\raggedright \textsuperscript{a}\,Classical / post-quantum. \textsuperscript{b}\,Ed25519 keys / ML-DSA-65 keys (v0.40). \textsuperscript{c}\,Native / WASM on a phone.\par}
+\end{table}
+
+Nine DPEP combinations have no deployment precedent, so they inherit no maturity: the \texttt{Prio3} budget circuit, Two-Root aggregation, the hybrid signature format, CapCerts, credentials, the beacon, the light-client policy (Table~\ref{tab:light-clients}), non-nested aggregator governance, and ratified WASM economic rules. Two-Root aggregation, WASM rules and server-side signature verification are tested at Kill Gate~2. The budget circuit, hybrid format, CapCerts, credentials, light-client policy and aggregator governance are tested at Kill Gate~3, whose external audit covers them. The beacon has an interim construction and stays an open question. Post-quantum deployment is moving quickly, so the hybrid-signature, \texttt{Prio3}, share-encryption, credential, beacon, \texttt{iroh} and CometBFT rows are re-checked before each gate.
 
 % ==============================================================================
 % CHAPTER 7: POST-QUANTUM CRYPTOGRAPHY, SECURITY, AND PRIVACY
@@ -1434,6 +1657,8 @@ The epigraph is the 1991 design: consumption is \emph{subject to collective crit
 
 To protect multi-decade household records against harvest-now-decrypt-later adversaries, DPEP uses cryptographic agility (\texttt{CryptoSuiteId}) and \textbf{hybrid} classical + NIST PQC primitives. This is \textbf{not} a uniform NIST Level-3 claim, and it is not a ``zero lattice'' claim: ML-KEM and ML-DSA are lattice schemes. BLAKE3's specification targets 128-bit security for all goals. VDAF-22 makes no post-quantum claim. Table~\ref{tab:pq-components} states the status of each component.\footnote{NIST, \emph{FIPS 203 (ML-KEM)}, \emph{FIPS 204 (ML-DSA)}, and \emph{FIPS 205 (SLH-DSA)} (13 August 2024). Byte sizes in Table~\ref{tab:pqc-bench} are specification constants. The latency columns are placeholders carried from an unsourced estimate; in particular $\sim 80\ \mu\text{s}$ for a hybrid X25519+ML-KEM-768 operation looks optimistic for an entry-level phone. They must be replaced by device benchmarks (Kill Gate~3) before use.}
 
+Two formats are still in standardisation. \textbf{Hybrid signatures} follow the composite ML-DSA Internet-Draft of Ounsworth et al.\ (2026), which defines an Ed25519 combination but is not yet an RFC; until it is, DPEP's hybrid wire format is DPEP-defined under \texttt{CryptoSuiteId}. Plain ML-DSA in X.509 certificates is standardised (Massimo et al.\ 2025). \textbf{Share encryption}: DAP encrypts report shares with HPKE, whose standard suites are classical, so the hybrid share encryption in Table~\ref{tab:pqc-bench} needs a post-quantum HPKE suite (ML-KEM or the X-Wing combiner), which is still in IETF drafting.
+
 \begin{table}[htbp]
 \centering
 \caption{Post-quantum primitives: specification byte sizes and \emph{placeholder} ARMv8 latencies (unbenchmarked)}
@@ -1446,7 +1671,7 @@ To protect multi-decade household records against harvest-now-decrypt-later adve
 \midrule
 \textbf{X25519 + ML-KEM-768} (FIPS 203 Hybrid KEM) & NIST L3 + Classical & $1,216\text{ B}$ & $1,120\text{ B}$ & $\sim 80\ \mu\text{s}$\textsuperscript{p} & $\sim 85\ \mu\text{s}$\textsuperscript{p} & Point-to-point QUIC channels \& \texttt{Prio3} aggregator share encryption. \\
 \addlinespace[3pt]
-\textbf{Ed25519 + ML-DSA-65} (FIPS 204 Hybrid Sig) & NIST L3 + Classical & $1,984\text{ B}$ & $3,373\text{ B}$ & $\sim 230\ \mu\text{s}$\textsuperscript{p} & $\sim 175\ \mu\text{s}$\textsuperscript{p} & \textbf{Workhorse Signature} for council proposals, \texttt{PQ-UCAN} tokens \& receipts. \\
+\textbf{Ed25519 + ML-DSA-65} (FIPS 204 Hybrid Sig) & NIST L3 + Classical & $1,984\text{ B}$ & $3,373\text{ B}$ & $\sim 230\ \mu\text{s}$\textsuperscript{p} & $\sim 175\ \mu\text{s}$\textsuperscript{p} & \textbf{Workhorse Signature} for council proposals, CapCerts \& receipts. \\
 \addlinespace[3pt]
 \textbf{SLH-DSA-SHA2-192s} (FIPS 205 Hash-Based) & \textbf{NIST L3} (Hash Only) & $48\text{ B}$ & $16,224\text{ B}$ & unverified & unverified & \textbf{Level-3 Root Anchor} for Federation accreditation \& WASM rule signing. Signing is slow by design; device timings not benchmarked. \\
 \addlinespace[3pt]
@@ -1468,19 +1693,134 @@ To protect multi-decade household records against harvest-now-decrypt-later adve
 Share encryption & Hybrid X25519 + ML-KEM-768 & Standards-based (FIPS 203 + classical). Lattice. NIST L3 for ML-KEM-768. \\
 Council / validator signatures & Hybrid Ed25519 + ML-DSA-65 & Standards-based (FIPS 204 + classical). Lattice. \\
 Root / WASM signatures & SLH-DSA-SHA2-192s & Standards-based (FIPS 205). Hash-based NIST L3. \\
-Transcript hashes / Merkle & BLAKE3 & Spec: 128-bit for all goals. Not NIST Level 3. Collision classically $\approx 128$ bits. \\
+Transcript hashes / Merkle & BLAKE3 (SHA3-256 registered as alternative) & Spec: 128-bit for all goals. Not NIST Level 3. Collision classically $\approx 128$ bits. Not standardised by NIST or the IETF, so SHA3-256 (FIPS 202) is registered under \texttt{CryptoSuiteId} for checkpoint roots. \\
 FLP soundness / joint randomness & Finite-field FLP + XofTurboShake128 & Inferred from VDAF-22; no PQ theorem. Joint randomness is a known attack surface if the XOF is broken. \\
-$B_u$ credentials / sortition beacon & Unspecified & Unknown. Open research. \\
+$B_u$ credentials / sortition beacon & Interim classical (Section~\ref{sec:pq-urgency}) & Not post-quantum. Accepted as interim because forgery and bias need a live CRQC; post-quantum replacement is open research. \\
 \texttt{Prio3} as a whole & Mix of the above & VDAF-22 Informational draft; no PQ claim. \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
+\subsection{Which Properties Need Post-Quantum Protection Now, and Crypto Agility}
+\label{sec:pq-urgency}
+
+Post-quantum protection is urgent for one property and not for the others. \textbf{Confidentiality} must be post-quantum now: ciphertext recorded today can be decrypted once a CRQC exists, so household reports, share encryption and transport use hybrid ML-KEM from the first deployment and are never downgraded. \textbf{Authenticity, Sybil resistance and randomness} need post-quantum protection \emph{before a CRQC exists}, not before deployment: a CRQC can forge future signatures and bias future draws, but it cannot alter a checkpoint whose history is already anchored under a hash-based signature, or redo a committee draw already made.
+
+\begin{designrule}[Interim Classical Constructions Under Crypto Agility (adopted)]
+Where a post-quantum construction is standardised and practical, DPEP uses it in hybrid. Where none exists (one-report-per-person credentials, the sortition beacon) or the consensus engine does not yet support the hybrid (Layer-1 validator keys), DPEP uses the most mature available construction, on four conditions:
+\begin{enumerate}[leftmargin=1.6em,itemsep=1pt]
+  \item \textbf{Suite inside the signature.} Every signed or encrypted object carries its \texttt{CryptoSuiteId} inside the signed bytes, next to its domain-separation tag, so a suite cannot be stripped or swapped.
+  \item \textbf{No downgrade below a ratified floor.} The minimum suite for each object type is fixed in the checkpoint and changed only by the dual-federation ratification used for WASM rules (Section~\ref{sec:sortition}); objects below the floor are rejected, never negotiated.
+  \item \textbf{Published migration triggers.} A suite is replaced when the first of these occurs: the replacement is a final standard (composite ML-DSA RFC; FIPS~206; a standardised post-quantum credential or VRF); the software in use supports it; or a credible public warning of CRQC progress. Each migration has a stated window with dual signing during the transition.
+  \item \textbf{History survives the switch.} Checkpoint history signed under an outgoing suite is re-anchored under SLH-DSA before that suite is withdrawn; per-epoch credentials and the beacon's threshold key are re-issued, not converted.
+\end{enumerate}
+\end{designrule}
+
+\begin{table}[htbp]
+\centering
+\caption{Post-quantum urgency, current construction and upgrade path by function}
+\label{tab:pq-urgency}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabularx}{\textwidth}{L{1.05in} L{0.62in} L{1.45in} Y}
+\toprule
+\textbf{Function} & \textbf{PQ needed} & \textbf{Construction now} & \textbf{Upgrade path and trigger} \\
+\midrule
+Transport, report-share encryption & Now & Hybrid X25519 + ML-KEM-768 & Already post-quantum; add HQC as a backup KEM once standardised (final expected 2027). \\
+Council signatures, receipts, CapCerts & Before CRQC & Hybrid Ed25519 + ML-DSA-65 (DPEP-defined format) & Composite ML-DSA RFC; FN-DSA once FIPS~206 is final (smaller signatures). \\
+Layer-1 validator keys & Before CRQC & Strongest suite the engine supports at deployment & Hybrid once a composite standard and engine support exist. Sizes in this book assume the hybrid, the worst case. \\
+Root anchors, WASM rules, re-anchoring & Before CRQC (long-lived) & SLH-DSA-SHA2-192s & None needed (hash-based). \\
+One-report-per-person credentials & Before CRQC (forgery) & Classical anonymous credential issued jointly by $k$-of-$n$ councils, with a per-epoch nullifier & Lattice credentials once they fit the phone budget of Kill Gate~3. \\
+Sortition beacon & Before CRQC (bias) & Threshold beacon run by the federations (threshold BLS) & A post-quantum VRF or VDF beacon once one is standardised. \\
+Binding $B_u$ to the credential & --- & Unspecified (Section~\ref{sec:bu-cred}) & Open research. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Figure~\ref{fig:agility} draws the same table as migration lanes.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1in,y=1in]
+  \def\lw{0.98in}\def\nw{1.12in}\def\tw{0.92in}\def\gw{1.28in}
+  \node[font=\tiny\bfseries] at (0.5,0.02) {Function};
+  \node[font=\tiny\bfseries] at (1.66,0.02) {Construction now};
+  \node[font=\tiny\bfseries] at (2.83,0.02) {Trigger (first of)};
+  \node[font=\tiny\bfseries] at (4.15,0.02) {Target};
+  \foreach \y/\f/\n/\t/\g/\st in {
+     -0.32/{Transport and share encryption}/{Hybrid X25519 + ML-KEM-768 (post-quantum now)}/{HQC standard (expected 2027)}/{add HQC as backup KEM}/dcrypto,
+     -0.80/{Council signatures, receipts, CapCerts}/{Hybrid Ed25519 + ML\mbox{-}DSA\mbox{-}65, DPEP format}/{composite RFC; FIPS~206}/{composite format; FN-DSA option}/dbox,
+     -1.28/{Layer-1 validator keys}/{engine's suite (Ed25519 or ML-DSA-65 keys)}/{composite standard and engine support}/{hybrid validator keys by key rotation}/dbox,
+     -1.76/{One-report-per-person credentials}/{classical, threshold-issued, per epoch}/{post-quantum credential fits a 150~kB round}/{lattice credential, re-issued}/dbox,
+     -2.24/{Sortition beacon}/{threshold BLS run by the federations}/{post-quantum VRF or VDF standard}/{post-quantum beacon, key re-shared}/dbox,
+     -2.72/{Root anchors and history}/{SLH\mbox{-}DSA\mbox{-}SHA2\mbox{-}192s\\(hash-based)}/{none}/{unchanged}/dcrypto}{
+    \node[font=\tiny\bfseries, text width=\lw, align=flush left] (f) at (0.5,\y) {\f};
+    \node[\st, text width=\nw, minimum height=0.32in] (n) at (1.66,\y) {\n};
+    \node[dwarn, dashed, text width=\tw, minimum height=0.32in] (t) at (2.83,\y) {\t};
+    \node[\st, text width=\gw, minimum height=0.32in] (g) at (4.15,\y) {\g};
+    \draw[darr] (n)--(t); \draw[darr] (t)--(g);
+  }
+  \node[font=\tiny\itshape, text=CrimsonAccent] at (2.45,-3.08) {Any lane switches early on a credible public warning of progress towards a CRQC.};
+  \node[dhead, text width=1.0in] (m1) at (0.56,-3.5) {1\; ratify new suite floor};
+  \node[dhead, text width=1.0in] (m2) at (1.85,-3.5) {2\; dual-sign window (old + new)};
+  \node[dhead, text width=1.0in] (m3) at (3.14,-3.5) {3\; re-anchor history under SLH-DSA};
+  \node[dhead, text width=1.0in] (m4) at (4.33,-3.5) {4\; withdraw old suite};
+  \draw[darr] (m1)--(m2); \draw[darr] (m2)--(m3); \draw[darr] (m3)--(m4);
+  \node[font=\tiny, text width=4.7in, align=flush center] at (2.45,-3.88) {Every migration follows these four steps. \texttt{CryptoSuiteId} sits inside the signed bytes; objects below the floor are rejected.};
+\end{tikzpicture}
+\caption{Crypto-agility lanes. Each function moves from its current construction to its target when the first trigger occurs, through the same four-step migration.}
+\label{fig:agility}
+\end{figure}
+
+
+\paragraph{Credentials.}
+Threshold issuance, in which no single council can mint or link a credential, follows Coconut (Sonnino et al.\ 2019), a classical pairing-based construction. Lattice alternatives exist as research (Bootle et al.\ 2023), but reported sizes, under 80~kB per credential in one recent construction,\footnote{Sven Argo et al., ``Practical Post-Quantum Signatures for Privacy,'' \emph{ACM CCS 2024}, \url{https://doi.org/10.1145/3658644.3670297} (IACR ePrint 2024/131).} do not fit beside a 55~kB report in a 150~kB round. \textbf{Selection criterion for the interim scheme:} its unlinkability should not rest on an assumption a CRQC breaks (statistically zero-knowledge presentation proofs, statistical blinding). This must be verified for the chosen scheme; it is not a property of every classical credential. RFC~9474, for example, attributes the blindness of RSA blind signatures to a separate proof without stating its assumptions, and states that the protocol is not post-quantum ready. If no scheme meets the criterion, a future CRQC could link past credential showings to identities. That reveals who submitted, not what was submitted, since report contents stay secret-shared under ML-KEM.
+
+\paragraph{Beacon.}
+The interim beacon uses threshold-BLS randomness of the kind produced by the open-source \texttt{drand} software,\footnote{\url{https://drand.love} (checked November 2026).} with the threshold key shared among the federations rather than delegated to an outside network. It has no last-revealer problem, and a CRQC could bias only draws made after it exists. Its distributed key generation and share custody are not yet specified.
+
+\paragraph{Layer 1.}
+CometBFT remains the reference engine (provisional). Its v0.40 release accepts ML-DSA-65 consensus keys through key rotation, as a pure rather than hybrid scheme, and the Cosmos documentation estimates about 331~kB of signatures per block for 100 validators, consistent with the 290--296~kB for 86 hybrid signatures in Table~\ref{tab:light-clients}.\footnote{Cosmos SDK documentation, ``Post-quantum keys'' (requires Cosmos SDK 0.55 and CometBFT 0.40), \url{https://docs.cosmos.network/sdk/latest/keys/post-quantum-keys}; release dates not confirmed (checked November 2026).} The validator suite therefore moves to ML-DSA by key rotation and to the hybrid when a composite standard and engine support exist, without a change of engine. A Rust engine with a pluggable signing interface (Malachite) is the fallback if a hybrid consensus signature becomes mandatory earlier; it is alpha software without an external audit.
+
 \section{Democratic Membership, Sybil Resistance, and Civil Liberties}
+\label{sec:membership}
 
 \begin{designrule}[Four-Way Separation of Identity, Eligibility, Accountability, and Legitimacy]
 DPEP strictly separates: (1) \textbf{Cryptographic Identity} (control of a keypair), (2) \textbf{Institutional Eligibility} (accredited membership in a council), (3) \textbf{Economic Accountability} (correspondence of reported claims to physical reality), and (4) \textbf{Democratic Legitimacy} (self-management proportional to degree affected).
 \end{designrule}
+
+Figure~\ref{fig:identity} shows how the separation is carried into membership, delegation and private reporting.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1in,y=1in]
+  \foreach \x/\t in {0.6/{\textbf{1 Identity}\\control of a keypair},
+                     1.83/{\textbf{2 Eligibility}\\accredited council membership},
+                     3.07/{\textbf{3 Accountability}\\claims match physical reality},
+                     4.3/{\textbf{4 Legitimacy}\\say in proportion to how one is affected}}{
+    \node[dhead, text width=1.08in, minimum height=0.36in, font=\tiny] at (\x,0) {\t};
+  }
+  \node[font=\tiny\itshape, text=SlateDark] at (2.45,-0.32) {Kept separate by design (Section \ref{sec:membership}): holding a key never by itself grants eligibility, budget or voting weight.};
+  % left branch
+  \node[font=\tiny\bfseries] at (1.2,-0.62) {Membership and delegation};
+  \node[dbox, text width=1.9in] (l1) at (1.2,-0.95) {Person generates a hybrid keypair on the phone};
+  \node[dbox, text width=1.9in] (l2) at (1.2,-1.42) {Council accredits the member by a $k$-of-$n$ multi-signature};
+  \node[dbox, text width=1.9in] (l3) at (1.2,-1.89) {CapCert: membership certificate (signed under the active \texttt{CryptoSuiteId})};
+  \node[dbox, text width=1.9in] (l4) at (1.2,-2.36) {CapCert: time-bounded delegate certificate for a federation, revocable by one council vote};
+  \draw[darr] (l1)--(l2); \draw[darr] (l2)--(l3); \draw[darr] (l3)--(l4);
+  % right branch
+  \node[font=\tiny\bfseries] at (3.7,-0.62) {Private consumption reports};
+  \node[dcrypto, text width=1.9in] (r1) at (3.7,-0.95) {$k$ of $n$ councils jointly issue a per-epoch anonymous budget credential (threshold issuance; interim classical)};
+  \node[dcrypto, text width=1.9in] (r2) at (3.7,-1.5) {Credential shown to the aggregators at upload with a per-epoch nullifier; no identity revealed};
+  \node[dcrypto, text width=1.9in] (r3) at (3.7,-2.0) {\texttt{Prio3} report bound to the credential through its nonce and \texttt{ctx}};
+  \node[dwarn, text width=1.9in] (r4) at (3.7,-2.42) {Open: binding the attested budget $B_u$ inside the report circuit};
+  \draw[darr] (r1)--(r2); \draw[darr] (r2)--(r3); \draw[darr, CrimsonAccent, dashed] (r3)--(r4);
+  \draw[darr, dashed, RuleGray] (l2.east) -- node[dlab, above, pos=0.5]{accreditation} (r1.west);
+  \node[dbox, text width=4.72in] at (2.45,-2.9) {\textbf{Goal:} residency, workplace and consumption records cannot be linked to one another, and no member's report or budget is visible to another (design goal; Section \ref{sec:membership}).};
+\end{tikzpicture}
+\caption{Identity, eligibility and the two credential paths. Membership and delegation are attributed and revocable; private consumption reports use a separate, unlinkable credential whose budget binding is still open.}
+\label{fig:identity}
+\end{figure}
 
 While phantom digital accounts in $CC_h$ cannot mint adult work income without $WC_j$ effort certificates capped by $SB_j/SC_j$, four deeper Sybil and collusion vectors must be closed explicitly:
 \begin{enumerate}[leftmargin=1.8em,itemsep=2pt]
@@ -1503,10 +1843,39 @@ Each budget holder $u$ (one person; Section~7.3) encodes its request as a vector
 \begin{equation}
   \sum_{g \in \mathcal{G}^{\text{rep}}} \pi_g^{(t)}\, q_{u,g} + \text{PubShare}_u \le B_u, \qquad \pi_g^{(t)} = p_g^{(t)} s_g \label{eq:budget-circuit}
 \end{equation}
-needs a \textbf{custom validity circuit}, which is not specified. Two facts constrain it. First, the prices $\pi^{(t)}$ must enter the circuit as public constants, so each price vector defines a different VDAF instance: a report proves the predicate for the round's prices and for no other. The application context string \texttt{ctx} should bind the report to $(\text{epoch}, t, \text{BLAKE3}(P^{(t)}), \text{aggregator set})$, but \texttt{ctx} enters only the domain separation of the XOF, not the circuit's arithmetic. Second, $B_u$ must reach the circuit either as a public value (which identifies the person) or as a secret-shared input whose correctness is vouched for by a credential; the second option depends on the open credential problem (Section~\ref{sec:bu-cred}). Reference: IETF CFRG \texttt{draft-irtf-cfrg-vdaf-22} (14 August 2026; Informational), full text.\footnote{Henry Corrigan-Gibbs and Dan Boneh, ``Prio: Private, Robust, and Scalable Computation of Aggregate Statistics,'' \emph{USENIX NSDI '17}, pp.~259--282; Dan Boneh et al., ``Zero-Knowledge Proofs on Secret-Shared Data via Fully Linear PCPs,'' \emph{CRYPTO 2019}; Richard Barnes et al., \emph{Verifiable Distributed Aggregation Functions (VDAFs)}, IETF CFRG \texttt{draft-irtf-cfrg-vdaf-22} (14 August 2026), \url{https://datatracker.ietf.org/doc/html/draft-irtf-cfrg-vdaf-22}.}
+needs a \textbf{custom validity circuit}, which is not specified. Two facts constrain it. First, the prices $\pi^{(t)}$ must enter the circuit as public constants, so each price vector defines a different VDAF instance: a report proves the predicate for the round's prices and for no other. The application context string \texttt{ctx} should bind the report to $(\text{epoch}, t, \text{BLAKE3}(P^{(t)}), \text{aggregator set})$, but \texttt{ctx} enters only the domain separation of the XOF, not the circuit's arithmetic. Second, $B_u$ must reach the circuit either as a public value (which identifies the person) or as a secret-shared input whose correctness is vouched for by a credential; the second option depends on the open credential problem (Section~\ref{sec:bu-cred}). Reference: IETF CFRG \texttt{draft-irtf-cfrg-vdaf-22} (14 August 2026; Informational), full text.\footnote{Henry Corrigan-Gibbs and Dan Boneh, ``Prio: Private, Robust, and Scalable Computation of Aggregate Statistics,'' \emph{USENIX NSDI '17}, pp.~259--282; Dan Boneh et al., ``Zero-Knowledge Proofs on Secret-Shared Data via Fully Linear PCPs,'' \emph{CRYPTO 2019}; Richard Barnes et al., \emph{Verifiable Distributed Aggregation Functions (VDAFs)}, IETF CFRG \texttt{draft-irtf-cfrg-vdaf-22} (14 August 2026), \url{https://datatracker.ietf.org/doc/html/draft-irtf-cfrg-vdaf-22}. Security analysis: Hannah Davis, Christopher Patton, Mike Rosulek, and Phillipp Schoppmann, ``Verifiable Distributed Aggregation Functions,'' \emph{PoPETs} 2023, no.~4, pp.~578--592; cite the full version (IACR ePrint 2023/130), whose 2024 revision corrects the proof of Theorem~1 with a weaker bound and a larger PRG seed.}
 
 \paragraph{Privacy versus correctness (VDAF-22 \S 9).}
 These must not be collapsed. Privacy of a measurement requires \textbf{at least one honest aggregator}. Correctness of the aggregate requires \textbf{all aggregators}: ``An Aggregator can, without detection, manipulate the aggregate result by modifying its own aggregate share.'' Any one aggregator can inflate or deflate demand and so move prices.
+
+Figure~\ref{fig:privacy-flow} shows the asymmetry.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1in,y=1in]
+  \node[dbox, text width=0.82in] (p) at (0.47,1.6) {\textbf{Person's report}\\$q_u$: 200 categories\\$\times$ 16 bits\\+ credential and nullifier};
+  \node[dcrypto, text width=0.92in] (a) at (2.0,2.5) {\textbf{Aggregator A}\\consumer-side operator};
+  \node[dcrypto, text width=0.92in] (b) at (2.0,1.6) {\textbf{Aggregator B}\\producer-side operator};
+  \node[dcrypto, text width=0.92in] (c) at (2.0,0.7) {\textbf{Aggregator C}\\external operator};
+  \draw[darr, TealAccent] (p.east) -- node[dlab, sloped, above]{share 1} (a.west);
+  \draw[darr, TealAccent] (p.east) -- node[dlab, above]{share 2} (b.west);
+  \draw[darr, TealAccent] (p.east) -- node[dlab, sloped, below]{share 3} (c.west);
+  \node[dbox, text width=0.72in] (m) at (3.33,1.6) {aggregate shares\\+ published\\commitments};
+  \draw[darr] (a.east) -- (m.north west);
+  \draw[darr] (b.east) -- (m.west);
+  \draw[darr] (c.east) -- (m.south west);
+  \node[dbox, text width=0.7in] (t) at (4.43,1.6) {\textbf{Neighbourhood total}\\($\ge 30$ reports)};
+  \draw[darr] (m) -- (t);
+  \node[dinst, text width=0.7in] (chk) at (4.43,0.7) {public check\\$p\cdot\textstyle\sum y \le \sum B_u$};
+  \draw[darr] (t) -- (chk);
+  \node[dinst, text width=1.5in] (aud) at (3.75,2.62) {\textbf{Independent auditor}: canary batches with known totals, sent to all three};
+  \draw[darr, GoldAccent!80!black, dashed] (aud.west) -- (a.east);
+  \node[dcrypto, text width=4.72in, align=flush left] at (2.45,0.22) {\textbf{Privacy (cryptographic):} each share alone reveals nothing; the report stays private if \emph{at least one} of A, B, C is honest. Shares are encrypted with hybrid ML-KEM.};
+  \node[dwarn, text width=4.72in, align=flush left] at (2.45,-0.2) {\textbf{Correct totals (institutional):} need \emph{all three} honest. Any one aggregator can change its own aggregate share and shift the total without detection by cryptography. Detection only: the public check (gross overspend), commitments (attribution) and canary batches (indiscriminate tampering).};
+\end{tikzpicture}
+\caption{Household report flow and the privacy/correctness asymmetry. Privacy needs one honest aggregator; correct totals need all three, and the remaining safeguards detect rather than prevent manipulation.}
+\label{fig:privacy-flow}
+\end{figure}
 
 \paragraph{How much the public budget check limits a cheating aggregator.}
 The check $p\cdot\sum_u y_u \le \sum_u B_u$ is cheap and should be run, but it constrains only one number. A malicious aggregator can (i) shift demand between categories while keeping the value total fixed, which is undetectable and moves relative prices; (ii) inflate the total up to the slack between actual spending and $\sum_u B_u$ (if households leave 10\% of budgets unspent, about 10\% of value can be added undetected); and (iii) deflate demand without limit, since the inequality has no lower bound. It is a tripwire for gross overspend, not a correctness guarantee.
@@ -1525,6 +1894,7 @@ Non-nested aggregators ($K=3$) & Same guarantees; independence more plausible. &
 Replicated aggregators ($K'>3$) & Privacy if one honest; correctness still needs all shares. & More KEMs and operational load; no correctness gain without robust aggregation. \\
 Robust / maliciously secure MPC & Detects or bounds a cheating aggregator. & Super-linear communication; not \texttt{Prio3}; unaudited for DPEP. \\
 Public check $p\cdot\sum y \le \sum B_u$ & Detects gross aggregate overspend only (see text). & Cheap; complements every option. \\
+Canary batches & Detects indiscriminate tampering with aggregate shares, with probability rising with the canary share. & An independent auditor submits whole batches with known totals. Needs per-batch aggregate shares and batches the aggregators cannot tell apart; does not catch tampering aimed at batches known to be real. \\
 Committee-run aggregation & Ties aggregation to the $n=128$ BFT set. & Concentrates privacy-breaking power in the body that finalises prices. \\
 Differential privacy on released totals & Bounds one-household differencing; outside VDAF. & Bias against planning accuracy; parameters unspecified. \\
 \bottomrule
@@ -1532,7 +1902,7 @@ Differential privacy on released totals & Bounds one-household differencing; out
 \end{table}
 
 \paragraph{Recommended correctness model for Phase~3 (proposed, for author ratification).}
-Use \textbf{three non-nested aggregators run by organisations with different interests} (for a co-op pilot: the consumer side, the producer side, and an external operator), plus the public budget check and published commitments to each aggregator's aggregate share, so that a dispute can at least be attributed. Nested CC/Ward/Federation aggregators should \textbf{not} be the default. Correctness then rests on institutional independence, which is honest about where the trust lies; robust MPC is deferred until a pilot shows that aggregator manipulation is a real rather than a hypothetical threat. This choice cannot be made final before Phase~3 because it depends on which organisations exist in a pilot.
+Use \textbf{three non-nested aggregators run by organisations with different interests} (for a co-op pilot: the consumer side, the producer side, and an external operator), plus the public budget check and published commitments to each aggregator's aggregate share, so that a dispute can at least be attributed. Nested CC/Ward/Federation aggregators should \textbf{not} be the default. Add \textbf{canary batches} run by an auditor independent of all three aggregators. \textbf{Cryptography in this model guarantees privacy, not correct totals:} correctness rests on institutional independence plus detection, and no mature construction removes that trust while keeping \texttt{Prio3}'s privacy. Robust MPC is deferred until a pilot shows that aggregator manipulation is a real rather than a hypothetical threat. Trusted execution environments are rejected for this role, because they would make the chip vendor the party trusted for correctness. This choice cannot be made final before Phase~3 because it depends on which organisations exist in a pilot.
 
 \subsection{Report Sizes, Units, and Measured Costs}
 \label{sec:prio3-cost}
@@ -1627,21 +1997,80 @@ Eq.~(\ref{eq:budget-circuit}) uses the round's prices. A report made at round $t
 \paragraph{Proposed rule (for author ratification).}
 Combine (b) and (c). Households submit fresh, budget-checked reports at the three milestone rounds of the hybrid schedule ($t=1,4,8$; P3). Between milestones, each neighbourhood's demand is held at its last milestone \emph{aggregate}: aggregators reuse their aggregate shares as constants, with no individual report re-verified or re-aggregated. The public aggregate check is applied at current prices with a tolerance $\kappa$ (proposed 5\%), and price-driven revisions between milestones happen at council level. A person offline at a milestone may submit within a grace window; otherwise they are counted at their council's per-capita average, flagged as imputed. Each released total at a milestone is a fresh aggregate of at least $m_{\min}=30$ reports, which limits but does not remove differencing between milestones (minimum batches, coarser release and DP noise remain the mitigations). This raises the per-person upload to three fresh reports a year: about 0.17~MB at the coarse baseline, against 9.8~MB for ten dense reports.
 
+Figure~\ref{fig:calendar} places the milestone rounds in the planning season and operating year.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1in,y=1in]
+  \node[font=\tiny\bfseries, anchor=west, text width=0.75in, align=flush left] at (0,0) {Planning season\\\normalfont(illustrative 10-round plan)};
+  \foreach \t in {1,...,10}{
+    \pgfmathsetmacro{\x}{0.95+(\t-1)*0.31}
+    \ifnum\t=1 \def\st{dwarn}\else\ifnum\t=4 \def\st{dwarn}\else\ifnum\t=8 \def\st{dwarn}\else\def\st{dcrypto}\fi\fi\fi
+    \node[\st, minimum width=0.24in, minimum height=0.22in, font=\tiny\bfseries] (r\t) at (\x,0) {\t};
+  }
+  \foreach \t/\m in {1/M1, 4/M2, 8/M3}{ \node[font=\tiny\bfseries, text=CrimsonAccent] at ($(r\t)+(0,0.22)$) {\m}; }
+  \node[dbox, text width=0.82in] (syn) at (4.42,0) {S5--S6 synthesis\\and ratification};
+  \draw[darr] (r10)--(syn);
+  \node[font=\tiny, anchor=north west, align=left] at (0.95,-0.2) {round $t$ \quad (one Layer-1 checkpoint each)};
+  \node[dwarn, text width=2.25in, align=flush left] at (1.25,-0.62) {\textbf{Milestone round ($t = 1, 4, 8$):} people deliberate; fresh, budget-checked \texttt{Prio3} reports; phones run a full quorum check.};
+  \node[dcrypto, text width=2.25in, align=flush left] at (3.68,-0.62) {\textbf{Automated round:} councils revise at council level; household demand held at the last milestone \emph{aggregate}; aggregate check within $\kappa = 5\%$.};
+  \node[font=\tiny\bfseries, anchor=west, text width=0.75in] at (0,-1.3) {Operating year};
+  \node[dbox, text width=2.2in, minimum height=0.3in] (s7) at (2.05,-1.3) {S7 intra-year clearing: one daily rollup block (365 per year)};
+  \node[dinst, text width=0.66in, minimum height=0.3in] (s8) at (3.65,-1.3) {S8 scoped replans ($\approx 50$)};
+  \node[dbox, text width=0.55in, minimum height=0.3in] (s9) at (4.45,-1.3) {S9 audit};
+  \draw[darr] (s7)--(s8); \draw[darr] (s8)--(s9);
+  \node[dhead, text width=4.72in] at (2.45,-1.75) {Layer-1 blocks per year: 10 round checkpoints + 365 daily rollups + 50 scoped replans $=$ 425 (435 at 20 rounds)};
+\end{tikzpicture}
+\caption{Annual calendar for an illustrative 10-round plan: three human milestone rounds with fresh reports, automated rounds in between, then the operating year and its Layer-1 block count.}
+\label{fig:calendar}
+\end{figure}
+
 \paragraph{Replay, re-runs and retention.}
 Aggregators keep the nonce of every accepted report for the epoch and reject duplicates (VDAF-22 \S 9.2 recommends the nonce for replay protection); \texttt{ctx} binds epoch, round, price-vector hash and aggregator set, so a report cannot be replayed into another round or instance. A round \emph{cannot} be re-run from stored reports with a replacement aggregator: the stored shares are encrypted to the failed aggregator, and re-verifying them would aggregate them a second time. Recovery therefore means failing that milestone and requesting fresh reports, or carrying the previous milestone's aggregate. Aggregators retain encrypted input shares, nonces and aggregate-share commitments only until the challenge window $T_{\text{challenge}}$ closes (proposed 14 days), to settle inclusion disputes, and then delete them; that bounded retention is what ``ephemeral shares'' means in Section~11.2. People keep their own reports locally.
 
 \subsection{Budget Credentials and One-Report-Per-Person}
 \label{sec:bu-cred}
-The protocol needs each eligible person to submit at most one report per milestone, against their own warranted budget, without a register linking reports to identities. No construction is specified, and Table~\ref{tab:pqc-bench} lists no post-quantum blind or anonymous credential. VDAF-22 notes that clients may be anonymous and that Sybil and rate-limit enforcement is outside the VDAF. Three points narrow the problem. (1) BBS-style anonymous credentials are pairing-based and offer no post-quantum security; lattice-based anonymous credentials are an active research area without a standard, and none is named here. (2) Checking the credential \emph{inside} the FLP is not realistic: the FLP validates low-degree arithmetic over the secret-shared measurement, while verifying a signature or hash chain needs a very large circuit, and the credential itself would have to be secret-shared. The credential should instead be shown to the aggregators at upload, outside the VDAF, with a per-epoch nullifier to block double submission, and bound to the report through its nonce and \texttt{ctx}. (3) What remains open is binding a secret-shared $B_u$ inside Eq.~(\ref{eq:budget-circuit}) to the credential's attested budget. Until that is solved, one-report-per-person rests on council accreditation and rate limits, which is why option (iii) above is the early-pilot default.
+The protocol needs each eligible person to submit at most one report per milestone, against their own warranted budget, without a register linking reports to identities. No construction is specified, and Table~\ref{tab:pqc-bench} lists no post-quantum blind or anonymous credential. VDAF-22 notes that clients may be anonymous and that Sybil and rate-limit enforcement is outside the VDAF. Three points narrow the problem. (1) BBS-style anonymous credentials are pairing-based and offer no post-quantum security; lattice-based anonymous credentials are an active research area without a standard, and none is named here. (2) Checking the credential \emph{inside} the FLP is not realistic: the FLP validates low-degree arithmetic over the secret-shared measurement, while verifying a signature or hash chain needs a very large circuit, and the credential itself would have to be secret-shared. The credential should instead be shown to the aggregators at upload, outside the VDAF, with a per-epoch nullifier to block double submission, and bound to the report through its nonce and \texttt{ctx}. (3) What remains open is binding a secret-shared $B_u$ inside Eq.~(\ref{eq:budget-circuit}) to the credential's attested budget. Until that is solved, one-report-per-person rests on council accreditation and rate limits, which is why option (iii) above is the early-pilot default. Section~\ref{sec:pq-urgency} adopts a classical credential with threshold issuance as the interim construction for the one-report-per-person part; the binding of $B_u$ remains open.
 
 \section{Threat Model, Equivocation, Recovery, and Ballots}
 \label{sec:threat-model}
+Figure~\ref{fig:trust-map} summarises what each part of the design rests on; the list below gives the detail.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1in,y=1in, node distance=0.06in]
+  \node[dcrypto, font=\tiny\bfseries, text width=1.45in, minimum height=0.36in] (h1) at (0.78,0) {Cryptography guarantees\\(under stated assumptions)};
+  \node[dinst, font=\tiny\bfseries, text width=1.45in, minimum height=0.36in] (h2) at (2.45,0) {Detected, not prevented};
+  \node[dwarn, font=\tiny\bfseries, text width=1.45in, minimum height=0.36in] (h3) at (4.12,0) {Rests on institutions\\and physical audit};
+  % column 1
+  \node[dcrypto, text width=1.45in, below=of h1] (a1) {Confidentiality of reports and channels (hybrid ML-KEM)};
+  \node[dcrypto, text width=1.45in, below=of a1] (a2) {Authenticity of proposals, receipts, checkpoints (hybrid signatures)};
+  \node[dcrypto, text width=1.45in, below=of a2] (a3) {Inclusion of a council's proposal (Two-Root path), given the leaf archive};
+  \node[dcrypto, text width=1.45in, below=of a3] (a4) {Privacy of a household report if $\ge 1$ aggregator is honest (\texttt{Prio3})};
+  \node[dcrypto, text width=1.45in, below=of a4] (a5) {Same prices on every node (deterministic fixed-point WASM)};
+  % column 2
+  \node[dinst, text width=1.45in, below=of h2] (b1) {Omitted or tampered proposals (receipts + challenge window)};
+  \node[dinst, text width=1.45in, below=of b1] (b2) {BFT equivocation (if $\ge 1$ honest validator records both votes)};
+  \node[dinst, text width=1.45in, below=of b2] (b3) {Gross aggregate overspend (public budget check)};
+  \node[dinst, text width=1.45in, below=of b3] (b4) {Indiscriminate tampering with aggregate shares (canary batches)};
+  \node[dinst, text width=1.45in, below=of b4] (b5) {Second report in an epoch (credential nullifier)};
+  % column 3
+  \node[dwarn, text width=1.45in, below=of h3] (c1) {\textbf{Correct totals}: all three aggregators honest and independent};
+  \node[dwarn, text width=1.45in, below=of c1] (c2) {Physical output, emissions and deliveries (\emph{euthynai} spot audits)};
+  \node[dwarn, text width=1.45in, below=of c2] (c3) {Labour rosters and carousel fraud};
+  \node[dwarn, text width=1.45in, below=of c3] (c4) {Key and appliance custody; who issues credentials};
+  \node[dwarn, text width=1.45in, below=of c4] (c5) {Consequences of faulting (attribution, de-accreditation)};
+  \node[dbox, text width=4.72in, align=flush left, anchor=north] at ($(a5.south -| h2)+(0,-0.1)$) {\textbf{Not yet specified:} binding $B_u$ inside the report circuit; a post-quantum beacon and credential; secret ballots for consumer-federation votes; key recovery. Interim classical constructions cover the credential and beacon until post-quantum ones exist (Section \ref{sec:pq-urgency}).};
+\end{tikzpicture}
+\caption{Trust map: what cryptography guarantees, what is only detected, and what rests on institutions and physical audit.}
+\label{fig:trust-map}
+\end{figure}
 \begin{description}[leftmargin=1.4em,itemsep=2pt]
   \item[Holds under stated assumptions.] Hybrid KEMs/signatures as in FIPS 203/204/205; BLAKE3 collision/preimage as in the BLAKE3 spec (128-bit target); Two-Root inclusion if a verifier has the leaf archive; \texttt{Prio3} measurement privacy if $\ge 1$ aggregator is honest.
   \item[Detected, not prevented.] Leaf omission given receipts and a challenge window; BFT equivocation given $\ge 1$ honest validator recording both votes; aggregate overspend if the public $p\cdot\sum y\le\sum B_u$ check is implemented.
   \item[Depends on social institutions.] Physical output, emissions, labour rosters, carousel fraud, aggregator independence, sortition appliance custody, and whether ``faulting'' an aggregator has consequences. There is no stake to slash; \textbf{faulting} means public attribution, dual-federation de-accreditation, and exclusion from the next sortition pool.
   \item[Aggregator compromise.] Replace the aggregator and either request fresh reports for the affected milestone or carry the previous milestone's aggregate. Stored reports cannot be re-verified with a replacement aggregator (Section~\ref{sec:carry-forward}). Old committee keys are a long-range risk: checkpoints must be weakly subjective (users pin a recent checkpoint) or re-signed by the new committee.
-  \item[Key compromise.] Individual keys: revoke by council $k$-of-$n$ decision and re-issue. No specified recovery UX or secure-element/mobile-storage profile; community-hosted appliances may make the \emph{host} the real validator unless keys are in a citizen-held token. Forward-secure erasure of committee keys is an \textbf{operational promise} until a ratchet (e.g.\ per-round key derivation with deletion) is specified.
+  \item[Key compromise.] Individual keys: revoke by council $k$-of-$n$ decision and re-issue. No specified recovery UX or secure-element/mobile-storage profile; community-hosted appliances may make the \emph{host} the real validator unless keys are in a citizen-held token. Until Android exposes post-quantum keys in hardware, keys use \textbf{split hybrid custody}: the classical half of each hybrid key stays in the platform keystore (Android Keystore or StrongBox, Apple Secure Enclave) and the ML-DSA half in software, encrypted under a hardware-held key. Until a CRQC exists a forger needs both halves, so the hybrid inherits the hardware's protection. Apple's Secure Enclave can hold ML-DSA keys directly from OS~26.\footnote{Apple, ``Enhancing your app's privacy and security with quantum-secure workflows,'' CryptoKit documentation, \url{https://developer.apple.com/documentation/cryptokit/enhancing-your-app-s-privacy-and-security-with-quantum-secure-workflows} (checked November 2026). No equivalent Android hardware profile was found.} Forward-secure erasure of committee keys is an \textbf{operational promise} until a ratchet (e.g.\ per-round key derivation with deletion) is specified.
   \item[Replay and domain separation.] Every signed object includes \texttt{epoch\_id}, \texttt{round}, \texttt{role}, and a domain-separation tag of the form \texttt{DPEP-WD-v0-<OBJECT>} (Listing~\ref{lst:cbor-idl}); the version component changes when the specification leaves working-draft status. Unspecified objects are not to be accepted.
   \item[Secret ballot.] Multi-signature bitmaps reveal who voted yes. Binding council votes may stay attributed; consumer-federation ballots that must be secret need a separate coercion-resistant scheme (open).
 \end{description}
@@ -1652,9 +2081,9 @@ The protocol needs each eligible person to submit at most one report per milesto
 To prevent software maintainers or server-rich councils from becoming a new coordinator class:
 \begin{enumerate}[leftmargin=1.8em,itemsep=2pt]
   \item \textbf{Dual-federation ratification of WASM rules, catalogues, and caps:} Changes to \texttt{wasm\_rule\_hash}, product categories $\Omega$, or 5-plan voting grids require a $\ge 2/3$ dual supermajority of the National Consumer Federation and Congress of Industry Federations with a 60-day reproducible-build audit window, and cannot be altered mid-plan.
-  \item \textbf{Sortition beacon (unresolved).} A beacon ``anchored'' on outgoing \texttt{SLH-DSA-192s} signatures is grindable if those signatures are randomised (FIPS 205 permits this). Commit-reveal has a last-revealer problem. A verifiable delay function could address grinding but is \textbf{not} specified here. Until a defensible beacon is specified, treat committee draws as an open cryptographic problem. There is no VRF in this draft.
+  \item \textbf{Sortition beacon (unresolved).} A beacon ``anchored'' on outgoing \texttt{SLH-DSA-192s} signatures is grindable if those signatures are randomised (FIPS 205 permits this). Commit-reveal has a last-revealer problem. A verifiable delay function could address grinding but is \textbf{not} specified here. A post-quantum beacon remains an open cryptographic problem, and there is no VRF in this draft. The interim construction is a threshold beacon run by the federations (Section~\ref{sec:pq-urgency}); its key generation and custody are unspecified.
   \item \textbf{Custody:} Sortition draws human delegates and provisions \texttt{Role-BFT} appliances. If keys live on the appliance, the host is the validator. Required: citizen-held tokens, or mark custody unresolved.
-  \item \textbf{Committee size $n=128$:} $f=42$, quorum $\lceil 2n/3\rceil=86$. Exact binomial tails (\texttt{verify\_r2.py}) for a single annual draw, corrupt share $p$: at $p=15\%$, $1.3\times 10^{-5}\%$ ($n=128$) vs.\ $9.5\times 10^{-3}\%$ ($n=64$); at $p=20\%$, $0.022\%$; at $p=25\%$, $1.82\%$; at $p=30\%$, $21\%$. Larger committees give little protection at a 30\% corrupt pool. An annual draw means a captured committee lasts a year; 1--4 rotations/year reduce but do not eliminate that window.
+  \item \textbf{Committee size $n=128$:} $f=42$, quorum $\lceil 2n/3\rceil=86$. Exact binomial tails\footnote{Computed by \path{research/analysis/verify_r2.py} in the project repository.} for a single annual draw, corrupt share $p$: at $p=15\%$, $1.3\times 10^{-5}\%$ ($n=128$) vs.\ $9.5\times 10^{-3}\%$ ($n=64$); at $p=20\%$, $0.022\%$; at $p=25\%$, $1.82\%$; at $p=30\%$, $21\%$. Larger committees give little protection at a 30\% corrupt pool. An annual draw means a captured committee lasts a year; 1--4 rotations/year reduce but do not eliminate that window.
 \end{enumerate}
 
 \paragraph{Light clients.}
@@ -1673,11 +2102,12 @@ Fetch and verify all 86 signatures & $\approx 296$ kB & Only the BFT assumption 
 Council coordinator verifies and attests & $\approx 3.4$ kB & The council's own \texttt{Role-CC}; a corrupt coordinator can feed a false checkpoint until a member checks. \\
 Random sample of 8 signatures & $\approx 27$ kB & Probabilistic: if only the 42 corrupt validators really signed a checkpoint claiming 86, all 8 samples pass with probability $(42/86)^8 \approx 0.3\%$. Not a proof, and it fails if the sample is predictable to the adversary. \\
 Full check at milestone rounds only & 296 kB $\times 3$/yr & BFT at milestones; coordinator attestation in between. \\
+Rotating sync committee: 24 validators drawn by the beacon, quorum 16 & $\approx 55$ kB & That fewer than 16 of the 24 are faulty. With 42 faulty validators among 128, a draw yields a capturing committee with probability $0.017\%$ (16 members, quorum 11: $\approx 38$ kB, $0.19\%$). A captured committee lasts until the next rotation, and the draw is only as good as the beacon. \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-\noindent\textbf{Proposed default (for author ratification):} coordinator attestation every round, plus a full quorum check at each milestone round and whenever a member's client is on Wi-Fi, with every client able to opt into full checks. The resulting mobile target, written into Kill Gate~3 (Table~\ref{tab:gates}), is $\le 150$~kB per ordinary round (55~kB report at milestones, price deltas, attestation, 512~B inclusion proof) and $\le 450$~kB in a round with a full quorum check.
+\noindent\textbf{Proposed default (for author ratification):} coordinator attestation every round, plus a full quorum check at each milestone round and whenever a member's client is on Wi-Fi, with every client able to opt into full checks. The sync-committee row, the pattern used by Ethereum light clients,\footnote{Ethereum consensus specifications, Altair light-client sync protocol, \url{https://github.com/ethereum/consensus-specs/blob/dev/specs/altair/light-client/sync-protocol.md}. Probabilities are exact hypergeometric tails from \path{research/analysis/verify_sync_committee.py}.} replaces trust in a member's own coordinator with trust in a rotating, randomly drawn committee, and is the preferred upgrade once the interim beacon (Section~\ref{sec:pq-urgency}) is running. The resulting mobile target, written into Kill Gate~3 (Table~\ref{tab:gates}), is $\le 150$~kB per ordinary round (55~kB report at milestones, price deltas, attestation, 512~B inclusion proof) and $\le 450$~kB in a round with a full quorum check.
 
 % ==============================================================================
 % CHAPTER 8: AI, MATHEMATICAL OPTIMISATION, AND ECONOMIC FAILURE MODES
@@ -1808,7 +2238,8 @@ Table~\ref{tab:gates} states each gate. \textbf{All numeric thresholds are propo
 \end{longtable}}
 
 \paragraph{Pre-registration.}
-Before any candidate solver is run on them, the instance generators, random seeds, instance counts, metrics, thresholds and analysis scripts are committed to \path{research/preregistration/} in the project repository, tagged with a signed Git tag, and the tag's commit hash is deposited with an independent registry (for example the Open Science Framework). Results are reported against that tag. Deviations are logged with reasons in the same directory, and any rerun uses a freshly registered set. Phase~1H registers its quiz, coding scheme for override reasons, and influence measure in the same way, together with its ethics approval.
+Before each gate, the fast-moving rows of the component maturity table (Table~\ref{tab:maturity}) are re-checked and the result is recorded with the gate's pre-registration.
+Before any candidate solver is run on them, the instance generators, random seeds, instance counts, metrics, thresholds and analysis scripts are committed to a pre-registration directory in the project repository,\footnote{\path{research/preregistration/}.} tagged with a signed Git tag, and the tag's commit hash is deposited with an independent registry (for example the Open Science Framework). Results are reported against that tag. Deviations are logged with reasons in the same directory, and any rerun uses a freshly registered set. Phase~1H registers its quiz, coding scheme for override reasons, and influence measure in the same way, together with its ethics approval.
 
 \paragraph{Pre-registered Phase~1 instance set.}
 At least 20 instances in each family, at 50, 200 and 1,000 councils: (1) convex baselines (Cobb--Douglas and CES with fixed budgets); (2) Leontief input--output economies; (3) Scarf-style cycles; (4) identical lumpy plants; (5) staggered lumpy plants; (6) deliberately infeasible plans (caps below minimum requirements); (7) endogenous income through the Society Account; (8) binding ecological caps; (9) strategic misreporting, in which a fixed share of councils understate capacity by a fixed fraction, measuring the resulting price distortion and the misreporters' gain (reported as a diagnostic; no pass threshold is set until a baseline exists).
@@ -1826,7 +2257,7 @@ Equation~(\ref{eq:effort-cap}) has two parameters with different meanings. $\bar
 
 \section{Multi-Scale Analytical Projections ($10^2$ to $10^6$ Participants)}
 
-{\small\color{SlateDark} \textbf{Methodological note:} Only the \texttt{pequod-cljs} CSV convergence counts, the Python stress tests and the \texttt{Prio3} benchmark in \texttt{research/analysis/} have been executed. Table~\ref{tab:scale-bench} uses a 10-round annual plan with three fresh household-report rounds; Kill Gate~1's 25-round bound is a halt criterion, not the table's round count. Archive rows use the coarse single-key proposal sizes of Table~\ref{tab:proposal-sizes}; multi-signature councils multiply them by up to 3.3. All rows assume an $n=128$ committee; small federations could use smaller committees.}
+{\small\color{SlateDark} \textbf{Methodological note:} Only the \texttt{pequod-cljs} CSV convergence counts, the Python stress tests and the \texttt{Prio3} benchmark have been executed.\footnote{Scripts and benchmark code are in \path{research/analysis/} in the project repository.} Table~\ref{tab:scale-bench} uses a 10-round annual plan with three fresh household-report rounds; Kill Gate~1's 25-round bound is a halt criterion, not the table's round count. Archive rows use the coarse single-key proposal sizes of Table~\ref{tab:proposal-sizes}; multi-signature councils multiply them by up to 3.3. All rows assume an $n=128$ committee; small federations could use smaller committees.}
 
 \begin{table}[htbp]
 \centering
@@ -1903,11 +2334,11 @@ We conclude our study by ranking the 15 most important unresolved questions acro
 \addlinespace[3pt]
 \textbf{P11} & \textbf{Byzantine Resilience Under Prolonged Regional Network Partitions} & \texttt{[DIST-SYS]} (\texttt{[SIM]}) & Benchmark Regional Proxy Extrapolation accuracy when 10\% of councils are partitioned for multiple rounds. \\
 \addlinespace[3pt]
-\textbf{P12} & \textbf{Standardisation of Compact Post-Quantum Threshold Signatures} & \texttt{[CRYPTO]} (\texttt{[SW-ARCH]}) & Councils use $k$-of-$n$ multi-signatures (3,437~B per signer) until a standard post-quantum threshold signature exists; \texttt{CryptoSuiteId} agility allows the switch. Proposal sizes depend on $k$ (Table~\ref{tab:proposal-sizes}). \\
+\textbf{P12} & \textbf{Standardisation of Compact Post-Quantum Threshold Signatures} & \texttt{[CRYPTO]} (\texttt{[SW-ARCH]}) & Councils use $k$-of-$n$ multi-signatures (3,437~B per signer) until a standard post-quantum threshold signature exists; \texttt{CryptoSuiteId} agility allows the switch. NIST opened a call for multi-party threshold schemes in January 2026 (NIST IR 8214C), a reference process rather than a standards competition. Proposal sizes depend on $k$ (Table~\ref{tab:proposal-sizes}). \\
 \addlinespace[3pt]
 \textbf{P13} & \textbf{Privacy anonymity sets in small hamlets ($m < 30$)} & \texttt{[PRIVACY]} (\texttt{[SW-ARCH]}) & Apply $m_{\min}=30$ per coarse reporting category and aggregate rare categories at Ward level with $m_{\text{rare}}=250$; measure differencing leakage between milestone releases under the carry-forward rule of Section~\ref{sec:carry-forward}. \\
 \addlinespace[3pt]
-\textbf{P14} & \textbf{Endpoint Security vs.\ Open Modifiability on User Smartphones} & \texttt{[SECURITY]} (\texttt{[SW-ARCH]}) & Use local hardware keystore unlock + social anomaly verification without mandatory proprietary OS attestation lock-in. \\
+\textbf{P14} & \textbf{Endpoint Security vs.\ Open Modifiability on User Smartphones} & \texttt{[SECURITY]} (\texttt{[SW-ARCH]}) & Use local hardware keystore unlock + social anomaly verification without mandatory proprietary OS attestation lock-in; split hybrid custody until Android holds post-quantum keys in hardware (Section~\ref{sec:threat-model}). \\*
 \addlinespace[3pt]
 \textbf{P15} & \textbf{Bootstrapping a ``Parallel Economy'' Inside Surrounding Markets} & \texttt{[ADOPTION]} (\texttt{[HUMAN]}) & Implement a Dual-Price Fiat Reserve Bridge in Sandstr\"om's Society Account for federated cooperatives (PEPE Ch.~6 p.~129). \\
 \end{longtable}}
@@ -2015,11 +2446,11 @@ Rounds-to-clear may grow with the number of councils. & Major & Log--log scaling
 \addlinespace[2pt]
 \multicolumn{5}{l}{\textbf{Distributed systems}}\\
 Round cost at $10^6$ (0.24--1.46~GB archives, 40k--200k signature checks, $10^6$ report verifications per aggregator) may not fit a usable round time. & Major & Kill Gate~2 measurements at $\ge 10^4$ with extrapolation from measured per-item costs. & 2 & Yes (for D; A remains) \\
-Annual committee capture lasts a year; a 30\% corrupt pool gives a 21\% chance of an unsafe draw. & Major & Rotation frequency and beacon design (open); not settled by an experiment. & 2 & No \\
+Annual committee capture lasts a year; a 30\% corrupt pool gives a 21\% chance of an unsafe draw. & Major & Rotation frequency; operation of the interim threshold beacon (Section~\ref{sec:pq-urgency}); a post-quantum beacon (open). Not settled by an experiment. & 2 & No \\
 \addlinespace[2pt]
 \multicolumn{5}{l}{\textbf{Cryptography}}\\
 Aggregate correctness needs all aggregators; the public budget check limits only gross overspend. & Major & Pilot use of non-nested aggregators; audit. & 3 & No \\
-No construction for budget credentials and one-report-per-person; the budget circuit is unspecified and price-dependent. & Critical (for household crypto only) & A specified, audited construction; until then the council-level trust model. & 3 & Yes (household mode only) \\
+No construction for budget credentials and one-report-per-person; the budget circuit is unspecified and price-dependent. & Critical (for household crypto only) & A specified, audited construction: an interim classical credential with threshold issuance covers one report per person (Section~\ref{sec:pq-urgency}); budget binding and the circuit remain open. Until then the council-level trust model. & 3 & Yes (household mode only) \\
 Carry-forward cannot re-aggregate reports; milestone-only revision freezes household demand between milestones. & Moderate & Planning-accuracy cost in simulation (P5) and pilots. & 1, 3 & No \\
 \addlinespace[2pt]
 \multicolumn{5}{l}{\textbf{Cooperative practice}}\\
@@ -2059,28 +2490,28 @@ Each claim has eight separate fields: identifier, claim, classification, status 
 \emph{Evidence:} Arrow--Hurwicz--Uzawa (1958); Heal (1973), Tier~3. & \emph{Assumptions:} Strict convexity; gross substitutability. & \emph{Limitations:} Fails on Scarf-type and non-convex economies. & \emph{Validation:} Reference only. \\
 \addlinespace[1pt]\midrule
 \textbf{CLM-ECON-02} & \texttt{dep1ex61--100.csv}: Year~1 reaches 5\% in 11.85 rounds and 3\% in 19.20; Year~2 5\% in 6.58. & \emph{Class:} Source-supported & \emph{Status:} \textbf{Verified} \\*
-\emph{Evidence:} \path{verify_r2.py} on \texttt{pequod-cljs} @ \texttt{8bd46b5c}. & \emph{Assumptions:} Fixed \$5{,}000 incomes; Cobb--Douglas FOCs. & \emph{Limitations:} Other subsets differ (01--50: 11.18); no wall-clock log. & \emph{Validation:} Reproduce in the Phase~1 simulator. \\
+\emph{Evidence:} Audit script\footnote{\path{research/analysis/verify_r2.py} in the project repository.} on \texttt{pequod-cljs} @ \texttt{8bd46b5c}. & \emph{Assumptions:} Fixed \$5{,}000 incomes; Cobb--Douglas FOCs. & \emph{Limitations:} Other subsets differ (01--50: 11.18); no wall-clock log. & \emph{Validation:} Reproduce in the Phase~1 simulator. \\
 \addlinespace[1pt]\midrule
 \textbf{CLM-ECON-03} & Eq.~(\ref{eq:pequod-rule}) plus trust regions does not clear Scarf's cycle or a single lumpy plant. & \emph{Class:} Analytical & \emph{Status:} \textbf{Verified} \\*
-\emph{Evidence:} \path{verify_economics.py}: min imbalance 10.5\% and 50.4\%. & \emph{Assumptions:} The stress-test economies. & \emph{Limitations:} Not a general impossibility proof. & \emph{Validation:} Instance families 3--4 in Phase~1. \\
+\emph{Evidence:} Simulation script\footnote{\path{research/analysis/verify_economics.py} in the project repository.}: min imbalance 10.5\% and 50.4\%. & \emph{Assumptions:} The stress-test economies. & \emph{Limitations:} Not a general impossibility proof. & \emph{Validation:} Instance families 3--4 in Phase~1. \\
 \addlinespace[1pt]\midrule
 \textbf{CLM-ECON-04} & With the toothache increment, $\sum b + c/k > 1$ for every one of 750,000 worker-council records in the 70 generators. & \emph{Class:} Source-supported & \emph{Status:} \textbf{Partially verified} \\*
-\emph{Evidence:} \path{verify_pequod_datasets.py}; LFS objects SHA-256 checked. & \emph{Assumptions:} 20\% of councils selected at run time. & \emph{Limitations:} Perverse supply predicted, not observed in CSVs; Clojure not run. & \emph{Validation:} Run \texttt{pequod-cljs} with toothaches. \\
+\emph{Evidence:} Dataset audit script\footnote{\path{research/analysis/verify_pequod_datasets.py} in the project repository.}; LFS objects SHA-256 checked. & \emph{Assumptions:} 20\% of councils selected at run time. & \emph{Limitations:} Perverse supply predicted, not observed in CSVs; Clojure not run. & \emph{Validation:} Run \texttt{pequod-cljs} with toothaches. \\
 \addlinespace[1pt]\midrule
 \textbf{CLM-ECON-05} & One good, $K=20$ staggered plants: min imbalance 0.40\% over 500 rounds; last-100-round max 8.4\%. & \emph{Class:} Analytical & \emph{Status:} \textbf{Partially verified} \\*
-\emph{Evidence:} \path{verify_r2.py}; sweep median 6.0\%, worst 9.5\%. & \emph{Assumptions:} $a\in[60,80]$; thresholds in $[8.5,11.5]$. & \emph{Limitations:} One good; not Leontief. & \emph{Validation:} Lumpy Leontief family in Phase~1. \\
+\emph{Evidence:} Simulation script\footnote{\path{research/analysis/verify_r2.py} in the project repository.}; sweep median 6.0\%, worst 9.5\%. & \emph{Assumptions:} $a\in[60,80]$; thresholds in $[8.5,11.5]$. & \emph{Limitations:} One good; not Leontief. & \emph{Validation:} Lumpy Leontief family in Phase~1. \\
 \addlinespace[1pt]\midrule
 \textbf{CLM-ECON-06} & $\sum_u B_u = (1-\sigma_{\text{inv}})Y^{\text{GDP}}$, and $\sigma_{\text{inv}}Y^{\text{GDP}} = p\cdot D^{\text{inv}}$ at a cleared plan. & \emph{Class:} Analytical & \emph{Status:} \textbf{Partially verified} \\*
 \emph{Evidence:} Algebra in Section~4.2 and Table~\ref{tab:macro-sheet}. & \emph{Assumptions:} $Y^{\text{allow}}$ is cash transfers only. & \emph{Limitations:} No numerical test on a full Society Account ledger. & \emph{Validation:} Phase~1 ledger test. \\
 \addlinespace[1pt]\midrule
 \textbf{CLM-ECON-07} & Algorithm~3b (Deng et al.\ Algorithm~4 with slack) converges on fixed-budget convex problems. & \emph{Class:} Established & \emph{Status:} \textbf{Partially verified} \\*
-\emph{Evidence:} Deng et al.\ (2017) Thm.~2.3--2.4 (read in full); \path{verify_r3.py} test~B. & \emph{Assumptions:} Convex $\mathcal{T}_c$; fixed budgets; $P_i$ condition (2.11). & \emph{Limitations:} Not endogenous income, non-convexity or dual renormalisation. & \emph{Validation:} Phase~1 convex families. \\
+\emph{Evidence:} Deng et al.\ (2017) Thm.~2.3--2.4 (read in full); test~B in the analysis script.\footnote{\path{research/analysis/verify_r3.py} in the project repository.} & \emph{Assumptions:} Convex $\mathcal{T}_c$; fixed budgets; $P_i$ condition (2.11). & \emph{Limitations:} Not endogenous income, non-convexity or dual renormalisation. & \emph{Validation:} Phase~1 convex families. \\
 \addlinespace[1pt]\midrule
 \textbf{CLM-ECON-08} & Some candidate (3a--3d) clears full DPEP instances (Leontief, lumpy, endogenous income, strategic). & \emph{Class:} Experimental target & \emph{Status:} \textbf{Unverified} \\*
 \emph{Evidence:} None yet. & \emph{Assumptions:} Pre-registered instance set. & \emph{Limitations:} Toy tests only; 3d has no convergence result. & \emph{Validation:} Kill Gate~1. \\
 \addlinespace[1pt]\midrule
 \textbf{CLM-ECON-09} & One-sided feasibility ($D\le S$) is an adequate success criterion. & \emph{Class:} Analytical & \emph{Status:} \textbf{Refuted} \\*
-\emph{Evidence:} Single plant: feasible at round 3 with 42\% unused output (\path{reference_tests_r3.py}). & \emph{Assumptions:} -- & \emph{Limitations:} -- & \emph{Validation:} Replaced by Definition~\ref{def:success}. \\
+\emph{Evidence:} Single plant: feasible at round 3 with 42\% unused output (reference test script)\footnote{\path{research/analysis/reference_tests_r3.py} in the project repository.}. & \emph{Assumptions:} -- & \emph{Limitations:} -- & \emph{Validation:} Replaced by Definition~\ref{def:success}. \\
 \addlinespace[1pt]\midrule
 \textbf{CLM-TECH-01} & Leaf transport plus BFT takes 9--27~s per round at $N=10^6$. & \emph{Class:} Analytical & \emph{Status:} \textbf{Refuted} \\*
 \emph{Evidence:} Assumed 5.2~kB proposals; reworked sizes give 0.24--1.46~GB per round (Table~\ref{tab:proposal-sizes}). & \emph{Assumptions:} -- & \emph{Limitations:} Omitted report verification and signature checks. & \emph{Validation:} Replaced by Kill Gate~2 thresholds. \\
@@ -2089,7 +2520,7 @@ Each claim has eight separate fields: identifier, claim, classification, status 
 \emph{Evidence:} libprio 0.18.1 benchmark (Table~\ref{tab:prio3-bench}). & \emph{Assumptions:} One desktop core; VDAF draft~18 code. & \emph{Limitations:} No phone or Raspberry Pi measurement; network excluded. & \emph{Validation:} Device benchmarks, Kill Gate~3. \\
 \addlinespace[1pt]\midrule
 \textbf{CLM-TECH-03} & \texttt{Prio3SumVec} report sizes follow the VDAF size formula. & \emph{Class:} Source-supported & \emph{Status:} \textbf{Verified} \\*
-\emph{Evidence:} \path{parameters.py} matches libprio byte-for-byte on 9 configurations. & \emph{Assumptions:} libprio chunk-length rule. & \emph{Limitations:} Custom budget circuit sizes unknown. & \emph{Validation:} Recompute when the circuit is specified. \\
+\emph{Evidence:} The size model\footnote{\path{research/analysis/parameters.py} in the project repository.} matches libprio byte-for-byte on 9 configurations. & \emph{Assumptions:} libprio chunk-length rule. & \emph{Limitations:} Custom budget circuit sizes unknown. & \emph{Validation:} Recompute when the circuit is specified. \\
 \addlinespace[1pt]\midrule
 \textbf{CLM-TECH-04} & Mobile feasibility: $\le 150$~kB per ordinary round and $\le 450$~kB with a full quorum check; RAM $\le 150$~MB. & \emph{Class:} Experimental target & \emph{Status:} \textbf{Unverified} \\*
 \emph{Evidence:} Byte budget analytical (Section~\ref{sec:sortition}). & \emph{Assumptions:} Coarse 55~kB report; coordinator attestation. & \emph{Limitations:} No device test. & \emph{Validation:} Kill Gate~3. \\
@@ -2098,7 +2529,10 @@ Each claim has eight separate fields: identifier, claim, classification, status 
 \emph{Evidence:} \$30--\$60 per server-month (assumed). & \emph{Assumptions:} Commodity servers. & \emph{Limitations:} Excludes audits, facilitation, research and energy. & \emph{Validation:} Phase~2 and 3 cost accounting. \\
 \addlinespace[1pt]\midrule
 \textbf{CLM-TECH-06} & Architecture D outranks A, B and C at baseline weights. & \emph{Class:} Conjectural & \emph{Status:} \textbf{Partially verified} \\*
-\emph{Evidence:} Expert scores; arithmetic and perturbation test in \path{verify_r3.py}. & \emph{Assumptions:} Table~\ref{tab:arch-comp} scores. & \emph{Limitations:} A overtakes D when simplicity, throughput and cost carry $\ge 63\%$ of the weight. & \emph{Validation:} Phases 2--3 replace judgements with measurements. \\
+\emph{Evidence:} Expert scores; arithmetic and perturbation test in the analysis script.\footnote{\path{research/analysis/verify_r3.py} in the project repository.} & \emph{Assumptions:} Table~\ref{tab:arch-comp} scores. & \emph{Limitations:} A overtakes D when simplicity, throughput and cost carry $\ge 63\%$ of the weight. & \emph{Validation:} Phases 2--3 replace judgements with measurements. \\
+\addlinespace[1pt]\midrule
+\textbf{CLM-TECH-07} & Component maturity: every function except threshold signatures, anonymous credentials, the beacon, capability-certificate formats and post-quantum HPKE has a standardised, deployed primitive. & \emph{Class:} Source-supported & \emph{Status:} \textbf{Partially verified} \\*
+\emph{Evidence:} Table~\ref{tab:maturity}; maturity dossier\footnote{\path{reports/STACK_MATURITY.md} in the project repository.} (web checks, November 2026). & \emph{Assumptions:} Ratings are judgements on the M0--M5 scale. & \emph{Limitations:} Primitive maturity is not library or combination maturity; nine combinations are original. & \emph{Validation:} Re-check before each gate; Kill Gate~3 audit. \\
 \addlinespace[1pt]\midrule
 \textbf{CLM-SEC-01} & Privacy: \texttt{Prio3} hides an individual report if at least one aggregator is honest. & \emph{Class:} Source-supported & \emph{Status:} \textbf{Partially verified} \\*
 \emph{Evidence:} VDAF-22 \S 9 (full text). & \emph{Assumptions:} Non-colluding aggregators; $m_{\min}=30$. & \emph{Limitations:} Budget circuit unspecified; differencing between releases. & \emph{Validation:} Phase~3 audit. \\
@@ -2116,13 +2550,22 @@ Each claim has eight separate fields: identifier, claim, classification, status 
 \emph{Evidence:} Eq.~(\ref{eq:effort-cap}). & \emph{Assumptions:} Roster and $SB/SC$ honest. & \emph{Limitations:} Falsified rosters and carousel fraud need physical audit. & \emph{Validation:} Pilot audits. \\
 \addlinespace[1pt]\midrule
 \textbf{CLM-SEC-06} & Sybil resistance (household): one report per person without a population register. & \emph{Class:} Conjectural & \emph{Status:} \textbf{Unverified} \\*
-\emph{Evidence:} No construction (Section~\ref{sec:bu-cred}). & \emph{Assumptions:} A post-quantum anonymous credential with nullifiers. & \emph{Limitations:} None identified as standard. & \emph{Validation:} Research; council-level trust meanwhile. \\
+\emph{Evidence:} No post-quantum construction (Section~\ref{sec:bu-cred}); interim classical credential adopted (Section~\ref{sec:pq-urgency}). & \emph{Assumptions:} An anonymous credential with threshold issuance and nullifiers. & \emph{Limitations:} Budget binding open; interim scheme not post-quantum. & \emph{Validation:} Research; council-level trust meanwhile. \\
 \addlinespace[1pt]\midrule
 \textbf{CLM-SEC-07} & An $n=128$ annual draw with $p=20\%$ corrupt gives a 0.022\% unsafe committee. & \emph{Class:} Analytical & \emph{Status:} \textbf{Verified} \\*
-\emph{Evidence:} Exact binomial, \path{verify_r2.py}. & \emph{Assumptions:} i.i.d.\ draws; failure at $k\ge 43$. & \emph{Limitations:} $p=30\%$ gives 21\%; capture lasts a year. & \emph{Validation:} Beacon design. \\
+\emph{Evidence:} Exact binomial computation.\footnote{\path{research/analysis/verify_r2.py} in the project repository.} & \emph{Assumptions:} i.i.d.\ draws; failure at $k\ge 43$. & \emph{Limitations:} $p=30\%$ gives 21\%; capture lasts a year. & \emph{Validation:} Beacon design. \\
 \addlinespace[1pt]\midrule
 \textbf{CLM-SEC-08} & \texttt{Prio3} reports cannot be carried forward into later rounds' aggregates. & \emph{Class:} Source-supported & \emph{Status:} \textbf{Verified} \\*
 \emph{Evidence:} VDAF-22 \S 7.2.3, \S 9.4. & \emph{Assumptions:} Standard \texttt{Prio3}. & \emph{Limitations:} Aggregate-level carry-forward is still possible. & \emph{Validation:} -- \\
+\addlinespace[1pt]\midrule
+\textbf{CLM-SEC-09} & An off-the-shelf BFT engine accepts post-quantum validator keys. & \emph{Class:} Source-supported & \emph{Status:} \textbf{Verified} \\*
+\emph{Evidence:} Cosmos SDK documentation (CometBFT 0.40, Cosmos SDK 0.55). & \emph{Assumptions:} Releases as documented. & \emph{Limitations:} Pure ML-DSA-65, not hybrid; $\approx 331$~kB of signatures per block at 100 validators; release dates not confirmed. & \emph{Validation:} Kill Gate~2. \\
+\addlinespace[1pt]\midrule
+\textbf{CLM-SEC-10} & An interim classical credential keeps past showings unlinkable after a CRQC. & \emph{Class:} Conjectural & \emph{Status:} \textbf{Unverified} \\*
+\emph{Evidence:} None for a chosen scheme; RFC~9474 states no assumption for blindness. & \emph{Assumptions:} Statistically zero-knowledge presentation and statistical blinding. & \emph{Limitations:} If false, a CRQC reveals who submitted, not what. & \emph{Validation:} Scheme selection before Phase~3. \\
+\addlinespace[1pt]\midrule
+\textbf{CLM-SEC-11} & Canary batches detect indiscriminate tampering with aggregate shares. & \emph{Class:} Analytical & \emph{Status:} \textbf{Unverified} \\*
+\emph{Evidence:} Argument in Section~\ref{sec:prio3}. & \emph{Assumptions:} Per-batch aggregate shares; batches indistinguishable to aggregators. & \emph{Limitations:} Misses tampering aimed at batches known to be real. & \emph{Validation:} Fault injection in Phase~3. \\
 \addlinespace[1pt]\midrule
 \textbf{CLM-POL-01} & Democratic scalability: ordinary participants complete, understand and genuinely shape multi-round planning. & \emph{Class:} Experimental target & \emph{Status:} \textbf{Unverified} \\*
 \emph{Evidence:} None yet. & \emph{Assumptions:} Phase~1H design. & \emph{Limitations:} $n=30$--60 self-selected volunteers. & \emph{Validation:} Kill Gate~1H. \\
@@ -2140,7 +2583,7 @@ Each claim has eight separate fields: identifier, claim, classification, status 
 \backmatter
 \chapter{Comprehensive Source Bibliography}
 
-Each entry's bibliographic identity was checked in November 2026 against Crossref (by DOI or bibliographic query), a publisher or journal page, or the IETF Datatracker (\path{research/analysis/audit_bibliography.py}; results in \path{research/SOURCE_AUDIT.md}). That is not a claim that every page citation was re-read; access levels are in the front-matter notice.
+Each entry's bibliographic identity was checked in November 2026 against Crossref (by DOI or bibliographic query), a publisher or journal page, or the IETF Datatracker.\footnote{Checked by \path{research/analysis/audit_bibliography.py}; results in \path{research/SOURCE_AUDIT.md}, both in the project repository.} That is not a claim that every page citation was re-read; access levels are in the front-matter notice.
 
 \begin{enumerate}[leftmargin=1.8em,itemsep=4pt,label={[\arabic*]}]
   \item \textbf{Albert, Michael, and Robin Hahnel (1991a).} \emph{The Political Economy of Participatory Economics}. Princeton, NJ: Princeton University Press. 132 pp. ISBN 978-0-691-00384-9. DOI: \url{https://doi.org/10.2307/j.ctv131bvr2}. Print TOC/pagination scan preserved at \texttt{research/sources/pepe\_dandelon.pdf}; full text analyzed via ZNetwork (\url{https://znetwork.org/wp-content/uploads/zbooks/htdocs/books/intro.htm} and \texttt{1.htm}--\texttt{6.htm}).
@@ -2200,6 +2643,12 @@ Each entry's bibliographic identity was checked in November 2026 against Crossre
   \item \textbf{Corrigan-Gibbs, Henry, and Dan Boneh (2017).} ``Prio: Private, Robust, and Scalable Computation of Aggregate Statistics.'' \emph{USENIX NSDI '17}, pp.~259--282; \textbf{Boneh, Dan, et al.\ (2019).} ``Zero-Knowledge Proofs on Secret-Shared Data via Fully Linear PCPs.'' \emph{CRYPTO 2019}; \textbf{Barnes, Richard, et al.\ (2026).} \emph{Verifiable Distributed Aggregation Functions (VDAFs)}, IETF CFRG \texttt{draft-irtf-cfrg-vdaf-22} (14 August 2026; Informational; IRSG poll). \url{https://datatracker.ietf.org/doc/html/draft-irtf-cfrg-vdaf-22}.
   \item \textbf{Crites, Elizabeth, and Alistair Stewart (2025).} ``On Reed--Solomon Proximity Gaps Conjectures.'' IACR Cryptology ePrint Archive \texttt{2025/2046} (\url{https://eprint.iacr.org/2025/2046.pdf}).
   \item \textbf{Aas, Josh, Tim Geoghegan, Christopher Patton, Karl Tarbe, et al.\ (2026).} \texttt{prio} Rust crate, version 0.18.1 (implements \texttt{draft-irtf-cfrg-vdaf-18}). \url{https://crates.io/crates/prio}; source \url{https://github.com/divviup/libprio-rs}. Compiled and executed for Table~\ref{tab:prio3-bench}.
+  \item \textbf{Davis, Hannah, Christopher Patton, Mike Rosulek, and Phillipp Schoppmann (2023).} ``Verifiable Distributed Aggregation Functions.'' \emph{Proceedings on Privacy Enhancing Technologies} 2023, no.~4: 578--592. DOI: \url{https://doi.org/10.56553/popets-2023-0126}. Full version with corrected proof of Theorem~1: IACR ePrint \texttt{2023/130} (\url{https://eprint.iacr.org/2023/130}).
+  \item \textbf{Massimo, Jake, Panos Kampanakis, Sean Turner, and Bas Westerbaan (2025).} ``Internet X.509 Public Key Infrastructure -- Algorithm Identifiers for the Module-Lattice-Based Digital Signature Algorithm (ML-DSA).'' RFC~9881, October 2025. \url{https://www.rfc-editor.org/rfc/rfc9881}.
+  \item \textbf{Ounsworth, Mike, John Gray, Massimiliano Pala, Jan Klau\ss{}ner, and Scott Fluhrer (2026).} ``Composite Module-Lattice-Based Digital Signature Algorithm (ML-DSA) for use in X.509 Public Key Infrastructure.'' IETF Internet-Draft \texttt{draft-ietf-lamps-pq-composite-sigs-19}, 21 April 2026. \url{https://datatracker.ietf.org/doc/html/draft-ietf-lamps-pq-composite-sigs-19}.
+  \item \textbf{Sonnino, Alberto, Mustafa Al-Bassam, Shehar Bano, Sarah Meiklejohn, and George Danezis (2019).} ``Coconut: Threshold Issuance Selective Disclosure Credentials with Applications to Distributed Ledgers.'' \emph{NDSS 2019}. DOI: \url{https://doi.org/10.14722/ndss.2019.23272}.
+  \item \textbf{Bootle, Jonathan, Vadim Lyubashevsky, Ngoc Khanh Nguyen, and Alessandro Sorniotti (2023).} ``A Framework for Practical Anonymous Credentials from Lattices.'' \emph{CRYPTO 2023}. \url{https://research.ibm.com/publications/a-framework-for-practical-anonymous-credentials-from-lattices}.
+  \item \textbf{Argo, Sven, Tim G\"uneysu, Corentin Jeudy, Georg Land, Adeline Roux-Langlois, and Olivier Sanders (2024).} ``Practical Post-Quantum Signatures for Privacy.'' \emph{ACM CCS 2024}. DOI: \url{https://doi.org/10.1145/3658644.3670297}.
   \item \textbf{Leval, Gaston (1971).} \emph{Espagne Libertaire (1936--1939)}. Paris: \'Editions du Monde Libertaire. Cited through Dolgoff's (1974) translation.
   \item \textbf{Peirats, Jos\'e.} Contributions on pay scales and on the Aragon federation, in Dolgoff (1974), Chs.~6 and~9 (Ch.~9 read via the marxists.org edition).
 \end{enumerate}

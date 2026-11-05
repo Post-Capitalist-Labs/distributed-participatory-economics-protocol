@@ -1,0 +1,26 @@
+{
+  "8": {
+    "quorum": 6,
+    "sig_bytes": 20622,
+    "capture_prob_f42": 0.015116090179116184,
+    "capture_prob_f32": 0.003123639722220047
+  },
+  "16": {
+    "quorum": 11,
+    "sig_bytes": 37807,
+    "capture_prob_f42": 0.0018787916203725384,
+    "capture_prob_f32": 9.308047501360654e-05
+  },
+  "24": {
+    "quorum": 16,
+    "sig_bytes": 54992,
+    "capture_prob_f42": 0.00017211036531298917,
+    "capture_prob_f32": 1.4400927759649807e-06
+  },
+  "32": {
+    "quorum": 22,
+    "sig_bytes": 75614,
+    "capture_prob_f42": 1.383774759363758e-06,
+    "capture_prob_f32": 5.179942674383779e-10
+  }
+}
