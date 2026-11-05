@@ -2,9 +2,18 @@
 
 **Deliverable:** `research/REVISION_CHANGELOG.md`
 **Status:** Working Draft
-**Latest pass:** third refinement, 4 November 2026. Dispositions: `research/THIRD_REFINEMENT_DISPOSITIONS.md`.
+**Latest pass:** stack maturity pass, 5 November 2026. Dispositions: `research/STACK_MATURITY_DISPOSITIONS.md`. Previous: third refinement, 4 November 2026 (`research/THIRD_REFINEMENT_DISPOSITIONS.md`).
 
 This file holds revision history so that the monograph does not. Phrases removed from the book because they addressed a reviewer or recorded history rather than informing a reader are listed in §T.3.
+
+---
+
+## M. Stack maturity pass (starting point: `bd14ddb`)
+
+- New §6.3 Component Maturity (Table 6.3) and §7.2.1 on post-quantum urgency and crypto agility (Table 7.3; later Chapter 7 tables renumbered by one).
+- Two author decisions recorded: interim classical credentials and beacon under crypto agility; no commitment to pure ML-DSA at the consensus layer (CometBFT provisional).
+- Corrections F1–F14 from `reports/STACK_MATURITY.md` (two batches); six bibliography entries; four claims added (CLM-TECH-07, CLM-SEC-09–11); new script `verify_sync_committee.py`. Eight protocol diagrams added (Figs. 5.2–5.4, 7.1–7.5). Book now 111 pages.
+- Full list and the findings not yet applied: `research/STACK_MATURITY_DISPOSITIONS.md`.
 
 ---
 

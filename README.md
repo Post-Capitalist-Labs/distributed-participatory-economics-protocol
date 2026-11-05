@@ -9,7 +9,7 @@
 
 ## 📖 Read the Book (Working Draft)
 
-- **[Download the Typeset PDF Monograph (`Distributed_Participatory_Economics_Protocol_Book.pdf`)](./Distributed_Participatory_Economics_Protocol_Book.pdf)** *(79 pages, LaTeX typeset with full mathematical models, comprehensive list of abbreviations & notation, canonical CBOR/`proto3` schemas, architecture diagrams, 6-discipline critical review, scientific claims register, and source footnotes)*
+- **[Download the Typeset PDF Monograph (`Distributed_Participatory_Economics_Protocol_Book.pdf`)](./Distributed_Participatory_Economics_Protocol_Book.pdf)** *(111 pages, LaTeX typeset with full mathematical models, comprehensive list of abbreviations & notation, canonical CBOR/`proto3` schemas, architecture diagrams, 6-discipline critical review, scientific claims register, and source footnotes)*
 - **LaTeX Source:** [`book/dpep_book.tex`](./book/dpep_book.tex)
 
 *Note: This research monograph and technical architecture specification are currently released in **draft form** for open community review, critique, and collaborative iteration prior to Proof-of-Concept implementation.*
@@ -24,7 +24,7 @@ This book presents a rigorous, source-grounded feasibility study and systems arc
 
 1. **Advocates & Cooperative Practitioners:** How council democracy, balanced job complexes, revocable delegation, sortition, and productive-commons accounting prevent bureaucratic capture, meeting fatigue, and inter-regional inequality.
 2. **Economists & Mechanism Designers:** Formal mathematical integration of Albert and Hahnel's Formal Model of a Participatory Economy (FMPE) with Sandström's *Society Account* and Hahnel's Pollution Demand-Revealing Mechanism (PDRM); a source-code audit of the `pequod-cljs` planning simulator; and **Algorithm 3** (Safeguarded Primal-Dual / ADMM Proximal Regularization) for convergence under non-convexities and hard biophysical ecological caps.
-3. **Systems Programmers & Cryptographers:** Why participatory planning is an epoch-synchronized bulk-synchronous aggregation process rather than a high-TPS global blockchain problem—specifying **Architecture D** (Local-First SQLite/CRDT council workspaces + QUIC P2P transport + **BLAKE3 Sparse Merkle-Sum Trees** + deterministic fixed-point **`Wasmtime` IFB engines** + **NIST FIPS 203/204/205 post-quantum security** + pairwise additive masking & `Plonky3` STARK budget proofs).
+3. **Systems Programmers & Cryptographers:** Why participatory planning is an epoch-synchronized bulk-synchronous aggregation process rather than a high-TPS global blockchain problem—specifying **Architecture D** (Local-First SQLite/CRDT council workspaces + QUIC P2P transport + **BLAKE3 Sparse Merkle-Sum Trees** + deterministic fixed-point **`Wasmtime` IFB engines** + **NIST FIPS 203/204/205 post-quantum security** + `Prio3` VDAF private household aggregation + crypto-agile interim credentials and beacon, with a component-by-component maturity assessment).
 
 ---
 
@@ -32,13 +32,14 @@ This book presents a rigorous, source-grounded feasibility study and systems arc
 
 | Path | Description |
 | :--- | :--- |
-| **[`Distributed_Participatory_Economics_Protocol_Book.pdf`](./Distributed_Participatory_Economics_Protocol_Book.pdf)** | **Complete 79-page typeset PDF book (Working Draft)** published under the Post-Capitalist Labs Imprint. |
+| **[`Distributed_Participatory_Economics_Protocol_Book.pdf`](./Distributed_Participatory_Economics_Protocol_Book.pdf)** | **Complete 111-page typeset PDF book (Working Draft)** published under the Post-Capitalist Labs Imprint. |
 | [`reports/EXECUTIVE_SUMMARY.md`](./reports/EXECUTIVE_SUMMARY.md) | Standalone executive summary covering feasibility, architecture, obstacles, PoC scope, and budget scenarios. |
 | [`reports/HISTORICAL_INSTITUTIONS.md`](./reports/HISTORICAL_INSTITUTIONS.md) | Institutional analysis of Spain (1936), Paris Commune (1871), Classical Athens, Occupy, Mondragón, Porto Alegre, Rojava, and Ostrom's CPR principles. |
 | [`reports/ECONOMIC_MODEL.md`](./reports/ECONOMIC_MODEL.md) | Formal mathematical specification, Sandström's Society Account, 10-state machine, convergence algorithms, and `proto3` schemas. |
 | [`reports/TECHNICAL_ARCHITECTURE.md`](./reports/TECHNICAL_ARCHITECTURE.md) | Four-layer hybrid local-first + federated Merkle-Sum Tree + selective Epoch-BFT architecture and 6-role mobile/low-power taxonomy. |
 | [`reports/TECHNOLOGY_COMPARISON.md`](./reports/TECHNOLOGY_COMPARISON.md) | Weighted 14-criterion comparison of Architectures A, B, C, and D, candidate P2P/consensus/ZK technologies, and language stacks. |
 | [`reports/SECURITY_AND_PQC.md`](./reports/SECURITY_AND_PQC.md) | NIST FIPS 203/204/205 post-quantum cryptography benchmarks, non-plutocratic Sybil resistance, 14-vector threat model, and privacy architecture. |
+| [`reports/STACK_MATURITY.md`](./reports/STACK_MATURITY.md) | Maturity dossier for every stack component (primitive, named implementation, DPEP composition): standards status, production users, cryptographers, audits, gaps. Machine-readable register: [`research/stack_maturity_register.csv`](./research/stack_maturity_register.csv). |
 | [`reports/AI_AND_OPTIMISATION.md`](./reports/AI_AND_OPTIMISATION.md) | Deterministic operations research core (`Clarabel.rs` / `HiGHS`) vs. bounded edge AI, plus analysis of 20 economic and institutional failure modes. |
 | [`reports/POC_SPECIFICATION.md`](./reports/POC_SPECIFICATION.md) | Implementable 1,000-participant Proof-of-Concept specification, multi-scale benchmark programme ($10^2$ to $10^6$), and roadmap. |
 | [`reports/OPEN_QUESTIONS.md`](./reports/OPEN_QUESTIONS.md) | Ranked research agenda of 15 open theoretical, institutional, economic, and technical questions. |
