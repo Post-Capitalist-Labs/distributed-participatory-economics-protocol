@@ -1,7 +1,8 @@
 # Distributed Participatory Economics Protocol (DPEP)
 
 > **Status: Working Draft Monograph (November 2026)**  
-> **Published under the [Post-Capitalist Labs](https://github.com/Post-Capitalist-Labs) Imprint** · Maintained by **[Titan Cassini](https://github.com/titancassini)**
+> **By [Titan Cassini](https://github.com/titancassini)** · **Published under the [Post-Capitalist Labs](https://github.com/Post-Capitalist-Labs) Imprint**  
+> **Licence:** text CC BY-SA 4.0, code GPL-3.0-or-later ([`LICENSE.md`](./LICENSE.md))
 
 [![Download the Full PDF Book](./reports/figures/book_pcl_p01.png)](./Distributed_Participatory_Economics_Protocol_Book.pdf)
 
