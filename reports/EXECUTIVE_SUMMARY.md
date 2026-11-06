@@ -13,7 +13,7 @@ DPEP is an open-source research programme asking whether distributed computing, 
 
 ## 2. What is established, estimated and unknown
 
-- **Established.** The 1991 model and its formalisations are coherent at the level of accounting identities. `pequod-cljs` Cobb–Douglas runs (`dep1ex61–100`, fixed incomes) reach 5% imbalance in 11.85 rounds. The price rule fails Scarf's cycle (min imbalance 10.5%) and a single lumpy plant (50.4%). NIST FIPS 203–205 are standards. `Prio3SumVec` sizes and desktop timings are **measured** with libprio 0.18.1: a dense 3,000-category, 20-bit report is 975,760 B to the leader and about 3.5 ms to verify per aggregator on one desktop core. A coarse 200-category, 16-bit report is 55,120 B and about 0.25 ms.
+- **Established.** The 1991 model and its formalisations are coherent at the level of accounting identities. `pequod-cljs` Cobb–Douglas runs (`dep1ex61–100`, fixed incomes) reach 5% imbalance in 11.85 rounds. The price rule fails Scarf's cycle, where incomes move with prices (min imbalance 10.5%), and a single lumpy plant (50.4%); with fixed budgets it clears Scarf's consumers (below 0.02%). NIST FIPS 203–205 are standards. `Prio3SumVec` sizes and desktop timings are **measured** with libprio 0.18.1: a dense 3,000-category, 20-bit report is 975,760 B to the leader and about 3.5 ms to verify per aggregator on one desktop core. A coarse 200-category, 16-bit report is 55,120 B and about 0.25 ms.
 - **Estimated, not measured at scale.** Round time, archive sizes (0.24–1.46 GB raw per round at $10^6$), mobile traffic, hosting (\$3k–\$6k/month for 100 servers), and aggregator CPU at $10^6$ participants (about 4 coarse to 61 dense desktop core-minutes per aggregator per fresh-report round).
 - **Unknown.** Whether any solver clears Leontief, lumpy, endogenous-income and strategic economies. Whether ordinary people sustain multi-round planning without a technical elite forming. How household budgets can be checked privately when prices change between rounds. Whether one-report-per-person can be enforced without a population register.
 
@@ -98,7 +98,7 @@ Phase 1 (economic coordination) and Phase 1H (30–60 self-selected volunteers o
 | Tier A (CSV / Python stress tests) | Tier B (schema estimates; unbenchmarked) | Tier C (open) |
 | :--- | :--- | :--- |
 | `dep1ex61–100.csv`: 11.85 / 19.20 / 6.58 rounds. `dep1ex01–50.csv`: 11.18 Year-1 5%. | Leaf transport + BFT 9–27 s **omits** `Prio3` verify-share. | Algorithms 3a–3c on pre-registered Scarf, lumpy, endogenous, ecological instances. |
-| Scarf min ρ 10.5%; single plant 50.4%. | n=128 quorum signatures ≈ 283 KB. Dense `Prio3` ≈ 946 KiB; sparse 50-item ≈ 18 KiB. | Budget credentials, sortition beacon, aggregator correctness beyond VDAF. |
+| Scarf min ρ 10.5% (endowment incomes; fixed budgets < 0.02%); single plant 50.4%. | n=128 quorum signatures ≈ 283 KB. Dense `Prio3` ≈ 946 KiB; sparse 50-item ≈ 18 KiB. | Budget credentials, sortition beacon, aggregator correctness beyond VDAF. |
 | K=20 one-good: min 0.40%; last-100 max 8.4%; sweep median 6.0%. | Layer-1 ≈ 284 MB/year at 10 rounds. Leaf archive ≈ 0.6 GB Zstd / 2.1 GB raw. | Phase 1H agency; ratchet; labour floor; foreign trade and defence. |
 
 ---
