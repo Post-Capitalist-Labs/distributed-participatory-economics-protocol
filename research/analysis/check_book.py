@@ -30,7 +30,9 @@ NON_CITATIONS = {"Kleisthenes", "Pericles", "Aristotle", "Freeman's", "Merriman"
                  "Nove", "Albert", "Hahnel", "Hurwicz",
                  # capitalised words followed by a year that are not citations
                  "Budgeting", "Catalonia", "Corporation", "DAANES", "Depots", "Street", "Valencia",
-                 "Algorithms''", "Economy''", "Mapping''", "PEP"}
+                 "Algorithms''", "Economy''", "Mapping''", "PEP",
+                 # movements named with a year in headings and tables
+                 "Rojava", "Zapatistas"}
 
 BANNED = [
     "not because of a 3.60", "does not licence", "returned 404", "is retired", "retired",
