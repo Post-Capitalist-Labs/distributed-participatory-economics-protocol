@@ -24,7 +24,7 @@
 | F12 | New §7.2.1: which properties need post-quantum protection now; design rule; Table 7.3 (urgency, construction now, upgrade trigger); credential selection criterion (unlinkability must not rest on a CRQC-breakable assumption); interim beacon; Layer 1. Pointers added in §7.4.4 and §7.6, and §1.4 Layer 1 reworded. The credentials/beacon row of Table 7.2 changed from "Unspecified" to "Interim classical". | §7.2.1; §7.4.4; §7.6; §1.4; Table 7.2 |
 | — | New §6.3 Component Maturity: three-level rating, scale, Table 6.3 (18 rows), nine original combinations mapped to Kill Gates 2/3, re-check rule. | §6.3 |
 
-New bibliography entries: Davis et al. (2023), Massimo et al. (2025, RFC 9881), Ounsworth et al. (2026, composite draft-19), Sonnino et al. (2019, Coconut), Bootle et al. (2023), Argo et al. (2024). Each was checked against its publisher, RFC Editor, Datatracker or IBM Research page on 5 November 2026. `audit_bibliography.py` was not re-run.
+New bibliography entries: Davis et al. (2023), Massimo et al. (2025, RFC 9881), Ounsworth et al. (2026, composite draft-19), Sonnino et al. (2019, Coconut), Bootle et al. (2023), Argo et al. (2024). Each was checked against its publisher, RFC Editor, Datatracker or IBM Research page on 5 November 2026. `audit_bibliography.py` was not re-run in this pass; it was re-run on 6 November 2026 and all six are confirmed (`research/SOURCE_AUDIT.md`).
 
 ## Second batch (same day): remaining findings
 
