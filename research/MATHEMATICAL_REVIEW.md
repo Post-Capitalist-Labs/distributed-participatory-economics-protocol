@@ -119,6 +119,8 @@ In `csvgen.clj` (upstream lines 168–169, local lines 162–163), `:natural-res
 ## 3. Critical Reassessment of Iterative Convergence (`R-ECON-01` to `R-ECON-05`, `R-ECON-07` to `R-ECON-11`)
 
 ### 3.1 Why General Tâtonnement Convergence Cannot Be Guaranteed (`R-ECON-03`: Scarf's Counterexample)
+
+> **Correction (6 November 2026).** The failure below comes from endowment income (each consumer's income is the value of the good they own), not from Leontief complementarity. With fixed equal budgets the same consumers clear under the same rule (`R-ECON-03b`: below 0.02% from round 9), consistent with Cheung, Cole and Devanur (2020). See `REVISION_CHANGELOG.md` §E and book §4.4.3.
 By the **Sonnenschein–Mantel–Debreu (SMD) theorem** (Sonnenschein 1973; Mantel 1974; Debreu 1974), aggregate excess demand functions in general exchange economies inherit only continuity, homogeneity of degree zero, and Walras's Law—not gross substitutability or uniqueness/stability of equilibrium. **Herbert Scarf (1960)** demonstrated that even with 3 goods and 3 strictly quasi-concave Leontief consumers, price tâtonnement can enter a permanent limit cycle from any non-equilibrium initial price vector.
 
 In `research/analysis/verify_economics.py` (`test_r_econ_03_scarf`), we tested the exact Hahnel-Weisdorf-Szczepanczyk price rule (Eqs. 4.14–4.15) on Scarf's 3-good cyclic Leontief economy ($S = (1,1,1)$, $P^{(0)} = (1.3, 1.0, 0.8)$) with and without multiplicative trust regions $|\Delta y_{i,g}| \le \beta^{(t)} y_{i,g}^{(t-1)}$ over $3,000$ rounds:
