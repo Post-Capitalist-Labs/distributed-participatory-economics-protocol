@@ -1,10 +1,55 @@
 # Source Audit and Provenance Verification
 
 **Deliverable:** `research/SOURCE_AUDIT.md`
-**Status:** Working Draft (third refinement, 4 November 2026)
+**Status:** Working Draft (third refinement, 4 November 2026; new-entry audit, 6 November 2026)
 **Canonical bibliography:** back matter of `book/dpep_book.tex`. Earlier sections of this file are kept below as a historical record; where they conflict with this section, this section wins.
 
 ---
+
+## Audit of entries added on 5–6 November 2026
+
+`research/analysis/audit_bibliography.py` was re-run on 6 November 2026 over the whole bibliography (103 works; output `research/analysis/bibliography_audit.json`). This section records dispositions for the 34 works added since the third-refinement audit below: the six from the stack maturity pass and the works added with §5.1, the Chapter 2 expansion and §§11.3–11.4. Entries already listed in the third-refinement table were not re-dispositioned.
+
+**34 entries reviewed:** 31 confirmed, 3 partially confirmed, 0 not confirmed, 0 corrected.
+
+| Entry | Result | How checked |
+|---|---|---|
+| Hume (1741) "Of the Independency of Parliament" | Confirmed | Crossref: essay in OUP and CUP editions of Hume's essays; quotation checked against the Project Gutenberg text of the *Essays* |
+| Madison (1788) Federalist No. 51 | Confirmed | Crossref: reprint of Federalist No. 51 under its full title; date and quotation checked on the Library of Congress text |
+| Lessig (1999) *Code and Other Laws of Cyberspace* | Confirmed | Crossref: reviews (SSRN 2000; College & Research Libraries 62(1)) |
+| Lessig (2000) "Code Is Law", *Harvard Magazine* | Confirmed | Magazine page fetched (not in Crossref) |
+| Rogaway (2015) "The Moral Character of Cryptographic Work" | Confirmed | IACR ePrint 2015/1162 page and PDF; quotations and pages checked |
+| Brinton (1967) "As We See It" | Confirmed | Text on marxists.org; quotation checked verbatim (the source has no comma after "confidence") |
+| Brinton (1970) *The Bolsheviks and Workers' Control* | Confirmed | Full text on marxists.org read; Solidarity, London, 1970 stated in the transcription |
+| Brinton (2004) *For Workers' Power*, ed. Goodway | Confirmed | Crossref: reviews in ILWCH (2006) and J. Labor and Society (2021) |
+| Castoriadis (1957/1972) *Workers' Councils and the Economics of a Self-Managed Society* | Partially confirmed | 1972 Solidarity translation read in full (original S. ou B. 22, July 1957, stated there); the 1988 Minnesota reprint is not confirmed |
+| Anderson (1964) *Hungary '56* | Confirmed | Chapter "The Proletariat Crushed" read on libcom; Solidarity, London, 1964 confirmed by a 1964 review (Kidron) and a translation's source note |
+| Lomax (1976) *Hungary 1956* | Partially confirmed | Crossref: AHR review of the 1977 St. Martin's (New York) edition; the 1976 Allison & Busby (London) edition is not directly confirmed |
+| Estrin (1983) *Self-Management* | Confirmed | Crossref: reviews in Canadian-American Slavic Studies and Slavic Review (1985), Cambridge University Press |
+| Woodward (1995) *Socialist Unemployment* | Confirmed | DOI 10.1515/9780691219653 |
+| Winn (1986) *Weavers of Revolution* | Confirmed | Crossref: reviews in The Americas and AHR (1987) |
+| Medina (2011) *Cybernetic Revolutionaries* | Confirmed | DOI 10.7551/mitpress/8417.001.0001 |
+| Sitrin, ed. (2006) *Horizontalism* | Confirmed | Crossref: reviews in Left History and Choice (2007) |
+| Gómez (2009) *Argentina's Parallel Currency* | Partially confirmed | DOI 10.4324/9781315653532 resolves to the 2015 Routledge reissue; the 2009 Pickering & Chatto edition is not directly confirmed |
+| Mora (2017) *Kuxlejal Politics* | Confirmed | DOI 10.7560/314463 |
+| Klein (2015) *Compañeras* | Confirmed | No Crossref record; publisher and bookseller listings: Seven Stories Press, 2015, ISBN 9781609805876 |
+| Baschet (2024) "The Reorganization of Zapatista Autonomy" | Confirmed | *Ill Will* page fetched (15 November 2024); not in Crossref |
+| Aziz (2011) "A Discussion Paper on Local Councils in Syria" | Confirmed | 2013 English translation read in full on The Anarchist Library; not in Crossref |
+| Bayat (2017) *Revolution without Revolutionaries* | Confirmed | Crossref: reviews in IJMES and AJS (2018), Stanford University Press |
+| Isaac with Franke (2002) *Local Democracy and Development* | Confirmed | Crossref: reviews in J. Asian Studies and American Anthropologist (2004) |
+| Farrell, Suiter & Harris (2019) | Confirmed | DOI 10.1080/07907184.2018.1534832; 34(1) 113-123 (Crossref dates the online version 2018) |
+| Barandiaran et al. (2024) *Decidim* | Confirmed | DOI 10.1007/978-3-031-50784-7 |
+| Kennedy, Lietaer & Rogers (2012) *People Money* | Confirmed | No Crossref match; title page of the PDF read in full (Triarchy Press, Axminster, 2012) |
+| Mattsson, Criscione & Ruddick (2022) | Confirmed | DOI 10.1038/s41597-022-01539-4 |
+| Mattsson, Criscione & Takes (2023) | Confirmed | DOI 10.1038/s41598-023-33184-1 |
+| Davis, Patton, Rosulek & Schoppmann (2023) | Confirmed | DOI 10.56553/popets-2023-0126, PoPETs 2023(4) 578-592 |
+| Massimo, Kampanakis, Turner & Westerbaan (2025) RFC 9881 | Confirmed | Crossref: DOI 10.17487/rfc9881 |
+| Ounsworth et al. (2026) composite ML-DSA draft-19 | Confirmed | Internet-Draft, not in Crossref (query returned unrelated RFCs); checked on the IETF Datatracker on 5 November 2026 |
+| Sonnino et al. (2019) Coconut | Confirmed | DOI 10.14722/ndss.2019.23272 |
+| Bootle, Lyubashevsky, Nguyen & Sorniotti (2023) | Confirmed | Crossref: CRYPTO 2023, LNCS, DOI 10.1007/978-3-031-38545-2_13 |
+| Argo et al. (2024) | Confirmed | DOI 10.1145/3658644.3670297, CCS 2024, pp. 1523-1537 |
+
+No entry needed correction. The three partial confirmations concern editions (Castoriadis 1988 reprint, Lomax London edition, Gómez first edition), not the identity of the work; the book cites none of them by page.
 
 ## Third refinement (this pass)
 

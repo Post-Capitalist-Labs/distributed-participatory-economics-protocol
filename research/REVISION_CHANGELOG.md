@@ -4,6 +4,8 @@
 **Status:** Working Draft
 **Latest pass:** Chapter 11 bridges, 6 November 2026 (§R below). Before that: Chapter 2 historical expansion (§Q) and architectural-properties section (§P), same day. Previous: stack maturity pass, 5 November 2026. Dispositions: `research/STACK_MATURITY_DISPOSITIONS.md`. Previous: third refinement, 4 November 2026 (`research/THIRD_REFINEMENT_DISPOSITIONS.md`).
 
+**Bibliography audit:** re-run on 6 November 2026 for all entries added in §§M, P, Q and R (34 works: 31 confirmed, 3 partially confirmed at edition level, none corrected). Dispositions: `research/SOURCE_AUDIT.md`, "Audit of entries added on 5–6 November 2026". Where the sections below say `audit_bibliography.py` was not re-run, this supersedes them.
+
 This file holds revision history so that the monograph does not. Phrases removed from the book because they addressed a reviewer or recorded history rather than informing a reader are listed in §T.3.
 
 ---
