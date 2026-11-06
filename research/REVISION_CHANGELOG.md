@@ -2,9 +2,18 @@
 
 **Deliverable:** `research/REVISION_CHANGELOG.md`
 **Status:** Working Draft
-**Latest pass:** Chapter 2 historical expansion, 6 November 2026 (§Q below). Before that: architectural-properties section, 6 November 2026 (§P). Previous: stack maturity pass, 5 November 2026. Dispositions: `research/STACK_MATURITY_DISPOSITIONS.md`. Previous: third refinement, 4 November 2026 (`research/THIRD_REFINEMENT_DISPOSITIONS.md`).
+**Latest pass:** Chapter 11 bridges, 6 November 2026 (§R below). Before that: Chapter 2 historical expansion (§Q) and architectural-properties section (§P), same day. Previous: stack maturity pass, 5 November 2026. Dispositions: `research/STACK_MATURITY_DISPOSITIONS.md`. Previous: third refinement, 4 November 2026 (`research/THIRD_REFINEMENT_DISPOSITIONS.md`).
 
 This file holds revision history so that the monograph does not. Phrases removed from the book because they addressed a reviewer or recorded history rather than informing a reader are listed in §T.3.
+
+---
+
+## R. Chapter 11 bridges (same day, after §Q)
+
+- New §11.3 "Bridged Adoption: Interoperability with Existing Systems": DPEP runs alongside existing systems; Table 11.2 lists six technical bridges as unspecified Phase 3 requirements (bookkeeping export incl. SAF-T, fiat payments via ISO 20022 and reconciliation against Eq. 11.1, e-invoicing EN 16931 / Peppol, identity checks at the federation's legal boundary never linked to council credentials, adapters to Open Food Network / Loomio / Decidim / Cyclos with Valueflows as a candidate format, complementary currencies). Shadow mode and rollback; right of exit extended to data. New Design Principle 11.1 "Bridged Adoption".
+- New §11.4 "Complementary Currencies as Allies and Bridges", from Kennedy, Lietaer and Rogers, *People Money* (2012; read in full): building blocks, alignment with Sandström accounting and Parecon credits, differences (allocation, who manages, governance, Brinton's Test), three lessons (Argentina, Stuttgart's Rössle, tax and running costs), and a three-stage adoption path. Cross-reference added from §2.10. One bibliography entry added.
+- §11.4 paragraph added on cryptocurrencies, tokens and supply control: supply set by the plan and the public budget check, not minting/burning; credits non-transferable; token governance and public ledgers rejected; Sarafu (Mattsson et al. 2022, 2023; DOIs confirmed on Crossref) and Circles (documentation checked) as blockchain community currencies belonging at the bridge; stablecoins at most a fiat-edge payment channel. Two bibliography items added.
+- Book now 133 pages; checks pass; only the existing Fig. 5.4 overfull box exceeds 10 pt.
 
 ---
 
