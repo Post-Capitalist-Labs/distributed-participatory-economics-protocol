@@ -2,9 +2,40 @@
 
 **Deliverable:** `research/REVISION_CHANGELOG.md`
 **Status:** Working Draft
-**Latest pass:** stack maturity pass, 5 November 2026. Dispositions: `research/STACK_MATURITY_DISPOSITIONS.md`. Previous: third refinement, 4 November 2026 (`research/THIRD_REFINEMENT_DISPOSITIONS.md`).
+**Latest pass:** Chapter 11 bridges, 6 November 2026 (§R below). Before that: Chapter 2 historical expansion (§Q) and architectural-properties section (§P), same day. Previous: stack maturity pass, 5 November 2026. Dispositions: `research/STACK_MATURITY_DISPOSITIONS.md`. Previous: third refinement, 4 November 2026 (`research/THIRD_REFINEMENT_DISPOSITIONS.md`).
 
 This file holds revision history so that the monograph does not. Phrases removed from the book because they addressed a reviewer or recorded history rather than informing a reader are listed in §T.3.
+
+---
+
+## R. Chapter 11 bridges (same day, after §Q)
+
+- New §11.3 "Bridged Adoption: Interoperability with Existing Systems": DPEP runs alongside existing systems; Table 11.2 lists six technical bridges as unspecified Phase 3 requirements (bookkeeping export incl. SAF-T, fiat payments via ISO 20022 and reconciliation against Eq. 11.1, e-invoicing EN 16931 / Peppol, identity checks at the federation's legal boundary never linked to council credentials, adapters to Open Food Network / Loomio / Decidim / Cyclos with Valueflows as a candidate format, complementary currencies). Shadow mode and rollback; right of exit extended to data. New Design Principle 11.1 "Bridged Adoption".
+- New §11.4 "Complementary Currencies as Allies and Bridges", from Kennedy, Lietaer and Rogers, *People Money* (2012; read in full): building blocks, alignment with Sandström accounting and Parecon credits, differences (allocation, who manages, governance, Brinton's Test), three lessons (Argentina, Stuttgart's Rössle, tax and running costs), and a three-stage adoption path. Cross-reference added from §2.10. One bibliography entry added.
+- §11.4 paragraph added on cryptocurrencies, tokens and supply control: supply set by the plan and the public budget check, not minting/burning; credits non-transferable; token governance and public ledgers rejected; Sarafu (Mattsson et al. 2022, 2023; DOIs confirmed on Crossref) and Circles (documentation checked) as blockchain community currencies belonging at the bridge; stablecoins at most a fiat-edge payment channel. Two bibliography items added.
+- Book now 133 pages; checks pass; only the existing Fig. 5.4 overfull box exceeds 10 pt.
+
+---
+
+## Q. Chapter 2 historical expansion (same day, after §P)
+
+- Chapter 2 now reads every case from one standpoint: what people built for themselves, what destroyed or captured it, and what must be carried forward so that the impulse to freedom, self-management and solidarity ends in direct democracy. The §2.1 framing paragraph was rewritten accordingly.
+- Eight new sections (§§2.6–2.13): Russia 1917–1921 read through Brinton (*The Bolsheviks and Workers' Control*); Hungary 1956 with Castoriadis's *Workers' Councils and the Economics of a Self-Managed Society* (plan factory computes but never decides; direct democracy; full knowledge of the relevant facts; fragmentation hides the centre; his wage-equality disagreement with Parecon noted); Yugoslavia as self-management granted from above; Chile 1970–73 (cordones industriales and Cybersyn); Argentina 2001–2003 (assemblies, recovered workplaces, barter-network collapse); the Zapatistas, including the November 2023 reorganisation; the 2010–2011 uprisings (Egyptian popular committees, Omar Aziz's local councils, Bayat's "refolution") and Sudan's resistance committees; and three government-initiated precedents (Kerala, Ireland's Citizens' Assembly, Decidim).
+- The synthesis became §2.14, with the existing matrix (Table 2.2, three precedent lists extended) and a new subsection "Enduring Lessons": Brinton's "meaningful action" criterion, new Design Principle 2.1 "Brinton's Test", and Table 2.3 (ten lessons, where each was learned, what each requires of DPEP; stated as requirements, not all specified).
+- Reading guide in the front matter updated. Later Chapter 2 cross-references are by label; no Chapter 2 number shifts affect other chapters (new sections come after §2.5).
+- Sources read in full: Brinton (1967; 1970), Castoriadis (1957/1972), Aziz (2011), Anderson (1964) chapter on the suppression of the councils; Baschet (2024) and a Radio Dabanga report (30 September 2022) checked for the Zapatista and Sudan facts. All other new works are cited at bibliographic level and the book says so; DOIs for Woodward, Medina, Gómez, Mora, Farrell et al. and Barandiaran et al. confirmed on Crossref. 20 bibliography entries added. `audit_bibliography.py` not re-run.
+- Closing paragraph of §2.14.2 added: the proposed stack and cryptographic primitives are the present best answer to the lessons in Table 2.3; early implementations need vigilant review, audit and upgrades (crypto agility, open code); that maintenance is a collective open-source commons expected to become easier to sustain as a self-managed society matures. A float barrier keeps Table 2.2 from splitting the Brinton quotation.
+- `check_book.py`: "Rojava" and "Zapatistas" added to its non-citation list (they appear with a year in headings). Book now 128 pages; checks pass; no undefined references; only the existing Fig. 5.4 overfull box exceeds 10 pt.
+
+---
+
+## P. Architectural properties section (starting point: `57f6317`)
+
+- New §5.1 "Why These Properties: Architectural Commitments and Their Limits" (`sec:why-properties`). It explains why Architecture D adopts decentralisation, trust minimisation (not "trustlessness"), censorship resistance against external and internal adversaries, open source, tamper-evident history (not immutable personal data) and disintermediation (not the absence of intermediaries). New Design Principle 5.1 "Design for People as They Are", new Table 5.1 (property, what it answers, mechanism, what it rests on, limit), and three limits common to all six (symmetric protection, Freeman's structurelessness, cryptography does not create solidarity).
+- Later Chapter 5 sections and tables renumbered by one (old §5.1–5.3 → §5.2–5.4; old Tables 5.1–5.3 → 5.2–5.4). Live references updated in `reports/STACK_MATURITY.md` and `reports/TECHNOLOGY_COMPARISON.md`; dated disposition files left as written.
+- Cross-references added from §1.4 (one-paragraph summary) and §2.1. New labels `sec:institutions-first`, `sec:normative`, `sec:transition`.
+- Bibliography: Rogaway (2015, IACR ePrint 2015/1162; quotes and pages checked against the PDF), Hume (1741; quote checked against the Project Gutenberg text of the *Essays*), Madison (1788, Federalist No. 51; checked against the Library of Congress text), Lessig (1999; 2000 *Harvard Magazine* essay checked against the magazine page). `audit_bibliography.py` not re-run.
+- No new claims added to the register: the section is normative and points to mechanisms whose claims already exist (CLM-SEC-02 and others). Book now 117 pages; `check_book.py` passes; no undefined references; the only overfull box over 10 pt is the existing one at the Fig. 5.4 topology figure.
 
 ---
 

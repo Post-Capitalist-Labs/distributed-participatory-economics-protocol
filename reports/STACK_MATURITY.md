@@ -321,7 +321,7 @@ Apple's Secure Enclave can hold ML-DSA and ML-KEM keys from OS 26 [V](https://de
 These are the components no outside team has deployed. Their maturity can come only from DPEP's own Phases 1–3:
 
 1. Prio3 **budget-predicate validity circuit** with per-round price constants (§7.4) — M0/M1.
-2. **Two-Root aggregation** with participation bitmap and receipt challenge (§5.2.1) — M1.
+2. **Two-Root aggregation** with participation bitmap and receipt challenge (§5.3.1) — M1.
 3. **Hybrid Ed25519+ML-DSA-65 wire format** for proposals, receipts and checkpoints — M1, until the composite RFC lands.
 4. **PQ capability certificates** ("PQ-UCAN") — M0.
 5. **PQ anonymous budget credentials with nullifiers** — M0.
@@ -339,7 +339,7 @@ Each one either sits behind a kill gate or is explicitly marked open in the book
 | # | Finding | Severity | Recommended action | Where in the book |
 |---|---|---|---|---|
 | F1 | The book names **RustCrypto** for FIPS 203/204/205. Its ML-KEM crate says it has never been audited; no audited Rust crate covers all three. | Medium | Name `libcrux-ml-kem` (verified) or `aws-lc-rs` (FIPS 140-3) for ML-KEM; `aws-lc-rs` or `libcrux-ml-dsa` for ML-DSA. Use `rustls` + `aws-lc-rs` with `prefer-post-quantum` for QUIC. | §6.2 item 2; Table 6.2 row 2 |
-| F2 | **CometBFT v0.40 supports ML-DSA-65 validator keys** (pure, not hybrid). | Positive / Medium | State that Layer 1 can use an off-the-shelf PQ BFT engine. Decide between pure ML-DSA at Layer 1 and a custom hybrid key type. Cite Cosmos's 331 kB/block figure as corroboration of Table 7.8. Provisional decision: CometBFT retained (§7.2). | §5.3 Table 5.2; §7.2 Table 7.1; §7.6 |
+| F2 | **CometBFT v0.40 supports ML-DSA-65 validator keys** (pure, not hybrid). | Positive / Medium | State that Layer 1 can use an off-the-shelf PQ BFT engine. Decide between pure ML-DSA at Layer 1 and a custom hybrid key type. Cite Cosmos's 331 kB/block figure as corroboration of Table 7.8. Provisional decision: CometBFT retained (§7.2). | §5.4 Table 5.3; §7.2 Table 7.1; §7.6 |
 | F3 | **Hybrid signature format is not standardised** (composite ML-DSA is draft-19). | Medium | Add a sentence: DPEP will adopt `draft-ietf-lamps-pq-composite-sigs` once it is an RFC. Until then, the format is DPEP-defined under `CryptoSuiteId`. | §7.2 |
 | F4 | **"PQ-UCAN" does not exist** as a specification. | Medium | Re-label it "capability certificates (format to be chosen; UCAN 1.0-rc and Biscuit are candidates, re-signed with ML-DSA)". | List of abbreviations; §1.4 Layer 3; Table 2.2; Fig. 5.1; Table 7.1 |
 | F5 | **PQ share encryption for DAP** has no standard HPKE suite. | Low–Medium | Note that DAP's HPKE is classical today; name X-Wing or ML-KEM HPKE drafts as the path. | §7.4 VDAF paragraph; Table 7.2 row 1 |
