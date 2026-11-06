@@ -2,11 +2,23 @@
 
 **Deliverable:** `research/REVISION_CHANGELOG.md`
 **Status:** Working Draft
-**Latest pass:** Chapter 11 bridges, 6 November 2026 (§R below). Before that: Chapter 2 historical expansion (§Q) and architectural-properties section (§P), same day. Previous: stack maturity pass, 5 November 2026. Dispositions: `research/STACK_MATURITY_DISPOSITIONS.md`. Previous: third refinement, 4 November 2026 (`research/THIRD_REFINEMENT_DISPOSITIONS.md`).
+**Latest pass:** Chapter 4 economics corrections, 6 November 2026 (§E below). Before that: Chapter 11 bridges (§R), same day; Chapter 2 historical expansion (§Q) and architectural-properties section (§P), same day. Previous: stack maturity pass, 5 November 2026. Dispositions: `research/STACK_MATURITY_DISPOSITIONS.md`. Previous: third refinement, 4 November 2026 (`research/THIRD_REFINEMENT_DISPOSITIONS.md`).
 
 **Bibliography audit:** re-run on 6 November 2026 for all entries added in §§M, P, Q and R (34 works: 31 confirmed, 3 partially confirmed at edition level, none corrected). Dispositions: `research/SOURCE_AUDIT.md`, "Audit of entries added on 5–6 November 2026". Where the sections below say `audit_bibliography.py` was not re-run, this supersedes them.
 
 This file holds revision history so that the monograph does not. Phrases removed from the book because they addressed a reviewer or recorded history rather than informing a reader are listed in §T.3.
+
+---
+
+## E. Chapter 4 economics corrections (same day, after the front-matter merge `155bdb7`)
+
+Review of the economics mathematics from a formal economist's standpoint, before the draft goes to Robin Hahnel.
+
+- **Scarf test re-diagnosed (§4.4.3).** The book attributed the failure of Eq. 4.15 on Scarf's (1960) economy to Leontief complementarity. Scarf's consumers draw income from the market value of their endowments, so incomes move with relative prices. New control test R-ECON-03b in `verify_economics.py` gives the same consumers fixed equal budgets: the same price rule reaches 5% in round 9 and stays below 0.02% (endowment version: never below 10.54%). This agrees with Cheung, Cole and Devanur (2020) on tâtonnement in Fisher markets. Parecon incomes are effort-based, so the section now names income feedback (effort cap, credited hours, CAP compensation) as the relevant risk and keeps Scarf as a stress test of that feedback. Dependent text updated: the §1.3 plain statement, row A2 of the executive-summary evidence table, the feasibility paragraph after the definition of a cleared plan, row 3a of the method-families table, CLM-ECON-03 (book and `research/CLAIMS_REGISTER.md`).
+- **Toothache paragraph (§4.4.2).** "Not observed in committed CSVs" replaced: the CSVs do not record exponents, so whether toothache runs were committed cannot be established; the question is put to the simulation's authors, and the text states that Hahnel (2021) Ch. 9 was not read at page level. CLM-ECON-04 limitation updated to match.
+- **Small corrections.** §3.2: the four maxims are "distinct", not "mutually exclusive" (Parecon combines Maxims 3 and 4). §4.2: "Net Final Output (GDP)" relabelled as gross. §4.3.2: the CAP first-order condition is now written in general form; the summed-marginal-damage (Pigouvian) condition is stated to need quasi-linear well-being, and the non-standard label "Lindahl–Pigou" is removed. Algorithm 3b: slack block uses the indicator of the non-negative orthant, not $f_s \equiv 0$.
+- New bibliography entry: Cheung, Cole and Devanur (2020), DOI 10.1016/j.geb.2019.03.014 (checked on Crossref, 6 November 2026).
+- Book now 135 pages; `check_book.py` passes; no undefined references.
 
 ---
 

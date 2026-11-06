@@ -85,6 +85,45 @@ def test_r_econ_03_scarf():
         }
     return results
 
+def test_r_econ_03b_scarf_fixed_budgets():
+    """
+    R-ECON-03b: Control for R-ECON-03. Same three Leontief consumers, same goods,
+    same starting prices and same price rule, but each consumer's budget is one third
+    of the value of total supply instead of the market value of their own endowment.
+    Relative incomes then do not move with relative prices (a Fisher market with equal
+    budgets, homogeneous of degree zero as under a numeraire). This isolates whether
+    the cycle in R-ECON-03 comes from Leontief complementarity or from endowment income.
+    """
+    supply = [1.0, 1.0, 1.0]
+    out = {}
+    for mode in ("endowment_income", "fixed_equal_budgets"):
+        prices = [1.3, 1.0, 0.8]
+        prev_pd = [0.25, 0.25, 0.25]
+        min_max_rho = 999.0
+        first_5pct = None
+        last100 = []
+        for t in range(1, 3001):
+            agg = [0.0, 0.0, 0.0]
+            for i in range(3):
+                j = (i + 1) % 3
+                income = prices[i] if mode == "endowment_income" else sum(p * s for p, s in zip(prices, supply)) / 3.0
+                q = income / (prices[i] + prices[j])
+                agg[i] += q
+                agg[j] += q
+            prices, prev_pd, rhos = pequod_price_step(supply, agg, prev_pd, prices)
+            m = max(rhos)
+            min_max_rho = min(min_max_rho, m)
+            if m <= 0.05 and first_5pct is None:
+                first_5pct = t
+            if t > 2900:
+                last100.append(m)
+        out[mode] = {
+            "min_max_rho_over_3000_rounds": round(min_max_rho, 6),
+            "max_rho_last_100_rounds": round(max(last100), 6),
+            "first_round_max_rho_le_5pct": first_5pct,
+        }
+    return out
+
 def test_r_econ_04_nonconvex_plant():
     """
     R-ECON-04: Single indivisible plant with S(p) = 100 if p >= 10 else 0,
@@ -160,6 +199,7 @@ def test_r_econ_05_numeraire():
 if __name__ == "__main__":
     out = {
         "R_ECON_03_scarf": test_r_econ_03_scarf(),
+        "R_ECON_03b_scarf_fixed_budgets": test_r_econ_03b_scarf_fixed_budgets(),
         "R_ECON_04_nonconvex": test_r_econ_04_nonconvex_plant(),
         "R_ECON_05_numeraire": test_r_econ_05_numeraire(),
     }

@@ -10,7 +10,7 @@
 
 ## 📖 Read the Book (Working Draft)
 
-- **[Download the Typeset PDF Monograph (`Distributed_Participatory_Economics_Protocol_Book.pdf`)](./Distributed_Participatory_Economics_Protocol_Book.pdf)** *(133 pages, LaTeX typeset with full mathematical models, comprehensive list of abbreviations & notation, canonical CBOR/`proto3` schemas, architecture diagrams, 6-discipline critical review, scientific claims register, and source footnotes)*
+- **[Download the Typeset PDF Monograph (`Distributed_Participatory_Economics_Protocol_Book.pdf`)](./Distributed_Participatory_Economics_Protocol_Book.pdf)** *(135 pages, LaTeX typeset with full mathematical models, comprehensive list of abbreviations & notation, canonical CBOR/`proto3` schemas, architecture diagrams, 6-discipline critical review, scientific claims register, and source footnotes)*
 - **LaTeX Source:** [`book/dpep_book.tex`](./book/dpep_book.tex)
 
 *Note: This research monograph and technical architecture specification are currently released in **draft form** for open community review, critique, and collaborative iteration prior to Proof-of-Concept implementation.*
@@ -33,7 +33,7 @@ This book presents a rigorous, source-grounded feasibility study and systems arc
 
 | Path | Description |
 | :--- | :--- |
-| **[`Distributed_Participatory_Economics_Protocol_Book.pdf`](./Distributed_Participatory_Economics_Protocol_Book.pdf)** | **Complete 133-page typeset PDF book (Working Draft)** published under the Post-Capitalist Labs Imprint. |
+| **[`Distributed_Participatory_Economics_Protocol_Book.pdf`](./Distributed_Participatory_Economics_Protocol_Book.pdf)** | **Complete 135-page typeset PDF book (Working Draft)** published under the Post-Capitalist Labs Imprint. |
 | [`reports/EXECUTIVE_SUMMARY.md`](./reports/EXECUTIVE_SUMMARY.md) | Standalone executive summary covering feasibility, architecture, obstacles, PoC scope, and budget scenarios. |
 | [`reports/HISTORICAL_INSTITUTIONS.md`](./reports/HISTORICAL_INSTITUTIONS.md) | Institutional analysis of Spain (1936), Paris Commune (1871), Classical Athens, Occupy, Mondragón, Porto Alegre, Rojava, and Ostrom's CPR principles. (The book's Chapter 2 now also covers Russia 1917–21, Hungary 1956 and Castoriadis, Yugoslavia, Chile, Argentina 2001, the Zapatistas, and the 2010–11 uprisings and Sudan.) |
 | [`reports/ECONOMIC_MODEL.md`](./reports/ECONOMIC_MODEL.md) | Formal mathematical specification, Sandström's Society Account, 10-state machine, convergence algorithms, and `proto3` schemas. |

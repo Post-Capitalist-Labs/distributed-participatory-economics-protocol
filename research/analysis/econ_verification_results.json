@@ -51,6 +51,18 @@
       ]
     }
   },
+  "R_ECON_03b_scarf_fixed_budgets": {
+    "endowment_income": {
+      "min_max_rho_over_3000_rounds": 0.105444,
+      "max_rho_last_100_rounds": 1.649675,
+      "first_round_max_rho_le_5pct": null
+    },
+    "fixed_equal_budgets": {
+      "min_max_rho_over_3000_rounds": 0.000164,
+      "max_rho_last_100_rounds": 0.000169,
+      "first_round_max_rho_le_5pct": 9
+    }
+  },
   "R_ECON_04_nonconvex": {
     "single_indivisible_plant": {
       "min_rho_over_500_rounds": 0.50374,
