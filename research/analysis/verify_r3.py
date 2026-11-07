@@ -371,7 +371,7 @@ def section_d():
 # E. Proposals, archive, signature counts (R3-10, R3-11, R3-18 Table 9.2)
 # ---------------------------------------------------------------------------
 def section_e():
-    sig = P.ML_DSA_65_SIG_BYTES
+    sig = P.HYBRID_SIG_BYTES      # 3,373 B hybrid (corrected in the fourth refinement)
     hyb = P.HYBRID_SIG_BYTES
     checks = {
         "book_5200_minus_one_sig": 5200 - sig,
@@ -473,6 +473,87 @@ def section_g():
     return out
 
 
+# ---------------------------------------------------------------------------
+# H. Fourth refinement: Table 6.1 with D under the proposed tiered signature
+#    policy and a witnessed-log variant (D-log); sensitivity; Phase 2-3 budget.
+# ---------------------------------------------------------------------------
+# Changes from RESCORE_D: row 5 bandwidth 3.5 -> 4.0 (phone check 5.5 kB, archive 103-113 MB);
+# row 10 post-quantum readiness 4.0 -> 3.5 (round-level authenticity classical until a trigger).
+D_TIERED = [4.5, 4.0, 4.5, 4.0, 4.0, 4.0, 5.0, 4.0, 3.5, 3.5, 3.5, 4.0, 4.0, 4.0]
+D_LOG = [4.0, 4.0, 4.0, 4.0, 4.5, 4.5, 5.0, 3.5, 3.5, 4.0, 4.0, 4.5, 4.0, 4.0]
+
+
+def parse_table61_r4(tex):
+    """Rows of Table 6.1 with five score columns (A, B, C, D, D-log)."""
+    block = tex.split(r"\label{tab:arch-comp}", 1)[1].split(r"\midrule", 1)[1].split(r"\midrule", 1)[0]
+    rows = []
+    num = r"\s*&\s*(?:\\textbf\{)?([\d.]+)\}?"
+    pat = re.compile(r"\s*(\d+)\.\s.*?&\s*(\d+)\\%" + num * 5)
+    for line in block.strip().splitlines():
+        m = pat.match(line)
+        if m:
+            rows.append([int(m.group(2))] + [float(m.group(i)) for i in range(3, 8)])
+    return rows
+
+
+def section_h(tex):
+    w = [float(x) for x in REFERENCE["w"]]
+    tab = {k: [float(x) for x in REFERENCE[k]] for k in "ABC"}
+    tab["D"] = D_TIERED
+    tab["Dlog"] = D_LOG
+    names = ["A", "B", "C", "D", "Dlog"]
+
+    def scores(ws, t):
+        return {k: round(score(ws, t[k]), 3) for k in names}
+
+    focus = {3, 10, 11}
+    rest = sum(w[i] for i in range(14) if i not in focus)
+
+    def wfocus(a):
+        return [a / 3 if i in focus else (1 - a) * w[i] / rest for i in range(14)]
+
+    def crossover(k):
+        for j in range(0, 101):
+            if score(wfocus(j / 100), tab["A"]) > score(wfocus(j / 100), tab[k]):
+                return j / 100
+        return None
+
+    harsh = dict(tab)
+    for k in ("D", "Dlog"):
+        h = list(tab[k]); h[1], h[4], h[5], h[8] = 3.5, 2.5, 3, 3; harsh[k] = h
+    rng = random.Random(20261107)
+    wins = {k: 0 for k in names}
+    for _ in range(20000):
+        sc = {k: score(w, [min(5, max(1, v + rng.uniform(-1, 1))) for v in tab[k]]) for k in names}
+        wins[max(sc, key=sc.get)] += 1
+    rows = parse_table61_r4(tex)
+    book_ok = len(rows) == 14 and [r[4] for r in rows] == D_TIERED and [r[5] for r in rows] == D_LOG
+    # Budget, fourth refinement (assumed loaded rate band; author to replace)
+    rate = (120_000, 180_000)
+    plan = {
+        "Phase 1": (1.0, 4, 6, 1_000, 3_000),
+        "Phase 1H": (1.0, 3, 4, 8_000, 25_000),
+        "Phase 2": (2.5, 6, 8, 2_000, 5_000),        # +2 months: formal model before Rust work
+        "Phase 3": (4.5, 9, 12, 90_000, 260_000),    # native clients, S7 pilot design, wider audit
+    }
+    rec, lo_t, hi_t = {}, 0, 0
+    for k, (fte, a, b, nlo, nhi) in plan.items():
+        lo = fte * a / 12 * rate[0] + nlo; hi = fte * b / 12 * rate[1] + nhi
+        rec[k] = [round(lo, -3), round(hi, -3)]; lo_t += lo; hi_t += hi
+    rec["Programme total"] = [round(lo_t, -3), round(hi_t, -3)]
+    formal_model = [round(1.0 * 2 / 12 * rate[0], -3), round(1.0 * 3 / 12 * rate[1], -3)]
+    k3_addon = [round(0.5 * 4 / 12 * rate[0] + 20_000, -3), round(0.5 * 6 / 12 * rate[1] + 50_000, -3)]
+    return {
+        "D_tiered_row": D_TIERED, "D_log_row": D_LOG,
+        "baseline": scores(w, tab), "equal_weights": scores([1.0] * 14, tab),
+        "seventy_pct_4_11_12": scores(wfocus(0.7), tab), "harsher": scores(w, harsh),
+        "A_overtakes_at": {k: crossover(k) for k in ("D", "Dlog")},
+        "perturbation_wins_share": {k: round(v / 20000, 4) for k, v in wins.items()},
+        "book_table_matches": book_ok,
+        "budget_r4": rec, "formal_model_cost": formal_model, "k3_custom_protocol_addon": k3_addon,
+    }
+
+
 def main():
     with open(os.path.join(ROOT, "book", "dpep_book.tex"), encoding="utf-8") as f:
         tex = f.read()
@@ -484,6 +565,7 @@ def main():
         "E_proposals_archive": section_e(),
         "F_layer1_units": section_f(),
         "G_budget": section_g(),
+        "H_fourth_refinement": section_h(tex),
     }
     dest = os.path.join(HERE, "r3_verification_results.json")
     with open(dest, "w") as f:

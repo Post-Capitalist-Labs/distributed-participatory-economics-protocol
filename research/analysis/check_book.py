@@ -107,7 +107,9 @@ def main() -> int:
         "55.1 kB coarse": r3["D_household_reports"]["sizes"]["200x16"]["client_upload_bytes"] == 55120,
         "700,142 B block": r3["F_layer1_units"]["block_bytes"] == 700142,
         "bench sizes match": all(x["match"] for x in r3["D_household_reports"]["bench_check"] or [{"match": False}]),
-        "\\$0.62M programme": r3["G_budget"]["proposed_reconciliation_at_120k_180k"]["Programme total"][0] == 621000.0,
+        "\\$0.73M programme": r3["H_fourth_refinement"]["budget_r4"]["Programme total"][0] == 726000.0,
+        "4.10 D-log": abs(r3["H_fourth_refinement"]["baseline"]["Dlog"] - 4.10) < 1e-9,
+        "235 MB coarse hybrid archive": r3["E_proposals_archive"]["archive_scenarios_1e6"]["coarse200_single_key"]["raw_MB_per_round"] == 234.9,
     }
     for k, v in checks.items():
         in_book = k.split(" ")[0].replace(",", "{,}") in tex or k.split(" ")[0] in tex

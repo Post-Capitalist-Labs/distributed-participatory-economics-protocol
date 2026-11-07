@@ -22,9 +22,19 @@ PROPOSAL_BYTES_ZSTD = 1_500   # ~60 MB / 40k ≈ 1.5 KB compressed (book: 60 MB)
 # ---------------------------------------------------------------------------
 # Cryptography
 # ---------------------------------------------------------------------------
-ML_DSA_65_SIG_BYTES = 3_373
-ML_KEM_768_CT_BYTES = 1_120
 ED25519_SIG_BYTES = 64
+ML_DSA_65_SIG_BYTES = 3_309      # FIPS 204 Table 2 (confirmed: libcrux-ml-dsa 0.0.11 emits 3,309 B)
+# Hybrid Ed25519 + ML-DSA-65: RFC 10073 composite = mldsaSig || tradSig (concatenation).
+HYBRID_SIG_BYTES = ML_DSA_65_SIG_BYTES + ED25519_SIG_BYTES   # 3,373
+# Until the fourth refinement, proposals used 3,437 B per signer: the 3,373-B hybrid
+# plus a second Ed25519 signature (double count). Kept only to reproduce old tables.
+HYBRID_SIG_BYTES_DOUBLE_COUNTED = HYBRID_SIG_BYTES + ED25519_SIG_BYTES  # 3,437
+ML_DSA_44_SIG_BYTES = 2_420      # FIPS 204 Table 2; C2SP tlog-cosignature recommends ML-DSA-44
+SLH_DSA_SHA2_192S_SIG_BYTES = 16_224
+BLS_MINPK_SIG_BYTES = 96         # BLS12-381 min-pk: signature in G2 (blst; bench_signatures)
+BLS_MINSIG_SIG_BYTES = 48        # BLS12-381 min-sig: signature in G1 (CometBFT bls12381 key type)
+COSIG_LINE_ED25519_BYTES = 4 + 8 + 64   # C2SP signed-note cosignature: key hash + timestamp + Ed25519
+ML_KEM_768_CT_BYTES = 1_120
 BLAKE3_DIGEST_BYTES = 32
 FIELD128_ENCODED_SIZE = 16    # VDAF-22 Table 4
 XOF_SEED_SIZE = 32            # XofTurboShake128 in VDAF-22
@@ -139,7 +149,7 @@ def prio3_report_bytes(length: int, bits: int = BITS_PER_ITEM, shares: int = PRI
     }
 
 
-def quorum_sig_bytes(n: int = N_VALIDATORS, sig: int = ML_DSA_65_SIG_BYTES) -> dict:
+def quorum_sig_bytes(n: int = N_VALIDATORS, sig: int = HYBRID_SIG_BYTES) -> dict:
     f = (n - 1) // 3
     q_2f1 = 2 * f + 1
     q_ceil = math.ceil(2 * n / 3)
@@ -155,10 +165,15 @@ def quorum_sig_bytes(n: int = N_VALIDATORS, sig: int = ML_DSA_65_SIG_BYTES) -> d
     }
 
 
-def layer1_block_bytes(n: int = N_VALIDATORS, g: int = G_CATALOGUE) -> dict:
+def layer1_block_bytes(n: int = N_VALIDATORS, g: int = G_CATALOGUE, sigs: int | None = None) -> dict:
+    """Layer-1 block: 5 FixedDecimal arrays + quorum signatures + 2-bit bitmap + two roots.
+
+    `sigs` overrides the quorum-signature bytes (e.g. 86 x 64 for Ed25519, 96 + 16 for an
+    aggregated BLS signature plus a 128-bit signer bitmap). Default: 86 hybrid signatures.
+    """
     arrays = 5 * g * 8                         # 5 FixedDecimal arrays
-    q = quorum_sig_bytes(n)
-    sigs = q["bytes_ceil_2n3"]
+    if sigs is None:
+        sigs = quorum_sig_bytes(n)["bytes_ceil_2n3"]
     bitmap = math.ceil(M_COUNCILS_AT_1E6 * 2 / 8)  # 2 bits/council
     total = arrays + sigs + bitmap + 2 * BLAKE3_DIGEST_BYTES
     return {
@@ -187,10 +202,9 @@ ROUNDS_FRESH_REPORT = 3                # milestone rounds with fresh household r
 # Proposal sizes (canonical CBOR). A sparse item = 4-B id + 8-B quantity = 12 B.
 SPARSE_ITEM_BYTES = 12
 PROPOSAL_HEADER_BYTES = 400            # ids, round, totals, transcript root, bitmap (estimate)
-HYBRID_SIG_BYTES = ML_DSA_65_SIG_BYTES + ED25519_SIG_BYTES  # 3,437 if both carried
 
 
-def proposal_bytes(items: int, signers: int = 1, sig: int = ML_DSA_65_SIG_BYTES,
+def proposal_bytes(items: int, signers: int = 1, sig: int = HYBRID_SIG_BYTES,
                    header: int = PROPOSAL_HEADER_BYTES) -> int:
     """Raw canonical-CBOR proposal size: header + sparse items + one sig per signer."""
     return header + SPARSE_ITEM_BYTES * items + signers * sig

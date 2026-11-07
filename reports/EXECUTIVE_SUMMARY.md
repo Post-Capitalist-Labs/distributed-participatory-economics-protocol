@@ -2,8 +2,8 @@
 
 **Deliverable:** `reports/EXECUTIVE_SUMMARY.md`
 **Imprint:** Post-Capitalist Labs Imprint (`https://github.com/Post-Capitalist-Labs`)
-**Status:** Working Draft Monograph (November 2026), third refinement
-**Canonical text:** `book/dpep_book.tex` (PDF: `Distributed_Participatory_Economics_Protocol_Book.pdf`, 99 pages). Where this summary and the book differ, the book wins.
+**Status:** Working Draft Monograph (November 2026), updated for the fourth refinement (technology stack, 7 November 2026)
+**Canonical text:** `book/dpep_book.tex` (PDF: `Distributed_Participatory_Economics_Protocol_Book.pdf`, 146 pages). Where this summary and the book differ, the book wins.
 
 ---
 
@@ -13,11 +13,23 @@ DPEP is an open-source research programme asking whether distributed computing, 
 
 ## 2. What is established, estimated and unknown
 
-- **Established.** The 1991 model and its formalisations are coherent at the level of accounting identities. `pequod-cljs` Cobb–Douglas runs (`dep1ex61–100`, fixed incomes) reach 5% imbalance in 11.85 rounds. The price rule fails Scarf's cycle, where incomes move with prices (min imbalance 10.5%), and a single lumpy plant (50.4%); with fixed budgets it clears Scarf's consumers (below 0.02%). NIST FIPS 203–205 are standards. `Prio3SumVec` sizes and desktop timings are **measured** with libprio 0.18.1: a dense 3,000-category, 20-bit report is 975,760 B to the leader and about 3.5 ms to verify per aggregator on one desktop core. A coarse 200-category, 16-bit report is 55,120 B and about 0.25 ms.
-- **Estimated, not measured at scale.** Round time, archive sizes (0.24–1.46 GB raw per round at $10^6$), mobile traffic, hosting (\$3k–\$6k/month for 100 servers), and aggregator CPU at $10^6$ participants (about 4 coarse to 61 dense desktop core-minutes per aggregator per fresh-report round).
-- **Unknown.** Whether any solver clears Leontief, lumpy, endogenous-income and strategic economies. Whether ordinary people sustain multi-round planning without a technical elite forming. How household budgets can be checked privately when prices change between rounds. Whether one-report-per-person can be enforced without a population register.
+- **Established.** The 1991 model and its formalisations are coherent at the level of accounting identities. `pequod-cljs` Cobb–Douglas runs (`dep1ex61–100`, fixed incomes) reach 5% imbalance in 11.85 rounds. The price rule fails Scarf's cycle, where incomes move with prices (min imbalance 10.5%), and a single lumpy plant (50.4%); with fixed budgets it clears Scarf's consumers (below 0.02%). NIST FIPS 203–205 are standards. `Prio3SumVec` sizes and desktop timings are **measured** with libprio 0.18.1: a dense 3,000-category, 20-bit report is 975,760 B to the leader and about 3.5 ms to verify per aggregator on one desktop core. A coarse 200-category, 16-bit report is 55,120 B and about 0.25 ms. Signature verification is measured too: 200,000 hybrid verifications take about 10 s on one desktop core.
+- **Estimated, not measured at scale.** Round time, archive sizes (0.10–1.45 GB raw per round at $10^6$, depending on the signature suite), mobile traffic, hosting (\$3k–\$6k/month for 100 servers), and aggregator CPU at $10^6$ participants (about 4 coarse to 61 dense desktop core-minutes per aggregator per fresh-report round).
+- **Unknown.** Whether any solver clears Leontief, lumpy, endogenous-income and strategic economies. Whether ordinary people sustain multi-round planning without a technical elite forming. How household budgets can be checked privately when prices change between rounds. Whether one-report-per-person can be enforced without a population register. How consumption at the point of use (intra-year fulfilment, S7) can be private and protected against offline double spending: **the household privacy claim covers annual requests only.**
 
-## 3. Most consequential changes in this pass
+## 3. Technology stack: fourth refinement (7 November 2026)
+
+1. **Signature sizes corrected.** ML-DSA-65 is 3,309 B; the RFC 10073 hybrid with Ed25519 is 3,373 B. Council proposals had counted 3,437 B per signer (a second Ed25519 signature).
+2. **Tiered signature policy proposed.** Per-round objects (proposals, receipts, checkpoints) classical, with each round's roots anchored post-quantum by several parties (3 of 5 federations signing with SLH-DSA under BFT, 48.7 kB per block and 20.7 MB a year; or 11 of 16 witnesses adding ML-DSA-44 cosignatures under a log, 26.8 kB and 11.4 MB a year, plus an annual SLH-DSA backstop); long-lived objects hybrid; confidentiality hybrid ML-KEM. A phone's full checkpoint check falls from 290 kB to 5.5 kB (Ed25519) or 0.1 kB (aggregated BLS, only with an engine or log that aggregates; CometBFT does not); per-round phone traffic from 306–386 kB to 21–101 kB; checkpoint block 700 → 416 kB; Layer 1 298 → 177 MB/yr; coarse archive with five signers 775 → 113 MB per round. Coordinator attestation and the sync committee are no longer needed.
+3. **Verification load is not the problem on a desktop.** On one Apple M4 Pro core, 200,000 hybrid signatures verify in about 10 s; Ed25519 batched in 1.7 s. Raspberry Pi and community-server timings are a Kill Gate 2 measurement.
+4. **Layer 1: BFT checkpoints or a witnessed log.** A C2SP witnessed transparency log meets the four Layer-1 requirements without a consensus engine but puts liveness on one operator per round. Both are tested at Kill Gate 2; the weighted comparison cannot separate them (4.07 vs 4.10).
+5. **Two aggregators for pilots.** DAP draft-20 requires exactly two aggregators; three would mean a protocol of DPEP's own (+\$40k–\$95k). Proposed: K = 2 on DAP (Janus) for pilots.
+6. **Intra-year fulfilment specified as a problem.** New §7.5 sets requirements and compares three designs; pilots use council-level allocation for staples and attributed receipts for rationed goods; the privacy claim is narrowed.
+7. **Native clients primary.** A PWA cannot reach hardware keystores, browsers lack ML-KEM/ML-DSA, and Safari lacks background sync. App-store removal and push metadata are treated as censorship vectors.
+8. **Offline overspend bounded consistently.** Rationed goods are checked online when possible and otherwise only at the home depot, so offline overspend is at most one credit cap per person per day.
+9. **Formal model before Rust.** A Quint or TLA+ model of S2–S4, S7 and S8 is a Phase 2 entry criterion, with seven named properties.
+
+## 3a. Third refinement (4 November 2026)
 
 1. **The gates can now fail.** Each kill gate has pre-registered pass and fail conditions, a consequence (proceed / narrow / redesign and rerun / stop) and a reason. Thresholds are proposed for author ratification (book Table 9.2). Pre-registration lives in `research/preregistration/` with a signed tag deposited externally.
 2. **Success is no longer one-sided feasibility.** The single-plant case was "feasible" at round 3 with 42% of output unused. The book now distinguishes *feasible*, *cleared* and *socially acceptable* (Definition 4.2), and Gate 1 requires clearing.
@@ -33,8 +45,8 @@ DPEP is an open-source research programme asking whether distributed computing, 
 |---|---|---|---|
 | 1 Economic | ≥90% of convex and Leontief instances cleared in ≤25 rounds; ≥70% of staggered-lumpy; 100% of infeasible instances detected; ≥70% of endogenous-income instances; median welfare gap ≤5% | <50% convex and Leontief cleared, any infeasible instance reported feasible, or median gap >15% | Proceed / narrow to passing classes / rerun once / stop |
 | 1H Human | ≥80% completion; median comprehension ≥70%; ≤25% drafts accepted unopened; ≥50% substantive override reasons; top 20% originate ≤60% of adopted amendments | <60% completion, comprehension <50%, >50% unopened, or top 20% >80% | Proceed / redesign once / stop human-facing claims |
-| 2 Distributed | 100% tamper detection over ≥1,000 trials; p95 round ≤10 min at ≥$10^4$, ≤60 min extrapolated to $10^6$; ≤10× an Architecture A baseline | Any miss; p95 >30 min; >50× overhead | Proceed / narrow / stop and pilot on A |
-| 3 Crypto, mobile, pilot | Audit with no open critical or high findings; ≤150 kB ordinary round, ≤450 kB full-check round, RAM ≤150 MB; pilot retention ≥70% | Open critical finding; any device metric >2× cap; retention <40% | Proceed / council-level trust only / stop custom circuits |
+| 2 Distributed | Entry: formal model passes model checking. 100% tamper detection over ≥1,000 trials for each Layer-1 design; p95 round ≤10 min at ≥$10^4$, ≤60 min extrapolated to $10^6$; ≤10× an Architecture A baseline; stalled log operator replaced within one round window | Any miss; p95 >30 min; >50× overhead | Proceed / narrow / stop and pilot on A |
+| 3 Crypto, mobile, pilot | Audit with no open critical or high findings; ≤150 kB every round (tiered; all-hybrid ≤450 kB full-check round), RAM ≤150 MB; pilot retention ≥70%; S7 rollups reconcile within 1%; reproducible clients outside app stores | Open critical finding; any device metric >2× cap; retention <40% | Proceed / council-level trust only / stop custom circuits |
 
 ## 5. Budget (proposed; assumed \$120k–\$180k loaded per FTE-year)
 
@@ -42,9 +54,9 @@ DPEP is an open-source research programme asking whether distributed computing, 
 |---|---|---|
 | 1 | 1.0 FTE, 4–6 months | \$41k–\$93k |
 | 1H | 1.0 FTE, 3–4 months, plus ethics, consent, compensation, data protection | \$38k–\$85k |
-| 2 | 2.5 FTE, 4–6 months | \$102k–\$230k |
-| 3 | 4.0 FTE, 9–12 months, plus audit and pilot data protection | \$440k–\$950k (Phase 3 alone) |
-| Programme | if every gate passes | \$0.62M–\$1.36M |
+| 2 | 2.5 FTE, 6–8 months, including a formal model before Rust (\$20k–\$45k) | \$152k–\$305k |
+| 3 | 4.5 FTE, 9–12 months, native clients, plus audit (\$60k–\$180k) and pilot data protection; K = 2 on DAP | \$495k–\$1.07M (Phase 3 alone); K = 3 adds \$40k–\$95k |
+| Programme | if every gate passes | \$0.73M–\$1.55M |
 
 The previous table's implied rates were inconsistent (about \$150k–\$180k per FTE-year in Phase 1, \$280k–\$300k in Phase 2, about \$120k in Phase 3), and its "2026 Verified Rates" label had no source; both are replaced.
 
@@ -52,14 +64,18 @@ The previous table's implied rates were inconsistent (about \$150k–\$180k per 
 
 1. **Gate thresholds and consequences:** as in section 4.
 2. **Privacy baseline:** coarse `Prio3` (200 × 16-bit) for household cryptography; council-level trust (no household crypto) for Phase 1H and the first Phase 3 pilots.
-3. **Aggregator correctness:** three non-nested aggregators from organisations with different interests, plus the public budget check and aggregate-share commitments; not nested CC/Ward/Federation. Robust MPC deferred.
+3. **Aggregator correctness and count:** two non-nested aggregators on DAP from organisations with opposed interests for pilots (a third only with a shown governance case), plus the public budget check and aggregate-share commitments; not nested CC/Ward/Federation. Robust MPC deferred.
 4. **Effort rating:** $\bar\epsilon_{\max}=1.0$; individual spread $\epsilon_{\max}=0$ (flat pay per accredited hour) unless a council votes for peer-rated spread capped at 0.15. This honours Maxim 3 through hours and job balancing but not, by default, through intensity.
 5. **Subtitle:** recommend replacing "A Rigorous, Source-Grounded Feasibility Study and Post-Quantum Technical Architecture…" with "A Source-Grounded Research Programme and Post-Quantum Technical Architecture…". The cover is unchanged pending the author's decision.
+6. **Signature policy:** tiered (recommended) or all-hybrid.
+7. **Layer-1 design at Kill Gate 2:** test both BFT checkpoints and a witnessed log (recommended).
+8. **S7 fulfilment for pilots:** council allocation for staples plus attributed receipts for rationed goods; privacy claim narrowed until a point-of-use design exists (recommended).
+9. **Primary client:** native Android/iOS over the Rust core; web client for exploration and Phase 1H (recommended).
 
 ## 7. Strongest remaining criticisms (severity)
 
 - **Critical:** participation at scale; a technical elite forming around the software; no solver shown to clear full DPEP instances; no credential construction for household cryptography.
-- **Major:** federations as hidden central authorities (Kuch); round cost at $10^6$; aggregator correctness; one-good results not transferring; ratchet and incentive limits; foreign trade and defence unspecified.
+- **Major:** federations as hidden central authorities (Kuch); round cost at $10^6$; consumption at the point of use not private (S7); a log operator stalling a round (log option); aggregator correctness; one-good results not transferring; ratchet and incentive limits; foreign trade and defence unspecified.
 
 ---
 

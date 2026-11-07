@@ -1,10 +1,59 @@
 # Security, Privacy, Membership, and Post-Quantum Cryptography Review
 
 **Deliverable:** `research/SECURITY_REVIEW.md`
-**Status:** Working Draft (third refinement, 4 November 2026)
-**Canonical text:** `book/dpep_book.tex` Chapter 7. Earlier passes are kept below as a historical record.
+**Status:** Working Draft (fourth refinement: technology stack, 7 November 2026)
+**Canonical text:** `book/dpep_book.tex` Chapters 5 and 7. Earlier passes are kept below as a historical record.
 
 ---
+
+## Fourth refinement (technology stack)
+
+Dispositions: `research/FOURTH_REFINEMENT_DISPOSITIONS.md`. Scripts: `research/analysis/verify_signature_suites.py`, `verify_r3.py` §H, `verify_sync_committee.py`, `bench_signatures/`.
+
+### Signature sizes (corrected)
+
+ML-DSA-65 signatures are 3,309 B (FIPS 204; confirmed by `libcrux-ml-dsa` 0.0.11). The hybrid Ed25519 + ML-DSA-65 composite of RFC 10073 concatenates the two: 3,373 B. Council-proposal sizes previously used 3,437 B per signer, which added a second Ed25519 signature; corrected throughout (Table 5.2, Table 7.9, P12, `verify_sync_committee.py`). Checkpoint figures already used 3,373 B and are unchanged.
+
+### Tiered signature policy (proposed)
+
+| Object class | Construction | Rationale |
+|---|---|---|
+| Confidentiality (transport, Prio3 shares) | Hybrid X25519 + ML-KEM-768 | Harvest-now-decrypt-later; unchanged |
+| Per-round objects (council proposals, receipts, round checkpoints) | Ed25519; aggregated BLS12-381 or 86 Ed25519 for validators/witnesses; roots anchored post-quantum within 24 h of round close by 3-of-5 federation SLH-DSA signatures (BFT: 48.7 kB per block, 20.7 MB/yr) or 11-of-16 ML-DSA-44 witness cosignatures (log: 26.8 kB, 11.4 MB/yr, plus an annual 3-of-5 SLH-DSA backstop) | Matter only for one round and its challenge window; anchoring bounds rewriting of history |
+| Long-lived objects (accreditation, CapCerts, roster roots, WASM hashes, annual ratification) | Hybrid (RFC 10073) or SLH-DSA | Long validity |
+
+Effects (`verify_signature_suites.py`): phone full checkpoint check 290 kB → 5.5 kB (Ed25519) / 112 B (BLS, only where the engine or log aggregates; CometBFT does not); checkpoint block 700 kB → 416 kB / 410 kB; Layer 1 298 → 177 / 174 MB/yr; coarse archive with five signers 775 MB → 113 MB per round. Phone traffic per round: 21–46 kB automated, 76–101 kB milestone (was 306–386 kB with hybrid full checks).
+
+Residual risk: a covert CRQC before a migration trigger could forge live round objects; migration of many devices needs rehearsal. All-hybrid would resist the first.
+
+### Follow-up fixes (7 November 2026)
+
+- **Distributed anchor.** A single federation SLH-DSA key replaced by k-of-n anchoring (Table 7.3 in the book): BFT design 3-of-5 federation SLH-DSA (48,673 B per block, 20.7 MB/yr); log design 11-of-16 ML-DSA-44 witness cosignatures (26,752 B, 11.4 MB/yr) plus an annual 3-of-5 SLH-DSA backstop over the year's log root (0.05 MB/yr). Anchor-key custody added to §7.7 and to the trust map; unspecified.
+- **S7 overspend bound.** Per-depot caps would give cap × depots visited. Pilot design now: rationed goods checked online when possible, offline only at the home depot, so the bound is one cap per person per day. A secure-hardware spend counter is left for later study (vendor trust; phones without secure hardware).
+
+### Verification load (measured)
+
+Apple M4 Pro, one core: ML-DSA-65 verify 32.2 µs; Ed25519 17.3 µs (8.7 µs in batches of 64); hybrid 49.5 µs; aggregated BLS of 86 signers 0.45 ms. 200,000 hybrid verifications: 9.9 s; ML-DSA alone on 14 threads: 0.66 s. On a desktop, size rather than CPU is the cost; Raspberry Pi and community-server timings remain a Kill Gate 2 measurement and could change this for small federations.
+
+### Layer 1
+
+Witnessed log (C2SP) added as an option beside BFT checkpoints; both tested at Kill Gate 2. Log liveness rests on one operator per round (institutional replacement). CometBFT v0.40.0 offers a BLS key type only behind a build flag and does not aggregate votes.
+
+### Aggregators
+
+DAP draft-20 requires exactly two aggregators; K = 3 means a DPEP-original protocol (+$40k–$95k, wider audit). Proposed: K = 2 on DAP (Janus) for pilots; K = 3 only if a governance case is shown. Privacy needs one of two honest; correctness needs both. A custom budget circuit needs server changes either way; libprio 0.18.1 supports user-defined circuits.
+
+### Intra-year fulfilment (S7)
+
+New §7.5: requirements, three candidate designs (attributed receipts with credit cap; anonymous tokens; council-level allocation for staples), daily rollup, and a pilot recommendation. **The household privacy claim is narrowed to annual requests**; point-of-use privacy is open (P16, Kill Gate 3(d), CLM-SEC-13). GNU Taler's offline design was abandoned, so offline anonymous tokens remain research-grade.
+
+### Clients, distribution, notifications
+
+A PWA cannot reach hardware keystores; WebCrypto PQ is a WICG draft (Chrome experiment only); Safari lacks Background Sync. Native Kotlin/Swift clients over the Rust core are proposed as primary. App-store removal and push metadata added to the threat model; mitigations: F-Droid and direct APK, reproducible client builds, content-free notifications.
+
+---
+
+# Historical record (earlier passes)
 
 ## Third refinement
 
