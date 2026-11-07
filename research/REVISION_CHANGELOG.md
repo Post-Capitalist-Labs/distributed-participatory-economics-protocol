@@ -2,11 +2,23 @@
 
 **Deliverable:** `research/REVISION_CHANGELOG.md`
 **Status:** Working Draft
-**Latest pass:** follow-up fixes to the fourth refinement, 7 November 2026 (§F.1 below). Before that: fourth refinement, technology stack, same day (§F below). Before that: Chapter 4 economics corrections, 6 November 2026 (§E below). Before that: Chapter 11 bridges (§R), same day; Chapter 2 historical expansion (§Q) and architectural-properties section (§P), same day. Previous: stack maturity pass, 5 November 2026. Dispositions: `research/STACK_MATURITY_DISPOSITIONS.md`. Previous: third refinement, 4 November 2026 (`research/THIRD_REFINEMENT_DISPOSITIONS.md`).
+**Latest pass:** Chapter 2 reordered, 7 November 2026 (§G below). Before that: follow-up fixes to the fourth refinement, same day (§F.1 below). Before that: fourth refinement, technology stack, same day (§F below). Before that: Chapter 4 economics corrections, 6 November 2026 (§E below). Before that: Chapter 11 bridges (§R), same day; Chapter 2 historical expansion (§Q) and architectural-properties section (§P), same day. Previous: stack maturity pass, 5 November 2026. Dispositions: `research/STACK_MATURITY_DISPOSITIONS.md`. Previous: third refinement, 4 November 2026 (`research/THIRD_REFINEMENT_DISPOSITIONS.md`).
 
 **Bibliography audit:** re-run on 6 November 2026 for all entries added in §§M, P, Q and R (34 works: 31 confirmed, 3 partially confirmed at edition level, none corrected). Dispositions: `research/SOURCE_AUDIT.md`, "Audit of entries added on 5–6 November 2026". Where the sections below say `audit_bibliography.py` was not re-run, this supersedes them.
 
 This file holds revision history so that the monograph does not. Phrases removed from the book because they addressed a reviewer or recorded history rather than informing a reader are listed in §T.3.
+
+---
+
+## G. Chapter 2 reordered (same day, after merge `af432be`)
+
+**Why.** The cases were in the order they were written, not by design: the four first-edition sections (Spain 1936, Paris 1871, Athens, then Occupy with Mondragón, Porto Alegre, Rojava and Ostrom as bullets) came first, and the §Q additions (Russia 1917 to the 2010–11 uprisings, then three government-initiated cases) were appended after them. Readers met 1936 → 1871 → 508 BCE → 2011 → 1917.
+
+**Approach (author's decision).** Two groups, each in date order, so that each experience is read against those it learned from (Paris → Russia → Spain; Brinton on Russia; Castoriadis after 1956; Occupy after the 2011 squares). Ordering by lesson was rejected: most cases teach several, and the synthesis (Table 2.2 mechanisms, Table 2.3 lessons) already organises by theme. The grouping applies the chapter's own rule that reforms granted by rulers are examined only for what they teach.
+1. *Built from below* (§§2.2–2.11): Athens (ancient antecedent, with its exclusions), Paris 1871, Russia 1917–21, Spain 1936–39, Hungary 1956, Chile 1970–73, Zapatistas 1994–, Argentina 2001–03, the 2010–11 uprisings with Occupy and Sudan, Rojava.
+2. *Granted from above, and long-lived institutions* (§2.12, one subsection each): Yugoslavia, Porto Alegre, Kerala, Ireland's Citizens' Assembly, Decidim (date order); then Mondragón and Ostrom's commons.
+
+**Edits.** Section text moved unchanged, except: §2.1 roadmap paragraph rewritten to state the two groups and why they are not ordered by lesson; the Occupy bullet became a paragraph in §2.10 with one linking sentence (began in New York in September 2011; drew on the occupied squares; general assemblies); Rojava became §2.11 with a lesson sentence tied to Table 2.2 row 6; new §2.12 introduction; Yugoslavia's "unlike the other cases in this chapter" now "unlike the cases in the first group"; Porto Alegre and Decidim bullets given subjects; new labels `sec:hist-athens`, `sec:hist-paris`, `sec:hist-rojava`; matrix range reference now Athens–§2.12. No sources or figures added or changed. Book 149 pp (TOC +7 entries); no undefined references; `check_book.py` passes.
 
 ---
 
