@@ -2,13 +2,48 @@
 
 **Deliverable:** `research/REVISION_CHANGELOG.md`
 **Status:** Working Draft
-**Latest pass:** Chapter 4 economics corrections, 6 November 2026 (§E below). Before that: Chapter 11 bridges (§R), same day; Chapter 2 historical expansion (§Q) and architectural-properties section (§P), same day. Previous: stack maturity pass, 5 November 2026. Dispositions: `research/STACK_MATURITY_DISPOSITIONS.md`. Previous: third refinement, 4 November 2026 (`research/THIRD_REFINEMENT_DISPOSITIONS.md`).
+**Latest pass:** follow-up fixes to the fourth refinement, 7 November 2026 (§F.1 below). Before that: fourth refinement, technology stack, same day (§F below). Before that: Chapter 4 economics corrections, 6 November 2026 (§E below). Before that: Chapter 11 bridges (§R), same day; Chapter 2 historical expansion (§Q) and architectural-properties section (§P), same day. Previous: stack maturity pass, 5 November 2026. Dispositions: `research/STACK_MATURITY_DISPOSITIONS.md`. Previous: third refinement, 4 November 2026 (`research/THIRD_REFINEMENT_DISPOSITIONS.md`).
 
 **Bibliography audit:** re-run on 6 November 2026 for all entries added in §§M, P, Q and R (34 works: 31 confirmed, 3 partially confirmed at edition level, none corrected). Dispositions: `research/SOURCE_AUDIT.md`, "Audit of entries added on 5–6 November 2026". Where the sections below say `audit_bibliography.py` was not re-run, this supersedes them.
 
 This file holds revision history so that the monograph does not. Phrases removed from the book because they addressed a reviewer or recorded history rather than informing a reader are listed in §T.3.
 
 ---
+
+## F.1 Follow-up fixes to the fourth refinement (same day)
+
+Dispositions: rows F5-01 to F5-05 in `research/FOURTH_REFINEMENT_DISPOSITIONS.md`. Uncommitted fourth-pass changes kept.
+
+- **Post-quantum anchoring by several parties.** The single federation SLH-DSA key is replaced: new paragraph and Table 7.3 in §7.2.1 (later Chapter 7 tables renumbered by one) (BFT: 3-of-5 federation SLH-DSA, 48.7 kB per block, 20.7 MB/yr; log: 11-of-16 ML-DSA-44 witness cosignatures, 26.8 kB, 11.4 MB/yr, plus an annual 3-of-5 SLH-DSA backstop), with custody and rotation; proposed, for author ratification. Updated: urgency table (now Table 7.4), Fig. 7.1, Table 7.2, Table 5.3, Fig. 5.3 band, §7.7 custody (formerly §7.6), Table 7.1 SLH-DSA role, trust map, Table 6.3 (new row), Table 6.1 row 12, Table 9.3 (new row), Listing field, Ch. 12 row, CLM-SEC-12.
+- **Offline overspend bound made consistent.** Rationed goods checked online when possible, offline only at the home depot: one credit cap per person per day. Table 7.9 (S7 designs; formerly 7.8), §7.5 recommendation, Table 5.4 row 5, threat model, trust map, Kill Gate 3(d), §9.1.2 property 7.
+- **Figure 5.3** no longer says "hybrid signatures"; other figures and captions checked.
+- **Aggregated BLS caveat** (CometBFT does not aggregate): Table 1.1 B3, §7.2.1, Table 5.3, light-client paragraph, Table 7.10 (light clients), light-client default, `reports/EXECUTIVE_SUMMARY.md`.
+- **Desktop caveat** on verification load (Apple M4 Pro; Pi and community-server timings a Kill Gate 2 measurement): Table 1.1 B1, §7.2.1, §5.3.1, Table 6.1 row 6, reports.
+- **Analysis:** `verify_signature_suites.py` section S8 (anchoring options); README updated; register row 36.
+
+---
+
+## F. Fourth refinement: technology stack (7 November 2026)
+
+Started from `0bcdabb` with three uncommitted author edits to `book/dpep_book.tex` (Table 1.2 basis note; Casanova/Seidman and Estrin/Woodward footnotes), which were kept. Dispositions: `research/FOURTH_REFINEMENT_DISPOSITIONS.md`.
+
+**Monograph (book/dpep_book.tex; 146 pp):**
+- Signature sizes corrected (3,309 B ML-DSA-65; 3,373 B hybrid per RFC 10073; the 3,437 B per council signer double-counted Ed25519). Composite format cited as RFC 10073.
+- Tiered signature policy proposed (§7.2.1, Tables 7.2–7.3, Fig. 7.1); Table 5.2 by signature suite with measured verification times; light-client table and default rewritten (Table 7.9); Kill Gate 3 mobile cap.
+- New §5.3.2 and Table 5.3: BFT checkpoints vs witnessed log (C2SP); both tested at Kill Gate 2; SHA-256 vs BLAKE3 trade-off.
+- Table 6.1: column D-log added; rows 5, 6, 10, 12 rescored for D; §6.1.1 rerun (D 4.07, D-log 4.10, not separable).
+- Table 6.3 split (Prio3 library vs aggregation protocol K = 2 / K = 3) and new rows (aggregated BLS, witnessed log, S7, formal model); longtable; precedent paragraph now ten combinations.
+- §7.4: two vs three aggregators (DAP draft-20 quotation; Janus; libprio custom circuits); Table 7.4 and recommendation changed to K = 2 for pilots; Figs. 5.4 and 7.3.
+- New §7.5 intra-year fulfilment (S7), Table 7.8; household privacy claim narrowed to annual requests (§1.3, §5.1, Table 5.1, §7.4.2, trust map).
+- New §5.5 client platform, distribution and notifications; native clients primary; Fig. 5.1 Layer 4; Tables 5.5, 6.2; threat model entries.
+- New §9.1.2 formal model as Phase 2 entry criterion; Table 9.1, Kill Gates 2 (entry, (d)) and 3 ((d), (e)); Table 9.3 recomputed by suite.
+- Table 1.2: Phase 2 $152k–$305k (6–8 months, includes formal model), Phase 3 $495k–$1.07M (4.5 FTE), programme $0.73M–$1.55M; K = 3 add-on $40k–$95k.
+- Chapter 10: P16 (S7), P17 (Layer-1 design); P12, P14 updated. §11.3 interop row. Chapter 12: four new rows. Claims: CLM-TECH-08, TECH-09, SEC-12, SEC-13; TECH-04, SEC-09 updated.
+
+**Analysis:** new `verify_signature_suites.py` (Test S reproduction plus corrected and alternative suites, phone traffic, verification load, S7 costs, K = 2/3 upload), `bench_signatures/` (Rust: ed25519-dalek 3.0.0, blst 0.3.17, libcrux-ml-dsa 0.0.11); `parameters.py` constants corrected and extended; `verify_r3.py` §H; `verify_sync_committee.py` imports parameters; `check_book.py` figures updated.
+
+---
+
 
 ## E. Chapter 4 economics corrections (same day, after the front-matter merge `155bdb7`)
 

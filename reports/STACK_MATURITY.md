@@ -7,6 +7,37 @@
 
 ---
 
+---
+
+## Fourth refinement update (7 November 2026)
+
+Statuses checked at primary sources on 7 November 2026. Book references are to the 146-page build.
+
+| Component | Status found | Effect on the book |
+|---|---|---|
+| Composite ML-DSA (Ed25519 + ML-DSA-65) | Published as **RFC 10073** (Proposed Standard, 2026); signature = ML-DSA-65 (3,309 B) ‖ Ed25519 (64 B) = 3,373 B | Hybrid format no longer "DPEP-defined"; the 3,437 B per council signer used in Table 5.2 double-counted Ed25519 and is corrected to 3,373 B |
+| DAP | **draft-ietf-ppm-dap-20** (21 Oct 2026), §2: "DAP requires exactly two Aggregators" | Table 6.3 row split: Prio3 (libprio) vs aggregation protocol; K = 3 rated M0 (DPEP-original); K = 2 on DAP proposed for pilots |
+| Janus | 0.7.146 (4 Nov 2026), MPL-2.0 | Candidate DAP server for K = 2 |
+| libprio | 0.18.1; public `flp::Type` and `Prio3::new(num_aggregators, …)`; 1–254 aggregators | Custom budget circuit possible with the library |
+| C2SP transparency logs | `tlog-witness` cites `tlog-checkpoint` / `tlog-cosignature` v1.1.0; cosignatures Ed25519 or ML-DSA-44 ("ML-DSA-44 SHOULD be used for new deployments") | Witnessed-log Layer-1 option added (§5.3.2) |
+| Tessera / Trillian | v1.0.4 (16 Jul 2026) / v1.8.0 (21 Sep 2026), Go | Log implementations M4 (Go) |
+| Rust log crates | `tlog_tiles` / `signed_note` 0.2.0 (Cloudflare azul); `sigsum` 0.4.0 (Mullvad) | Rust implementations M2 |
+| CometBFT | v0.40.0 (27 Jul 2026); `bls12_381` key type only with build tag; no vote aggregation (RFC 018 exploration) | Aggregated BLS checkpoints need application-level aggregation or another engine |
+| Malachite | v0.8.2 (circlefin, 19 Oct 2026); README: alpha, not externally audited; Quint specs | Unchanged fallback; Quint precedent for the formal model |
+| Commonware | `commonware-consensus` 2026.10.0, BLS12-381 multisig Simplex scheme; stability levels per primitive | Noted as a further Rust engine; not rated in the book |
+| Quint | v0.33.1 (28 Oct 2026; repo now quint-co/quint) | Formal model requirement (§9.1.2) |
+| WebCrypto ML-KEM / ML-DSA | WICG "Modern Algorithms" Draft CG Report (23 Oct 2026); Chrome Intent to Experiment behind a flag; no Safari implementation found | PWA demoted; native clients primary (§5.5) |
+| Background sync on iOS | MDN data: `SyncManager` and `PeriodicSyncManager` unsupported in Safari (incl. iOS) and Firefox | As above |
+| GNU Taler offline payments | Design document 30 abandoned; Taler "explicitly meant to be an online payment system" | S7 option (b) rated research-grade |
+
+**Measured (bench_signatures, Apple M4 Pro, 7 Nov 2026):** ML-DSA-65 verify 32 µs (signature 3,309 B confirmed); hybrid 49 µs; Ed25519 17 µs single, 8.7 µs batched; aggregated BLS of 86 signers 0.45 ms. 200,000 hybrid verifications ≈ 9.9 s on one core. On a desktop, verification load is not a reason to drop hybrid signatures; size is. Raspberry Pi and community-server timings are a Kill Gate 2 measurement. Aggregated BLS needs an engine or log that aggregates; CometBFT does not.
+
+**Post-quantum history anchor (follow-up, 7 Nov 2026; proposed, for author ratification):** a single federation SLH-DSA key is replaced by k-of-n anchoring. BFT design: 3-of-5 federations sign each round's roots with SLH-DSA-SHA2-192s (48,673 B per block, 20.7 MB/yr). Log design: 11-of-16 witnesses add ML-DSA-44 cosignatures (26,752 B per round, 11.4 MB/yr), archived by replicas, plus an annual 3-of-5 SLH-DSA backstop over the year's log root (0.05 MB/yr). Maturity M3 (BFT) / M2–M3 (log); composition M1. Anchor-key custody unspecified.
+
+New register rows 29–36: witnessed log; aggregation protocol K = 2 (DAP/Janus); K = 3 protocol; aggregated BLS; intra-year fulfilment (S7); native clients; formal model; post-quantum history anchor (k of n).
+
+---
+
 ## 0. How to read this dossier
 
 ### 0.1 Three different things can be "mature"

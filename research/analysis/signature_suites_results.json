@@ -1,0 +1,332 @@
+{
+  "S1_reference_test_s": {
+    "quorum": {
+      "hybrid": {
+        "sig_bytes": 290078,
+        "block_bytes": 700142,
+        "year_MB": 297.6
+      },
+      "ed25519": {
+        "sig_bytes": 5504,
+        "block_bytes": 415568,
+        "year_MB": 176.6
+      },
+      "bls_agg": {
+        "sig_bytes": 112,
+        "block_bytes": 410176,
+        "year_MB": 174.3
+      }
+    },
+    "archive": {
+      "coarse_1": {
+        "hybrid_MB": 237.5,
+        "ed25519_MB": 102.6,
+        "ratio": 2.32
+      },
+      "coarse_5": {
+        "hybrid_MB": 787.4,
+        "ed25519_MB": 112.8,
+        "ratio": 6.98
+      },
+      "dense_1": {
+        "hybrid_MB": 909.5,
+        "ed25519_MB": 774.6,
+        "ratio": 1.17
+      },
+      "dense_5": {
+        "hybrid_MB": 1459.4,
+        "ed25519_MB": 784.8,
+        "ratio": 1.86
+      }
+    }
+  },
+  "S2_corrected": {
+    "checkpoints": {
+      "hybrid": {
+        "quorum_sig_bytes": 290078,
+        "block_bytes": 700142,
+        "year_MB": 297.6
+      },
+      "ed25519": {
+        "quorum_sig_bytes": 5504,
+        "block_bytes": 415568,
+        "year_MB": 176.6
+      },
+      "bls_agg_minpk": {
+        "quorum_sig_bytes": 112,
+        "block_bytes": 410176,
+        "year_MB": 174.3
+      },
+      "bls_agg_minsig": {
+        "quorum_sig_bytes": 64,
+        "block_bytes": 410128,
+        "year_MB": 174.3
+      }
+    },
+    "proposals": {
+      "hybrid_wc150_1": 5573,
+      "hybrid_wc150_5": 19065,
+      "hybrid_cc200_1": 6173,
+      "hybrid_cc200_5": 19665,
+      "hybrid_cc3000_1": 39773,
+      "hybrid_cc3000_5": 53265,
+      "ed25519_wc150_1": 2264,
+      "ed25519_wc150_5": 2520,
+      "ed25519_cc200_1": 2864,
+      "ed25519_cc200_5": 3120,
+      "ed25519_cc3000_1": 36464,
+      "ed25519_cc3000_5": 36720
+    },
+    "archives": {
+      "coarse_1_signer": {
+        "hybrid_MB_per_round": 234.9,
+        "hybrid_GB_per_year": 2.35,
+        "ed25519_MB_per_round": 102.6,
+        "ed25519_GB_per_year": 1.03,
+        "ratio_hybrid_over_ed25519": 2.29,
+        "signature_verifications": 40000
+      },
+      "coarse_5_signer": {
+        "hybrid_MB_per_round": 774.6,
+        "hybrid_GB_per_year": 7.75,
+        "ed25519_MB_per_round": 112.8,
+        "ed25519_GB_per_year": 1.13,
+        "ratio_hybrid_over_ed25519": 6.87,
+        "signature_verifications": 200000
+      },
+      "dense_1_signer": {
+        "hybrid_MB_per_round": 906.9,
+        "hybrid_GB_per_year": 9.07,
+        "ed25519_MB_per_round": 774.6,
+        "ed25519_GB_per_year": 7.75,
+        "ratio_hybrid_over_ed25519": 1.17,
+        "signature_verifications": 40000
+      },
+      "dense_5_signer": {
+        "hybrid_MB_per_round": 1446.6,
+        "hybrid_GB_per_year": 14.47,
+        "ed25519_MB_per_round": 784.8,
+        "ed25519_GB_per_year": 7.85,
+        "ratio_hybrid_over_ed25519": 1.84,
+        "signature_verifications": 200000
+      }
+    },
+    "table93": {
+      "100": {
+        "hybrid_leaf_round_kB": 117.5,
+        "hybrid_leaf_year_MB": 1.17,
+        "ed25519_leaf_round_kB": 51.3,
+        "ed25519_leaf_year_MB": 0.51,
+        "hybrid_L1_year_MB": 123.8,
+        "ed25519_L1_year_MB": 2.9,
+        "bls_L1_year_MB": 0.6
+      },
+      "1000": {
+        "hybrid_leaf_round_kB": 234.9,
+        "hybrid_leaf_year_MB": 2.35,
+        "ed25519_leaf_round_kB": 102.6,
+        "ed25519_leaf_year_MB": 1.03,
+        "hybrid_L1_year_MB": 124.7,
+        "ed25519_L1_year_MB": 3.7,
+        "bls_L1_year_MB": 1.4
+      },
+      "10000": {
+        "hybrid_leaf_round_kB": 2349.2,
+        "hybrid_leaf_year_MB": 23.49,
+        "ed25519_leaf_round_kB": 1025.6,
+        "ed25519_leaf_year_MB": 10.26,
+        "hybrid_L1_year_MB": 131.9,
+        "ed25519_L1_year_MB": 10.9,
+        "bls_L1_year_MB": 8.6
+      },
+      "100000": {
+        "hybrid_leaf_round_kB": 23492.0,
+        "hybrid_leaf_year_MB": 234.92,
+        "ed25519_leaf_round_kB": 10256.0,
+        "ed25519_leaf_year_MB": 102.56,
+        "hybrid_L1_year_MB": 157.7,
+        "ed25519_L1_year_MB": 36.8,
+        "bls_L1_year_MB": 34.5
+      },
+      "1000000": {
+        "hybrid_leaf_round_kB": 234920.0,
+        "hybrid_leaf_year_MB": 2349.2,
+        "ed25519_leaf_round_kB": 102560.0,
+        "ed25519_leaf_year_MB": 1025.6,
+        "hybrid_L1_year_MB": 297.6,
+        "ed25519_L1_year_MB": 176.7,
+        "bls_L1_year_MB": 174.4
+      }
+    },
+    "hybrid_sig_bytes": 3373,
+    "ml_dsa_65_sig_bytes": 3309,
+    "double_counted_per_signer": 3437
+  },
+  "S3_phone_traffic": {
+    "check_bytes": {
+      "hybrid_full_86": 290078,
+      "hybrid_coordinator_attestation": 3373,
+      "hybrid_sync_committee_24_q16": 53968,
+      "ed25519_full_86": 5504,
+      "bls_aggregate": 112,
+      "log_ed25519_cosigs": 900,
+      "log_mldsa44_cosigs": 30125
+    },
+    "hybrid_full_86": {
+      "automated_round_kB": [
+        305.6,
+        330.6
+      ],
+      "milestone_round_kB": [
+        360.7,
+        385.7
+      ]
+    },
+    "hybrid_coordinator_attestation": {
+      "automated_round_kB": [
+        18.9,
+        43.9
+      ],
+      "milestone_round_kB": [
+        74.0,
+        99.0
+      ]
+    },
+    "hybrid_sync_committee_24_q16": {
+      "automated_round_kB": [
+        69.5,
+        94.5
+      ],
+      "milestone_round_kB": [
+        124.6,
+        149.6
+      ]
+    },
+    "ed25519_full_86": {
+      "automated_round_kB": [
+        21.0,
+        46.0
+      ],
+      "milestone_round_kB": [
+        76.1,
+        101.1
+      ]
+    },
+    "bls_aggregate": {
+      "automated_round_kB": [
+        15.6,
+        40.6
+      ],
+      "milestone_round_kB": [
+        70.7,
+        95.7
+      ]
+    },
+    "log_ed25519_cosigs": {
+      "automated_round_kB": [
+        16.4,
+        41.4
+      ],
+      "milestone_round_kB": [
+        71.5,
+        96.5
+      ]
+    },
+    "log_mldsa44_cosigs": {
+      "automated_round_kB": [
+        45.6,
+        70.6
+      ],
+      "milestone_round_kB": [
+        100.8,
+        125.8
+      ]
+    }
+  },
+  "S4_witnessed_log": {
+    "witnesses": 16,
+    "quorum": 11,
+    "checkpoint_plus_ed25519_cosigs_bytes": 1100,
+    "checkpoint_plus_mldsa44_cosigs_bytes": 30325,
+    "note": "Arrays (prices, totals) are served separately and bound by the totals root; a phone fetches deltas, not the full block."
+  },
+  "S5_verification_load": {
+    "machine": "Apple M4 Pro, 14 threads (10P+4E)",
+    "bench": {
+      "threads": 14,
+      "n_signatures": 200000,
+      "ed25519_single_us": 17.27,
+      "ed25519_batch64_us": 8.71,
+      "ed25519_200k_single_core_s": 3.45,
+      "ed25519_200k_batch_single_core_s": 1.74,
+      "ed25519_200k_batch_all_cores_s": 0.182,
+      "mldsa65_sig_bytes": 3309,
+      "mldsa65_verify_us": 32.19,
+      "mldsa65_200k_single_core_s_extrapolated": 6.44,
+      "mldsa65_200k_all_cores_s": 0.66,
+      "hybrid_verify_us": 49.46,
+      "hybrid_200k_single_core_s_extrapolated": 9.89,
+      "bls_aggregate_sig_bytes": 96,
+      "bls_verify_aggregate_of_86_ms": 0.45,
+      "bls_verify_single_ms": 0.425,
+      "ed25519_86_individual_ms": 1.485,
+      "hybrid_86_individual_ms": 4.254
+    },
+    "40000": {
+      "hybrid_single_core_s": 1.98,
+      "mldsa65_single_core_s": 1.29,
+      "ed25519_single_core_s": 0.69,
+      "ed25519_batch_single_core_s": 0.35
+    },
+    "200000": {
+      "hybrid_single_core_s": 9.89,
+      "mldsa65_single_core_s": 6.44,
+      "ed25519_single_core_s": 3.45,
+      "ed25519_batch_single_core_s": 1.74
+    }
+  },
+  "S6_fulfilment": {
+    "pickups_per_day": 2,
+    "bytes_per_person_per_day": {
+      "a_attributed_receipts_ed25519": 496,
+      "a_attributed_receipts_hybrid": 13732,
+      "b_blind_tokens_bls": 400,
+      "b_blind_tokens_rsa2048": 816,
+      "c_council_allocation_staples": 0
+    },
+    "per_year_MB_attributed_ed25519": 0.18,
+    "per_year_MB_attributed_hybrid": 5.01
+  },
+  "S7_aggregators": {
+    "coarse_upload_K3_bytes": 55120,
+    "coarse_upload_K2_bytes": 55024
+  },
+  "S8_anchoring": {
+    "single_federation_slh_dsa": {
+      "bytes_per_anchor": 16224,
+      "kB_per_anchor": 16.2,
+      "MB_per_year": 6.9
+    },
+    "slh_dsa_3_of_5_federations": {
+      "bytes_per_anchor": 48673,
+      "kB_per_anchor": 48.7,
+      "MB_per_year": 20.69
+    },
+    "slh_dsa_4_of_7_federations": {
+      "bytes_per_anchor": 64897,
+      "kB_per_anchor": 64.9,
+      "MB_per_year": 27.58
+    },
+    "mldsa44_cosigs_11_of_16": {
+      "bytes_per_anchor": 26752,
+      "kB_per_anchor": 26.8,
+      "MB_per_year": 11.37
+    },
+    "annual_slh_dsa_3_of_5_backstop": {
+      "bytes_per_anchor": 48673,
+      "kB_per_anchor": 48.7,
+      "MB_per_year": 0.05
+    },
+    "phone_bytes_log_ed25519_cosigs": 836
+  }
+}

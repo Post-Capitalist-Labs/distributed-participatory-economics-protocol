@@ -9,9 +9,13 @@ q = ceil(2m/3) committee members. The committee can mislead phones only if at
 least q of its m members are faulty (hypergeometric tail). Writes
 sync_committee_results.json next to this script. Standard library only.
 """
-import json, math, os
+import json, math, os, sys
 
-HYBRID_SIG = 3437  # bytes per hybrid Ed25519+ML-DSA-65 signature (book Table 5.1)
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import parameters as P  # noqa: E402
+
+HYBRID_SIG = P.HYBRID_SIG_BYTES   # 3,373 B (RFC 10073 concatenation); was 3,437 before the fourth refinement
+ED25519_SIG = P.ED25519_SIG_BYTES
 
 def tail(n, f, m, q):
     tot = math.comb(n, m)
@@ -23,6 +27,7 @@ for m in (8, 16, 24, 32):
     out[str(m)] = {
         "quorum": q,
         "sig_bytes": q * HYBRID_SIG,
+        "sig_bytes_ed25519": q * ED25519_SIG,
         "capture_prob_f42": tail(128, 42, m, q),
         "capture_prob_f32": tail(128, 32, m, q),
     }

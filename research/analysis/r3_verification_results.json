@@ -195,7 +195,7 @@
       ]
     },
     "book_table_rows_parsed": 14,
-    "book_table_matches_rescored": true
+    "book_table_matches_rescored": false
   },
   "D_household_reports": {
     "sizes": {
@@ -497,32 +497,32 @@
       "neighbourhood_dense_3000_items_bytes": 36000
     },
     "proposal_types": {
-      "worker_council_150_items_1sig": 5637,
-      "worker_council_150_items_5sig": 19385,
-      "consumer_council_coarse200_1sig": 6237,
-      "consumer_council_coarse200_5sig": 19985,
-      "consumer_council_3000_items_1sig": 39837,
-      "consumer_council_3000_items_5sig": 53585
+      "worker_council_150_items_1sig": 5573,
+      "worker_council_150_items_5sig": 19065,
+      "consumer_council_coarse200_1sig": 6173,
+      "consumer_council_coarse200_5sig": 19665,
+      "consumer_council_3000_items_1sig": 39773,
+      "consumer_council_3000_items_5sig": 53265
     },
     "archive_scenarios_1e6": {
       "coarse200_single_key": {
-        "raw_MB_per_round": 237.5,
-        "raw_GB_per_year_10_rounds": 2.37,
+        "raw_MB_per_round": 234.9,
+        "raw_GB_per_year_10_rounds": 2.35,
         "signature_verifications_per_round": 40000
       },
       "coarse200_5_signers": {
-        "raw_MB_per_round": 787.4,
-        "raw_GB_per_year_10_rounds": 7.87,
+        "raw_MB_per_round": 774.6,
+        "raw_GB_per_year_10_rounds": 7.75,
         "signature_verifications_per_round": 200000
       },
       "dense3000_single_key": {
-        "raw_MB_per_round": 909.5,
-        "raw_GB_per_year_10_rounds": 9.09,
+        "raw_MB_per_round": 906.9,
+        "raw_GB_per_year_10_rounds": 9.07,
         "signature_verifications_per_round": 40000
       },
       "dense3000_5_signers": {
-        "raw_MB_per_round": 1459.4,
-        "raw_GB_per_year_10_rounds": 14.59,
+        "raw_MB_per_round": 1446.6,
+        "raw_GB_per_year_10_rounds": 14.47,
         "signature_verifications_per_round": 200000
       }
     },
@@ -550,9 +550,9 @@
     },
     "light_client_options": {
       "fetch_all_86_sigs_bytes": 290078,
-      "fetch_all_86_hybrid_sigs_bytes": 295582,
-      "coordinator_attestation_bytes": 3437,
-      "sample_8_of_86_bytes": 27496
+      "fetch_all_86_hybrid_sigs_bytes": 290078,
+      "coordinator_attestation_bytes": 3373,
+      "sample_8_of_86_bytes": 26984
     }
   },
   "F_layer1_units": {
@@ -636,5 +636,109 @@
         1358000.0
       ]
     }
+  },
+  "H_fourth_refinement": {
+    "D_tiered_row": [
+      4.5,
+      4.0,
+      4.5,
+      4.0,
+      4.0,
+      4.0,
+      5.0,
+      4.0,
+      3.5,
+      3.5,
+      3.5,
+      4.0,
+      4.0,
+      4.0
+    ],
+    "D_log_row": [
+      4.0,
+      4.0,
+      4.0,
+      4.0,
+      4.5,
+      4.5,
+      5.0,
+      3.5,
+      3.5,
+      4.0,
+      4.0,
+      4.5,
+      4.0,
+      4.0
+    ],
+    "baseline": {
+      "A": 3.095,
+      "B": 3.585,
+      "C": 2.535,
+      "D": 4.07,
+      "Dlog": 4.1
+    },
+    "equal_weights": {
+      "A": 3.321,
+      "B": 3.607,
+      "C": 2.464,
+      "D": 4.036,
+      "Dlog": 4.107
+    },
+    "seventy_pct_4_11_12": {
+      "A": 4.084,
+      "B": 3.746,
+      "C": 2.301,
+      "D": 3.92,
+      "Dlog": 4.146
+    },
+    "harsher": {
+      "A": 3.095,
+      "B": 3.585,
+      "C": 2.535,
+      "D": 3.79,
+      "Dlog": 3.745
+    },
+    "A_overtakes_at": {
+      "D": 0.63,
+      "Dlog": 0.74
+    },
+    "perturbation_wins_share": {
+      "A": 0.0,
+      "B": 0.0008,
+      "C": 0.0,
+      "D": 0.4444,
+      "Dlog": 0.5549
+    },
+    "book_table_matches": true,
+    "budget_r4": {
+      "Phase 1": [
+        41000.0,
+        93000.0
+      ],
+      "Phase 1H": [
+        38000.0,
+        85000.0
+      ],
+      "Phase 2": [
+        152000.0,
+        305000.0
+      ],
+      "Phase 3": [
+        495000.0,
+        1070000.0
+      ],
+      "Programme total": [
+        726000.0,
+        1553000.0
+      ]
+    },
+    "formal_model_cost": [
+      20000.0,
+      45000.0
+    ],
+    "k3_custom_protocol_addon": [
+      40000.0,
+      95000.0
+    ]
   }
 }
