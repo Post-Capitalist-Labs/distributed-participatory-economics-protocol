@@ -5,3 +5,6 @@
 *.toc
 book/previews/
 book/previews_check/
+
+# Editorial working files (kept locally)
+editorial/
