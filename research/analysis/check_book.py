@@ -34,6 +34,9 @@ NON_CITATIONS = {"Kleisthenes", "Pericles", "Aristotle", "Freeman's", "Merriman"
                  # movements named with a year in headings and tables
                  "Rojava", "Zapatistas"}
 
+# References listed but not cited, awaiting the author's decision (editorial/AUTHOR_QUERIES.md, X-2).
+UNCITED_PENDING = {"Henry"}
+
 BANNED = [
     "not because of a 3.60", "does not licence", "returned 404", "is retired", "retired",
     "Do not cite", "previously published", "previously quoted", "this pass",
@@ -45,8 +48,9 @@ BANNED = [
 def main() -> int:
     tex = open(TEX, encoding="utf-8").read()
     ok = True
-    body, bib = tex.split(r"\chapter{Comprehensive Source Bibliography}", 1)
-    bib = bib.split(r"\end{enumerate}", 1)[0]
+    body, bib = tex.split(r"\chapter{References}", 1)
+    body_n = re.sub(r"\\[\'\"`^~]\{?(\w)\}?", r"\1", body)
+    bib = bib.split(r"\end{list}", 1)[0]
 
     # 1. labels and refs
     labels = re.findall(r"\\label\{([^}]+)\}", tex) + re.findall(r"label=([^,\]]+)", tex)
@@ -59,11 +63,13 @@ def main() -> int:
     ok &= not missing and not dup
 
     # 2. bibliography entries cited?
-    entries = re.findall(r"\\textbf\{([^}]*?)\((\d{4})[a-c]?[^)]*\)\.?\}", bib)
+    entries = re.findall(r"\\item ([^\n]*?)\. (?:\(\d{4}\) )?(\d{4})[a-c]?\.", bib)
     uncited = []
     surnames = set()
     for who, year in entries:
-        sur = re.split(r"[ ,]", who.strip())[0].replace("\\", "").replace('"', "")
+        sur = re.split(r"[ ,]", re.sub(r"\\['\"`^~]\{?(\w)\}?", r"\1", who.strip()))[0].replace("\\", "").replace('"', "")
+        if sur in UNCITED_PENDING:
+            continue
         sur = {"Sandstr": "Sandstr"}.get(sur[:7], sur)
         surnames.add(sur)
         alias = {"O'Connor": "BLAKE3 spec", "Aas": "prio", "Hong": "Hong, Luo"}
@@ -72,7 +78,7 @@ def main() -> int:
         elif sur in alias:
             hit = re.search(re.escape(alias[sur]), body)
         else:
-            hit = re.search(re.escape(sur), body)
+            hit = re.search(re.escape(sur), body_n)
         if not hit:
             uncited.append(f"{who.strip()} ({year})")
     # entries without a year in bold (e.g. Peirats)
