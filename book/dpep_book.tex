@@ -500,6 +500,7 @@ A core mandate of this monograph is to separate what has been \textbf{shown}, wh
 \stepcounter{footnote}\footnotetext{Hurwicz 1972, 1973.}
 
 \section{The Most Promising Architecture: Why We Reject a Global Blockchain}
+\label{sec:architecture-choice}
 
 \textbf{We explicitly reject building a per-transaction global blockchain (Architecture C), a centralized cloud database (Architecture A), or an unstructured gossip network without finality (Architecture B).}
 
@@ -821,7 +822,7 @@ Read together, these experiences are not a catalog of better or worse government
 \end{quote}
 The same passage names its opposite: whatever reinforces passivity, apathy, cynicism, hierarchy, alienation, and ``reliance on others to do things for them.''
 
-\begin{designrule}[Brinton's Test]
+\begin{designrule}[Brinton's Test]\label{dp:brinton}
 A feature of DPEP is justified only if it increases the confidence, autonomy, initiative, participation, solidarity, egalitarian tendencies, and self-activity of the people who use it, and helps them understand the system they govern. A feature that increases their passivity, their dependence on experts or officials, or their differentiation through hierarchy is rejected, however efficient it is.
 \end{designrule}
 
@@ -968,6 +969,7 @@ $\rho_i^{(t)}, \tau$ & Normalized relative excess demand imbalance $\rho_i^{(t)}
 \end{longtable}}
 
 \section{Ontology of Economic Actors and Priced Objects}
+\label{sec:ontology}
 
 Let the participatory economy $\mathcal{E}$ over annual planning period $T$ consist of the following finite sets of actors and institutional entities:\footnote{Formalized from Albert and Hahnel 1991a, chap.~4 (62--68) and chap.~5 (77--95); Hahnel 2021, chap.~7 (130--156); Sandstr\"om 2020, chap.~3; and Participatory Economy Project 2023.}
 \begin{itemize}[leftmargin=1.6em,itemsep=2pt]
@@ -978,7 +980,7 @@ Let the participatory economy $\mathcal{E}$ over annual planning period $T$ cons
   \item \textbf{Six Facilitation Boards ($\mathcal{B} = \{\text{IFB}, \text{CFB}, \text{PFB}, \text{EFB}, \text{HFB}, \text{UFB}\}$), Stand-Alone Capital Asset Entities ($\mathcal{A}^{\text{cap}}$), and the Society Account ($\mathcal{A}^{\text{soc}}$).}\footnote{Albert and Hahnel 1991b, chap.~6 (\texttt{lf6\_1.htm}); Sandstr\"om 2023.}
 \end{itemize}
 
-\begin{definition}[Master Catalog of Seven Priced Economic Categories]
+\begin{definition}[Master Catalog of Seven Priced Economic Categories]\label{def:catalog}
 Following Albert and Hahnel (1991a, chaps.~5--6), Hahnel (2021, chaps.~7--9), and Szczepanczyk (2023, sec.~4), the economy tracks supply, demand, and indicative prices across seven disjoint categories indexed by the master catalog $\Omega$:
 \begin{equation}
   \Omega = \mathcal{G}^{\text{priv}} \sqcup \mathcal{G}^{\text{pub}} \sqcup \mathcal{G}^{\text{int}} \sqcup \mathcal{R} \sqcup \mathcal{L} \sqcup \mathcal{K} \sqcup \mathcal{Z}
@@ -1053,6 +1055,7 @@ $p^{\text{lab}} \ge w_{\text{base}}$ & Labor price floor (INV-4B). & Policy cons
 \end{table}
 
 \section{Formal Optimization Problems of Councils and CAPs}
+\label{sec:optimization}
 
 \subsection{Consumer Councils and Nested Federations (PEPE Ch.~5, pp.~79--82, 88)}
 Each consumer council $CC_h \in \mathcal{H}$ seeks to maximize its members' total economic well-being $W_h(U_h, \Delta C_h)$---incorporating both immediate preference fulfillment $U_h$ and endogenous human characteristic development $\Delta C_h$---subject to the equitable budget constraint that its total social cost $SC(CC_h, P)$ does not exceed its members' warranted budget $B(CC_h, P) = \sum_{u \in \text{pop}(CC_h)} B_u(P)$ (Albert and Hahnel 1991a, chap.~5, 77--80, 88):
@@ -1385,6 +1388,7 @@ Erasable personal data & Permanent records of private life & Local profiles; del
 \end{enumerate}
 
 \section{Why Participatory Economics Is Not a High-TPS Blockchain Problem}
+\label{sec:not-blockchain}
 
 When we examine the computational structure formalized in Chapter~\ref{ch:model}, three architectural truths emerge:
 \begin{enumerate}[leftmargin=1.8em,itemsep=2pt]
@@ -1394,6 +1398,7 @@ When we examine the computational structure formalized in Chapter~\ref{ch:model}
 \end{enumerate}
 
 \section{The Four-Layer Hybrid Architecture (Architecture D)}
+\label{sec:arch-d}
 
 \begin{figure}[ht!]
 \centering
@@ -1717,6 +1722,7 @@ The participant's client holds keys, drafts proposals, splits household reports 
 \footnotetext{Albert and Hahnel 1991a, chap.~4, 68.}
 
 \section{Weighted Comparison of the Four Architectural Paradigms}
+\label{sec:weighted}
 
 We compare the four candidate architectures across all 14 required criteria: \textbf{Architecture A} (Conventional Federated SQL/REST Services), \textbf{Architecture B} (Pure P2P Gossip + CRDTs without finality), \textbf{Architecture C} (Full Per-Transaction BFT Blockchain), and \textbf{Architecture D} (Hybrid Local-First + Two-Root Aggregation + Selective Epoch-BFT Checkpoints). Scores are expert judgements of the \emph{current} design, not measured performance. Rows 4, 5, 6, 9, and 12 are scored against the measured \texttt{Prio3} costs, the reworked proposal sizes (Table~\ref{tab:proposal-sizes}) and the carry-forward constraint in Section~\ref{sec:carry-forward}. Column D assumes BFT checkpoints and the proposed tiered signature policy (Section~\ref{sec:pq-urgency}); column D-log is the same architecture with a witnessed log at Layer~1 (Section~\ref{sec:layer1-options}). A leads D on six criteria (throughput, bandwidth, hardware, post-quantum readiness, implementation simplicity, energy) and D equals or beats A on the other eight. With every signature hybrid, D scores the same 4.07: the tiered policy gains on bandwidth what it loses on post-quantum readiness, so its case rests on phone traffic and archive size, not on this table.
 
@@ -1859,6 +1865,7 @@ Ten DPEP combinations have no deployment precedent, so they inherit no maturity:
 The epigraph is the 1991 design: consumption is \emph{subject to collective criticism}, with unspecified ``guarantees'' for freedom and privacy. PEPE Ch.~3 (p.~41) and Ch.~5 (p.~80) add a non-veto rule for in-budget requests. Albert (2003, chaps.~12, 18) argues for anonymous submission against busybody intrusion. None of those texts specifies cryptographic aggregation. DPEP's \texttt{Prio3} invisibility is a \textbf{technical extension}: neighbors cannot see or comment on the anonymous bundle, so the 1991 criticism channel is lost. That is a genuine normative cost, not a proven improvement. REQ-DATA-04 therefore splits: non-veto is \texttt{[ORIGINAL-1991]}; invisibility is \texttt{[TECH-EXT]}.
 
 \section{Post-Quantum Cryptography (NIST FIPS 203, 204, 205)}
+\label{sec:pqc}
 
 To protect multi-decade household records against harvest-now-decrypt-later adversaries, DPEP uses cryptographic agility (\texttt{CryptoSuiteId}) and \textbf{hybrid} classical + NIST PQC primitives. This is \textbf{not} a uniform NIST Level-3 claim, and it is not a ``zero lattice'' claim: ML-KEM and ML-DSA are lattice schemes. BLAKE3's specification targets 128-bit security for all goals. VDAF-22 makes no post-quantum claim. Table~\ref{tab:pq-components} states the status of each component.\footnote{NIST 2024a, 2024b, 2024c. Byte sizes in Table~\ref{tab:pqc-bench} are specification constants. The latency columns are placeholders carried from an unsourced estimate; in particular $\sim 80\ \mu\text{s}$ for a hybrid X25519+ML-KEM-768 operation looks optimistic for an entry-level phone. They must be replaced by device benchmarks (Kill Gate~3) before use.}
 
@@ -2775,7 +2782,7 @@ Open protocol standards & DAP aggregation servers; C2SP transparency-log witness
 
 \paragraph{Running in parallel, and rolling back.} A group trying DPEP should be able to run it in \emph{shadow mode}: proposals, accounts, and planning rounds are computed alongside the existing system, compared with it, and bind no one until a council ratifies a switch. If the trial fails, the group exports its data and stops. The right of exit in Section~\ref{sec:transition} therefore has to include data: a council that leaves takes its full history with it in open formats. Low switching costs and safe exit decide adoption, as the barter networks of Argentina (Section~\ref{sec:hist-argentina}) and the failed regional currencies discussed in Section~\ref{sec:complementary} show from opposite directions.
 
-\begin{designrule}[Bridged Adoption]
+\begin{designrule}[Bridged Adoption]\label{dp:bridged}
 Every DPEP module offered to existing organizations must (a) run in shadow mode alongside the systems it may replace, binding no one until a council ratifies the change; (b) export all of a council's data in open, documented formats at any time; and (c) be removable without loss of that data. Identity checks required by banks or states are carried out at the federation's legal boundary and are never linked to council credentials.
 \end{designrule}
 
@@ -2873,6 +2880,7 @@ Foreign trade and defense are unspecified. & Major & Not settled by any experime
 % ==============================================================================
 \appendix
 \chapter{Scientific Claims, Evidence, and Validation Status Register}
+\label{app:claims}
 
 Each claim has eight separate fields: identifier, claim, classification, status (first line) and evidence, assumptions, limitations and required validation (second line). \textbf{Classifications:} Established (peer-reviewed theorem or standard), Source-supported (checked in primary literature, audited code or a measurement), Analytical (derived from models or arithmetic in this monograph), Conjectural (hypothesis or judgment), Experimental target (a goal to be tested). \textbf{Statuses:} Verified, Partially verified, Unverified, Refuted.
 
@@ -3157,6 +3165,151 @@ Each claim has eight separate fields: identifier, claim, classification, status 
 % BACK MATTER: COMPREHENSIVE SOURCE BIBLIOGRAPHY
 % ==============================================================================
 \backmatter
+\chapter{Glossary}
+\label{app:glossary}
+
+This glossary defines the terms a reader from one discipline may meet from another. The first section explains the core ideas in three vocabularies: for advocates and cooperators, who care about who decides and who is protected; for economists, who care about prices, information, convergence, and incentives; and for technologists, who care about threat models, guarantees, and what runs where. The remaining sections define terms by area, each with the section of the book where it is treated in full. Status labels follow the book: \emph{demonstrated}, \emph{specified}, or \emph{open}. Abbreviations are listed in Appendix~\ref{app:abbreviations}.
+
+\section*{The Core Ideas in Three Vocabularies}
+
+{\scriptsize\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.2}
+\begin{longtable}{L{0.72in} L{1.3in} L{1.3in} L{1.3in}}
+\toprule
+\textbf{Idea} & \textbf{Advocates} & \textbf{Economists} & \textbf{Technologists} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Idea} & \textbf{Advocates} & \textbf{Economists} & \textbf{Technologists} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+\textbf{DPEP itself} & Software that helps councils plan the economy together, without a market and without a central planning office. & An implementation of Albert and Hahnel's participatory planning procedure: iterative indicative-price planning, with councils as the only proposers. & A local-first protocol: councils hold their own state, federation servers aggregate, deterministic WASM computes prices, and a checkpoint layer fixes each round's history. \\ \addlinespace[2pt]
+\textbf{A planning round} & Everyone proposes, sees where demand exceeds what's available, and revises. & One iteration of a tâtonnement-like procedure: proposals, then excess demand, then a price update. & One pass through states S2--S4: signed proposals, Two-Root aggregation, the price update, a checkpoint. \\ \addlinespace[2pt]
+\textbf{The facilitation board} & It does the arithmetic and publishes it. It can't write or change anyone's plan. & A price-adjustment rule applied publicly, with no discretion over allocations. & A deterministic WASM function that anyone can recompute; a proposal is valid only if a council signed it. \\ \addlinespace[2pt]
+\textbf{Two-Root aggregation} & You can check that your council's proposal was counted and that the totals add up. & A verifiable record of every proposal and every category total, so the excess-demand signal can be audited. & Two BLAKE3 Merkle trees (proposals and category totals), a 512-byte inclusion path for phones, and full recomputation for auditors. \\ \addlinespace[2pt]
+\textbf{Offline councils} & Losing the internet doesn't hand your decision to anyone else. & Participation is robust to missed rounds: the last proposal stands in. & Local-first state with CRDT merging; the participation bitmap marks each council fresh, carried forward or excluded. \\ \addlinespace[2pt]
+\textbf{Cheating detection} & If someone changes or drops your proposal, your receipt proves it and forces it back in. & An audit mechanism against omission by intermediaries (it does not cover misreporting by a council). & Signed proposals, signed receipts, the challenge window and forced inclusion: detection, not prevention. \\ \addlinespace[2pt]
+\textbf{Household privacy} & What your household asks for stays private; only neighborhood totals are seen. & Demand is aggregated privately; individual bundles are never revealed. & Prio3 secret-sharing over two aggregators: privacy needs one honest aggregator, correct totals need both. \\ \addlinespace[2pt]
+\textbf{Post-quantum security} & Records stay trustworthy even if powerful quantum computers arrive. & (Rarely needed.) The integrity of the plan record over decades. & Hybrid ML-KEM for confidentiality; a tiered signature policy; k-of-n post-quantum anchoring of each round's roots. \\ \addlinespace[2pt]
+\textbf{Kill gates} & Each stage has a test it can fail, and failing means stopping or changing course. & Pre-registered falsification criteria with defined consequences. & Go/no-go thresholds measured on testbeds before building further. \\ \addlinespace[2pt]
+\end{longtable}}
+
+
+\section*{Self-Management and Institutions (Chapters 2--3)}
+
+\begin{itemize}[leftmargin=1.2em,itemsep=2pt,topsep=2pt]
+\item \textbf{Workers' council (WC, $WC_j$).} A democratic workplace collective: one worker, one vote. Each worker holds a balanced job complex. \emph{Economists:} the supply-side planning unit. (\S\ref{sec:ontology})
+\item \textbf{Consumers' council (CC, $CC_h$).} A neighborhood council of consumers, nested into ward, city and regional federations. \emph{Economists:} the demand-side planning unit. (\S\ref{sec:ontology})
+\item \textbf{Federation (IF, consumer federations).} A body of councils joined by industry or geography. It is an instrument of the councils, not a level above them. (\S\ref{sec:ontology}, \S\ref{sec:hist-hungary})
+\item \textbf{Balanced job complex (BJC).} A bundle of tasks balanced for empowerment and desirability, so no one specializes in deciding while others only execute. (\S\ref{sec:normative})
+\item \textbf{Coordinator class.} Albert and Hahnel's term for managers and experts who monopolize empowering work, as distinct from owners. Brinton's history of Russia 1917--21 is the book's main case. (\S\ref{sec:institutions-first}, \S\ref{sec:hist-russia})
+\item \textbf{Brinton's Test (Design Principle~\ref{dp:brinton}).} A feature is justified only if it increases people's confidence, autonomy, participation and self-activity, not their dependence on experts. (\S\ref{sec:enduring})
+\item \textbf{Plan factory (Castoriadis).} A technical body that computes alternatives and their consequences but never decides. DPEP's facilitation board is designed on this rule. (\S\ref{sec:hist-hungary})
+\item \textbf{Revocable delegation / recall.} A delegate can be withdrawn by the council that sent them, at any time. In DPEP, a delegate certificate is revoked by one council vote. (\S\ref{sec:hist-paris}, \S\ref{sec:sortition})
+\item \textbf{Sortition.} Selection by lot, as in Athens. DPEP uses it for audit, juries and facilitation oversight; it supports councils and does not replace them. (\S\ref{sec:hist-athens}, \S\ref{sec:sortition})
+\item \textbf{\emph{Euthynai}.} The Athenian end-of-term audit of officials. The book's name for physical audits of things cryptography can't check, such as output, emissions and rosters. (\S\ref{sec:hist-athens}, Fig.~\ref{fig:trust-map})
+\item \textbf{Community of Affected Parties (CAP).} Residents affected by a specific pollutant in an airshed or watershed. They set emission tolerances. (\S\ref{sec:optimization})
+\item \textbf{Productive commons.} Productive assets belong to society. Councils are charged for using inherited capital, which avoids the ``collective egoism'' of Barcelona in 1936. (\S\ref{sec:hist-spain})
+\item \textbf{Bridged adoption (Design Principle~\ref{dp:bridged}).} DPEP runs alongside existing systems, such as bookkeeping, payments and identity, through specified bridges, with a right of exit. (\S\ref{sec:interop})
+\end{itemize}
+
+
+\section*{Economics and Planning (Chapter 4)}
+
+\begin{itemize}[leftmargin=1.2em,itemsep=2pt,topsep=2pt]
+\item \textbf{Indicative prices ($P^{(t)}$).} Prices published each round as estimates of social opportunity cost. They guide revisions; they are not market prices. (\S\ref{sec:primal-dual})
+\item \textbf{Priced items ($\Omega$, $G = |\Omega|$).} The master catalog of everything priced: private, public and intermediate goods, resources, labor, capital and pollutants. G is the number of items. (Definition~\ref{def:catalog})
+\item \textbf{Social benefit / social cost (SB/SC).} A council's outputs valued against the opportunity cost of its inputs; proposals must reach SB/SC $\geq$ 1. (\S\ref{sec:optimization})
+\item \textbf{Excess demand / imbalance ($\rho_i$).} The normalized gap between demand and supply in a category. Planning aims to bring it under a tolerance $\tau$. (\S\ref{sec:pequod-audit})
+\item \textbf{Feasible, cleared, socially acceptable (Definition~\ref{def:success}).} A plan can be \emph{feasible} while still wasteful. \emph{Cleared} means the imbalances are within tolerance. \emph{Socially acceptable} means people endorse it. Kill Gate 1 requires a cleared plan. (\S\ref{sec:pequod-audit})
+\item \textbf{Tâtonnement.} Iterative price adjustment toward balance. Its convergence is guaranteed only in special cases, which is the central open economic question. (\S\ref{sec:convergence-limits})
+\item \textbf{Scarf test.} A classic economy in which simple price adjustment cycles forever. The book's diagnosis is that the instability comes from incomes that move with prices. (\S\ref{sec:convergence-limits})
+\item \textbf{Non-convexity / lumpy (indivisible) plants.} A plant you either build whole or not at all, which breaks the smooth mathematics behind price convergence. (\S\ref{sec:pequod-audit})
+\item \textbf{Endogenous income.} Incomes that depend on the plan itself, such as effort-rated pay. (\S\ref{sec:pequod-audit})
+\item \textbf{Algorithms 3a--3d.} Research-candidate solvers (damped tâtonnement, proximal ADMM, federation MILP, damped budget fixed point). None has a general convergence guarantee. (\S\ref{sec:alg3})
+\item \textbf{Effort rating ($\epsilon$).} A multiplier for effort and sacrifice. The proposed default is flat hourly pay unless a council votes otherwise. (\S\ref{sec:effort-default})
+\item \textbf{Slack buffer ($SL$).} A planned surplus so that small intra-year shocks need no replanning. (\S\ref{sec:primal-dual})
+\item \textbf{Society Account (Sandström).} Double-entry accounting for a democratic economy. DPEP uses it for its accounting identities. (\S\ref{sec:primal-dual})
+\item \textbf{Pollution Demand-Revealing Mechanism (PDRM).} Hahnel's procedure for pricing local pollution through CAPs. (\S\ref{sec:optimization})
+\end{itemize}
+
+
+\section*{The Protocol: How DPEP Runs (Chapters 4--5, 7)}
+
+\begin{itemize}[leftmargin=1.2em,itemsep=2pt,topsep=2pt]
+\item \textbf{State machine (S0--S9).} The annual cycle: planning rounds, ratification, the operating year, intra-year fulfillment (S7), and scoped replanning (S8). (Fig.~\ref{fig:state-machine})
+\item \textbf{Milestone rounds / automated rounds.} Households submit fresh private reports only at milestone rounds (proposed t = 1, 4 and 8). The rounds between them carry aggregates forward. (\S\ref{sec:carry-forward}, Fig.~\ref{fig:calendar})
+\item \textbf{Participation bitmap.} Two bits per council each round: fresh proposal, carried forward, or excluded. It makes censorship distinguishable from a network partition. (\S\ref{sec:two-root})
+\item \textbf{Carry-forward.} A council that misses a round's deadline keeps its previous proposal, recorded as carried, not dropped. (\S\ref{sec:two-root})
+\item \textbf{Signed receipt / challenge window / forced inclusion.} A council receives a signed receipt for each submission. If its proposal is omitted, it presents the receipt within the challenge window (proposed: 14 days), and inclusion is forced. (\S\ref{sec:two-root})
+\item \textbf{Checkpoint.} A small per-round record of the roots and quorum signatures that fixes the round's history. (\S\ref{sec:arch-d}, \S\ref{sec:pqc})
+\item \textbf{Intra-year fulfillment (S7).} Collecting goods at depots through the year. The pilot design uses council allocation for staples and receipts held by the home council for rationed goods. (\S\ref{sec:fulfilment})
+\item \textbf{Credit cap / home depot.} An offline-overspend bound: rationed goods are checked online, or collected offline only at your home depot, so overspending is limited to one cap per person per day. (\S\ref{sec:fulfilment})
+\item \textbf{Household Reporting Unit (HRU).} The integer unit for private household reports, converted exactly to protocol units. (\S\ref{sec:prio3-cost})
+\item \textbf{Coarse report.} The privacy baseline: about 200 categories, about 55 kB per report. (\S\ref{sec:privacy-baseline})
+\item \textbf{Node roles (Role-LP, CC, SR, PCW, BFT, GW).} Phone, council coordinator, storage replica, planning compute worker, epoch validator, delay-tolerant gateway. (Table~\ref{tab:node-roles})
+\end{itemize}
+
+
+\section*{Distributed Systems (Chapters 5--6)}
+
+\begin{itemize}[leftmargin=1.2em,itemsep=2pt,topsep=2pt]
+\item \textbf{Local-first.} Your device holds your data and works offline; servers sync and aggregate but don't own the data. (\S\ref{sec:arch-d})
+\item \textbf{CRDT.} A data structure that merges offline edits made by council members without conflicts. (\S\ref{sec:arch-d})
+\item \textbf{Architecture A / B / C / D (and D-log).} Federated SQL/REST; pure peer-to-peer; a per-transaction blockchain; DPEP's four-layer hybrid (D-log uses a witnessed log instead of BFT). D scores highest at baseline weights, but A wins when simplicity and cost dominate. (\S\ref{sec:weighted})
+\item \textbf{Four layers.}
+\begin{itemize}[leftmargin=1.2em,itemsep=2pt,topsep=2pt]
+\item Layer 4: human deliberation and the local solver.
+\item Layer 3: local-first council and household state.
+\item Layer 2: federated aggregation and the data plane.
+\item Layer 1: checkpoints and the deterministic price engine. (Fig.~\ref{fig:arch-d})
+\end{itemize}
+\item \textbf{BFT (Byzantine fault tolerance).} Consensus that stays correct while fewer than a third of validators misbehave. CometBFT is the reference engine. (\S\ref{sec:layer1-options})
+\item \textbf{Witnessed log (C2SP).} The alternative Layer 1: one operator appends each round, and independent witnesses cosign it. It is simpler than BFT but gives up liveness. (\S\ref{sec:layer1-options})
+\item \textbf{Deterministic WASM.} Price rules compiled so that every node computes exactly the same result. (\S\ref{sec:arch-d})
+\item \textbf{Canonical CBOR.} One exact byte encoding for every signed message, so signatures can be checked by anyone. (\S\ref{sec:cbor-schemas})
+\item \textbf{Why not a blockchain.} Planning is a bulk, round-based computation, not millions of transactions per second. Transactions per second is the wrong metric. (\S\ref{sec:not-blockchain})
+\end{itemize}
+
+
+\section*{Cryptography and Privacy (Chapter 7)}
+
+\begin{itemize}[leftmargin=1.2em,itemsep=2pt,topsep=2pt]
+\item \textbf{Prio3 / VDAF / DAP.} An IETF standard track for computing sums over secret-shared reports. In DPEP, households split each report between two aggregators. (\S\ref{sec:prio3})
+\item \textbf{Aggregator (K = 2).} A server that sees only random-looking shares. Two are recommended for pilots; a third is optional. (\S\ref{sec:prio3})
+\item \textbf{Privacy vs. correctness asymmetry.} Privacy needs at least one honest aggregator; correct totals need all of them. (Fig.~\ref{fig:privacy-flow})
+\item \textbf{Budget credential / one report per person.} An unlinkable per-epoch credential that limits each person to one report. Binding each household's budget inside the private report is open research. (\S\ref{sec:bu-cred})
+\item \textbf{Post-quantum cryptography (PQC) / CRQC.} Algorithms resistant to quantum computers; a CRQC is a quantum computer able to break today's public-key cryptography. (\S\ref{sec:pqc})
+\item \textbf{Hybrid (X25519 + ML-KEM; Ed25519 + ML-DSA).} Classical and post-quantum algorithms combined, so an attacker must break both. (\S\ref{sec:pqc})
+\item \textbf{Tiered signature policy.} Per-round objects are signed classically (small and fast). Long-lived objects are signed hybrid. Each round's roots get a post-quantum anchor from several parties. (\S\ref{sec:pq-urgency})
+\item \textbf{Post-quantum anchor (k of n).} Under BFT, three of five federations sign each round's roots with SLH-DSA; under the log design, witnesses add ML-DSA-44 cosignatures. (Table~\ref{tab:anchors})
+\item \textbf{Crypto-agility / CryptoSuiteId.} Every signed object names its algorithm suite, so suites can be replaced through a rehearsed four-step migration. (Fig.~\ref{fig:agility})
+\item \textbf{Trust map.} What cryptography guarantees, what is only detected, and what rests on institutions and audit. (Fig.~\ref{fig:trust-map})
+\item \textbf{Sortition beacon.} Public randomness for drawing lots that no one can bias. The design is open. (\S\ref{sec:sortition})
+\end{itemize}
+
+
+\section*{The Research Program and Evidence (Chapters 1, 6, 9--12)}
+
+\begin{itemize}[leftmargin=1.2em,itemsep=2pt,topsep=2pt]
+\item \textbf{Three tiers of evidence.} \emph{Demonstrated} (code or data audited), \emph{analytical estimate}, and \emph{open research target}. Use these labels when explaining status. (Table~\ref{tab:exec-feasibility})
+\item \textbf{Phases 1, 1H, 2, 3.}
+\begin{itemize}[leftmargin=1.2em,itemsep=2pt,topsep=2pt]
+\item Phase 1: economic simulator.
+\item Phase 1H: human probe with 30--60 volunteers.
+\item Phase 2: distributed testbed, with a formal model first.
+\item Phase 3: cryptography, mobile and cooperative pilot. (Table~\ref{tab:poc-tests})
+\end{itemize}
+\item \textbf{Kill gate.} A pre-registered pass/fail test at the end of a phase, with a stated consequence: proceed, narrow, redesign and rerun, or stop. (\S\ref{sec:gates}, Table~\ref{tab:gates})
+\item \textbf{Pre-registration.} Instances, thresholds and analysis scripts are committed before the run, so results can't be tuned after the fact. (\S\ref{sec:gates})
+\item \textbf{Formal model (Quint / TLA+).} A model-checked specification of states S2--S4, S7 and S8, written before any Phase 2 Rust code. (\S\ref{sec:formal-model})
+\item \textbf{Maturity levels (M0--M5).} A scale for components, from unspecified (M0) to ubiquitous (M5). (Table~\ref{tab:maturity})
+\item \textbf{The demonstration.} Four scenes: councils plan; a council goes offline; an operator cheats; households report privately. Each scene is tied to a gate and a status. (\S\ref{sec:demo-brief}, \S\ref{sec:demo}, Table~\ref{tab:demo})
+\item \textbf{Shadow mode.} A group runs DPEP alongside its existing tools, binding no one until a council ratifies a switch. (\S\ref{sec:interop})
+\item \textbf{Claims register.} Every scientific and engineering claim, with its evidence, assumptions, limitations and required validation. (Appendix~\ref{app:claims})
+\end{itemize}
+
 \chapter{References}
 
 Each entry's bibliographic identity was checked in November 2026 against Crossref (by DOI or bibliographic query), a publisher or journal page, or the IETF Datatracker.\footnote{Checked by \path{research/analysis/audit_bibliography.py}; results in \path{research/SOURCE_AUDIT.md}, both in the project repository.} That is not a claim that every page citation was re-read; access levels are in the front-matter notice. Web documentation, software release pages and news reports are cited in the notes only, with the date they were checked.
